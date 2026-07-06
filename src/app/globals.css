@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
+/* Dark mode is class-driven so the user's saved preference wins. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * The reasoning journal palette.
+ * Light: warm paper and ink, with a muted violet accent — a notebook by lamplight.
+ * Dark: deep ink-blue paper, candlelit text. Chosen, not inverted.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f5f0e6;
+  --raised: #fcf8f0;
+  --ink: #2b2620;
+  --ink-soft: #6d6355;
+  --line: #ddd3c1;
+  --accent: #5a4a82;
+  --accent-ink: #f5f0e6;
+  --accent-soft: #ebe5f2;
+  --mark: #f3e3b8; /* the "highlighter" for selected sentences */
+}
+
+.dark {
+  --paper: #16141d;
+  --raised: #201d2b;
+  --ink: #e7e1d4;
+  --ink-soft: #a49b8c;
+  --line: #37324a;
+  --accent: #b3a2e0;
+  --accent-ink: #16141d;
+  --accent-soft: #2c2740;
+  --mark: #4a3f28;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-mark: var(--mark);
+  --font-serif: var(--font-literata), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Text size preference, applied to the root so rem units follow. */
+html {
+  font-size: 17px;
+}
+html[data-text-size="small"] {
+  font-size: 15px;
+}
+html[data-text-size="large"] {
+  font-size: 19.5px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-literata), Georgia, serif;
+  line-height: 1.7;
+}
+
+/* One visible, consistent focus style everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--mark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
