@@ -27,11 +27,9 @@ const VERDICT_PRESENTATION: Record<
 function SentenceFeedback({
   story,
   result,
-  chosenExplanationId,
 }: {
   story: PracticeStory;
   result: SentenceResult;
-  chosenExplanationId?: string;
 }) {
   const sentence = story.sentences.find((s) => s.id === result.sentenceId);
   if (!sentence) return null;
@@ -87,9 +85,6 @@ function SentenceFeedback({
             Why: {correctExplanation.text}
           </p>
         )}
-      {chosenExplanationId === undefined &&
-        result.verdict === "correct" &&
-        result.explanationCorrect === undefined && null}
     </div>
   );
 }
@@ -144,7 +139,6 @@ export function FeedbackView() {
       {result.score.storyScores.map((storyScore) => {
         const story = getStory(storyScore.storyId);
         if (!story) return null;
-        const answers = result.answers[story.id] ?? [];
         return (
           <section key={story.id} aria-label={`Feedback for ${story.title}`}>
             <h2 className="text-xl font-semibold tracking-tight">{story.title}</h2>
@@ -154,10 +148,6 @@ export function FeedbackView() {
                   key={sentenceResult.sentenceId}
                   story={story}
                   result={sentenceResult}
-                  chosenExplanationId={
-                    answers.find((a) => a.sentenceId === sentenceResult.sentenceId)
-                      ?.explanationId
-                  }
                 />
               ))}
             </div>
