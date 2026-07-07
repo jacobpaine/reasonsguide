@@ -83,6 +83,27 @@ describe("selectPracticeStories", () => {
     expect(draws.size).toBeGreaterThan(3);
   });
 
+  it("offers stories mixing a fallacy with its healthy parent form", () => {
+    // Completed fallacy chapters should surface inside practice stories
+    // alongside the reasoning they are failures of.
+    const pairs: ReadonlyArray<readonly ["deductive" | "dialectical" | "part-whole", string]> = [
+      ["deductive", "affirming-consequent"],
+      ["dialectical", "moving-goalposts"],
+      ["part-whole", "composition"],
+    ];
+    for (const [parent, fallacy] of pairs) {
+      const mixed = ALL_STORIES.filter((story) => {
+        const targets = targetLabelsOf(story) as readonly string[];
+        return targets.includes(parent) && targets.includes(fallacy);
+      });
+      expect(mixed.length, `${parent} + ${fallacy}`).toBeGreaterThanOrEqual(1);
+      // And each such story is reachable by selecting exactly its own labels.
+      for (const story of mixed) {
+        expect(eligibleStories(ALL_STORIES, story.includedLabels)).toContain(story);
+      }
+    }
+  });
+
   it("randomizes single-label sessions too when enough stories exist", () => {
     const draws = new Set(
       Array.from({ length: 20 }, (_, seed) =>

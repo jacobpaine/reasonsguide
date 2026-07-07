@@ -10,6 +10,10 @@ import { structureStories } from "@/content/stories/structure";
 import { fallacyStories } from "@/content/stories/fallacies";
 import { evidenceFallacyStories } from "@/content/stories/evidence-fallacies";
 import { causalFallacyStories } from "@/content/stories/causal-fallacies";
+import { formalFallacyStories } from "@/content/stories/formal-fallacies";
+import { relevanceFallacyStories } from "@/content/stories/relevance-fallacies";
+import { presumptionFallacyStories } from "@/content/stories/presumption-fallacies";
+import { languageFallacyStories } from "@/content/stories/language-fallacies";
 import { targetLabelsOf } from "@/domain/practice";
 import { getLabel } from "@/domain/labels";
 
@@ -30,7 +34,11 @@ describe("practice stories", () => {
     expect(fallacyStories.length).toBeGreaterThanOrEqual(7);
     expect(evidenceFallacyStories.length).toBeGreaterThanOrEqual(7);
     expect(causalFallacyStories.length).toBeGreaterThanOrEqual(7);
-    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(63);
+    expect(formalFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(relevanceFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(presumptionFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(languageFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(91);
   });
 
   it("each practiced label is targeted by enough stories for varied sessions", () => {

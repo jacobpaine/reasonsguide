@@ -1,35 +1,84 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { LESSONS } from "@/content/curriculum";
 import { isLessonCompleted } from "@/domain/curriculum";
 import { masteryTier, MASTERY_TIER_NAMES } from "@/domain/mastery";
 import { getLabel } from "@/domain/labels";
+import type { Lesson } from "@/domain/types";
 import { useProgress } from "@/components/layout/useProgress";
 import { Card } from "@/components/ui/Card";
 import { LabelChip } from "@/components/ui/LabelChip";
+import { cn } from "@/lib/cn";
+
+type Track = "reasoning" | "fallacies";
+
+function lessonTrack(lesson: Lesson): Track {
+  return lesson.labelIds.every((id) => getLabel(id).kind === "reasoning")
+    ? "reasoning"
+    : "fallacies";
+}
+
+const TRACK_INTRO: Record<Track, string> = {
+  reasoning:
+    "The forms of healthy inference, from rules and patterns to values, words, and structure. The numbering suggests a path, but every chapter is open in any order.",
+  fallacies:
+    "Every fallacy here is a failure mode of a reasoning form from the other tab — induction gone hasty, deduction run backward, debate derailed. Finishing a chapter adds its fallacies to your practice shelf, where they hide inside stories beside the healthy forms.",
+};
 
 export function CurriculumView() {
   const { progress, loaded } = useProgress();
+  const [track, setTrack] = useState<Track>("reasoning");
 
   const readyLessons = LESSONS.filter((l) => l.status === "ready");
+  const trackLessons = readyLessons.filter((l) => lessonTrack(l) === track);
   const draftLessons = LESSONS.filter((l) => l.status === "draft");
 
+  const completedIn = (t: Track) =>
+    readyLessons.filter(
+      (l) => lessonTrack(l) === t && isLessonCompleted(progress, l.id),
+    ).length;
+  const totalIn = (t: Track) =>
+    readyLessons.filter((l) => lessonTrack(l) === t).length;
+
   return (
-    <article className="space-y-10" aria-busy={!loaded}>
+    <article className="space-y-8" aria-busy={!loaded}>
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Chapters</h1>
-        <p className="max-w-prose text-ink-soft">
-          The numbering suggests a path — from recognizing healthy reasoning
-          to diagnosing its failures — but every written chapter is open to
-          read in any order. Finishing a chapter&apos;s unlock challenge is
-          what adds its forms to your practice shelf.
-        </p>
       </header>
 
-      <section aria-label="Available chapters">
+      <div
+        role="tablist"
+        aria-label="Chapter tracks"
+        className="flex gap-2 border-b border-line"
+      >
+        {(["reasoning", "fallacies"] as const).map((t) => (
+          <button
+            key={t}
+            role="tab"
+            aria-selected={track === t}
+            onClick={() => setTrack(t)}
+            className={cn(
+              "-mb-px rounded-t-md border-b-2 px-4 py-2 font-sans text-sm font-medium transition-colors",
+              track === t
+                ? "border-accent text-ink"
+                : "border-transparent text-ink-soft hover:text-ink",
+            )}
+          >
+            {t === "reasoning" ? "Reasoning" : "Fallacies"}
+            <span className="ml-2 text-xs text-ink-soft">
+              {completedIn(t)}/{totalIn(t)}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <p className="max-w-prose text-ink-soft">{TRACK_INTRO[track]}</p>
+
+      <section aria-label={`${track} chapters`}>
         <ol className="space-y-4">
-          {readyLessons.map((lesson, index) => {
+          {trackLessons.map((lesson, index) => {
             const completed = isLessonCompleted(progress, lesson.id);
             return (
               <li key={lesson.id}>
@@ -57,7 +106,10 @@ export function CurriculumView() {
                         const record = progress.mastery[id];
                         const tier = masteryTier(record);
                         return (
-                          <span key={`${id}-tier`} className="font-sans text-xs text-ink-soft">
+                          <span
+                            key={`${id}-tier`}
+                            className="font-sans text-xs text-ink-soft"
+                          >
                             {getLabel(id).name}: {MASTERY_TIER_NAMES[tier]}
                           </span>
                         );
@@ -78,22 +130,24 @@ export function CurriculumView() {
         </ol>
       </section>
 
-      <section aria-label="Future chapters" className="space-y-3">
-        <h2 className="font-sans text-sm font-semibold uppercase tracking-wider text-ink-soft">
-          Future chapters — drafted, not yet written
-        </h2>
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {draftLessons.map((lesson) => (
-            <li
-              key={lesson.id}
-              className="rounded-md border border-dashed border-line px-4 py-3"
-            >
-              <span className="text-sm font-medium">{lesson.title}</span>
-              <p className="mt-1 text-xs text-ink-soft">{lesson.memoryHook}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {draftLessons.length > 0 && (
+        <section aria-label="Future chapters" className="space-y-3">
+          <h2 className="font-sans text-sm font-semibold uppercase tracking-wider text-ink-soft">
+            Future chapters — drafted, not yet written
+          </h2>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {draftLessons.map((lesson) => (
+              <li
+                key={lesson.id}
+                className="rounded-md border border-dashed border-line px-4 py-3"
+              >
+                <span className="text-sm font-medium">{lesson.title}</span>
+                <p className="mt-1 text-xs text-ink-soft">{lesson.memoryHook}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }

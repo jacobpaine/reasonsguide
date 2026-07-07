@@ -20,15 +20,19 @@ import { dialecticalLesson } from "./dialectical";
 import { fallaciesIntroLesson } from "./fallacies-intro";
 import { evidenceFallaciesLesson } from "./evidence-fallacies";
 import { causalFallaciesLesson } from "./causal-fallacies";
-import { fallacyDrafts } from "./drafts";
+import { formalFallaciesLesson } from "./formal-fallacies";
+import { relevanceFallaciesLesson } from "./relevance-fallacies";
+import { presumptionFallaciesLesson } from "./presumption-fallacies";
+import { languageFallaciesLesson } from "./language-fallacies";
 
 /**
  * The curriculum path, in suggested learning order (all written chapters are
- * open; the order is a path, not a gate). Drafts appear as "future chapters".
+ * open; the order is a path, not a gate).
  *
  * Ordering principle: the core inference forms, then reasoning in use
  * (applied/evaluative), then reasoning about words, ideas, and structure —
  * and only then fallacies, framed as failure modes of forms already learned.
+ * The UI shows the two tracks (reasoning / fallacies) as separate tabs.
  */
 export const LESSONS: readonly Lesson[] = [
   // core inference
@@ -56,7 +60,10 @@ export const LESSONS: readonly Lesson[] = [
   fallaciesIntroLesson,
   evidenceFallaciesLesson,
   causalFallaciesLesson,
-  ...fallacyDrafts,
+  formalFallaciesLesson,
+  relevanceFallaciesLesson,
+  presumptionFallaciesLesson,
+  languageFallaciesLesson,
 ];
 
 export function getLesson(id: string): Lesson | undefined {

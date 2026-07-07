@@ -8,6 +8,10 @@ import { structureStories } from "./structure";
 import { fallacyStories } from "./fallacies";
 import { evidenceFallacyStories } from "./evidence-fallacies";
 import { causalFallacyStories } from "./causal-fallacies";
+import { formalFallacyStories } from "./formal-fallacies";
+import { relevanceFallacyStories } from "./relevance-fallacies";
+import { presumptionFallacyStories } from "./presumption-fallacies";
+import { languageFallacyStories } from "./language-fallacies";
 
 export const ALL_STORIES: readonly PracticeStory[] = [
   ...beginnerStories,
@@ -19,6 +23,10 @@ export const ALL_STORIES: readonly PracticeStory[] = [
   ...fallacyStories,
   ...evidenceFallacyStories,
   ...causalFallacyStories,
+  ...formalFallacyStories,
+  ...relevanceFallacyStories,
+  ...presumptionFallacyStories,
+  ...languageFallacyStories,
 ];
 
 export function getStory(id: string): PracticeStory | undefined {

@@ -16,10 +16,10 @@ describe("lesson availability", () => {
     }
   });
 
-  it("draft lessons are never available", () => {
-    const drafts = LESSONS.filter((l) => l.status === "draft");
-    expect(drafts.length).toBeGreaterThan(0);
-    for (const draft of drafts) {
+  it("every planned chapter is now written — no drafts remain", () => {
+    expect(LESSONS.filter((l) => l.status === "draft")).toHaveLength(0);
+    // If drafts return, they must not be available:
+    for (const draft of LESSONS.filter((l) => l.status === "draft")) {
       expect(isLessonAvailable(LESSONS, draft.id)).toBe(false);
     }
   });
