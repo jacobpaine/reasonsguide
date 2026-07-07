@@ -31,27 +31,6 @@ function draft(
 
 export const reasoningDrafts: readonly Lesson[] = [
   draft(
-    "bayesian",
-    "Bayesian reasoning",
-    ["bayesian"],
-    "Bayesian reasoning updates how likely a belief is as new evidence arrives: start from a prior likelihood, then shift it in proportion to how strongly the evidence favors one hypothesis over its rivals.",
-    "New evidence moves the needle — by just the right amount.",
-  ),
-  draft(
-    "authority",
-    "Authority and testimony",
-    ["authority"],
-    "Authority reasoning accepts a claim because a credible source vouches for it. Its strength depends on the source's expertise in the relevant domain, their track record, and whether experts agree.",
-    "Trust the source only as far as their expertise reaches.",
-  ),
-  draft(
-    "practical",
-    "Practical reasoning",
-    ["practical"],
-    "Practical reasoning moves from a goal you hold and beliefs about means to a decision to act: I want G; doing A is the best available way to get G; so I should do A.",
-    "Goal + best means → action.",
-  ),
-  draft(
     "moral",
     "Moral and normative reasoning",
     ["moral"],
@@ -140,49 +119,7 @@ export const fallacyDrafts: readonly Lesson[] = [
     "If the premises fight, the conclusion is orphaned.",
   ),
   // evidence (hasty-generalization, post-hoc, anecdotal-evidence taught in the intro lesson)
-  draft(
-    "cherry-picking",
-    "Cherry-picking",
-    ["cherry-picking"],
-    "Citing only the evidence that favors a conclusion while ignoring the rest. Each cited fact may be true; the selection is the lie.",
-    "True pieces, false picture.",
-  ),
-  draft(
-    "biased-sample",
-    "Biased sample",
-    ["biased-sample"],
-    "Generalizing from a sample gathered in a way that over-represents some kinds of cases — polling drivers about bike lanes.",
-    "Ask who never got asked.",
-  ),
-  draft(
-    "survivorship-bias",
-    "Survivorship bias",
-    ["survivorship-bias"],
-    "Drawing conclusions only from cases that made it through a filter — studying the returned planes, the successful founders, the buildings still standing.",
-    "The missing cases are the evidence.",
-  ),
   // causal
-  draft(
-    "correlation-causation",
-    "Correlation implies causation",
-    ["correlation-causation"],
-    "Treating two things that move together as if one caused the other, without ruling out coincidence, reverse causation, or a common cause.",
-    "Moving together isn't pushing.",
-  ),
-  draft(
-    "single-cause",
-    "Single-cause fallacy",
-    ["single-cause"],
-    "Explaining a complex outcome by one cause when several contributed. The chosen cause is often real — just not alone.",
-    "Big outcomes rarely have one parent.",
-  ),
-  draft(
-    "slippery-slope",
-    "Slippery slope",
-    ["slippery-slope"],
-    "Claiming one step must lead to an extreme outcome without defending each link in the chain. Chains exist; this fallacy skips proving them.",
-    "Every link needs its own argument.",
-  ),
   // relevance
   draft(
     "ad-hominem",

@@ -3,7 +3,10 @@ import { LESSONS } from "@/content/curriculum";
 import { ALL_STORIES } from "@/content/stories";
 import { beginnerStories } from "@/content/stories/beginner";
 import { intermediateStories } from "@/content/stories/intermediate";
+import { appliedStories } from "@/content/stories/applied";
 import { fallacyStories } from "@/content/stories/fallacies";
+import { evidenceFallacyStories } from "@/content/stories/evidence-fallacies";
+import { causalFallacyStories } from "@/content/stories/causal-fallacies";
 import { targetLabelsOf } from "@/domain/practice";
 import { getLabel } from "@/domain/labels";
 
@@ -17,8 +20,11 @@ describe("practice stories", () => {
   it("has at least 7 stories of each type", () => {
     expect(beginnerStories.length).toBeGreaterThanOrEqual(7);
     expect(intermediateStories.length).toBeGreaterThanOrEqual(7);
+    expect(appliedStories.length).toBeGreaterThanOrEqual(7);
     expect(fallacyStories.length).toBeGreaterThanOrEqual(7);
-    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(21);
+    expect(evidenceFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(causalFallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(42);
   });
 
   it("each practiced label is targeted by enough stories for varied sessions", () => {
