@@ -4,9 +4,10 @@ import { getLabel } from "./labels";
 /**
  * Curriculum progression rules.
  *
- * Lessons form an ordered path. A lesson is available when every earlier
- * *ready* lesson has been completed (drafts never block progress and can't be
- * taken). Completing a lesson unlocks its labels for practice.
+ * Every written (ready) lesson is open to take in any order — the lesson
+ * sequence is a suggested path, not a gate. What stays gated is practice:
+ * a lesson's labels only join the practice shelf when the lesson is
+ * completed (its unlock challenge passed). Drafts can't be taken at all.
  */
 
 export function toCurriculumItems(lessons: readonly Lesson[]): CurriculumItem[] {
@@ -27,19 +28,13 @@ export function isLessonCompleted(state: UnlockState, lessonId: string): boolean
   return state.completedLessons.includes(lessonId);
 }
 
-/** A lesson is available if it's ready and all earlier ready lessons are done. */
+/** A lesson is available if it's written ("ready"); drafts are not. */
 export function isLessonAvailable(
   lessons: readonly Lesson[],
-  state: UnlockState,
   lessonId: string,
 ): boolean {
-  const index = lessons.findIndex((l) => l.id === lessonId);
-  if (index === -1) return false;
-  if (lessons[index].status !== "ready") return false;
-  return lessons
-    .slice(0, index)
-    .filter((l) => l.status === "ready")
-    .every((l) => state.completedLessons.includes(l.id));
+  const lesson = lessons.find((l) => l.id === lessonId);
+  return lesson?.status === "ready";
 }
 
 /** The next ready lesson the user hasn't completed, if any. */

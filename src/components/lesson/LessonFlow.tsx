@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { LESSONS, getLesson } from "@/content/curriculum";
-import { completeLesson, isLessonAvailable, isLessonCompleted } from "@/domain/curriculum";
+import { completeLesson } from "@/domain/curriculum";
 import type { GuidedExample } from "@/domain/types";
 import { useProgress } from "@/components/layout/useProgress";
 import { Button } from "@/components/ui/Button";
@@ -90,7 +90,7 @@ function GuidedCard({ example }: { example: GuidedExample }) {
 
 export function LessonFlow({ lessonId }: { lessonId: string }) {
   const lesson = getLesson(lessonId);
-  const { progress, loaded, update } = useProgress();
+  const { progress, update } = useProgress();
   const [stage, setStage] = useState<Stage>("overview");
   const [challengeKey, setChallengeKey] = useState(0);
   const [challengeResults, setChallengeResults] = useState<boolean[]>([]);
@@ -107,26 +107,6 @@ export function LessonFlow({ lessonId }: { lessonId: string }) {
           </p>
           <p className="mt-3">{lesson.definition}</p>
           <p className="mt-3 italic text-ink-soft">“{lesson.memoryHook}”</p>
-        </Card>
-        <Link href="/learn/" className="font-sans text-sm text-accent underline-offset-4 hover:underline">
-          ← Back to chapters
-        </Link>
-      </article>
-    );
-  }
-
-  const available = isLessonAvailable(LESSONS, progress, lesson.id);
-  const alreadyCompleted = isLessonCompleted(progress, lesson.id);
-
-  if (loaded && !available && !alreadyCompleted) {
-    return (
-      <article className="space-y-6">
-        <h1 className="text-3xl font-semibold tracking-tight">{lesson.title}</h1>
-        <Card>
-          <p>
-            This chapter is still locked. Finish the earlier chapters first —
-            each form is easier to see once you know its neighbors.
-          </p>
         </Card>
         <Link href="/learn/" className="font-sans text-sm text-accent underline-offset-4 hover:underline">
           ← Back to chapters

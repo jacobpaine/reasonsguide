@@ -10,26 +10,31 @@ import type { UnlockState } from "@/domain/types";
 const fresh: UnlockState = { completedLessons: [], unlockedLabels: [] };
 
 describe("lesson availability", () => {
-  it("only the first ready lesson is available at the start", () => {
-    const ready = LESSONS.filter((l) => l.status === "ready");
-    expect(isLessonAvailable(LESSONS, fresh, ready[0].id)).toBe(true);
-    expect(isLessonAvailable(LESSONS, fresh, ready[1].id)).toBe(false);
+  it("every ready lesson is open from the start, in any order", () => {
+    for (const lesson of LESSONS.filter((l) => l.status === "ready")) {
+      expect(isLessonAvailable(LESSONS, lesson.id)).toBe(true);
+    }
   });
 
   it("draft lessons are never available", () => {
-    const draft = LESSONS.find((l) => l.status === "draft");
-    expect(draft).toBeDefined();
-    const allDone: UnlockState = {
-      completedLessons: LESSONS.map((l) => l.id),
-      unlockedLabels: [],
-    };
-    expect(isLessonAvailable(LESSONS, allDone, draft!.id)).toBe(false);
+    const drafts = LESSONS.filter((l) => l.status === "draft");
+    expect(drafts.length).toBeGreaterThan(0);
+    for (const draft of drafts) {
+      expect(isLessonAvailable(LESSONS, draft.id)).toBe(false);
+    }
   });
 
-  it("completing a lesson makes the next ready lesson available", () => {
-    const ready = LESSONS.filter((l) => l.status === "ready");
-    const after = completeLesson(LESSONS, fresh, ready[0].id);
-    expect(isLessonAvailable(LESSONS, after, ready[1].id)).toBe(true);
+  it("unknown lesson ids are not available", () => {
+    expect(isLessonAvailable(LESSONS, "no-such-lesson")).toBe(false);
+  });
+
+  it("open chapters do not put labels into practice — completion does", () => {
+    // A later chapter can be taken first, but its labels only unlock on completion.
+    expect(fresh.unlockedLabels).toHaveLength(0);
+    const after = completeLesson(LESSONS, fresh, "bayesian");
+    expect(after.unlockedLabels).toEqual(["bayesian"]);
+    // Other chapters' labels remain out of practice until their own completion.
+    expect(after.unlockedLabels).not.toContain("deductive");
   });
 });
 

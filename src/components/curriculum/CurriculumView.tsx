@@ -2,16 +2,12 @@
 
 import Link from "next/link";
 import { LESSONS } from "@/content/curriculum";
-import {
-  isLessonAvailable,
-  isLessonCompleted,
-} from "@/domain/curriculum";
+import { isLessonCompleted } from "@/domain/curriculum";
 import { masteryTier, MASTERY_TIER_NAMES } from "@/domain/mastery";
 import { getLabel } from "@/domain/labels";
 import { useProgress } from "@/components/layout/useProgress";
 import { Card } from "@/components/ui/Card";
 import { LabelChip } from "@/components/ui/LabelChip";
-import { cn } from "@/lib/cn";
 
 export function CurriculumView() {
   const { progress, loaded } = useProgress();
@@ -24,9 +20,10 @@ export function CurriculumView() {
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Chapters</h1>
         <p className="max-w-prose text-ink-soft">
-          The path runs from recognizing healthy reasoning to diagnosing its
-          failures. Finish a chapter&apos;s unlock challenge to add its forms
-          to your practice shelf.
+          The numbering suggests a path — from recognizing healthy reasoning
+          to diagnosing its failures — but every written chapter is open to
+          read in any order. Finishing a chapter&apos;s unlock challenge is
+          what adds its forms to your practice shelf.
         </p>
       </header>
 
@@ -34,15 +31,9 @@ export function CurriculumView() {
         <ol className="space-y-4">
           {readyLessons.map((lesson, index) => {
             const completed = isLessonCompleted(progress, lesson.id);
-            const available = isLessonAvailable(LESSONS, progress, lesson.id);
             return (
               <li key={lesson.id}>
-                <Card
-                  className={cn(
-                    "transition-colors",
-                    !completed && !available && "opacity-60",
-                  )}
-                >
+                <Card className="transition-colors">
                   <div className="flex items-baseline justify-between gap-4">
                     <h2 className="text-lg font-semibold">
                       <span className="mr-2 font-sans text-sm text-ink-soft">
@@ -51,7 +42,7 @@ export function CurriculumView() {
                       {lesson.title}
                     </h2>
                     <span className="shrink-0 font-sans text-xs text-ink-soft">
-                      {completed ? "✓ Completed" : available ? "Available" : "🔒 Locked"}
+                      {completed ? "✓ Completed" : "Open"}
                     </span>
                   </div>
                   <p className="mt-2 max-w-prose text-sm text-ink-soft">
@@ -72,16 +63,14 @@ export function CurriculumView() {
                         );
                       })}
                   </div>
-                  {(available || completed) && (
-                    <div className="mt-4">
-                      <Link
-                        href={`/lesson/${lesson.id}/`}
-                        className="font-sans text-sm font-medium text-accent underline-offset-4 hover:underline"
-                      >
-                        {completed ? "Revisit chapter →" : "Begin chapter →"}
-                      </Link>
-                    </div>
-                  )}
+                  <div className="mt-4">
+                    <Link
+                      href={`/lesson/${lesson.id}/`}
+                      className="font-sans text-sm font-medium text-accent underline-offset-4 hover:underline"
+                    >
+                      {completed ? "Revisit chapter →" : "Begin chapter →"}
+                    </Link>
+                  </div>
                 </Card>
               </li>
             );
