@@ -9,21 +9,29 @@ import { statisticalLesson } from "./statistical";
 import { bayesianLesson } from "./bayesian";
 import { authorityLesson } from "./authority";
 import { practicalLesson } from "./practical";
+import { moralLesson } from "./moral";
+import { comparativeLesson } from "./comparative";
+import { conductiveLesson } from "./conductive";
+import { definitionalLesson } from "./definitional";
+import { conceptualLesson } from "./conceptual";
+import { classificationLesson } from "./classification";
+import { partWholeLesson } from "./part-whole";
+import { dialecticalLesson } from "./dialectical";
 import { fallaciesIntroLesson } from "./fallacies-intro";
 import { evidenceFallaciesLesson } from "./evidence-fallacies";
 import { causalFallaciesLesson } from "./causal-fallacies";
-import { fallacyDrafts, reasoningDrafts } from "./drafts";
+import { fallacyDrafts } from "./drafts";
 
 /**
- * The curriculum path, in learning order. Ready lessons form the unlockable
- * spine; drafts appear in the journal as "future chapters".
+ * The curriculum path, in suggested learning order (all written chapters are
+ * open; the order is a path, not a gate). Drafts appear as "future chapters".
  *
- * Ordering principle: learn to recognize kinds of reasoning first, then meet
- * fallacies as failure modes of forms you already know. Bayesian follows
- * statistical (it refines rates with evidence); the fallacy chapters follow
- * the healthy forms they are failures of.
+ * Ordering principle: the core inference forms, then reasoning in use
+ * (applied/evaluative), then reasoning about words, ideas, and structure —
+ * and only then fallacies, framed as failure modes of forms already learned.
  */
 export const LESSONS: readonly Lesson[] = [
+  // core inference
   claimSupportLesson,
   deductiveLesson,
   inductiveLesson,
@@ -32,12 +40,22 @@ export const LESSONS: readonly Lesson[] = [
   causalLesson,
   statisticalLesson,
   bayesianLesson,
+  // reasoning in use
   authorityLesson,
   practicalLesson,
+  moralLesson,
+  comparativeLesson,
+  conductiveLesson,
+  // words, ideas, and structure
+  definitionalLesson,
+  conceptualLesson,
+  classificationLesson,
+  partWholeLesson,
+  dialecticalLesson,
+  // failure modes
   fallaciesIntroLesson,
   evidenceFallaciesLesson,
   causalFallaciesLesson,
-  ...reasoningDrafts,
   ...fallacyDrafts,
 ];
 

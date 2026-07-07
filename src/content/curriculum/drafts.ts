@@ -29,65 +29,8 @@ function draft(
   };
 }
 
-export const reasoningDrafts: readonly Lesson[] = [
-  draft(
-    "moral",
-    "Moral and normative reasoning",
-    ["moral"],
-    "Moral reasoning argues about what ought to be done, deriving verdicts from values, duties, rights, or principles rather than from facts alone.",
-    "From 'is' plus a value to 'ought'.",
-  ),
-  draft(
-    "comparative",
-    "Comparative reasoning",
-    ["comparative"],
-    "Comparative reasoning ranks options against each other along shared criteria: better, worse, or equal — and shows its work by naming the criteria.",
-    "Rank options by named criteria.",
-  ),
-  draft(
-    "conductive",
-    "Conductive reasoning",
-    ["conductive"],
-    "Conductive reasoning weighs several independent reasons for and against a conclusion together. No single reason settles it; the verdict comes from the balance.",
-    "Many small reasons, weighed together.",
-  ),
-  draft(
-    "definitional",
-    "Definitional reasoning",
-    ["definitional"],
-    "Definitional reasoning settles a question by clarifying what a term means or requires — whether a case falls under a word once the word is made precise.",
-    "Settle the word, settle the question.",
-  ),
-  draft(
-    "conceptual",
-    "Conceptual reasoning",
-    ["conceptual"],
-    "Conceptual reasoning works out what follows from how a concept is structured or how it relates to neighboring concepts — what promising entails, what fairness excludes.",
-    "Unfold what the idea already contains.",
-  ),
-  draft(
-    "classification",
-    "Classification reasoning",
-    ["classification"],
-    "Classification reasoning places a case in a category and draws conclusions from what is true of the category's members.",
-    "Sort it, then inherit the category's traits.",
-  ),
-  draft(
-    "part-whole",
-    "Part–whole reasoning",
-    ["part-whole"],
-    "Part–whole reasoning moves between properties of parts and properties of the whole — sometimes validly, sometimes not, which is why it deserves care.",
-    "Check whether the property survives the trip between part and whole.",
-  ),
-  draft(
-    "dialectical",
-    "Dialectical reasoning",
-    ["dialectical"],
-    "Dialectical reasoning refines a position by taking objections seriously: state the view, meet the strongest counterargument, and revise or defend in response.",
-    "A view earns its keep by answering objections.",
-  ),
-];
-
+// All reasoning-type lessons have been promoted to full chapters;
+// only fallacy drafts remain.
 export const fallacyDrafts: readonly Lesson[] = [
   // formal
   draft(
