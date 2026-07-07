@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { LESSONS } from "@/content/curriculum";
 import { ALL_STORIES } from "@/content/stories";
+import { beginnerStories } from "@/content/stories/beginner";
+import { intermediateStories } from "@/content/stories/intermediate";
+import { fallacyStories } from "@/content/stories/fallacies";
 import { targetLabelsOf } from "@/domain/practice";
 import { getLabel } from "@/domain/labels";
 
@@ -11,8 +14,25 @@ import { getLabel } from "@/domain/labels";
  */
 
 describe("practice stories", () => {
-  it("has at least 9 stories", () => {
-    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(9);
+  it("has at least 7 stories of each type", () => {
+    expect(beginnerStories.length).toBeGreaterThanOrEqual(7);
+    expect(intermediateStories.length).toBeGreaterThanOrEqual(7);
+    expect(fallacyStories.length).toBeGreaterThanOrEqual(7);
+    expect(ALL_STORIES.length).toBeGreaterThanOrEqual(21);
+  });
+
+  it("each practiced label is targeted by enough stories for varied sessions", () => {
+    // Every label used by any story should appear in at least 3 stories,
+    // so repeated sessions with the same selection can differ.
+    const counts = new Map<string, number>();
+    for (const story of ALL_STORIES) {
+      for (const label of targetLabelsOf(story)) {
+        counts.set(label, (counts.get(label) ?? 0) + 1);
+      }
+    }
+    for (const [label, count] of counts) {
+      expect(count, `stories targeting ${label}`).toBeGreaterThanOrEqual(3);
+    }
   });
 
   it("has unique story and sentence ids", () => {

@@ -21,8 +21,9 @@ describe("eligibleStories", () => {
   });
 
   it("excludes stories containing unselected target labels", () => {
-    // Only deductive selected: no starter story targets deduction alone.
+    // Only deductive selected: eligible stories must target deduction alone.
     const stories = eligibleStories(ALL_STORIES, ["deductive"]);
+    expect(stories.length).toBeGreaterThanOrEqual(1);
     for (const story of stories) {
       expect(targetLabelsOf(story)).toEqual(["deductive"]);
     }
@@ -59,10 +60,39 @@ describe("selectPracticeStories", () => {
     expect(a).toEqual(b);
   });
 
-  it("works with a single selected label when a matching story exists", () => {
-    // No single-label stories exist in starter content, so this returns [].
+  it("works with a single selected label", () => {
     const stories = selectPracticeStories(ALL_STORIES, ["deductive"], createRng(1));
-    expect(Array.isArray(stories)).toBe(true);
+    expect(stories.length).toBeGreaterThanOrEqual(1);
+    for (const story of stories) {
+      expect(targetLabelsOf(story)).toEqual(["deductive"]);
+    }
+  });
+
+  it("randomizes which stories are drawn across sessions", () => {
+    // With 7+ eligible stories per set, different seeds must not all yield
+    // the same three stories.
+    const selected = ["deductive", "inductive", "abductive"] as const;
+    const draws = new Set(
+      Array.from({ length: 20 }, (_, seed) =>
+        selectPracticeStories(ALL_STORIES, selected, createRng(seed + 1))
+          .map((s) => s.id)
+          .sort()
+          .join("|"),
+      ),
+    );
+    expect(draws.size).toBeGreaterThan(3);
+  });
+
+  it("randomizes single-label sessions too when enough stories exist", () => {
+    const draws = new Set(
+      Array.from({ length: 20 }, (_, seed) =>
+        selectPracticeStories(ALL_STORIES, ["hasty-generalization", "post-hoc", "anecdotal-evidence"], createRng(seed + 100))
+          .map((s) => s.id)
+          .sort()
+          .join("|"),
+      ),
+    );
+    expect(draws.size).toBeGreaterThan(3);
   });
 });
 

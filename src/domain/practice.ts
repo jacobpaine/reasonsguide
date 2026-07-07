@@ -47,23 +47,20 @@ export function selectPracticeStories(
   const pool = shuffle(eligibleStories(stories, selected), rng);
   if (pool.length <= count) return pool;
 
-  // Greedy cover: repeatedly take the story covering the most not-yet-seen
-  // selected labels; ties are broken by the shuffled pool order.
+  // Randomized first-fit cover: walk the shuffled pool, preferring the first
+  // story that still adds an uncovered selected label; once everything is
+  // covered (or nothing can add coverage), fill the rest in shuffled order.
+  // Unlike a strict max-gain greedy, this varies from session to session —
+  // no single story is picked every time just for covering the most labels.
   const uncovered = new Set(selected);
   const chosen: PracticeStory[] = [];
   const remaining = [...pool];
 
   while (chosen.length < count && remaining.length > 0) {
-    let bestIndex = 0;
-    let bestGain = -1;
-    remaining.forEach((story, index) => {
-      const gain = targetLabelsOf(story).filter((l) => uncovered.has(l)).length;
-      if (gain > bestGain) {
-        bestGain = gain;
-        bestIndex = index;
-      }
-    });
-    const [picked] = remaining.splice(bestIndex, 1);
+    const coveringIndex = remaining.findIndex((story) =>
+      targetLabelsOf(story).some((l) => uncovered.has(l)),
+    );
+    const [picked] = remaining.splice(Math.max(coveringIndex, 0), 1);
     chosen.push(picked);
     targetLabelsOf(picked).forEach((l) => uncovered.delete(l));
   }
