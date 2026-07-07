@@ -629,4 +629,451 @@ export const formalFallacyStories: readonly PracticeStory[] = [
       },
     ],
   },
+  {
+    id: "story-ferry-register",
+    title: "The Ferry Register",
+    difficulty: "intermediate",
+    includedLabels: ["undistributed-middle", "contradictory-premises"],
+    sentences: [
+      {
+        id: "ff8-1",
+        text: "The ferry-keeper at Stoat's Landing maintained a crossing register in a water-stained leather book that showed two decades of tolls, disputes, and weather.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff8-2",
+        text: "When a clinker-hulled cutter came in without papers, he searched back through his entries and settled the question to his satisfaction: every boat from Orwell's yard was clinker-hulled, this cutter was clinker-hulled, and so it had come from Orwell's yard and Orwell would answer for the arrears.",
+        labels: ["undistributed-middle"],
+        primaryLabel: "undistributed-middle",
+        isTarget: true,
+        correctExplanationId: "ff8-2-b",
+        explanationOptions: [
+          {
+            id: "ff8-2-a",
+            text: "His rule plus the cutter's hull settle the attribution; since Orwell's yard builds this way and this boat is built this way, the conclusion follows of necessity.",
+          },
+          {
+            id: "ff8-2-b",
+            text: "Orwell's yard and this cutter meet only in the clinker-hulling they share — a method common enough that the register's own contents show the connection proves nothing.",
+          },
+          {
+            id: "ff8-2-c",
+            text: "He reasons from the clinker hull back to Orwell's yard as its origin, taking the construction style as proof of the one builder who usually produces it.",
+          },
+          {
+            id: "ff8-2-d",
+            text: "He holds both that the boat has no papers to identify it and that its hull identifies it — premises that cannot together settle an unregistered vessel.",
+          },
+        ],
+      },
+      {
+        id: "ff8-3",
+        text: "Clinker-hulling was the standard habit from the creek to the cliffs, which was why the register contained more clinker hulls than the keeper's memory held builders.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff8-4",
+        text: "The harbourmaster arrived that afternoon and issued two pronouncements he considered equally certain: the cutter was unregistered, with no owner on any roll, and the cutter was liable to the impound schedule, which required a registered keeper to sign for the hull.",
+        labels: ["contradictory-premises"],
+        primaryLabel: "contradictory-premises",
+        isTarget: true,
+        correctExplanationId: "ff8-4-a",
+        explanationOptions: [
+          {
+            id: "ff8-4-a",
+            text: "An unregistered boat with no owner on any roll cannot also require a registered keeper to sign for it; the two premises unsay each other, and the impound stands on neither.",
+          },
+          {
+            id: "ff8-4-b",
+            text: "He connects the cutter to impoundable vessels only through the class of unpapered hulls at the landing, which carries no boat from that class into the schedule.",
+          },
+          {
+            id: "ff8-4-c",
+            text: "He argues that because there is no registered owner, no impound procedure can properly apply — cancelling the obligation by cancelling the antecedent of the schedule.",
+          },
+          {
+            id: "ff8-4-d",
+            text: "He reasons from the missing papers back to liability as their one result, treating the absence as proof of a specific legal obligation.",
+          },
+        ],
+      },
+      {
+        id: "ff8-5",
+        text: "The impound form sat on the harbourmaster's table and asked for a name that, by his own account, did not exist.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff8-6",
+        text: "The cutter's owner arrived three days later with papers from Yarmouth in better order than anyone's reasoning, and the register gained a new entry.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-tithe-map",
+    title: "The Tithe Map",
+    difficulty: "intermediate",
+    includedLabels: ["undistributed-middle", "deductive"],
+    sentences: [
+      {
+        id: "ff9-1",
+        text: "The boundary stone between Ketch's meadow and the church glebe went missing after the autumn ploughing, and the vestry opened its books and its mouths in equal measure.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff9-2",
+        text: "The churchwarden had found an old estate map with charcoal-line borders, and since the rector's known glebe and Ketch's meadow were both charcoal-lined on it, he presented this as proof they had been drawn in the same hand and held under the same tenure.",
+        labels: ["undistributed-middle"],
+        primaryLabel: "undistributed-middle",
+        isTarget: true,
+        correctExplanationId: "ff9-2-b",
+        explanationOptions: [
+          {
+            id: "ff9-2-a",
+            text: "The charcoal lines, applied to both parcels in the same drafting session, force the shared-tenure conclusion; where the same hand maps, the same tenure follows.",
+          },
+          {
+            id: "ff9-2-b",
+            text: "The rector's glebe and Ketch's meadow are joined only through the charcoal-line technique — a drafting habit covering every parcel on the sheet, which carries nothing from one holding's tenure to another.",
+          },
+          {
+            id: "ff9-2-c",
+            text: "He reasons from the charcoal lines back to a shared hand as their cause, taking the drafting feature as proof of the one circumstance that usually produces it.",
+          },
+          {
+            id: "ff9-2-d",
+            text: "He maintains both that the boundary stone is gone and that the map can establish the boundary — premises that cannot together settle a question the stone alone was meant to answer.",
+          },
+        ],
+      },
+      {
+        id: "ff9-3",
+        text: "Every parcel on that map — forty-three by the schoolmistress's count — wore charcoal lines, the draughtsman having preferred them to ink for large-scale work.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff9-4",
+        text: "The schoolmistress asked to see the terrier instead, and fetched it from the shelf herself when nobody moved.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff9-5",
+        text: "The terrier held that any land lying within ten chains of the church tower was glebe unless annotated otherwise; the meadow stood nine chains from the tower and carried no annotation; the meadow was therefore glebe, and the argument closed.",
+        labels: ["deductive"],
+        primaryLabel: "deductive",
+        isTarget: true,
+        correctExplanationId: "ff9-5-a",
+        explanationOptions: [
+          {
+            id: "ff9-5-a",
+            text: "A rule — land within ten chains is glebe unless noted — meets two measured facts, and the conclusion is forced; she needs nothing beyond the terrier and the chain.",
+          },
+          {
+            id: "ff9-5-b",
+            text: "She reasons from the meadow's nearness to the tower back to glebe status as its one cause, treating the distance as proof of what produced the legal designation.",
+          },
+          {
+            id: "ff9-5-c",
+            text: "She holds that the terrier covers all land within range and that no annotation can override it — a reading at odds with the rule's own exception clause.",
+          },
+          {
+            id: "ff9-5-d",
+            text: "She connects this meadow to other glebe parcels through the shared feature of church-adjacency, and lets the category carry the tenure without specifying what the terrier actually says.",
+          },
+        ],
+      },
+      {
+        id: "ff9-6",
+        text: "Ketch walked the chains himself the next morning and returned with nothing useful to say.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff9-7",
+        text: "The stone was cut and set at the measured line before Easter, and the charcoal map returned to its drawer unmarked.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-cresset-inquiry",
+    title: "The Cresset Inquiry",
+    difficulty: "intermediate",
+    includedLabels: ["affirming-consequent", "contradictory-premises"],
+    sentences: [
+      {
+        id: "ff10-1",
+        text: "The chandler's workshop on Wren Lane burned to the sill in February, and the guild sent two assessors to settle whether the loss fell to the insurer or to the owner's account.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff10-2",
+        text: "The guild's manual held one rule the assessors both knew by heart: a fire beginning above the ceiling joists always spread outward before downward and left the lowest shelf-stock untouched.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff10-3",
+        text: "The first assessor found the lowest shelves untouched and entered in his ledger that the fire had begun above the joists — which placed the origin in the chimney stack and the loss with the insurer.",
+        labels: ["affirming-consequent"],
+        primaryLabel: "affirming-consequent",
+        isTarget: true,
+        correctExplanationId: "ff10-3-b",
+        explanationOptions: [
+          {
+            id: "ff10-3-a",
+            text: "The rule and the untouched shelves settle the finding; an above-joist origin is the only premise that makes those shelves survive, and so the conclusion follows.",
+          },
+          {
+            id: "ff10-3-b",
+            text: "Untouched shelves are the 'then' of the guild's rule, and he reads them back to an above-joist start — though other sources can leave those shelves standing just as well.",
+          },
+          {
+            id: "ff10-3-c",
+            text: "He groups this fire with above-joist fires through the shared feature of untouched shelves, and lets the category carry the attribution without confirming the actual origin.",
+          },
+          {
+            id: "ff10-3-d",
+            text: "He argues that since the shelves below were not scorched, no low-origin fire could have occurred — denying the antecedent of a different shelf-damage rule.",
+          },
+        ],
+      },
+      {
+        id: "ff10-4",
+        text: "Candles stored near an open grating, the second assessor observed, would leave the lowest shelves equally untouched, since such a fire burns upward before it spreads.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff10-5",
+        text: "The first assessor, pressed, produced a further argument: the chimney had been cold for three full days before the fire, he was now certain, yet the fire must have started there all the same, since no other origin could account for the pattern he had already recorded.",
+        labels: ["contradictory-premises"],
+        primaryLabel: "contradictory-premises",
+        isTarget: true,
+        correctExplanationId: "ff10-5-a",
+        explanationOptions: [
+          {
+            id: "ff10-5-a",
+            text: "A chimney cold for three days cannot also have started the fire; he leans on both at once, and they cannot both hold — so neither holds up the conclusion.",
+          },
+          {
+            id: "ff10-5-b",
+            text: "He reads the damage pattern backward to the chimney as its one possible cause, taking the spread as proof of where the fire began.",
+          },
+          {
+            id: "ff10-5-c",
+            text: "He connects this fire to chimney-origin fires through the shared pattern of outward spread, letting the category prove the origin without confirming it.",
+          },
+          {
+            id: "ff10-5-d",
+            text: "He argues that since no other origin matches the pattern, the chimney must be it — denying every alternative and leaving one antecedent standing.",
+          },
+        ],
+      },
+      {
+        id: "ff10-6",
+        text: "The guild examiner called it a draw, sent for the sweep's log, and had the answer in six lines.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-wicker-trap",
+    title: "The Wicker Trap",
+    difficulty: "intermediate",
+    includedLabels: ["undistributed-middle", "affirming-consequent"],
+    sentences: [
+      {
+        id: "ff11-1",
+        text: "A wicker eel-trap came up at Holbrook weir after the spring floods with no owner's mark on it, and two fishermen named it theirs before the weir-keeper had set it on his table.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff11-2",
+        text: "Aldous pressed first: his traps were woven with a right-hand twist, this trap was right-hand twisted, and so it had come from his hands and no one else's — the weave, he said, was as good as a brand.",
+        labels: ["undistributed-middle"],
+        primaryLabel: "undistributed-middle",
+        isTarget: true,
+        correctExplanationId: "ff11-2-c",
+        explanationOptions: [
+          {
+            id: "ff11-2-a",
+            text: "He reasons from the right-hand twist back to his own hands as its origin, treating a characteristic of his traps as proof of the maker who produced this one.",
+          },
+          {
+            id: "ff11-2-b",
+            text: "He maintains both that the trap carries no mark and that the weave names the maker — premises that cannot together identify an unbranded piece.",
+          },
+          {
+            id: "ff11-2-c",
+            text: "Aldous's traps and this trap meet only in the right-hand twist they share — a habit common enough across the parish that the middle term connects the two to each other not at all.",
+          },
+          {
+            id: "ff11-2-d",
+            text: "Right-hand twist and Aldous's established practice, taken together, force the attribution; the weave narrows the maker to one.",
+          },
+        ],
+      },
+      {
+        id: "ff11-3",
+        text: "Half the basket-weavers in three parishes had been taught the same right-hand habit by the same travelling tutor, which the weir-keeper mentioned once and softly.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff11-4",
+        text: "Berwick's reasoning ran differently: when a trap was his, it came up from the river-floor with silt compacted in the base, and this trap had silt packed exactly there — proof enough, he said, of whose hands had woven it.",
+        labels: ["affirming-consequent"],
+        primaryLabel: "affirming-consequent",
+        isTarget: true,
+        correctExplanationId: "ff11-4-a",
+        explanationOptions: [
+          {
+            id: "ff11-4-a",
+            text: "Silt-packed bases are the 'then' of Berwick's rule, and he reads them back to his ownership — though any trap resting on a silty riverbed through a spring flood comes up the same way.",
+          },
+          {
+            id: "ff11-4-b",
+            text: "He connects this trap to his own through the shared class of silt-bearing traps, and lets the category prove ownership without distributing it to any particular fisherman.",
+          },
+          {
+            id: "ff11-4-c",
+            text: "He holds that the trap has no mark yet the silt marks it as his — premises that cannot both serve as proof of the same thing.",
+          },
+          {
+            id: "ff11-4-d",
+            text: "He argues that since Aldous's traps do not carry compacted silt, none of them could account for this one — denying Aldous's antecedent and claiming the field.",
+          },
+        ],
+      },
+      {
+        id: "ff11-5",
+        text: "The weir-keeper asked both men when they had last laid traps above the sluice, found the same week and the same reach in both answers, and settled the dispute with a coin.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff11-6",
+        text: "The trap fished well for whoever carried it home, which seemed the best that could be said of reasoning that ends in a coin-flip.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-kelp-road",
+    title: "The Kelp Road",
+    difficulty: "intermediate",
+    includedLabels: ["denying-antecedent", "contradictory-premises"],
+    sentences: [
+      {
+        id: "ff12-1",
+        text: "The cliff track above Stave Cove washed out a little further each autumn, and the parish council met in March to determine whose hands would repair it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff12-2",
+        text: "The roadman read from the maintenance book: the parish was bound to repair any road where carts ran regularly; no cart had used the cliff track since the kelp trade closed three winters before; and so the track lay outside the parish's obligation.",
+        labels: ["denying-antecedent"],
+        primaryLabel: "denying-antecedent",
+        isTarget: true,
+        correctExplanationId: "ff12-2-c",
+        explanationOptions: [
+          {
+            id: "ff12-2-a",
+            text: "The maintenance rule and three winters without carts settle it; once the trade that generated the traffic ends, the obligation ends with it.",
+          },
+          {
+            id: "ff12-2-b",
+            text: "He reasons from the empty track back to the closed trade as its cause, treating the absence of carts as proof of the one event that produced it.",
+          },
+          {
+            id: "ff12-2-c",
+            text: "Cart-traffic is the 'if' of his rule, and he cancels the obligation by cancelling it — but the rule never made carts the only ground for upkeep, and pedestrians in number offer another.",
+          },
+          {
+            id: "ff12-2-d",
+            text: "He holds both that the track is a public road and that it carries no users — premises that cannot stand together in a working parish.",
+          },
+        ],
+      },
+      {
+        id: "ff12-3",
+        text: "The fishing families walked the track twice a day for their gear, and the autumn visitors arrived in a number the roadman had not thought to count.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff12-4",
+        text: "Councillor Breach rose with the manner of a man who had prepared his remarks on the walk over.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ff12-5",
+        text: "He argued, with equal confidence in both halves, that the fishing families had used the track in steady and unbroken daily use for forty years without pause, and that the track had seen no regular use since the trade ended three winters back — and on both of those grounds together he was satisfied the parish owed nothing.",
+        labels: ["contradictory-premises"],
+        primaryLabel: "contradictory-premises",
+        isTarget: true,
+        correctExplanationId: "ff12-5-a",
+        explanationOptions: [
+          {
+            id: "ff12-5-a",
+            text: "Forty years of unbroken daily use and three winters of no regular use cannot both hold; the argument rests on premises that directly unsay each other, and the council can take nothing from either.",
+          },
+          {
+            id: "ff12-5-b",
+            text: "He connects the track to unrepaired roads through the shared category of lapsed commercial routes, letting the class carry a legal conclusion its members cannot support.",
+          },
+          {
+            id: "ff12-5-c",
+            text: "He argues that because the trade ended, no further obligation can be claimed — denying the antecedent of a rule about continuous access.",
+          },
+          {
+            id: "ff12-5-d",
+            text: "He reasons from the track's disrepair back to disuse as its one cause, treating the condition of the road as proof of what produced it.",
+          },
+        ],
+      },
+      {
+        id: "ff12-6",
+        text: "The clerk read both assertions back to the room at the same measured pace, and the council adjourned without further argument.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
 ];

@@ -554,4 +554,434 @@ export const languageFallacyStories: readonly PracticeStory[] = [
       },
     ],
   },
+  {
+    id: "story-signed-charter",
+    title: "The Signed Charter",
+    difficulty: "intermediate",
+    includedLabels: ["equivocation", "ambiguity"],
+    sentences: [
+      {
+        id: "ln8-1",
+        text: "The dyers' charter of the third year of the reign, renewed without amendment twice since, was a close-written document that gave the guild the sole right to set the colour price within the county and had so served forty years without recorded dispute.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln8-2",
+        text: "When a Flemish merchant began listing his rates below the guild's floor, the master dyer rode to the assizes with the charter.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln8-3",
+        text: "The merchant's advocate answered that a sole right is freely held — free being the nature of right as such — and therefore freely priced: the charter itself, he concluded, forbade the guild from imposing any floor on prices, including the one the guild had set.",
+        labels: ["equivocation"],
+        primaryLabel: "equivocation",
+        isTarget: true,
+        correctExplanationId: "ln8-3-a",
+        explanationOptions: [
+          {
+            id: "ln8-3-a",
+            text: "'Free' begins as a description of the grant's character — uncontested, rightfully held — and ends as a description of price — unconstrained from below; the advocate uses the word's first sense to establish the second, and the two senses are not the same office.",
+          },
+          {
+            id: "ln8-3-b",
+            text: "The phrase 'freely priced' can describe the guild's right or the merchant's entitlement, and the advocate borrows whichever reading he needs.",
+          },
+          {
+            id: "ln8-3-c",
+            text: "The advocate reasons that since each individual dyer holds the right freely, the guild as a collective body must price freely too.",
+          },
+        ],
+      },
+      {
+        id: "ln8-4",
+        text: "The charter gave the guild 'the right to settle all disputes touching cloth priced below the guild standard at fair' — a phrase the dyers read as fixing where disputes were to be settled, and the merchants as fixing which disputes qualified, the same few words carrying both readings without strain.",
+        labels: ["ambiguity"],
+        primaryLabel: "ambiguity",
+        isTarget: true,
+        correctExplanationId: "ln8-4-a",
+        explanationOptions: [
+          {
+            id: "ln8-4-a",
+            text: "'At fair' attaches grammatically to either the settling or the pricing: disputes must be settled at fair, or disputes are those arising from cloth priced below standard at fair — the sentence runs both ways and the charter chose neither.",
+          },
+          {
+            id: "ln8-4-b",
+            text: "'Guild standard' shifts between a price floor and a quality grade in the merchant's reading of the charter.",
+          },
+          {
+            id: "ln8-4-c",
+            text: "The guild assumes that because each transaction at fair is regulated, all cloth sold anywhere by guild members is covered by the same right.",
+          },
+        ],
+      },
+      {
+        id: "ln8-5",
+        text: "A recorder read the parchment twice, found it to carry two meanings and therefore none enforceable, and advised the guild to redraft before the next fair.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-parish-ledger",
+    title: "The Parish Ledger",
+    difficulty: "intermediate",
+    includedLabels: ["composition", "division", "part-whole"],
+    sentences: [
+      {
+        id: "ln9-1",
+        text: "The vestry of St. Audrey's commissioned a survey after a wet winter brought three buckets into the nave.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln9-2",
+        text: "The surveyor examined each bay with lantern and rod: every pillar was plumb, every arch held true at its crown, every window sealed at the sill, and no course of stonework had opened since the last recording.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln9-3",
+        text: "On that verdict the churchwarden closed the survey and wound up the fabric fund, reasoning that a church whose every part was whole must itself be whole and require no reserve.",
+        labels: ["composition"],
+        primaryLabel: "composition",
+        isTarget: true,
+        correctExplanationId: "ln9-3-a",
+        explanationOptions: [
+          {
+            id: "ln9-3-a",
+            text: "A fabric's condition depends on how its parts meet — whether foundations drain together, joints seal at their meeting, arches distribute load across the build — and no sum of individually sound elements settles those questions; the warden's conclusion travels a route the survey had not walked.",
+          },
+          {
+            id: "ln9-3-b",
+            text: "The warden distributes the fabric fund's surplus back to each bay and arch as though the fund's health were each component's entitlement.",
+          },
+          {
+            id: "ln9-3-c",
+            text: "'Perfect repair' can mean requiring no work now or requiring no work for a decade, and the warden has taken the longer reading without stating it.",
+          },
+        ],
+      },
+      {
+        id: "ln9-4",
+        text: "The wet winter had not finished with the matter, and by Easter a corbel had shifted and a run of lead had lifted.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln9-5",
+        text: "At a special vestry the curate proposed dividing the repair bill equally among all parishioners, the church being in debt for one hundred and four pounds and every member of a debtor body being, in his reasoning, a debtor to the same amount.",
+        labels: ["division"],
+        primaryLabel: "division",
+        isTarget: true,
+        correctExplanationId: "ln9-5-a",
+        explanationOptions: [
+          {
+            id: "ln9-5-a",
+            text: "A congregation's collective deficit belongs to the body, not replicated in full in each member; the curate has handed the same hundred and four pounds to forty-two people separately, multiplying what was owed rather than apportioning it.",
+          },
+          {
+            id: "ln9-5-b",
+            text: "The curate is summing each parishioner's private means to arrive at the church's total capacity for repair.",
+          },
+          {
+            id: "ln9-5-c",
+            text: "'Debtor to the same amount' shifts from an equal share of a collective debt to the full debt owed personally by each member.",
+          },
+        ],
+      },
+      {
+        id: "ln9-6",
+        text: "The treasurer proposed a share levy instead: one hundred and four pounds divided by forty-two shares came to two pounds nine and eightpence each, the whole's burden carried to each part in strict proportion to the hold each part had in the body.",
+        labels: ["part-whole"],
+        primaryLabel: "part-whole",
+        isTarget: true,
+        correctExplanationId: "ln9-6-a",
+        explanationOptions: [
+          {
+            id: "ln9-6-a",
+            text: "A subscription share is a defined fraction of the whole, so each part's assessment follows from the whole's cost by valid division — the denominator is named, the arithmetic is exact, and the trip from whole to part is the licensed form of the move the curate had made without a license.",
+          },
+          {
+            id: "ln9-6-b",
+            text: "The treasurer assumes that because each parishioner's share is small, the church as a whole can afford the repair without diocesan assistance.",
+          },
+          {
+            id: "ln9-6-c",
+            text: "The treasurer distributes the church's full debt to each parishioner at face value, as the curate had proposed, rather than each member's fractional share.",
+          },
+        ],
+      },
+      {
+        id: "ln9-7",
+        text: "The levy was set and collected, the lead replaced, and the fund reconstituted at a lower figure with a clause requiring survey every five years.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-common-pasture",
+    title: "The Common Pasture",
+    difficulty: "intermediate",
+    includedLabels: ["equivocation", "division"],
+    sentences: [
+      {
+        id: "ln10-1",
+        text: "The manor court of Alderton held its Michaelmas session with one matter on the roll: the common had been overstocked in August and someone was to answer.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln10-2",
+        text: "The manorial steward proposed fining every beast on the common, since the herd as a whole had been adjudged in breach, and a herd in breach must be composed of beasts in breach.",
+        labels: ["division"],
+        primaryLabel: "division",
+        isTarget: true,
+        correctExplanationId: "ln10-2-a",
+        explanationOptions: [
+          {
+            id: "ln10-2-a",
+            text: "Overstock is a property of a count, not of individual beasts — it arises when the total exceeds the stint, and no single animal is in breach merely by being part of a herd whose sum tipped the limit; the steward distributes a collective verdict to each component.",
+          },
+          {
+            id: "ln10-2-b",
+            text: "'Breach' slides from violation of the stinting rule to individual trespass liability in the steward's proposal.",
+          },
+          {
+            id: "ln10-2-c",
+            text: "'Herd in breach' can describe the demesne's animals alone or every beast present that day, and the steward reads it as covering all.",
+          },
+        ],
+      },
+      {
+        id: "ln10-3",
+        text: "Eleanor Alcock, freeholder of three roods, said she had no objection to arithmetic but a firm one to the logic.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln10-4",
+        text: "The steward pressed a further point: the pasture was stinted, he noted — stinted in the register meaning a fixed-number right — and a stinted right was a limited one, and limited rights could be curtailed, and what could be curtailed could be revoked, so the freeholders' title to graze was revocable at the lord's pleasure.",
+        labels: ["equivocation"],
+        primaryLabel: "equivocation",
+        isTarget: true,
+        correctExplanationId: "ln10-4-a",
+        explanationOptions: [
+          {
+            id: "ln10-4-a",
+            text: "'Stinted' names a specific form of common right — number-fixed by agreement — and carries no suggestion that the right may be revoked; the steward walks the word from its technical sense to a general sense of 'limited' and from there to 'revocable,' a journey the word cannot make without changing passengers.",
+          },
+          {
+            id: "ln10-4-b",
+            text: "The steward distributes the lord's authority over the common as a whole to each freeholder's individual share of the pasture.",
+          },
+          {
+            id: "ln10-4-c",
+            text: "'Fixed-number right' can describe a seasonal limitation or a permanent curtailment, and the steward borrows the second reading.",
+          },
+        ],
+      },
+      {
+        id: "ln10-5",
+        text: "Alcock cited the court roll back three reigns and the steward's case was dismissed without costs.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-tanners-bond",
+    title: "The Tanners' Bond",
+    difficulty: "intermediate",
+    includedLabels: ["ambiguity", "composition"],
+    sentences: [
+      {
+        id: "ln11-1",
+        text: "The tanners' bond, written in the guild hall in the year of the great frost and witnessed by the city recorder, required every master to hold the price of dressed leather at no less than sixpence the pound throughout fair time and to register his prices with the warden before opening his stall.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln11-2",
+        text: "For two generations this had settled quietly: no undercutting at the summer and winter fairs, the floor held, the trade content.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln11-3",
+        text: "When a cloth merchant demanded the floor be honored at an auction held the Wednesday before the summer fair opened, the warden argued that the auction fell within fair time, while the merchant's factor held that fair time did not begin until the stalls were formally opened and the oaths sworn.",
+        labels: ["ambiguity"],
+        primaryLabel: "ambiguity",
+        isTarget: true,
+        correctExplanationId: "ln11-3-a",
+        explanationOptions: [
+          {
+            id: "ln11-3-a",
+            text: "'During fair time' can span the fair's full commercial season — preparation, opening, and trade together — or it can name exactly the days between the formal oaths; the bond bears both readings without straining a word, and no clause in it settles the question.",
+          },
+          {
+            id: "ln11-3-b",
+            text: "'Fair time' shifts between a customary commercial season and a formal legal interval measured from oath to oath.",
+          },
+          {
+            id: "ln11-3-c",
+            text: "The warden distributes the fair's regulatory regime to each individual transaction in the week before the formal opening.",
+          },
+        ],
+      },
+      {
+        id: "ln11-4",
+        text: "A guild recorder recalled that the bond's drafters had resolved their disagreement about the Wednesday in question but could not produce the minutes that would have shown how.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln11-5",
+        text: "The factor added a second argument: every master in the guild was individually solvent, every workshop in good standing, every ledger current — and therefore the trade as a whole was sound enough to honor its obligations without enforcement, making the bond's penalty clauses unnecessary.",
+        labels: ["composition"],
+        primaryLabel: "composition",
+        isTarget: true,
+        correctExplanationId: "ln11-5-a",
+        explanationOptions: [
+          {
+            id: "ln11-5-a",
+            text: "Collective reliability — the capacity to hold a floor when individual interests run against it — is more than the sum of solvent members; penalty clauses exist precisely because sound parts do not guarantee a sound whole under pressure, and the factor erases the gap the bond was written to bridge.",
+          },
+          {
+            id: "ln11-5-b",
+            text: "The factor distributes the guild's collective good standing to each individual transaction, treating institutional reliability as a property of single sales.",
+          },
+          {
+            id: "ln11-5-c",
+            text: "'Sound enough to honor its obligations' can describe financial capacity or willingness to comply, and the factor moves between them.",
+          },
+        ],
+      },
+      {
+        id: "ln11-6",
+        text: "The bond was rewritten that autumn to name both fairs and the three preceding days, and the penalty clauses were doubled.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-bridge-survey",
+    title: "The Bridge Survey",
+    difficulty: "intermediate",
+    includedLabels: ["equivocation", "composition", "definitional"],
+    sentences: [
+      {
+        id: "ln12-1",
+        text: "The county surveyor arrived at Tollerton bridge in November with his measuring rod and his clerk.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln12-2",
+        text: "His first notation entered the bridge as 'ancient' — the word used in the county register for any structure predating the previous survey by more than a decade.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln12-3",
+        text: "The bridge warden objected that if the bridge was ancient it was old, and old structures were held immune from the new repair schedule under a standing order of 1704; the surveyor replied that the register defined 'ancient' as a filing category, not an age claim, and that filing age conferred no immunity the standing order had granted.",
+        labels: ["definitional"],
+        primaryLabel: "definitional",
+        isTarget: true,
+        correctExplanationId: "ln12-3-a",
+        explanationOptions: [
+          {
+            id: "ln12-3-a",
+            text: "The surveyor pins 'ancient' to its defined technical sense — a classification in the register's scheme — and shows the warden's immunity claim requires a popular sense of age the definition excludes; the question is closed by specifying which meaning of the word governs in this document.",
+          },
+          {
+            id: "ln12-3-b",
+            text: "'Ancient' slides between a filing category and a temporal quality and back in the argument, shifting with whoever is speaking rather than being fixed to one meaning.",
+          },
+          {
+            id: "ln12-3-c",
+            text: "'Predating the previous survey' can describe predating its date or predating its findings, and the two parties have each read the phrase to suit themselves.",
+          },
+        ],
+      },
+      {
+        id: "ln12-4",
+        text: "The warden accepted the notation but declared the bridge sound: the spans were sound, he said, and a sound structure is by definition fit for public use, and a structure fit for public use requires no examination — sound was sound, whatever a surveyor's rod might add.",
+        labels: ["equivocation"],
+        primaryLabel: "equivocation",
+        isTarget: true,
+        correctExplanationId: "ln12-4-a",
+        explanationOptions: [
+          {
+            id: "ln12-4-a",
+            text: "'Sound' begins as an engineering assessment — structurally intact — and ends as a regulatory conclusion — beyond the need for inspection; the warden borrows the authority of the engineer's judgment to establish an administrative immunity, and the two senses are not the same word doing the same job.",
+          },
+          {
+            id: "ln12-4-b",
+            text: "The warden reasons from each span being sound in isolation to the bridge's load-bearing behavior as an assembled whole.",
+          },
+          {
+            id: "ln12-4-c",
+            text: "'Fit for public use' can describe a condition of safety or a legal certification, and the warden passes between the two without naming the move.",
+          },
+        ],
+      },
+      {
+        id: "ln12-5",
+        text: "The clerk wrote 'sound' twice in the margin of his notebook, with a small arrow between the two entries.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ln12-6",
+        text: "Against the surveyor's intention to probe the pier footings, the warden objected that every stone had been laid by guild masons, every arch turned by a certified craftsman, every joint pointed the previous decade — a bridge built thus needing, in his reasoning, no further account of its foundations.",
+        labels: ["composition"],
+        primaryLabel: "composition",
+        isTarget: true,
+        correctExplanationId: "ln12-6-a",
+        explanationOptions: [
+          {
+            id: "ln12-6-a",
+            text: "Individual components — stones, arches, joints — do not decide whether they bear load well in combination, whether footings have settled evenly, whether the mill-race has worked on the base of the pier; no enumeration of certified parts closes the question of their assembly, which is what the survey existed to discover.",
+          },
+          {
+            id: "ln12-6-b",
+            text: "The warden distributes the bridge's official 'ancient' classification to each stone and joint, treating registry approval of the whole structure as approval of each element.",
+          },
+          {
+            id: "ln12-6-c",
+            text: "'Guild mason' shifts from a craftsman who belongs to the guild to one whose work is legally warranted by the guild in the warden's argument.",
+          },
+        ],
+      },
+      {
+        id: "ln12-7",
+        text: "The surveyor examined the pier footings regardless and found one undercut by the mill-race; the warden's objection was recorded in the file and marked withdrawn.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
 ];

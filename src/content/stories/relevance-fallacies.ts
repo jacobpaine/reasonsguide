@@ -622,4 +622,426 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
       },
     ],
   },
+  {
+    id: "story-price-card-ordinance",
+    title: "The Price-Card Ordinance",
+    difficulty: "intermediate",
+    includedLabels: ["straw-man", "red-herring"],
+    sentences: [
+      {
+        id: "rv8-1",
+        text: "The market master put a single clause to the hall: that every licensed stall selling goods by weight must display a written price card at the front of its board, so a buyer could read the rate before the scale was touched.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv8-2",
+        text: "Chandler Brigg said he was not the sort of man to sit quiet while they turned his wife's Tuesday stall into a counting-house, with forms to fill, a ledger to keep, and a clerk perhaps to be hired and paid, and that the town had done well enough without all this for two hundred years.",
+        labels: ["straw-man"],
+        primaryLabel: "straw-man",
+        isTarget: true,
+        correctExplanationId: "rv8-2-a",
+        explanationOptions: [
+          {
+            id: "rv8-2-a",
+            text: "Brigg rebuilds the ordinance — a single posted card — into a counting-house demanding forms, a ledger, and paid staff, then defeats that invented scale of burden; the actual clause, three lines long, is left completely untouched.",
+          },
+          {
+            id: "rv8-2-b",
+            text: "Brigg shifts the hall from the card rule to the town's two-hundred-year market history, a different subject under which the ordinance is never brought to a vote.",
+          },
+          {
+            id: "rv8-2-c",
+            text: "Brigg casts the clause's drafter as a bureaucrat hostile to working traders, attacking whoever designed the rule rather than engaging the rule itself.",
+          },
+        ],
+      },
+      {
+        id: "rv8-3",
+        text: "The market master noted that the proposed card was three lines long and required no ledger of any kind.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv8-4",
+        text: "Before he could say more, Mrs. Foss asked whether the hall might also attend to the municipal scale at the south gate, which had been running three grains light since Candlemas, a matter she considered more pressing than any card, and the hall turned as one toward the scale.",
+        labels: ["red-herring"],
+        primaryLabel: "red-herring",
+        isTarget: true,
+        correctExplanationId: "rv8-4-c",
+        explanationOptions: [
+          {
+            id: "rv8-4-a",
+            text: "Foss recasts the price-card clause as a claim that the market's weights and measures are already fair, then produces the short-weight scale as evidence against that claim — arguing against a position no one had taken.",
+          },
+          {
+            id: "rv8-4-b",
+            text: "Foss summons the grievance of buyers short-changed since Candlemas as a feeling that stands in for any reasoning about whether the card clause would help.",
+          },
+          {
+            id: "rv8-4-c",
+            text: "Nothing in the ordinance is distorted and no one is attacked; the scale at the south gate is simply a livelier grievance, drawn across the trail, and the hall follows it away from the price-card vote.",
+          },
+        ],
+      },
+      {
+        id: "rv8-5",
+        text: "The price-card clause was not resumed that morning, and the south-gate scale was not weighed that morning either.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv8-6",
+        text: "A buyer on Bridge Row paid the wrong rate for a quarter of beeswax the following Tuesday, and had nothing posted to check against.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-infirmary-rate",
+    title: "The Infirmary Rate",
+    difficulty: "intermediate",
+    includedLabels: ["ad-hominem", "appeal-to-emotion"],
+    sentences: [
+      {
+        id: "rv9-1",
+        text: "The overseer of the poor had proposed raising the parish rate by one halfpenny in the pound for a single year, the sum earmarked for a second room at the infirmary where women could lie apart from men.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv9-2",
+        text: "Councillor Manse replied that the overseer had come to the post through his cousin's influence, that his father's drapery had ended in the county court, and that a man who had never managed his own affairs without a relative's hand was a singular choice to direct the parish's.",
+        labels: ["ad-hominem"],
+        primaryLabel: "ad-hominem",
+        isTarget: true,
+        correctExplanationId: "rv9-2-b",
+        explanationOptions: [
+          {
+            id: "rv9-2-a",
+            text: "Manse turns the overseer's own past difficulty — the failed drapery, the cousin's favour — back at him as if his family's history committed the same fault as the one Manse suspects in the rate proposal.",
+          },
+          {
+            id: "rv9-2-b",
+            text: "The halfpenny proposal is never examined; the overseer's family connections and his father's debts are set in their place — the man's circumstances offered as if they answered his arithmetic.",
+          },
+          {
+            id: "rv9-2-c",
+            text: "Manse steers the council from the rate question to the overseer's appointment, a separate matter, so the infirmary room is never costed or considered.",
+          },
+        ],
+      },
+      {
+        id: "rv9-3",
+        text: "The halfpenny in question had not been disputed on any arithmetical ground.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv9-4",
+        text: "Mrs. Crowe spoke of the women she had visited in the fever ward — three to a pallet in December, the candles gone before midnight, the smell such that she had wept on the way home — and said that anyone who could sit in this room and query a halfpenny had no Christian feeling left in him.",
+        labels: ["appeal-to-emotion"],
+        primaryLabel: "appeal-to-emotion",
+        isTarget: true,
+        correctExplanationId: "rv9-4-c",
+        explanationOptions: [
+          {
+            id: "rv9-4-a",
+            text: "Crowe recasts the council's hesitation as indifference to suffering — and argues against that cruelty rather than the actual question of whether a halfpenny sum would fund a separate room.",
+          },
+          {
+            id: "rv9-4-b",
+            text: "Crowe draws the meeting away from the rate figures and into the fever ward's conditions, a change of subject under which the halfpenny is never weighed.",
+          },
+          {
+            id: "rv9-4-c",
+            text: "The anguish of three women to a pallet is placed where a reckoning of cost belongs — the feeling is real, but it stands in for the evidence: whether a halfpenny rise would in fact fund and staff a second room.",
+          },
+        ],
+      },
+      {
+        id: "rv9-5",
+        text: "What a halfpenny in the pound would actually buy, and whether it was enough, remained unexamined when the hour ended.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv9-6",
+        text: "The motion was deferred for better figures, which the overseer produced, alone, three weeks later.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-leat-hearing",
+    title: "The Leat Hearing",
+    difficulty: "intermediate",
+    includedLabels: ["tu-quoque", "straw-man"],
+    sentences: [
+      {
+        id: "rv10-1",
+        text: "The water inspector's report was brief: Farrow's Mill had drawn from the leat on nine nights in July beyond its licensed hours, and the inspector asked that the lost flow be reckoned and a price set.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv10-2",
+        text: "Aldred Farrow, the mill's owner, did not dispute the nine nights.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv10-3",
+        text: "He observed instead that this same inspector had run the north leat dry in a drought summer twelve years past, without leave from anyone, and asked whether a man with that on his record was in a position to price anyone else's water.",
+        labels: ["tu-quoque"],
+        primaryLabel: "tu-quoque",
+        isTarget: true,
+        correctExplanationId: "rv10-3-a",
+        explanationOptions: [
+          {
+            id: "rv10-3-a",
+            text: "The nine nights are never answered; the inspector's own dry-summer diversion — the same kind of act — is held up as if a critic's past fault could refute his present finding, the reckoning still owed.",
+          },
+          {
+            id: "rv10-3-b",
+            text: "Farrow attacks the inspector's general character and fitness for office rather than returning one specific act of the same kind to him.",
+          },
+          {
+            id: "rv10-3-c",
+            text: "Farrow steers the hearing from this July's nine nights to a drought twelve years past, a separate event, under which the present excess is never examined.",
+          },
+        ],
+      },
+      {
+        id: "rv10-4",
+        text: "The inspector's report lay before the board with its nine nights intact, undisputed still.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv10-5",
+        text: "Young Farrow, Aldred's son, rose to say he would not sit still while they condemned his grandfather's mill and stripped the family of its licence over a trifle, and that the inspectorate could come for the wheel itself when they were ready to answer for what that would do to the village.",
+        labels: ["straw-man"],
+        primaryLabel: "straw-man",
+        isTarget: true,
+        correctExplanationId: "rv10-5-b",
+        explanationOptions: [
+          {
+            id: "rv10-5-a",
+            text: "Young Farrow summons the grandfather's mill and the village's dependence on it — inheritance and local feeling doing the arguing where an account of the nine nights was owed.",
+          },
+          {
+            id: "rv10-5-b",
+            text: "The report asked for a price for nine nights' excess; young Farrow answers a confiscation — licence stripped, the wheel itself taken — and defends against that extreme rather than the modest reckoning the inspector filed.",
+          },
+          {
+            id: "rv10-5-c",
+            text: "Young Farrow turns the inspector's finding back on the inspectorate, charging them with overreach as if their excess cancelled the question of his father's.",
+          },
+        ],
+      },
+      {
+        id: "rv10-6",
+        text: "The board adjourned without setting a price, and the nine nights remained on the record, unclosed.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-reading-room-renewal",
+    title: "The Reading Room Renewal",
+    difficulty: "intermediate",
+    includedLabels: ["red-herring", "appeal-to-emotion"],
+    sentences: [
+      {
+        id: "rv11-1",
+        text: "The reading room committee had a single item: whether to renew the London Illustrated at its new subscription of fourteen shillings — four more than the year before — or to let the subscription lapse and find a cheaper paper for the shelf.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv11-2",
+        text: "Before the chair could invite discussion, Mr. Tole asked whether this might not be the moment to address the fiction catalogue, which had gone un-weeded since the previous secretary's time and currently listed three entries for the same novel, and the room gave the catalogue its full attention for the better part of an hour.",
+        labels: ["red-herring"],
+        primaryLabel: "red-herring",
+        isTarget: true,
+        correctExplanationId: "rv11-2-c",
+        explanationOptions: [
+          {
+            id: "rv11-2-a",
+            text: "Tole recasts the renewal question as a claim that the reading room's administration is in good order, then uses the catalogue's three duplicate entries to disprove that claim — arguing against a position no one had taken.",
+          },
+          {
+            id: "rv11-2-b",
+            text: "Tole offers the committee's neglect of the catalogue as an indignity — accumulated carelessness doing the work of engaging the fourteen-shilling question — feeling in place of a price comparison.",
+          },
+          {
+            id: "rv11-2-c",
+            text: "Nothing in the renewal question is distorted and no one is attacked; the catalogue's three copies of the same novel is simply a more engrossing problem, and the committee follows it away from the vote on fourteen shillings.",
+          },
+        ],
+      },
+      {
+        id: "rv11-3",
+        text: "The chair recovered her thread and put the fourteen shillings back before the table.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv11-4",
+        text: "Mr. Hoult said that the London Illustrated had arrived every week when he was a boy sweeping the room's floor for pennies, that it had taught him to read a map and follow a parliamentary debate, and that a committee willing to lose it for four shillings was not the kind of committee his parents had trusted with their dues.",
+        labels: ["appeal-to-emotion"],
+        primaryLabel: "appeal-to-emotion",
+        isTarget: true,
+        correctExplanationId: "rv11-4-b",
+        explanationOptions: [
+          {
+            id: "rv11-4-a",
+            text: "Hoult leads the committee away from the fourteen-shilling question and into his childhood with the room, a change of subject that leaves the price comparison where it began.",
+          },
+          {
+            id: "rv11-4-b",
+            text: "Hoult's memories of the sweeping boy and his parents' trust are placed where an argument about the paper's value at fourteen shillings belongs — feeling doing the work that a comparison of price to benefit was owed.",
+          },
+          {
+            id: "rv11-4-c",
+            text: "Hoult calls the committee unworthy of the trust placed in them, attacking their character rather than engaging the question of whether fourteen shillings is a price worth paying.",
+          },
+        ],
+      },
+      {
+        id: "rv11-5",
+        text: "The four extra shillings, and whether any paper in England offered comparable reading at a lower price, were not discussed.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv11-6",
+        text: "The Illustrated was renewed, the catalogue was not weeded, and the three copies of the same novel stood through the following year on the same shelf.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-mill-lane-bridge",
+    title: "The Mill Lane Bridge",
+    difficulty: "intermediate",
+    includedLabels: ["ad-hominem", "tu-quoque", "dialectical"],
+    sentences: [
+      {
+        id: "rv12-1",
+        text: "The borough surveyor's report put the cost of repiling the Mill Lane footbridge at eleven pounds twelve, and advised the work be done before the autumn floods.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv12-2",
+        text: "Councillor Petch reminded the room that this same surveyor had declared the south vestry wall sound eighteen months before it shed a course of stone into the churchyard, and suggested the eleven pounds might deserve a firmer foundation than his word.",
+        labels: ["ad-hominem"],
+        primaryLabel: "ad-hominem",
+        isTarget: true,
+        correctExplanationId: "rv12-2-b",
+        explanationOptions: [
+          {
+            id: "rv12-2-a",
+            text: "Petch charges the surveyor with the very carelessness he suspects in the piling report, returning the vestry wall failure to him as if a past fault cancelled the present estimate.",
+          },
+          {
+            id: "rv12-2-b",
+            text: "The piling estimate is never examined on its own terms; the surveyor's record on the vestry wall is set in its place — the man's past error offered as if it answered whether eleven pounds twelve is the right price for the footbridge.",
+          },
+          {
+            id: "rv12-2-c",
+            text: "Petch moves the meeting from the footbridge to the vestry wall, a different structure on a different question, so the piling figures are never opened.",
+          },
+        ],
+      },
+      {
+        id: "rv12-3",
+        text: "Alderman Rowe observed that Petch had been more than willing to accept that same surveyor's certificate on his own barn extension last spring, had written to thank him for it, and asked when exactly the incompetence had been discovered.",
+        labels: ["tu-quoque"],
+        primaryLabel: "tu-quoque",
+        isTarget: true,
+        correctExplanationId: "rv12-3-c",
+        explanationOptions: [
+          {
+            id: "rv12-3-a",
+            text: "Rowe attacks Petch's general reliability as a councillor — a man who shifts his opinions for convenience — rather than specifically turning Petch's use of the vestry wall back on him.",
+          },
+          {
+            id: "rv12-3-b",
+            text: "Rowe steers the meeting from the footbridge toward Petch's barn, a separate building, so the piling estimate remains unopened throughout.",
+          },
+          {
+            id: "rv12-3-c",
+            text: "Petch's past trust in the surveyor — when that trust served his own barn — is turned back on him, as though his earlier reliance refuted his present doubt, the footbridge's piles still unexamined.",
+          },
+        ],
+      },
+      {
+        id: "rv12-4",
+        text: "Neither man had yet said anything about the eleven pounds twelve, or about the piles.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv12-5",
+        text: "The chair stated the surveyor's concern plainly — the piles were six inches short of specification after six winters, and the first heavy flood would find that margin — acknowledged that the vestry wall question was a fair one for another meeting, and proposed the repair proceed on the condition that the county surveyor review the work independently before any sum was released.",
+        labels: ["dialectical"],
+        primaryLabel: "dialectical",
+        isTarget: true,
+        correctExplanationId: "rv12-5-a",
+        explanationOptions: [
+          {
+            id: "rv12-5-a",
+            text: "The surveyor's finding is restated at full strength; the vestry wall concern is acknowledged as legitimate rather than dismissed; the two matters are separated and both answered — the objection taken into the plan rather than turned aside.",
+          },
+          {
+            id: "rv12-5-b",
+            text: "The chair rewrites Petch's vestry wall concern as a minor quibble about one past job and grants it cheaply, sidestepping the real challenge to the surveyor's reliability rather than meeting it.",
+          },
+          {
+            id: "rv12-5-c",
+            text: "The chair pivots from the bridge estimate to the county surveyor review, a new subject, so the eleven-pounds figure passes through without the room ever examining it.",
+          },
+        ],
+      },
+      {
+        id: "rv12-6",
+        text: "The motion carried, and the footbridge stood through the winter without event.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rv12-7",
+        text: "The vestry wall question went onto the agenda for March, where it sat through the spring undiscussed.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
 ];

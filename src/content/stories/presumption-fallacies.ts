@@ -503,6 +503,466 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
       },
     ],
   },
+  // ── Stories 8–12 ─────────────────────────────────────────────────────────
+  {
+    id: "story-tide-wall",
+    title: "The Tide Wall",
+    difficulty: "intermediate",
+    includedLabels: ["false-dilemma", "moving-goalposts"],
+    sentences: [
+      {
+        id: "ps8-1",
+        text: "The tide-wall commission sat in the harbor house on a grey Wednesday, the crack in the sea wall wide enough to see from the south window.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps8-2",
+        text: "Commissioner Pryce opened with what he called practical clarity: the wall must either come down to the sill and be rebuilt entirely, or stand as it is — the sea, he said, left no room between those two positions.",
+        labels: ["false-dilemma"],
+        primaryLabel: "false-dilemma",
+        isTarget: true,
+        correctExplanationId: "ps8-2-a",
+        explanationOptions: [
+          {
+            id: "ps8-2-a",
+            text: "Full demolition or doing nothing are offered as the only choices, while the harbor engineer's buttress repair — already drafted and costed — sits unmentioned on the same table.",
+          },
+          {
+            id: "ps8-2-b",
+            text: "Pryce treats the wall's condition as self-evident without letting the survey speak, arguing from the conclusion he has already reached.",
+          },
+          {
+            id: "ps8-2-c",
+            text: "Pryce raises the evidentiary standard for the repair plan each time a new piece of evidence is brought forward.",
+          },
+          {
+            id: "ps8-2-d",
+            text: "Pryce exempts the rebuild proposal from the cost scrutiny he applies to the repair plan.",
+          },
+        ],
+      },
+      {
+        id: "ps8-3",
+        text: "The harbor engineer spread her survey drawings across the table and traced the crack, explaining that a buttress line at the toe of the wall would seal it at a sixth of the rebuild cost.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps8-4",
+        text: "Pryce required core samples before accepting that finding; when the cores came back sound, he wanted an admiralty endorsement; when the endorsement arrived by Friday and agreed with the survey, he concluded that only a decade of tidal readings could confirm whether the lime had been weakened by salt.",
+        labels: ["moving-goalposts"],
+        primaryLabel: "moving-goalposts",
+        isTarget: true,
+        correctExplanationId: "ps8-4-c",
+        explanationOptions: [
+          {
+            id: "ps8-4-a",
+            text: "Pryce offers the commission a pair of options — demolition or inaction — when the survey already names a third.",
+          },
+          {
+            id: "ps8-4-b",
+            text: "Pryce assumes the wall is unsound, and then uses that assumption to question any evidence that the wall is sound.",
+          },
+          {
+            id: "ps8-4-c",
+            text: "Cores, then admiralty endorsement, then ten years of tidal readings — each standard is satisfied and immediately traded for a steeper one, so no survey can ever be enough.",
+          },
+          {
+            id: "ps8-4-d",
+            text: "Pryce waives the tidal-reading requirement for the rebuild proposal while applying it strictly to the repair.",
+          },
+        ],
+      },
+      {
+        id: "ps8-5",
+        text: "The tidal ledgers, fifty-three years of them in bound volumes, were on the shelf behind the commissioner's chair.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps8-6",
+        text: "The commission voted three to one for the buttress repair, and the ledgers were returned, unread, to the shelf.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-missing-folio",
+    title: "The Missing Folio",
+    difficulty: "intermediate",
+    includedLabels: ["begging-the-question", "loaded-question"],
+    sentences: [
+      {
+        id: "ps9-1",
+        text: "Folio 39 of the county register had been missing for three weeks when the head archivist raised it at the board of trustees, without, it emerged, telling his assistant in advance.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps9-2",
+        text: "His opening question to her was brief: 'Can you tell the board at what point you decided to conceal the loss rather than report it?'",
+        labels: ["loaded-question"],
+        primaryLabel: "loaded-question",
+        isTarget: true,
+        correctExplanationId: "ps9-2-b",
+        explanationOptions: [
+          {
+            id: "ps9-2-a",
+            text: "The archivist assumes his conclusion — that she concealed the loss — in order to establish the conclusion that she concealed the loss.",
+          },
+          {
+            id: "ps9-2-b",
+            text: "'Decided to conceal' and 'rather than report' both presume guilt before any evidence is heard; saying 'I did not conceal it' still accepts the frame of a deliberate decision.",
+          },
+          {
+            id: "ps9-2-c",
+            text: "The archivist demands a higher standard of proof from his assistant than from other staff who handled the register that month.",
+          },
+          {
+            id: "ps9-2-d",
+            text: "The archivist limits the board to two readings — concealment or negligence — while a third possibility, that the folio was misfiled by someone else, goes unmentioned.",
+          },
+        ],
+      },
+      {
+        id: "ps9-3",
+        text: "The assistant asked the board to check the incident ledger, where she had logged the gap the same afternoon she noticed it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps9-4",
+        text: "The archivist set the ledger aside without reading it: a record kept by someone dishonest must be read with suspicion, and dishonesty, he explained, was self-evident in a person who hid what went missing.",
+        labels: ["begging-the-question"],
+        primaryLabel: "begging-the-question",
+        isTarget: true,
+        correctExplanationId: "ps9-4-a",
+        explanationOptions: [
+          {
+            id: "ps9-4-a",
+            text: "The ledger is disqualified because she is dishonest, and she is dishonest because the ledger would otherwise clear her — the circle needs no evidence and admits none.",
+          },
+          {
+            id: "ps9-4-b",
+            text: "The archivist's question to her presupposes concealment, and his dismissal of the ledger reinforces that presupposition without new argument.",
+          },
+          {
+            id: "ps9-4-c",
+            text: "The archivist raises the required proof one step each time the previous step is satisfied: report, then ledger, then a witness to the shelving.",
+          },
+          {
+            id: "ps9-4-d",
+            text: "The archivist waives the ledger requirement for his own incident reports while insisting on it for hers.",
+          },
+        ],
+      },
+      {
+        id: "ps9-5",
+        text: "The board opened the ledger and found the entry in the assistant's hand, dated three weeks prior, with the archivist's own counter-signature immediately below it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-net-toll",
+    title: "The Net Toll",
+    difficulty: "intermediate",
+    includedLabels: ["special-pleading", "false-dilemma"],
+    sentences: [
+      {
+        id: "ps10-1",
+        text: "The harbor toll had stood at sixpence a catch since the charter, and the thirty working boats that came through the channel bar paid it without argument.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps10-2",
+        text: "The harbor master's brother kept a sloop, and that sloop had crossed the bar weekly for four years without paying, described each time in the port log as transit on harbor business — though the log recorded no business done.",
+        labels: ["special-pleading"],
+        primaryLabel: "special-pleading",
+        isTarget: true,
+        correctExplanationId: "ps10-2-c",
+        explanationOptions: [
+          {
+            id: "ps10-2-a",
+            text: "The harbor master limits the fishers' association to two options — accept the exemption or challenge it — while the charter provides a third.",
+          },
+          {
+            id: "ps10-2-b",
+            text: "The harbor master's argument that the sloop serves harbor business assumes what it needs to prove — that a relevant exception exists.",
+          },
+          {
+            id: "ps10-2-c",
+            text: "The toll pressed on every other vessel is suspended for a family member's, with 'harbor business' offered as a justification the log contradicts and the charter does not mention.",
+          },
+          {
+            id: "ps10-2-d",
+            text: "The harbor master shifts his justification for the exemption each time a new crossing is queried.",
+          },
+        ],
+      },
+      {
+        id: "ps10-3",
+        text: "The fishers' association brought the matter before the harbor board at the autumn sitting.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps10-4",
+        text: "The harbor master framed the board's choices plainly: either confirm, on the record, that the exemption was valid by long custom, or expose the harbor to litigation by overturning a practice that had run for years — those, he told the board, were its only options.",
+        labels: ["false-dilemma"],
+        primaryLabel: "false-dilemma",
+        isTarget: true,
+        correctExplanationId: "ps10-4-b",
+        explanationOptions: [
+          {
+            id: "ps10-4-a",
+            text: "The harbor master assumes the exemption is already customary, which was the point the board was assembled to determine.",
+          },
+          {
+            id: "ps10-4-b",
+            text: "Legal confirmation or costly litigation are presented as exhaustive, while amendment, enforcement, and a simple board resolution go unmentioned — avenues the board's solicitor named in under a minute.",
+          },
+          {
+            id: "ps10-4-c",
+            text: "The harbor master applies the risk of litigation to the association's position while waiving any similar risk from his own family's practice.",
+          },
+          {
+            id: "ps10-4-d",
+            text: "The harbor master shifts his defence from custom to necessity each time the board presses the previous justification.",
+          },
+        ],
+      },
+      {
+        id: "ps10-5",
+        text: "The board's solicitor observed that a vote to amend the collection register was both available and free, and moved to schedule it for the following week.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps10-6",
+        text: "The sloop began paying sixpence a catch at the next crossing, and the port log found other ways to be interesting.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-chart-proof",
+    title: "The Chart Proof",
+    difficulty: "intermediate",
+    includedLabels: ["moving-goalposts", "begging-the-question"],
+    sentences: [
+      {
+        id: "ps11-1",
+        text: "The surveyor's apprentice had redrawn the northern commons chart three times at the certifier's direction, each version correcting the fault he had named in the last.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps11-2",
+        text: "The first draft lacked a sealed instrument, so she obtained one; the second lacked a licensed co-signature, so she secured one; the third was returned for an insufficient scale, and when she submitted the fourth — with the seal, the signature, and the larger scale — he found it wanting in a common-land notation he had not previously mentioned.",
+        labels: ["moving-goalposts"],
+        primaryLabel: "moving-goalposts",
+        isTarget: true,
+        correctExplanationId: "ps11-2-d",
+        explanationOptions: [
+          {
+            id: "ps11-2-a",
+            text: "The certifier confines the apprentice to passing or failing, when the guild examiner represents a third path she had not been told to take.",
+          },
+          {
+            id: "ps11-2-b",
+            text: "The certifier assumes that uncertified charts are inadequate, and uses that assumption to justify the certification process that produces the assumption.",
+          },
+          {
+            id: "ps11-2-c",
+            text: "The certifier holds the apprentice's charts to a standard he exempts from licensed surveyors who submit through the same office.",
+          },
+          {
+            id: "ps11-2-d",
+            text: "Seal, co-signature, scale, and finally an undisclosed notation — each requirement is satisfied and at once replaced, so the fourth draft is no closer to acceptance than the first.",
+          },
+        ],
+      },
+      {
+        id: "ps11-3",
+        text: "She added the notation, submitted the chart a fifth time, and waited.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps11-4",
+        text: "The certifier explained his thoroughness to a colleague: charts that failed certification were by definition inadequate, and inadequate charts were exactly why a certification process existed — which showed, he said, that the process was doing its job.",
+        labels: ["begging-the-question"],
+        primaryLabel: "begging-the-question",
+        isTarget: true,
+        correctExplanationId: "ps11-4-b",
+        explanationOptions: [
+          {
+            id: "ps11-4-a",
+            text: "The certifier raises the standard for what counts as adequate each time the apprentice satisfies the previous requirement.",
+          },
+          {
+            id: "ps11-4-b",
+            text: "'Failed charts are inadequate' and 'inadequate charts need certification' circle each other without touching the question of whether the process itself is well-designed — any chart it rejects is, by definition, proof that the process is necessary.",
+          },
+          {
+            id: "ps11-4-c",
+            text: "The certifier limits the apprentice to two conclusions — the chart is adequate or it is not — rather than allowing that adequacy admits of degrees.",
+          },
+          {
+            id: "ps11-4-d",
+            text: "The certifier's defense embeds the assumption that the certification standard is beyond challenge, which was precisely what the guild examiner had been asked to review.",
+          },
+        ],
+      },
+      {
+        id: "ps11-5",
+        text: "The guild examiner arrived for an unrelated inspection, looked at the fifth draft for ninety seconds, and stamped it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps11-6",
+        text: "The certifier found, in the weeks that followed, other apprentices and other charts requiring his particular attention.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-vestry-bond",
+    title: "The Vestry Bond",
+    difficulty: "intermediate",
+    includedLabels: ["loaded-question", "special-pleading", "dialectical"],
+    sentences: [
+      {
+        id: "ps12-1",
+        text: "The vestry committee met after evensong to decide whether to sell the lower meadow — left in a Victorian bequest — and use the proceeds to settle the bell-tower debt.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps12-2",
+        text: "The rector opened by asking whether the committee was prepared to explain to the parish why it had let the tower fall into disrepair while sitting on a valuable asset for thirty years.",
+        labels: ["loaded-question"],
+        primaryLabel: "loaded-question",
+        isTarget: true,
+        correctExplanationId: "ps12-2-a",
+        explanationOptions: [
+          {
+            id: "ps12-2-a",
+            text: "'Let the tower fall' and 'sitting on a valuable asset' both plant blame before the meeting has begun — any direct answer, including a denial, accepts that a decision to neglect was made.",
+          },
+          {
+            id: "ps12-2-b",
+            text: "The rector assumes the committee was negligent in order to argue that the committee was negligent; the question is its own evidence.",
+          },
+          {
+            id: "ps12-2-c",
+            text: "The rector limits the committee to selling or facing criticism, while a fundraising campaign or a grant application are unmentioned alternatives.",
+          },
+          {
+            id: "ps12-2-d",
+            text: "The rector exempts his own tenure from the thirty-year account he demands of the committee.",
+          },
+        ],
+      },
+      {
+        id: "ps12-3",
+        text: "The clerk noted that the bequest had carried spending restrictions until the present year, so 'sitting on' the meadow had not, until recently, been a choice the committee was permitted to forgo.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps12-4",
+        text: "The treasurer, whose family ran cattle on the meadow under a private grazing arrangement, supported the sale warmly — but when the clerk proposed that the grazing arrangement should also come before the committee, he explained that personal tenure was a wholly separate matter, not within the vestry's jurisdiction to review.",
+        labels: ["special-pleading"],
+        primaryLabel: "special-pleading",
+        isTarget: true,
+        correctExplanationId: "ps12-4-c",
+        explanationOptions: [
+          {
+            id: "ps12-4-a",
+            text: "The treasurer's support for the sale embeds the assumption that his own arrangement is already settled, which the clerk's motion would decide.",
+          },
+          {
+            id: "ps12-4-b",
+            text: "The treasurer assumes the vestry lacks jurisdiction, and uses that assumption to establish that the vestry lacks jurisdiction.",
+          },
+          {
+            id: "ps12-4-c",
+            text: "The parish asset under review is subject to full committee scrutiny; the treasurer's private use of the same asset is not — with 'separate matter' standing in for any distinction the vestry's own rules actually draw.",
+          },
+          {
+            id: "ps12-4-d",
+            text: "The treasurer shifts his objection from jurisdiction to procedure to precedent each time a committee member pushes back.",
+          },
+        ],
+      },
+      {
+        id: "ps12-5",
+        text: "Three committee members exchanged a look, but the agenda moved on.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "ps12-6",
+        text: "The school governor set the question of culpability aside and laid out what she took to be the actual case: the tower needed eighty thousand pounds by March, the endowment earned less than four thousand a year, and no other parish asset was available — an argument she believed was sufficient, and which she invited the room to rebut on its own terms rather than avoid.",
+        labels: ["dialectical"],
+        primaryLabel: "dialectical",
+        isTarget: true,
+        correctExplanationId: "ps12-6-b",
+        explanationOptions: [
+          {
+            id: "ps12-6-a",
+            text: "The governor presents debt and meadow as the only two items in the equation, when a grant application or a loan are options she does not address.",
+          },
+          {
+            id: "ps12-6-b",
+            text: "The loaded frame of the rector's opening question is set aside, the real case for selling is stated as a proper argument with specific figures, and the room is invited to answer it — a move from accusation to genuine contestation.",
+          },
+          {
+            id: "ps12-6-c",
+            text: "The governor assumes the tower must be repaired without arguing for that premise, which some members had not conceded.",
+          },
+          {
+            id: "ps12-6-d",
+            text: "The governor raises a new standard — eighty thousand by March — after the earlier question of culpability has been set aside.",
+          },
+        ],
+      },
+      {
+        id: "ps12-7",
+        text: "The committee voted to sell, and the treasurer's grazing arrangement became, by the clerk's motion, the first item on the next meeting's agenda.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
   {
     id: "story-boundary-oak",
     title: "The Boundary Oak",
