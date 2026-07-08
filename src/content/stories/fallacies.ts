@@ -10,20 +10,20 @@ import type { PracticeStory } from "@/domain/types";
 export const fallacyStories: readonly PracticeStory[] = [
   {
     id: "story-new-doctor",
-    title: "The New Doctor",
+    title: "Conference Season",
     difficulty: "beginner",
     includedLabels: ["hasty-generalization", "post-hoc"],
     sentences: [
       {
         id: "nd-1",
-        text: "When Dr. Passeri took over the village practice, opinions formed faster than appointments.",
+        text: "The spring parent-teacher conferences ran fifteen minutes per slot and produced, among other outcomes, a reliable cross-section of parental opinions.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "nd-2",
-        text: "Her first patient waited forty minutes, and by evening half the square had heard that the new doctor keeps everyone waiting.",
+        text: "Renata sat through one meeting with a math teacher who stumbled over the grading rubric, and by the parking lot she had decided that none of the teachers at the school had any business standing in front of children.",
         labels: ["hasty-generalization"],
         primaryLabel: "hasty-generalization",
         isTarget: true,
@@ -31,28 +31,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "nd-2-a",
-            text: "A single wait, on a first morning, is generalized into a standing habit — far too few cases to support the claim.",
+            text: "One stumbling meeting with one teacher becomes a verdict on the entire staff — a generalization built on a single case.",
           },
           {
             id: "nd-2-b",
-            text: "The wait happened after she arrived, so her arrival is wrongly blamed for causing it.",
+            text: "Renata blames the confused rubric on the new conference format because the format changed this year.",
           },
           {
             id: "nd-2-c",
-            text: "One villager's vivid story is allowed to outweigh the practice's actual records.",
+            text: "Renata lets her one evening's impression outweigh the principal's satisfaction survey of hundreds of parents.",
           },
         ],
       },
       {
         id: "nd-3",
-        text: "The pharmacist, who kept better track, noted that the next nine patients were seen on the dot.",
+        text: "Her daughter's other teachers had sent detailed weekly updates all term, and the district's parent-satisfaction scores put the school in the ninety-second percentile.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "nd-4",
-        text: "Old Marc, meanwhile, had developed a cough the very week she arrived, and told the café that the new doctor's coming had somehow brought illness with her.",
+        text: "Her neighbor Leo had noticed that his son grew quieter the same week the school launched a new phone-free policy, and Leo told every carpool that the phone ban had done it — though the same week the boy had also been cut from the soccer team.",
         labels: ["post-hoc"],
         primaryLabel: "post-hoc",
         isTarget: true,
@@ -60,21 +60,21 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "nd-4-b",
-            text: "The cough merely followed her arrival in time; nothing connects the two, and autumn coughs have causes of their own.",
+            text: "The quietness followed the phone ban in time; the roster cut — arriving the same week and a more obvious cause — goes entirely unexamined.",
           },
           {
             id: "nd-4-c",
-            text: "Marc concludes from one cough that the whole village will fall ill.",
+            text: "Leo concludes from one son's withdrawn week that phone bans harm every student's wellbeing.",
           },
           {
             id: "nd-4-d",
-            text: "Marc trusts his own single story over the village's health records.",
+            text: "Leo trusts his son's single week of behavior over the counselor's term-long notes.",
           },
         ],
       },
       {
         id: "nd-5",
-        text: "By the solstice, the waiting room had a jar of her plum jam on the table and no one remembered the rumors.",
+        text: "The school counselor's notes from that month pointed to the roster cut; Leo's timeline pointed to the policy; the two explanations never really competed, because only one got told at pickup.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -83,20 +83,20 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-lucky-boots",
-    title: "The Lucky Boots",
+    title: "The Cold Plunge Episode",
     difficulty: "beginner",
     includedLabels: ["post-hoc", "anecdotal-evidence"],
     sentences: [
       {
         id: "lb-1",
-        text: "The angling club's spring contest drew every rod in the county to the reservoir.",
+        text: "The wellness podcast had nine thousand subscribers and a host who never met a theory he couldn't road-test on himself.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lb-2",
-        text: "Emil wore his grandfather's boots that morning and landed the biggest pike of the day, and from then on he swore the boots were what caught the fish.",
+        text: "Marcus launched his month of daily cold plunges on a Monday, threw his back out on Wednesday, and told his listeners in Thursday's episode that the plunges had seized his spine — the cold water was the cause and that was that.",
         labels: ["post-hoc"],
         primaryLabel: "post-hoc",
         isTarget: true,
@@ -104,35 +104,35 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "lb-2-a",
-            text: "The catch came after he wore the boots, and that sequence alone is made to carry the whole causal claim.",
+            text: "The back strain came after the cold plunges began, and that sequence alone is made to carry the whole causal claim — with the sofa Marcus had moved alone on Tuesday evening entirely ignored.",
           },
           {
             id: "lb-2-b",
-            text: "Emil generalizes from one contest to all future contests.",
+            text: "Marcus generalizes from one bad week to a conclusion about cold plunges for everyone who tries them.",
           },
           {
             id: "lb-2-c",
-            text: "Emil lets one dramatic story override the club's long records.",
+            text: "Marcus lets his own dramatic story of injury override the sports medicine literature on cold immersion.",
           },
         ],
       },
       {
         id: "lb-3",
-        text: "The club secretary pointed out that Emil had also fished the deepest hole on the reservoir, at dawn, in perfect weather.",
+        text: "His physiotherapist noted that Marcus had also moved a sectional sofa on Tuesday evening, mostly by himself, mostly by bending wrong.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lb-4",
-        text: "Club records across twenty years showed the deep hole produced the winning fish in fourteen contests, whatever anyone wore.",
+        text: "Three separate reviews of sports medicine literature found no mechanism by which cold-water immersion at his duration and temperature could produce a lumbar strain.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lb-5",
-        text: "But young Pia had heard Emil tell the story of the boots three times, and against all the secretary's ledgers, the story was what she believed.",
+        text: "But Priya had heard Marcus describe the Wednesday morning in genuine detail over four episodes, and against the physiotherapist's explanation and the literature, the story was what she filed away.",
         labels: ["anecdotal-evidence"],
         primaryLabel: "anecdotal-evidence",
         isTarget: true,
@@ -140,21 +140,21 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "lb-5-a",
-            text: "Pia assumes that whatever worked for Emil must work for every angler.",
+            text: "Priya assumes that whatever harmed Marcus must harm every listener who takes cold plunges.",
           },
           {
             id: "lb-5-b",
-            text: "One vivid, thrice-told story outweighs twenty years of records in Pia's judgment — vividness standing in for evidence.",
+            text: "One vividly told episode of pain outweighs both expert explanation and published literature in Priya's judgment — the story's vividness standing in for evidence.",
           },
           {
             id: "lb-5-c",
-            text: "Pia believes the boots caused the catch because the catch came after them.",
+            text: "Priya reasons that the cold plunges caused Marcus's injury because the plunges came before the injury.",
           },
         ],
       },
       {
         id: "lb-6",
-        text: "Next spring she fished the shallow bank in borrowed boots, and caught, as the records would have predicted, nothing at all.",
+        text: "She quit the plunges, threw her own back out moving boxes, and left a five-star review on the episode anyway.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -163,27 +163,27 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-market-stall",
-    title: "Rain on Market Day",
+    title: "Four Hundred and Thirty Reviews",
     difficulty: "beginner",
     includedLabels: ["anecdotal-evidence", "hasty-generalization"],
     sentences: [
       {
         id: "ms-1",
-        text: "The weavers' cooperative met to decide whether to keep their stall at the new riverside market.",
+        text: "The restaurant had been open eight years, had four hundred and thirty reviews, and held a steady four-point-six average.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ms-2",
-        text: "Sales figures from the first season showed the riverside stall out-earning their old square pitch by a third.",
+        text: "On a Saturday night, one diner posted a thread about cold soup and an inattentive server; by Sunday morning it had more engagement than anything the restaurant had ever shared itself.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ms-3",
-        text: "But Dorrit told again the story of the Saturday it rained sideways and she sold a single scarf, and the story hung over the table heavier than the season's figures.",
+        text: "Regular customers who had eaten there dozens of times kept scrolling past the ratings summary, but one stranger's bad Saturday stopped them — that single evening carrying more weight than four hundred measured visits.",
         labels: ["anecdotal-evidence"],
         primaryLabel: "anecdotal-evidence",
         isTarget: true,
@@ -191,21 +191,21 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ms-3-a",
-            text: "One memorable bad Saturday is given more weight than a full season of sales figures — a single story beating the data.",
+            text: "One memorable bad Saturday is given more weight than four hundred measured visits — a single story beating the data.",
           },
           {
             id: "ms-3-b",
-            text: "Dorrit assumes the rain caused the poor sales because it came first.",
+            text: "The thread assumes the cold soup caused the inattentive service, treating one problem as the cause of the other.",
           },
           {
             id: "ms-3-c",
-            text: "Dorrit concludes from one Saturday that every market day will be rainy.",
+            text: "The regulars conclude from one bad thread that every visit to the restaurant will be disappointing.",
           },
         ],
       },
       {
         id: "ms-4",
-        text: "Then Hale, who had visited the riverside twice and been jostled both times, declared the riverside crowd was simply rougher than market crowds anywhere else in the county.",
+        text: "A food blogger who had never visited read the thread, found two commenters mentioning slow service, and published a piece naming the restaurant a symptom of everything broken in neighborhood dining across the city.",
         labels: ["hasty-generalization"],
         primaryLabel: "hasty-generalization",
         isTarget: true,
@@ -213,28 +213,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ms-4-b",
-            text: "Hale lets one vivid jostling story outweigh the constables' crowd reports.",
+            text: "The blogger lets two commenters' vivid complaints outweigh the restaurant's four-hundred-review average.",
           },
           {
             id: "ms-4-c",
-            text: "Two visits become a verdict on a whole market's crowds, across the whole county — a generalization far outrunning its cases.",
+            text: "Two comments in a single thread become a verdict on neighborhood dining across an entire city — a generalization wildly outrunning its evidence.",
           },
           {
             id: "ms-4-d",
-            text: "Hale reasons that the jostling caused the stall's poor sales.",
+            text: "The blogger reasons that the cold soup caused the slow service, treating one as the cause of the other.",
           },
         ],
       },
       {
         id: "ms-5",
-        text: "The treasurer slid the season's ledger to the middle of the table and let the column totals speak.",
+        text: "The owner posted a note explaining that the server had called in sick that evening and a first-time fill-in had covered the shift.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ms-6",
-        text: "The cooperative voted to keep the riverside stall, and to buy, by way of compromise, a much better awning.",
+        text: "The blogger issued no correction; the original commenter went back, had a fine meal, and quietly updated the post to four stars.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -243,20 +243,20 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-first-impressions",
-    title: "First Impressions at the Fair",
+    title: "Patch Day",
     difficulty: "beginner",
     includedLabels: ["hasty-generalization"],
     sentences: [
       {
         id: "ff-1",
-        text: "The autumn fair opened under a sky that couldn't make up its mind, and the Harlow sisters went in at the first bell.",
+        text: "Patch 2.4 dropped on a Tuesday with a lengthy change log and a developer note promising balance fixes, and the forum threads opened before the servers even came back up.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ff-2",
-        text: "At the ring, one juggler dropped a club in his opening pass, and Edith declared the whole troupe slapdash and not worth the seats.",
+        text: "Osei had played two ranked matches since the update, lost both, and was already typing that the patch had ruined every competitive mode in the game and made skill-based matchmaking completely unplayable.",
         labels: ["hasty-generalization"],
         primaryLabel: "hasty-generalization",
         isTarget: true,
@@ -264,28 +264,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ff-2-a",
-            text: "One dropped club by one performer becomes a verdict on the entire troupe — a generalization built on a single case.",
+            text: "Two losses in two matches become a verdict on every competitive mode in the game — a sweeping conclusion from a pair of cases.",
           },
           {
             id: "ff-2-b",
-            text: "Edith blames the drop on the morning's damp air merely because the damp came first.",
+            text: "Osei blames the losses on the patch because the patch arrived before the losses, mistaking sequence for cause.",
           },
           {
             id: "ff-2-c",
-            text: "Edith lets one vivid story about a juggler outweigh the troupe's printed notices.",
+            text: "Osei lets his own two-match experience outweigh the win-rate data across thousands of ranked games.",
           },
         ],
       },
       {
         id: "ff-3",
-        text: "Her sister May pointed out that the same man caught the next forty throws, some of them behind his back.",
+        text: "His teammate Dani had also played two matches since the patch, won both, and was in a different thread describing how smooth the updated hitbox detection felt.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ff-4",
-        text: "At the refreshment row, the first stall's cider was sour, and Edith announced that the fair's food and drink, all of it, was not to be trusted.",
+        text: "A streamer with a large following found three bugs in two hours of play and announced live that the QA team had clearly tested nothing, the entire pipeline was broken, and the studio could not be trusted to ship another update.",
         labels: ["hasty-generalization"],
         primaryLabel: "hasty-generalization",
         isTarget: true,
@@ -293,28 +293,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ff-4-b",
-            text: "Edith reasons that the sour cider caused her sour mood for the rest of the day.",
+            text: "The streamer concludes that the patch release itself caused the bugs to appear, mistaking timing for causation.",
           },
           {
             id: "ff-4-c",
-            text: "A single cup from a single stall stands in for every kitchen at the fair — far too small a sample for so wide a conclusion.",
+            text: "Three bugs in two hours become a verdict on the studio's entire QA pipeline — a generalization from a small and unlucky sample.",
           },
           {
             id: "ff-4-d",
-            text: "Edith treats her one bad cup as weightier than the fair's food prizes and inspections.",
+            text: "The streamer treats a single session's bugs as more reliable evidence than the studio's internal testing logs.",
           },
         ],
       },
       {
         id: "ff-5",
-        text: "May, working through a plate of honey cakes from the second stall, offered no rebuttal but the empty plate.",
+        text: "The studio's patch notes listed forty-seven issues caught in internal testing, and the three visible bugs had already been logged and queued for a hotfix.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ff-6",
-        text: "They stayed till the lanterns came out, Edith complaining, May collecting evidence of a different kind.",
+        text: "The hotfix landed Thursday; the streamer played it for six hours and said nothing further about the QA team.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -323,20 +323,20 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-weathervane",
-    title: "The Weathervane",
+    title: "The Apprentice's Log",
     difficulty: "beginner",
     includedLabels: ["post-hoc"],
     sentences: [
       {
         id: "wv-1",
-        text: "The new copper weathervane went up on the guildhall on a Tuesday, gleaming like a coin over the square.",
+        text: "The apprentice had been keeping a spell log for three months and was beginning to form theories, not all of them sound.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wv-2",
-        text: "That same week a line of storms came through, and by Sunday half the square agreed the new vane had somehow drawn the weather down on the town.",
+        text: "She burned a sprig of dried rosemary before one afternoon's casting, the spell went cleanly on the first try, and she wrote in the log that the rosemary had been responsible — though she had also, for the first time, used the master's properly calibrated mixing bowl instead of her own chipped one.",
         labels: ["post-hoc"],
         primaryLabel: "post-hoc",
         isTarget: true,
@@ -344,28 +344,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "wv-2-a",
-            text: "The storms merely followed the vane in time; the sequence is made to carry the whole causal claim, with the season's usual weather ignored.",
+            text: "The clean spell followed the rosemary in time; the sequence alone carries the causal claim, with the new calibrated bowl — a far more plausible explanation — entirely ignored.",
           },
           {
             id: "wv-2-b",
-            text: "The town concludes from one stormy week that every week under the vane will storm.",
+            text: "The apprentice generalizes from one successful spell to a rule that rosemary always ensures success.",
           },
           {
             id: "wv-2-c",
-            text: "One neighbor's dramatic account of the lightning outweighs the almanac's records.",
+            text: "The apprentice lets her single logged observation outweigh the master's full records of the same session.",
           },
         ],
       },
       {
         id: "wv-3",
-        text: "The almanac-keeper observed, to anyone who would listen, that the same week last year had brought worse, under the old vane.",
+        text: "The master reviewed the log and added a marginal note: 'also: new bowl. also: fourth attempt this week, muscle memory improving.'",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wv-4",
-        text: "When the rains eased the following month, the glazier — who had petitioned loudest for the vane's removal and been refused — let it be known that the town's luck had turned because the council finally oiled the church clock, which had happened the Monday before.",
+        text: "The following month the apprentice started waking before sunrise to meditate, and when her accuracy with directional spells improved noticeably she marked 'sunrise meditation: confirmed cause' — though that same month she had also finished the third workbook, which addressed directional casting specifically.",
         labels: ["post-hoc"],
         primaryLabel: "post-hoc",
         isTarget: true,
@@ -373,28 +373,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "wv-4-b",
-            text: "The glazier generalizes from one dry month to a whole year of fair weather.",
+            text: "The apprentice generalizes from one month of improvement to a permanent rule about sunrise meditation.",
           },
           {
             id: "wv-4-c",
-            text: "Again the calendar does all the work: the clock was oiled, then the rains eased, and 'then' is dressed up as 'because'.",
+            text: "Again the timeline does all the work: meditation began, accuracy improved, and 'then' is dressed up as 'because' — the completed workbook, which targeted exactly this skill, goes unexamined.",
           },
           {
             id: "wv-4-d",
-            text: "The glazier trusts his own single memory of the dry spell over the almanac-keeper's measurements.",
+            text: "The apprentice trusts her own single month of observation over the master's longer record of her skill development.",
           },
         ],
       },
       {
         id: "wv-5",
-        text: "The vane, for its part, kept pointing wherever the wind actually came from, which satisfied nobody.",
+        text: "The master's second marginal note read: 'workbook three. also: you are simply getting better.'",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wv-6",
-        text: "It is still up there, accused of everything and guilty, at most, of glinting.",
+        text: "The apprentice kept the rosemary anyway, because it smelled quite nice and superstition, unlike the log, cost nothing.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -403,20 +403,20 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-silvas-cure",
-    title: "Cousin Silva's Cure",
+    title: "Dev from Accounting",
     difficulty: "beginner",
     includedLabels: ["anecdotal-evidence"],
     sentences: [
       {
         id: "cs-1",
-        text: "When the coughing season came to the valley, remedies traveled faster than the cough itself.",
+        text: "When the flu swept through the open-plan office in January, remedies spread faster than the virus itself.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cs-2",
-        text: "The pharmacist kept a printed sheet on the counter — trials, numbers, the honest limits of what the syrups could do — but what moved the bottles was the tale of Cousin Silva, who had gargled vinegar and honey and sung at a wedding two days later, and against that one shining recovery the printed sheet never stood a chance.",
+        text: "The pharmacist had left a stack of information sheets by the register — trial numbers, confidence intervals, the honest limits of what the supplements could do — but what moved the inventory was the story of Dev from accounting, who had started zinc-and-ginger shots on a Monday and been back at his desk by Thursday, and against that one gleaming recovery the printed sheets never stood a chance.",
         labels: ["anecdotal-evidence"],
         primaryLabel: "anecdotal-evidence",
         isTarget: true,
@@ -428,24 +428,24 @@ export const fallacyStories: readonly PracticeStory[] = [
           },
           {
             id: "cs-2-b",
-            text: "The valley assumes the vinegar caused the recovery simply because the gargling came first.",
+            text: "The office assumes the zinc shot caused the recovery simply because Dev started drinking it before he got better.",
           },
           {
             id: "cs-2-c",
-            text: "The valley concludes from Silva's case that every cough in the region is mild.",
+            text: "The office concludes from Dev's case that every flu in the building will resolve in four days with the shot.",
           },
         ],
       },
       {
         id: "cs-3",
-        text: "The doctor's rounds told a plainer arithmetic: most coughs mended in a fortnight whatever was gargled, and a few did not, whatever was gargled.",
+        text: "The doctor's notes from that season told a plainer arithmetic: most flu cases resolved in five to seven days regardless of supplementation, and a few ran to ten days regardless as well.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cs-4",
-        text: "But old Berta had once waited three hours at the district clinic, years ago, and her telling of that afternoon — the hard bench, the sighing clerk — kept half the lane from the clinic's door long after its record had become the best in the county.",
+        text: "But Margot had once spent four hours in the urgent care waiting room, two years ago, and her account of those plastic chairs and the flickering fluorescent light kept half the floor from seeking medical care long after the clinic had installed a new triage system and cut wait times to under forty minutes.",
         labels: ["anecdotal-evidence"],
         primaryLabel: "anecdotal-evidence",
         isTarget: true,
@@ -453,28 +453,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cs-4-b",
-            text: "Berta reasons that the hard bench caused her long wait, mistaking sequence for cause.",
+            text: "Margot reasons that the plastic chairs caused her long wait, mistaking co-presence for causation.",
           },
           {
             id: "cs-4-c",
-            text: "One well-told afternoon from years ago outweighs the clinic's current measured record — vividness standing in for evidence.",
+            text: "One vivid four-hour afternoon from two years ago outweighs the clinic's current measured wait times — vividness standing in for evidence.",
           },
           {
             id: "cs-4-d",
-            text: "Berta concludes from one bad visit that all clinics everywhere keep patients waiting.",
+            text: "Margot concludes from one bad visit that every urgent care everywhere keeps patients waiting four hours.",
           },
         ],
       },
       {
         id: "cs-5",
-        text: "The pharmacist, a patient man, moved the printed sheet nearer the vinegar and said nothing.",
+        text: "The pharmacist moved the information sheets next to the zinc shots and said nothing, having learned not to compete with a good story.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cs-6",
-        text: "The coughing season passed, as it mostly does, taking the credit arguments with it until next year.",
+        text: "The flu passed, as flu does, taking the credit arguments with it until next January.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -483,20 +483,20 @@ export const fallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-council-debate",
-    title: "The Council Debate",
+    title: "The Platform Migration",
     difficulty: "beginner",
     includedLabels: ["hasty-generalization", "post-hoc", "anecdotal-evidence"],
     sentences: [
       {
         id: "cd-1",
-        text: "The question before the council was streetlamps: whether the new pattern should go up in the lower town as it had in the high street.",
+        text: "The question before the product team was whether to migrate their weekly all-hands from the current video platform to the new one the rest of the company had already adopted.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cd-2",
-        text: "Councilman Prewitt had walked the high street once since the change, seen two lamps flicker near the corn exchange, and now assured the chamber that the new pattern was faulty through and through.",
+        text: "Dev had joined two calls on the new platform, experienced audio lag on both, and now assured the room that the system was technically deficient across the board and would never work reliably for a team their size.",
         labels: ["hasty-generalization"],
         primaryLabel: "hasty-generalization",
         isTarget: true,
@@ -504,28 +504,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cd-2-a",
-            text: "Two flickering lamps on one evening's walk become a verdict on the whole pattern — a sweeping conclusion from a couple of cases.",
+            text: "Two laggy calls on two mornings become a verdict on the system's performance across the board — a sweeping conclusion from a couple of cases.",
           },
           {
             id: "cd-2-b",
-            text: "Prewitt credits the flickering to the evening fog because the fog rolled in first.",
+            text: "Dev credits the audio lag to the migration itself because the migration happened before the calls.",
           },
           {
             id: "cd-2-c",
-            text: "Prewitt sets his single stroll against the lamplighters' maintenance logs and lets the stroll win.",
+            text: "Dev sets his two calls against the IT department's three-month usage data and lets his own experience win.",
           },
         ],
       },
       {
         id: "cd-3",
-        text: "The town surveyor's figures said the new lamps burned brighter for less oil, with fewer outages per mile than the old.",
+        text: "The IT department's three-month usage data showed the new platform had outperformed the old one in call quality for ninety-two percent of sessions across every other team.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cd-4",
-        text: "Councilwoman Mott countered that pilfering on the high street had fallen the very month the lamps went in — proof, she said, that the lamps had done it — though the same month the watch had doubled its patrols.",
+        text: "The project manager noted that meeting satisfaction scores had jumped the month after they switched to standing agendas, and called it proof that structured agendas were responsible — though the same month they had also cut the all-hands from ninety minutes to forty-five.",
         labels: ["post-hoc"],
         primaryLabel: "post-hoc",
         isTarget: true,
@@ -533,21 +533,21 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cd-4-b",
-            text: "Mott generalizes from one month of figures to a permanent fall in pilfering.",
+            text: "The project manager generalizes from one month's satisfaction jump to a permanent improvement in meeting quality.",
           },
           {
             id: "cd-4-c",
-            text: "The drop followed the lamps, so the lamps get the credit — while the doubled patrols, an obvious rival cause, go unexamined.",
+            text: "The satisfaction jump followed the structured agendas, so the agendas get the credit — while the meeting-length cut, an obvious rival cause from the same month, goes unexamined.",
           },
           {
             id: "cd-4-d",
-            text: "Mott lets one shopkeeper's story about a foiled thief outweigh the watch reports.",
+            text: "The project manager lets one team member's story about a good agenda outweigh the broader satisfaction figures.",
           },
         ],
       },
       {
         id: "cd-5",
-        text: "Then a resident of the lower town rose to tell, at length and beautifully, of the night his lane went dark and he put his boot through a bakehouse window, and the chamber, quite moved, weighed his tale above the surveyor's columns.",
+        text: "Then a senior engineer described, at length and with feeling, a catastrophic demo on an earlier version of the platform three years ago — the screen share had frozen mid-presentation — and the room, quite moved, weighed this single episode against three months of performance data and found the data wanting.",
         labels: ["anecdotal-evidence"],
         primaryLabel: "anecdotal-evidence",
         isTarget: true,
@@ -555,28 +555,28 @@ export const fallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cd-5-a",
-            text: "One memorable misadventure, well told, is allowed to outweigh the surveyor's systematic outage figures — the story beating the data.",
+            text: "One well-told catastrophic demo from three years ago is allowed to outweigh three months of systematic performance data — the story beating the numbers.",
           },
           {
             id: "cd-5-b",
-            text: "The resident concludes that dark lanes always lead to broken windows everywhere.",
+            text: "The engineer concludes that frozen screen shares always happen on this platform and always will.",
           },
           {
             id: "cd-5-c",
-            text: "The resident blames the bakehouse window on the darkness merely because the dark came first.",
+            text: "The engineer blames the screen freeze on the presentation itself because the share started right before the freeze.",
           },
         ],
       },
       {
         id: "cd-6",
-        text: "The clerk recorded that the debate had generated more heat than any lamp under discussion.",
+        text: "The IT lead mentioned, quietly, that the platform had been rebuilt entirely since then and shared nothing but a name with the version from three years ago.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cd-7",
-        text: "The vote was postponed to the spring session, by which time, the mayor hoped aloud, someone might have read the figures.",
+        text: "The team voted to pilot the new platform for a month — except for the senior engineer, who dialed in by phone, just in case.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

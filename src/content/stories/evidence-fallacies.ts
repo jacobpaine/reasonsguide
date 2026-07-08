@@ -1,30 +1,30 @@
 import type { PracticeStory } from "@/domain/types";
 
 /**
- * Evidence-fallacy stories for the labels unlocked by the evidence lessons:
- * cherry-picking, biased sample, and survivorship bias. Intermediate
- * difficulty: the fallacious sentences read the way people actually argue,
- * and the neutral sentences quietly hold the fuller evidence — the lean
- * months, the unasked villagers, the boats that never came back.
+ * Evidence-fallacy stories: cherry-picking, biased-sample, survivorship-bias.
+ * Settings range from startup all-hands to gym walls to gaming subreddits.
+ * At intermediate difficulty the reasoning is embedded in natural speech —
+ * no signposts, and neutral sentences vary in length so targets don't stand
+ * out by shape alone.
  */
 
 export const evidenceFallacyStories: readonly PracticeStory[] = [
   {
     id: "story-harbormaster-year",
-    title: "The Harbormaster's Year",
+    title: "The All-Hands Deck",
     difficulty: "intermediate",
     includedLabels: ["cherry-picking"],
     sentences: [
       {
         id: "cp-1",
-        text: "The harbormaster's annual report ran to forty pages, and the reading of it emptied the meeting room by tradition rather than by accident.",
+        text: "The company met in the largest conference room, which had glass walls and a projector that had cost more than anyone's starting salary.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cp-2",
-        text: "Arguing for a grander quay, the chandler read aloud the three record months — April, May, and the astonishing June — and let the ledger fall shut on the other nine.",
+        text: "Nadia, the head of growth, clicked through the Q3 highlights — three record weeks in August, the product's best NPS score ever, a chart of new signups with a slope that made the room nod — and then closed the deck before October's numbers appeared.",
         labels: ["cherry-picking"],
         primaryLabel: "cherry-picking",
         isTarget: true,
@@ -32,28 +32,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cp-2-a",
-            text: "Three months is too small a stretch of the year from which to judge the harbor's trade at all.",
+            text: "Three record weeks is too small a stretch of data from which to judge a whole quarter's performance.",
           },
           {
             id: "cp-2-b",
-            text: "The record months are real, but the nine lean months sitting in the same ledger are deliberately left unread — the selection, not the figures, does the arguing.",
+            text: "The three record weeks are real, and so are October's numbers — on the same dashboard, not presented; the case is made by what Nadia stops reading before, not by anything false in what she shows.",
           },
           {
             id: "cp-2-c",
-            text: "The chandler's figures come only from merchants who already use the quay, so his sample cannot speak for the harbor as a whole.",
+            text: "The record weeks coincided with a discount campaign, so Nadia's figures come from an unusual period that doesn't represent normal performance.",
           },
         ],
       },
       {
         id: "cp-3",
-        text: "Read whole, the columns told a flatter story: nine lean months, wages paid out of savings, a dredger hired and idle.",
+        text: "The full dashboard, accessible to anyone with a login, showed that those three weeks had run on a discount campaign, and that churn had outpaced acquisition for the rest of the quarter.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cp-4",
-        text: "Old Vane, who wanted no quay at all, was no better; he recited the two groundings on the bar as though they were the year entire, and never came to the eleven hundred safe passages recorded on the facing page.",
+        text: "Marcus from finance, who wanted the campaign killed, cited the refund rate from the worst cohort and the acquisition cost from the priciest channel, and never mentioned the cohorts in between that had performed adequately.",
         labels: ["cherry-picking"],
         primaryLabel: "cherry-picking",
         isTarget: true,
@@ -61,28 +61,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cp-4-a",
-            text: "The two groundings are cited and the eleven hundred safe passages on the facing page are withheld — evidence picked to fit a conclusion Vane held before he opened the report.",
+            text: "The worst cohort and the priciest channel are presented as the story while the middle-performing cohorts stay offscreen — the evidence exists, is known, and is not shown.",
           },
           {
             id: "cp-4-b",
-            text: "Vane reasons only from vessels that made it into the harbor record, ignoring the ships that never attempted the bar at all.",
+            text: "The cohorts Marcus cites skew toward customers who were likely to churn regardless, so his sample over-represents the unhappy end of a wider distribution.",
           },
           {
             id: "cp-4-c",
-            text: "Two mishaps become a verdict on a whole year of traffic — far too few cases to carry so sweeping a conclusion.",
+            text: "One worst cohort is too thin a basis from which to conclude anything about the campaign overall.",
           },
         ],
       },
       {
         id: "cp-5",
-        text: "The harbormaster, who had written every page, said nothing while the room quoted at itself.",
+        text: "The CEO thanked them both and asked for a complete picture before the board meeting.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cp-6",
-        text: "The vote went, as votes there often did, to whoever had read least and recited loudest.",
+        text: "No one sent it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -91,20 +91,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-parish-poll",
-    title: "The Parish Poll",
+    title: "The Late-Start Survey",
     difficulty: "intermediate",
     includedLabels: ["biased-sample"],
     sentences: [
       {
         id: "bs-1",
-        text: "The parish council wanted the village's opinion on moving market day to Wednesday, and appointed two canvassers to go and gather it.",
+        text: "The student council wanted to know whether the school's late-start day should move from Monday to Friday.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bs-2",
-        text: "Tolliver did his asking at the Saturday market itself, stall to stall through a busy morning, and returned with a tidy unanimity: nobody he met saw the least reason for a change.",
+        text: "Priya collected her data at after-school robotics on a Tuesday and came back with near-unanimous support for keeping Mondays free — every student she had asked had already demonstrated, by showing up voluntarily at four-thirty on a weekday, that the current schedule was no hardship.",
         labels: ["biased-sample"],
         primaryLabel: "biased-sample",
         isTarget: true,
@@ -112,28 +112,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bs-2-a",
-            text: "Tolliver keeps only the answers that favored Saturday and quietly drops the handful that did not, so his unanimity is edited rather than found.",
+            text: "Priya may have set aside the few answers that didn't favor Monday, making her results look more unanimous than they actually were.",
           },
           {
             id: "bs-2-b",
-            text: "He counts only the stallholders whose trade has survived years of Saturdays, the ones Saturdays already failed having long since left the market.",
+            text: "Students who have stayed in robotics club long enough to be surveyed are those the schedule has never driven away — the ones it cost something are no longer in the room.",
           },
           {
             id: "bs-2-c",
-            text: "Everyone at a Saturday market is there because Saturday suits them; the people a Wednesday would serve were never standing at a stall to be asked.",
+            text: "Every student in that room was there by choice on a Tuesday afternoon — the precise group least likely to have a problem with the existing schedule; the students a Monday start disadvantaged most were never at robotics to be asked.",
           },
         ],
       },
       {
         id: "bs-3",
-        text: "The farms upriver, whose carts could not spare a Saturday in harvest, went unvisited, being nowhere near a stall.",
+        text: "Students who caught the bus straight home after the final bell, who held afternoon jobs, or who had never joined a club of any kind were not in the room to answer.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bs-4",
-        text: "Prue, meanwhile, gathered her numbers outside the chapel after the early service, and pronounced the village firmly for quiet Saturdays on the strength of a congregation that had been for quiet Saturdays since before she was born.",
+        text: "Dev ran his own poll in the school's competitive-gaming Discord server and found near-unanimous support for Friday — which tracked, since the server's members spent weekends coordinating tournament brackets and found Fridays inconvenient for specific logistical reasons.",
         labels: ["biased-sample"],
         primaryLabel: "biased-sample",
         isTarget: true,
@@ -141,28 +141,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bs-4-a",
-            text: "The early congregation is one settled corner of the village, over-represented by the choice of where to stand; the villagers who spend their Saturdays otherwise were never in her count.",
+            text: "The gaming server self-selects for members with a particular weekend routine that makes Fridays a scheduling headache; students with no strong preference or a different schedule were never on the server to answer.",
           },
           {
             id: "bs-4-b",
-            text: "One morning's conversation outside the chapel is too few people, asked too briefly, to support any conclusion about the village.",
+            text: "Dev may have counted only the responses that favored Friday and dropped the minority who were indifferent, shaping the result before he reported it.",
           },
           {
             id: "bs-4-c",
-            text: "Prue reads out only the answers that matched her own preference for quiet Saturdays and leaves the rest off her sheet.",
+            text: "One Discord poll run over a single afternoon is too small a sample from which to draw conclusions about the whole school.",
           },
         ],
       },
       {
         id: "bs-5",
-        text: "The two reports arrived at the council table flatly contradicting each other, each perfectly certain.",
+        text: "The two reports arrived at the council table contradicting each other completely, each delivered with equal confidence.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bs-6",
-        text: "The clerk suggested, gently, that next time the doors knocked on might be chosen by something other than convenience.",
+        text: "The council ran a school-wide online poll instead, which forty-three people answered.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -171,20 +171,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-tarred-hulls",
-    title: "The Tarred Hulls",
+    title: "The Gym Wall",
     difficulty: "intermediate",
     includedLabels: ["survivorship-bias"],
     sentences: [
       {
         id: "sv-1",
-        text: "After the equinox gale, the boats came back into the harbor one and two at a time, and the whole village turned out on the wall to look them over.",
+        text: "The gym had replaced its carpet with rubber mats, added a smoothie bar, and covered the entrance wall in framed before-and-after photographs.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sv-2",
-        text: "Every hull that came home had been tarred at Marek's yard, and by evening it was settled along the quay that Marek's tar was what had brought them through.",
+        text: "The manager told prospective members that these thirty-six photos were simply what happened when people committed fully to the program — treating the wall, which showed only members whose results were worth framing, as proof that the program worked for everyone who tried it.",
         labels: ["survivorship-bias"],
         primaryLabel: "survivorship-bias",
         isTarget: true,
@@ -192,28 +192,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sv-2-a",
-            text: "The quay cites only the facts that flatter Marek's yard and passes over the work of the rival yards down the coast.",
+            text: "The manager is showing only the most dramatic transformations and leaving the more modest outcomes off the wall, selecting the evidence that flatters the program.",
           },
           {
             id: "sv-2-b",
-            text: "The verdict is drawn only from the boats that returned; the boats that didn't come back never enter the reckoning, though they would test the tar's reputation hardest.",
+            text: "The wall only holds members whose results were good enough to display; everyone who quit, plateaued, or left with an injury never made it onto the wall, and their absence is the gap in the proof.",
           },
           {
             id: "sv-2-c",
-            text: "The quay polls only harbor-side opinion, a crowd already loyal to Marek, so the conclusion was decided by who was standing on the wall.",
+            text: "Members willing to have their photo on a public wall are self-selected for motivation and confidence — not a representative sample of people who try the program.",
           },
         ],
       },
       {
         id: "sv-3",
-        text: "The Dorcas and the Little Owl, which did not come back, had been tarred in the same yard in the same week, though no one on the quay stood up to say so.",
+        text: "Members whose results were modest, who had quit after six weeks, or who had developed a knee problem and stopped coming found their experiences on no wall anywhere.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sv-4",
-        text: "Old Aldous took the occasion to say what he always said, that the sea had been safer in his youth, and for proof he offered himself and his three messmates, hale at eighty.",
+        text: "Head trainer Gordie, twenty years in, said he had never had a client fail to improve under his method — his long-term clients being, by that point, definitionally the ones who had not quit.",
         labels: ["survivorship-bias"],
         primaryLabel: "survivorship-bias",
         isTarget: true,
@@ -221,28 +221,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sv-4-a",
-            text: "Aldous samples only fishermen of his own acquaintance, a circle far too narrow and too fond of him to represent the old fleet fairly.",
+            text: "Gordie's long-term clients are a tight personal circle likely to report favorably on their trainer's methods regardless of the actual outcomes.",
           },
           {
             id: "sv-4-b",
-            text: "Four old men are simply too few cases from which to conclude anything about a whole generation of seafaring.",
+            text: "Twenty years of personal observation is a vivid story, but a single trainer's memory is too narrow a base from which to make a claim about a method's success rate.",
           },
           {
             id: "sv-4-c",
-            text: "His proof consists entirely of the men still alive to be offered as proof; the crews of his youth who would testify otherwise did not live to be counted.",
+            text: "A long-term client is one who has not yet quit — anyone Gordie's method failed or frustrated enough to leave is no longer a long-term client and so no longer counts as evidence.",
           },
         ],
       },
       {
         id: "sv-5",
-        text: "The parish register, which kept its own accounts, listed nineteen men lost in the decade Aldous called safe.",
+        text: "A member-retention report, buried in a spreadsheet that had never been projected on the smoothie-bar television, showed that fifty-four percent of new memberships lapsed within ninety days.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sv-6",
-        text: "Marek, to his credit, raised his prices not at all, and tarred whatever came to him.",
+        text: "A new before-and-after photo went up on Friday, bringing the total to thirty-seven.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -251,20 +251,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-rootstock-trial",
-    title: "The Rootstock Trial",
+    title: "The Feature Review",
     difficulty: "intermediate",
     includedLabels: ["cherry-picking", "biased-sample"],
     sentences: [
       {
         id: "cb-1",
-        text: "The growers' cooperative met in the long barn to decide whether the spring plantings should go onto the new rootstock.",
+        text: "The product team met to decide whether to roll the new recommendation algorithm out to all users.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cb-2",
-        text: "The nurseryman's circular was persuasive: it pictured the six trial rows that had flourished, row upon glossy row, and found no space in four pages for the five rows that had failed on the same clay.",
+        text: "The PM's slides featured the six power users whose daily engagement had doubled, each one shown in a rising line — but the deck ended there, skipping the fourteen users in the same test cohort who had emailed support asking how to turn it off.",
         labels: ["cherry-picking"],
         primaryLabel: "cherry-picking",
         isTarget: true,
@@ -272,28 +272,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cb-2-a",
-            text: "The flourishing rows are shown and the failed rows from the very same trial are left out of the four pages — each picture true, and the whole picture false.",
+            text: "The six positive cases and the fourteen negative ones are both from the same cohort; the slides show one half and end before the other — the selection decides the story, not the results.",
           },
           {
             id: "cb-2-b",
-            text: "The trial was run only on the nursery's own well-tended ground, so its rows cannot represent what the rootstock would do in ordinary orchards.",
+            text: "The power users in the cohort were already the most engaged before the trial, so the sample can't show what the algorithm does for a typical user.",
           },
           {
             id: "cb-2-c",
-            text: "Six rows of trees is too small a planting from which to conclude anything about how the rootstock will fare at scale.",
+            text: "Six users is far too small a group from which to conclude anything about how the algorithm will perform across the full product.",
           },
         ],
       },
       {
         id: "cb-3",
-        text: "Hodge, who had walked the trial ground himself in March, remembered mud to the ankle and rather more gaps than the pictures showed.",
+        text: "Lena, who ran the data team, had the full cohort breakdown open in another tab and said nothing while the room admired the chart.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cb-4",
-        text: "For local opinion, Wetherall had canvassed the growers at the nursery's own open day and reported sentiment running nine to one in favor — as it might, among people who chose to take their Saturday at the nursery.",
+        text: "For a broader read, the researcher had surveyed attendees at the company's annual user conference and found nine out of ten in favor — the kind of result you might expect from a crowd that had paid to fly across the country to spend a weekend talking about the product.",
         labels: ["biased-sample"],
         primaryLabel: "biased-sample",
         isTarget: true,
@@ -301,28 +301,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cb-4-a",
-            text: "Wetherall reports the nine and discards the dissenting tenth, trimming his returns until they say what the nursery would like.",
+            text: "The researcher may have set aside negative responses from the conference before presenting, leaving only the favorable answers to reach the room.",
           },
           {
             id: "cb-4-b",
-            text: "He counts only growers whose orchards are still in business, and the rootstock's real record lies with the orchards that have already gone under.",
+            text: "Conference attendees who are still active fans of the product are those it hasn't already lost — earlier unhappy users stopped engaging long before the conference mailing list was built.",
           },
           {
             id: "cb-4-c",
-            text: "An open-day crowd is the nursery's admirers by self-selection; the growers who never attend — the very ones to be persuaded — were never put the question.",
+            text: "Conference attendees self-select by enthusiasm — they are already among the most committed users; the skeptics and the indifferent, who never registered for the event, were never put the question.",
           },
         ],
       },
       {
         id: "cb-5",
-        text: "The cooperative's own trial plot, planted three winters back, had figures nobody had thought to read out.",
+        text: "The support queue, full of tickets from users who had never been near a conference and had strong opinions about the algorithm, held a different distribution.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cb-6",
-        text: "They tabled the grafting until someone had, and the barn emptied into the wet evening.",
+        text: "The algorithm shipped to twenty percent of users, and the A/B results were due in six weeks.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -331,20 +331,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-high-hut",
-    title: "The Hut on the Col",
+    title: "The Wellness Thread",
     difficulty: "intermediate",
     includedLabels: ["biased-sample", "survivorship-bias"],
     sentences: [
       {
         id: "bv-1",
-        text: "The wardens' association asked the hut-keeper on the col to report whether the new zigzag path was too hard for ordinary walkers.",
+        text: "A nutritionist with a large following posted a question to her audience: was the sixteen-hour fasting protocol actually manageable for working parents?",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bv-2",
-        text: "He sent the question down with the mule post to the climbing club's newsletter, and the replies came back warmly in favor, club members being on the whole the kind of walkers who wish every path steeper.",
+        text: "The thread filled quickly with enthusiastic replies, and she took this as confirmation that the protocol was broadly workable — though everyone responding was there because they already found her content compelling enough to follow, which was not a random draw from the population of working parents.",
         labels: ["biased-sample"],
         primaryLabel: "biased-sample",
         isTarget: true,
@@ -352,28 +352,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bv-2-a",
-            text: "The hut-keeper forwards only the warmest replies to the association and leaves the doubtful letters in the hut drawer.",
+            text: "She may have highlighted the most enthusiastic replies when framing her conclusions, overlooking the more cautious responses further down.",
           },
           {
             id: "bv-2-b",
-            text: "Polling the climbing club over-represents the keen by the very method of asking; the ordinary walkers the question was actually about were never on the newsletter's list.",
+            text: "Her followers are there because they already found her approach worth subscribing to — a community pre-selected for alignment with her methods before the question was even asked; working parents who had tried fasting and given up on her account were no longer in the thread.",
           },
           {
             id: "bv-2-c",
-            text: "Only members still climbing answer a climbing newsletter, and the ones the mountains have used hardest are no longer subscribers to say so.",
+            text: "A comment thread with hundreds of replies is still a small and self-selected slice of all the working parents who might try this protocol — too few cases to conclude it would be manageable broadly.",
           },
         ],
       },
       {
         id: "bv-3",
-        text: "The village postmistress could have told him about the day-trippers who came down early, asking after the old mule track.",
+        text: "Working parents who had spent several weeks attempting the protocol, found it incompatible with shift patterns and school pick-ups, and eventually stopped following her account had no thread to comment on.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bv-4",
-        text: "As for the old unrailed traverse, he judged it by his regulars — thirty years of them, and never a bone broken — and wrote that the crossing was a good deal safer than the association's fretting suggested.",
+        text: "Her long-term clients, she added — twelve people still working with her after three years, all thriving on the protocol — would have been more useful evidence if long-term clients weren't, by definition, the ones who hadn't quit.",
         labels: ["survivorship-bias"],
         primaryLabel: "survivorship-bias",
         isTarget: true,
@@ -381,28 +381,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bv-4-a",
-            text: "The regulars are the walkers the traverse never hurt or frightened off; anyone it did is no longer a regular, so the evidence has been filtered clean before he consults it.",
+            text: "A long-term client is someone who has not yet stopped — anyone the protocol didn't suit left the practice and ceased to be a long-term client, so the twelve are the survivors of the method, not a test of it.",
           },
           {
             id: "bv-4-b",
-            text: "He asks only guests under his own roof, a sample flattered by soup and shelter into agreeing with their host.",
+            text: "Twelve people working closely with the same practitioner over years are a circle too narrow and too personally invested to speak for working parents generally.",
           },
           {
             id: "bv-4-c",
-            text: "He rests the whole judgment on his own thirty vivid years at the hut, one man's story set against the association's wider records.",
+            text: "Twelve clients is too small a group from which to draw conclusions about whether the protocol works for working parents as a category.",
           },
         ],
       },
       {
         id: "bv-5",
-        text: "The valley ledger told it differently, its accident entries mostly first-timers who had tried the traverse once and never come back to become regulars.",
+        text: "The thread reached four hundred comments before the day was out, nearly all of them positive.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bv-6",
-        text: "He posted his report with the down-mule and went back to his soup, well pleased with the mountain's opinion of itself.",
+        text: "She pinned it to her profile as a resource.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -411,20 +411,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-old-quarter",
-    title: "The Old Quarter",
+    title: "The Investor's Lunch",
     difficulty: "intermediate",
     includedLabels: ["survivorship-bias", "cherry-picking"],
     sentences: [
       {
         id: "vc-1",
-        text: "The question of whether to let the mason rebuild Chandler's Row in the old manner filled the vestry twice over.",
+        text: "The question of joining a seed-stage investment fund came up at a lunch that had been scheduled for something else entirely.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "vc-2",
-        text: "They built to last in those days, the mason said, and for evidence he had only to gesture at the old quarter, where every house standing was two centuries old and straight as a mast.",
+        text: "Roland, the fund's most prominent backer, said the founders he had backed had all become excellent operators — and for evidence he gestured at the three sitting at the table, the founders whose companies had failed not being, on the whole, at the lunch.",
         labels: ["survivorship-bias"],
         primaryLabel: "survivorship-bias",
         isTarget: true,
@@ -432,28 +432,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "vc-2-a",
-            text: "The mason points only at the handsomest houses in the quarter and keeps the crooked ones out of his gesture.",
+            text: "Roland is pointing to only the three founders present and not mentioning other portfolio companies — showing the successes and keeping the rest offscreen.",
           },
           {
             id: "vc-2-b",
-            text: "A single quarter of one town is too narrow a district from which to judge the building of a whole age.",
+            text: "The three founders at the table all came from the same sector and the same cohort year, too narrow a group to speak for all the different kinds of founders Roland has backed.",
           },
           {
             id: "vc-2-c",
-            text: "The standing houses are the ones that lasted; the period's shoddy work fell, burned, or was pulled down long ago, and cannot be gestured at.",
+            text: "The founders Roland is gesturing at are the ones whose companies survived; the founders whose companies failed are not at this lunch, and their trajectories would say something different about what his backing produces.",
           },
         ],
       },
       {
         id: "vc-3",
-        text: "The parish maps in the archive showed the quarter twice its present size in its day, the missing half having subsided, burned, or been condemned by prudent grandfathers.",
+        text: "A fund performance summary Roland had not circulated would have shown that fewer than a third of his investments had returned more than the original capital.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "vc-4",
-        text: "The antiquarian pressed the case with documents, reading out the three surveyors' reports that praised the old lime mortar and leaving in the box, unread, the thicker bundle of repair bills filed alongside them.",
+        text: "His co-presenter laid out the data: the three portfolio companies with the best return multiples, each detailed across two slides, while the spreadsheet in the folder — twenty-six further entries — sat between them, unread.",
         labels: ["cherry-picking"],
         primaryLabel: "cherry-picking",
         isTarget: true,
@@ -461,28 +461,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "vc-4-a",
-            text: "The antiquarian reads only such documents as happened to survive the centuries, and the archive's losses decide his case for him.",
+            text: "The three top performers likely had advantages before the fund invested, so citing them is drawing on an unrepresentative corner of the portfolio.",
           },
           {
             id: "vc-4-b",
-            text: "The favorable reports are read out while the repair bills filed in the same box stay in the box — the evidence is complete, and the presentation of it is not.",
+            text: "The three best returns are on the slides and the other twenty-six entries are in the folder on the table — the full picture is present; the presentation of it is not.",
           },
           {
             id: "vc-4-c",
-            text: "The three reports were commissioned by owners proud of their houses, so the antiquarian's documents speak only for the satisfied.",
+            text: "Three successes is too few cases from which to conclude anything about the fund's overall performance.",
           },
         ],
       },
       {
         id: "vc-5",
-        text: "Nobody thought to ask the roofers, who worked in the old quarter oftenest and priced it accordingly.",
+        text: "Nobody asked about the folder.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "vc-6",
-        text: "The vestry approved the old manner, with a modern damp course nobody mentioned aloud.",
+        text: "Two people at the table agreed to invest before the coffee arrived.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -491,20 +491,20 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-crossing-question",
-    title: "The Crossing Question",
+    title: "The Difficulty Setting",
     difficulty: "intermediate",
     includedLabels: ["cherry-picking", "biased-sample", "survivorship-bias"],
     sentences: [
       {
         id: "ev-1",
-        text: "Whether to keep the ferry or petition for a bridge was the only question that could fill the reading room on a fine evening.",
+        text: "When the studio announced it was considering an optional easy mode for its cult-hit combat game, the internet organized its opinions quickly.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ev-2",
-        text: "The treasurer, a ferry man to his boots, read out the receipts from the fair-weather quarter and stopped there, June through August glittering on the page while November stayed in his coat pocket.",
+        text: "The community manager posted a round-up of press quotes — five lines praising the game's punishing design — and stopped there, just before the paragraph in the largest review that called the difficulty a meaningful accessibility barrier.",
         labels: ["cherry-picking"],
         primaryLabel: "cherry-picking",
         isTarget: true,
@@ -512,28 +512,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ev-2-a",
-            text: "The summer receipts are genuine and the winter figures exist in his very pocket — the case is made by what he chooses to stop reading before.",
+            text: "The five favorable lines and the critical paragraph are from the same coverage; the post ends where it needs to, and what it stops reading before is doing the arguing.",
           },
           {
             id: "ev-2-b",
-            text: "Receipts count only the crossings that were made, and say nothing of the travelers the ferry's timetable turned away.",
+            text: "Press outlets that review this genre over-represent enthusiast journalists, so the quotes can't speak for the broader player base that might want an easy mode.",
           },
           {
             id: "ev-2-c",
-            text: "One quarter is too short a season of trade from which to judge the ferry's whole year.",
+            text: "Five quotes from a handful of outlets are too few data points from which to conclude that praise for the difficulty is the dominant critical view.",
           },
         ],
       },
       {
         id: "ev-3",
-        text: "The full accounts, plain to anyone who asked, showed the ferry eating its summer profits by January.",
+        text: "That paragraph had been widely circulated when the review first published and had prompted the accessibility discussion the studio was now navigating.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ev-4",
-        text: "A petition to save the crossing gathered four hundred names in a week, every one of them collected on the ferry's own deck, midstream between the banks.",
+        text: "A poll pinned to the game's official subreddit found seventy-two percent of voters opposed to adding an easy mode — a result from a community that had self-selected, by building a subreddit around a notoriously hard game, for exactly the kind of player most likely to want things to stay hard.",
         labels: ["biased-sample"],
         primaryLabel: "biased-sample",
         isTarget: true,
@@ -541,28 +541,28 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ev-4-a",
-            text: "The petitioners kept the four hundred names in favor and tore off the sheet of those who declined to sign.",
+            text: "The subreddit's moderators may have removed dissenting comments before the poll closed, shaping the visible result before it was cited.",
           },
           {
             id: "ev-4-b",
-            text: "Four hundred signatures is too few, in a district of thousands, to establish what the villages on either bank truly want.",
+            text: "Seventy-two percent is a strong majority, but one subreddit poll is a small sample — far too few voters to represent everyone who plays or might play the game.",
           },
           {
             id: "ev-4-c",
-            text: "A paper passed around the ferry's deck can only ever reach the ferry's riders; the villagers who avoid the crossing, or cannot use it, never had it put before them.",
+            text: "The subreddit exists because dedicated fans of this specific hard game built it — players who found the difficulty off-putting bought the game, bounced, and never subscribed; the poll captures exactly the group most motivated to preserve the current design.",
           },
         ],
       },
       {
         id: "ev-5",
-        text: "The carters, who took the long road round with anything heavy, signed nothing, being seldom aboard.",
+        text: "Players who had bought the game, spent an hour with it, and never returned to post about it were not subscribed to the subreddit and cast no votes.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ev-6",
-        text: "As for the bridge men's talk of danger, old Sefton settled it to his own satisfaction: he had crossed twice a day for fifty years and come to no harm, and so had every regular he could name.",
+        text: "Veteran players in the thread were certain the difficulty was the whole point, because everyone they knew who still played regularly had come to love it — the phrase \"everyone they knew who still played\" being, of course, a description of the players the difficulty had not driven away.",
         labels: ["survivorship-bias"],
         primaryLabel: "survivorship-bias",
         isTarget: true,
@@ -570,21 +570,21 @@ export const evidenceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ev-6-a",
-            text: "Sefton sets one man's fifty vivid years against the district's records, and lets the better story win.",
+            text: "The veterans are reasoning from years of personal experience with one game, setting a vivid personal story against the studio's broader player data.",
           },
           {
             id: "ev-6-b",
-            text: "The regulars Sefton can name are precisely those the crossing never harmed; anyone it hurt or frightened off stopped being a regular, and so slipped out of his evidence.",
+            text: "The players veterans \"know who still play\" are precisely those the difficulty didn't push out; anyone it drove away stopped playing and is no longer part of that social circle, so their evidence has been filtered clean before they consult it.",
           },
           {
             id: "ev-6-c",
-            text: "Sefton consults only riders like himself, a circle chosen by friendship rather than any fair method of asking.",
+            text: "Veteran players in any fan community self-select for attachment to the product, so their satisfaction with the design can't speak for the wider audience the easy mode would reach.",
           },
         ],
       },
       {
         id: "ev-7",
-        text: "The reading room voted for the ferry, warmly, and the river went on being a river.",
+        text: "The studio shipped the easy mode three months later, noted it was optional, and moved on to the next patch.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

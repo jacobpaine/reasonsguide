@@ -3,27 +3,27 @@ import type { PracticeStory } from "@/domain/types";
 /**
  * Causal-fallacy stories for the labels unlocked by the causal-fallacies
  * lesson: correlation implies causation, single-cause fallacy, and slippery
- * slope. The fallacious sentences sound like things sensible people say;
- * the neutral sentences quietly hold the rival causes and the missing links.
+ * slope. Settings are modern and varied; the reasoning sounds like things
+ * real people say with complete confidence.
  */
 
 export const causalFallacyStories: readonly PracticeStory[] = [
   {
     id: "story-clerks-chart",
-    title: "The Clerk's Chart",
+    title: "The Thursday Rule",
     difficulty: "intermediate",
     includedLabels: ["correlation-causation"],
     sentences: [
       {
         id: "cc-1",
-        text: "The town clerk had discovered charts that winter, and the council chamber wall bloomed with inked curves.",
+        text: "Priya had spent the whole winter convinced her podcast growth was hiding somewhere in the numbers, and she had the spreadsheet, the color-coding, and a premium analytics subscription to prove it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cc-2",
-        text: "Streets with more lime trees suffered fewer break-ins, his first chart showed, and he proposed planting limes down every lane to drive the burglars out.",
+        text: "Her download spikes aligned perfectly with Thursday releases, so she moved the entire calendar to Thursdays and told her newsletter that Thursdays were clearly the engine of her growth.",
         labels: ["correlation-causation"],
         primaryLabel: "correlation-causation",
         isTarget: true,
@@ -31,28 +31,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cc-2-a",
-            text: "Trees and safety move together across streets, and the movement alone is read as the trees causing the safety — when prosperous streets may simply have both.",
+            text: "Download spikes and Thursdays go together in her data, but Thursdays are also her newsletter day, her clip day, and her preview day — the going-together is read as the release day's own power.",
           },
           {
             id: "cc-2-b",
-            text: "The clerk blames every break-in on a single cause when several contribute.",
+            text: "Priya credits the growth to Thursday releases alone when the newsletter, the clips, and the preview links all contribute alongside them.",
           },
           {
             id: "cc-2-c",
-            text: "The clerk argues that one planting will lead, step by inevitable step, to a crime-free town.",
+            text: "Priya argues that missing a single Thursday will send her audience sliding away by inevitable stages.",
           },
         ],
       },
       {
         id: "cc-3",
-        text: "The constable observed, mildly, that the lime-shaded streets were also the ones with gates, lamps, and households that could afford locks.",
+        text: "Her producer pointed out, not for the first time, that Thursday was also when the newsletter dropped, the audio clips hit social, the episode transcript appeared on the website, and Priya herself was reliably in a good mood because the hard part was finished.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cc-4",
-        text: "Undeterred, the clerk unveiled a second chart: children whose families kept a lamp burning after supper scored better at the winter examinations, so the parish should issue lamps and watch the marks rise.",
+        text: "A second finding in the dashboard: listeners who had found the podcast through app-store search rated episodes higher on average than those who had arrived via social media, so she killed the social ad budget entirely and moved everything to app-store placement to lift her ratings.",
         labels: ["correlation-causation"],
         primaryLabel: "correlation-causation",
         isTarget: true,
@@ -60,28 +60,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cc-4-b",
-            text: "The clerk warns that skipping the lamps will send the school sliding toward ruin.",
+            text: "Priya warns that continuing to promote on social will cause her average rating to keep declining.",
           },
           {
             id: "cc-4-c",
-            text: "Lamps and marks rise together, and the rise is treated as the lamp's doing — though families with oil to spare may differ in many ways that matter to examinations.",
+            text: "App-store subscribers and high ratings travel together in her data, but dedicated app-store searchers are already committed podcast listeners who tend to rate generously everywhere — the correlation says nothing about which way the cause runs.",
           },
           {
             id: "cc-4-d",
-            text: "The clerk credits the marks to lamps alone when teaching and appetite surely contribute.",
+            text: "Priya gives sole credit to the discovery channel when episode quality, host reliability, and audience loyalty all shape how listeners rate a show.",
           },
         ],
       },
       {
         id: "cc-5",
-        text: "The schoolmistress asked, to general discomfort, whether the parish meant to issue the spare hours and quiet kitchens as well.",
+        text: "A friend who ran a media startup asked whether app-store listeners might simply be heavier consumers of audio in general, reviewing more and more favorably regardless of how they had first found a show.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cc-6",
-        text: "The charts stayed on the wall through spring, admired by visitors and trusted by fewer of them each week.",
+        text: "The Thursday rule stayed, the social budget did not return, and the ratings moved in the patient, unimpressed way that dashboards always promise they won't.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -90,20 +90,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-failed-harvest",
-    title: "The Failed Harvest",
+    title: "The Debrief",
     difficulty: "intermediate",
     includedLabels: ["single-cause"],
     sentences: [
       {
         id: "sg-1",
-        text: "The barley came in thin that year — a dry June, a rust blight in July, and half the fields sown three weeks late after the flooded spring.",
+        text: "The team had lost twelve of seventeen games — the starting center tore a ligament in week three, the two road stretches landed during final-exam week, and the new coach's system took the full fall to install.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sg-2",
-        text: "At the granary door, old Vasso told anyone with ears that the drought had done it, the drought and nothing else, as droughts had done in his father's day.",
+        text: "The head coach told every reporter who asked that it was the scheduling — the draw had done it, the draw alone, the way brutal schedules had sunk teams in every previous season he could name.",
         labels: ["single-cause"],
         primaryLabel: "single-cause",
         isTarget: true,
@@ -111,28 +111,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sg-2-a",
-            text: "Three contributing causes stand in plain view — drought, blight, late sowing — and Vasso crowns one of them the whole story.",
+            text: "Three visible causes — the center's injury, the finals-week travel, and the new system's installation — are all on the table, and the coach elevates the schedule to 'the draw alone'.",
           },
           {
             id: "sg-2-b",
-            text: "Vasso reasons that because the thin harvest followed the dry June, the dryness must have caused it.",
+            text: "The coach reasons that because the losing streak followed the brutal draw, the schedule must have caused the losses.",
           },
           {
             id: "sg-2-c",
-            text: "Vasso predicts that one dry summer will lead by degrees to famine and the village's end.",
+            text: "The coach warns that one bad schedule will lead, game by game, to the franchise's irreversible decline.",
           },
         ],
       },
       {
         id: "sg-3",
-        text: "The seed merchant, who had sold the village its barley since autumn, had a different accounting to fear.",
+        text: "The assistant coach, who had spent the week reviewing film on the center's replacements, had a different set of numbers ready for anyone who asked.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sg-4",
-        text: "It was the new seed stock, a rival merchant assured the tavern — bad seed, plain and simple, and no talk of weather or rust need enter into it.",
+        text: "The commentators on the team's fan forum settled the matter faster: it was the new system, the whole problem was the new system, and no talk of the injury or the exam-week travel needed to enter into it.",
         labels: ["single-cause"],
         primaryLabel: "single-cause",
         isTarget: true,
@@ -140,28 +140,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sg-4-b",
-            text: "The rival treats seed sales and thin harvests as moving together across villages and reads causation into the pattern.",
+            text: "The commentators observe that teams installing new systems and teams with losing records tend to go together, and take the system to be the cause.",
           },
           {
             id: "sg-4-c",
-            text: "A failure with several visible parents is pinned entirely on one — and the phrase 'no talk of weather or rust need enter into it' waves the other causes away by hand.",
+            text: "A season with several named contributors — injury, travel, system — is pinned entirely on one, and the phrase 'no talk of the injury or the travel needed to enter into it' waves the others away by hand.",
           },
           {
             id: "sg-4-d",
-            text: "The rival argues that buying seed from his competitor once will end with the village owning nothing at all.",
+            text: "The commentators warn that keeping the new system another season will lead by degrees to the end of a competitive roster.",
           },
         ],
       },
       {
         id: "sg-5",
-        text: "The agent from the agricultural society walked the fields, weighed the rust against the rain gauge, and wrote a report with three causes and no villains.",
+        text: "A sports analytics firm the front office had quietly hired ranked four separate factors — schedule difficulty, injury depth, system transition, and exam-period fatigue — with none of them responsible for more than a third of the losses.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sg-6",
-        text: "It satisfied nobody, which the agent privately took as a sign of its accuracy.",
+        text: "The report satisfied nobody, which the analysts took, quietly, as a sign of its accuracy.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -170,20 +170,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-thin-end",
-    title: "The Thin End",
+    title: "One Small Change",
     difficulty: "intermediate",
     includedLabels: ["slippery-slope"],
     sentences: [
       {
         id: "ss-1",
-        text: "The proposal before the vestry was small: trim the reading room's Thursday hours by one, to spare the sexton's knees and the candle budget.",
+        text: "The proposal at Monday's all-hands was minor: let the engineering team flex their start time by an hour to avoid the worst of the commute.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ss-2",
-        text: "Trim an hour Thursday, warned Deacon Amos, and by Michaelmas it would be an hour every day, then whole days, then the reading room shuttered and the books sold for the roof fund — it always went this way.",
+        text: "Flex the engineers once, warned the head of operations, and next the sales team would want it, then every team would set its own hours, then no one would be reachable, and the whole coordination structure holding the company together would quietly dissolve — it always started this way.",
         labels: ["slippery-slope"],
         primaryLabel: "slippery-slope",
         isTarget: true,
@@ -191,28 +191,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ss-2-a",
-            text: "A one-hour trim is chained to the room's abolition without a single link argued — each 'then' is asserted, none defended.",
+            text: "A one-hour flex for one team is chained to the dissolution of the company's entire coordination structure, with every 'then' arriving by assertion and no link between them argued.",
           },
           {
             id: "ss-2-b",
-            text: "Amos blames the room's troubles entirely on the candle budget when several pressures share the blame.",
+            text: "The head of operations blames the company's scheduling difficulties on one cause — the flex request — when meeting loads, time zones, and management overhead all strain coordination too.",
           },
           {
             id: "ss-2-c",
-            text: "Amos notes that shorter hours and shuttered rooms go together across parishes and takes the hours to be the cause.",
+            text: "The head of operations notes that companies with flexible start times report lower cohesion scores, and takes the schedule to be the cause of the gap.",
           },
         ],
       },
       {
         id: "ss-3",
-        text: "The sexton pointed out that the same vestry had trimmed the vestry-garden budget four years running without abolishing the garden.",
+        text: "An engineer pointed out that the design team had been allowed to set their own hours for two years without any of these consequences materializing.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ss-4",
-        text: "Mrs. Quill rose next: allow the schoolchildren to borrow books unsupervised, as was also proposed, and soon it would be dog-eared pages, then missing volumes, then no library worth the name and a generation lost to idleness besides.",
+        text: "The office manager then raised the snack budget: add twenty dollars a week, she said, and soon the team would expect catered lunches, then a fully stocked kitchen, then a chef on retainer, and the burn rate would spiral until the company ran out of runway mid-Series B.",
         labels: ["slippery-slope"],
         primaryLabel: "slippery-slope",
         isTarget: true,
@@ -220,28 +220,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ss-4-b",
-            text: "Mrs. Quill credits the whole decline of reading to a single cause, the unsupervised borrowing.",
+            text: "The office manager credits the entire burn-rate risk to the single line-item decision about snacks.",
           },
           {
             id: "ss-4-c",
-            text: "The chain runs from lending to a lost generation with every link missing — no reason is given why dog-ears must become disappearances, or disappearances idleness.",
+            text: "The chain runs from twenty extra dollars a week to a Series B collapse with no link argued — no reason is given why granola bars must become catered lunches, or lunches a chef, or a chef a funding crisis.",
           },
           {
             id: "ss-4-d",
-            text: "Mrs. Quill assumes that because idleness follows school holidays, the holidays cause the idleness.",
+            text: "The office manager assumes that because snack budget expansions preceded financial trouble at other startups, the expansions caused the trouble.",
           },
         ],
       },
       {
         id: "ss-5",
-        text: "The records clerk noted that the neighboring parish had lent to children for a decade, losing on average one volume a year, usually to a dog.",
+        text: "The COO mentioned three portfolio companies that had expanded snack budgets two years earlier and were all still operating, with burn rates they reported cheerfully in their board decks.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ss-6",
-        text: "Both motions carried, and the reading room survived the autumn in the usual way of things predicted to perish.",
+        text: "Both measures passed, the flex hours became a quiet norm, and the snack budget now covered almonds and sparkling water, neither of which had yet endangered a funding round.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -250,20 +250,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-healthy-village",
-    title: "The Healthy Village",
+    title: "The Sano Paste",
     difficulty: "intermediate",
     includedLabels: ["correlation-causation", "single-cause"],
     sentences: [
       {
         id: "cn-1",
-        text: "A traveling writer came up the switchbacks to Aldenrue, where an uncommon number of residents kept their own teeth past eighty.",
+        text: "A health journalist flew to the island of Sano, where residents reached their nineties at twice the national rate, to find out why.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cn-2",
-        text: "The long-lived here all drink from the iron spring, he wrote in his first dispatch, and there is the engine of their years: the spring water does it.",
+        text: "Every long-lived resident she interviewed started the morning with two tablespoons of fermented black garlic paste, and she filed her first dispatch concluding that the paste was the engine of their years — the paste was doing it.",
         labels: ["correlation-causation"],
         primaryLabel: "correlation-causation",
         isTarget: true,
@@ -271,28 +271,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cn-2-a",
-            text: "Everyone in the village drinks the spring, the long-lived included — the shared habit merely travels with the long lives, and the dispatch reads the traveling-together as causing.",
+            text: "Everyone on Sano eats the paste, the long-lived and the recently arrived alike — the shared habit simply travels with the long lives, and the dispatch reads the traveling-together as the paste's own doing.",
           },
           {
             id: "cn-2-b",
-            text: "The writer warns that abandoning the spring would begin the village's slow slide into sickness.",
+            text: "The journalist warns that abandoning the paste would set the island's health on an irreversible downward slide.",
           },
           {
             id: "cn-2-c",
-            text: "The writer picks the water as the sole cause of a longevity that plainly has several.",
+            text: "The journalist picks the paste as the sole explanation for a longevity that the island's own physician has shown to have several roots.",
           },
         ],
       },
       {
         id: "cn-3",
-        text: "The village doctor, when consulted, mentioned the steep daily walking, the garden diet, the clean high air, and the habit of retiring with the sun.",
+        text: "The island's physician mentioned the steep daily walk down to the harbor, the communal lunches that lasted two hours, the near-total absence of shift work, and a social life so dense it was basically a second immune system.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cn-4",
-        text: "The book, when it appeared, was titled The Water of Aldenrue, and gave the spring sole credit in eleven chapters, the walking and the gardens and the air appearing nowhere in it.",
+        text: "The book, when it appeared eight months later, was called The Sano Paste and devoted eleven chapters to fermented garlic, with the walks and the lunches and the social bonds gathered into a two-page afterword under the heading 'Other Factors.'",
         labels: ["single-cause"],
         primaryLabel: "single-cause",
         isTarget: true,
@@ -300,28 +300,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cn-4-b",
-            text: "The book treats spring-drinking and long life as correlated across villages and infers the water's power from the correlation.",
+            text: "The book treats paste-eating and longevity as correlated across island communities and reads the paste's power from the pattern.",
           },
           {
             id: "cn-4-c",
-            text: "Where the doctor counted four contributing causes, the book crowns one and omits the rest — a complex outcome given a single parent.",
+            text: "Where the physician counted four contributing factors, the book crowns one and buries the rest in an afterword — a complex outcome with several parents is handed a single explanation.",
           },
           {
             id: "cn-4-d",
-            text: "The book claims that bottling the spring will lead, step by step, to the ruin of Aldenrue's way of life.",
+            text: "The book claims that stopping the paste would trigger a step-by-step unraveling of the island's remarkable health.",
           },
         ],
       },
       {
         id: "cn-5",
-        text: "Crates of bottled iron water went down the switchbacks all summer, to buyers who kept their carriages and their suppers just as before.",
+        text: "Cases of the paste moved briskly online all spring, purchased mostly by buyers who continued eating at their desks, commuting forty minutes each way, and skipping lunch with colleagues they had never met.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cn-6",
-        text: "Their teeth, the doctor predicted, would be along presently to testify.",
+        text: "The physician said their checkups, given sufficient time, would arrive with their own opinion on the matter.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -330,20 +330,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-empty-bench",
-    title: "The Empty School Bench",
+    title: "Three Years Down",
     difficulty: "intermediate",
     includedLabels: ["single-cause", "slippery-slope"],
     sentences: [
       {
         id: "sq-1",
-        text: "The school had lost eleven pupils in three years, and the fact sat at the head of the town meeting's agenda like a guest nobody had invited.",
+        text: "The school's reading scores had dropped for three years running, and the fact anchored every PTA meeting agenda like a guest nobody had invited and nobody knew how to ask to leave.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sq-2",
-        text: "The mayor laid it all at the new mill's gate: the mill drew the families to the valley towns, he said, and there was the whole of the matter.",
+        text: "Marcus stood at the microphone and laid it entirely on the tablets: every classroom had added devices in the past three years, and there was the whole of the matter.",
         labels: ["single-cause"],
         primaryLabel: "single-cause",
         isTarget: true,
@@ -351,28 +351,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sq-2-a",
-            text: "Lean birth years, the closed quarry, and the new valley road all shed pupils too — the mill is one cause promoted to 'the whole of the matter'.",
+            text: "A cut librarian position, doubled teacher turnover, a canceled after-school program, and a mid-year curriculum switch all share the same three-year window — and Marcus promotes the tablets to 'the whole of the matter'.",
           },
           {
             id: "sq-2-b",
-            text: "The mayor argues that pupil numbers and mill wages move together and takes the wages to be the cause.",
+            text: "Marcus argues that schools with more devices show lower reading scores across districts, and reads the devices as the cause of the pattern.",
           },
           {
             id: "sq-2-c",
-            text: "The mayor warns that one lost pupil sets the school on an unstoppable road to closure.",
+            text: "Marcus warns that one unchecked device will set the school on an unstoppable road to complete academic failure.",
           },
         ],
       },
       {
         id: "sq-3",
-        text: "The registrar's ledger told a plainer tale — the thin birth years of the last decade, the quarry closure, the new road that made the valley schools an easy drive.",
+        text: "The principal's report listed four other changes from the same period: the librarian position had been cut, teacher turnover had doubled, the after-school tutoring program had ended, and the district had swapped reading curricula halfway through the second year.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sq-4",
-        text: "Then the schoolmaster spoke: close one classroom now, and next it would be the second classroom, then the school itself, then the young families gone for good and the town a place old people write letters from.",
+        text: "Then the board chair spoke: reduce screen time by one hour, she said, and next the school would cut tablets entirely, then the district's technology infrastructure would hollow out, then graduates would enter a workforce that had moved on without them — and the board would own that outcome.",
         labels: ["slippery-slope"],
         primaryLabel: "slippery-slope",
         isTarget: true,
@@ -380,35 +380,35 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sq-4-b",
-            text: "The schoolmaster blames the town's whole decline on the single decision about the classroom.",
+            text: "The board chair credits the district's entire competitive disadvantage to the single decision about screen time.",
           },
           {
             id: "sq-4-c",
-            text: "One classroom's closure is marched to the death of the town through links — second closure, school's end, exodus — that are announced rather than argued.",
+            text: "One hour of reduced screen time is marched to workforce-unprepared graduates through links — full cuts, hollow infrastructure, graduate disadvantage — that are announced rather than argued.",
           },
           {
             id: "sq-4-d",
-            text: "The schoolmaster observes that towns with fewer classrooms have fewer families, and reads the classrooms as the cause.",
+            text: "The board chair observes that districts with tablet restrictions have lower graduation rates and takes the restrictions to be the cause of the gap.",
           },
         ],
       },
       {
         id: "sq-5",
-        text: "A farmer at the back asked what had actually happened in Merrow, which had closed a classroom five years back.",
+        text: "A parent near the exit mentioned that Westfield Elementary had reduced tablet time two years ago and had posted its highest reading scores in a decade the following spring.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sq-6",
-        text: "Merrow, it emerged, still had its school, its second classroom, and a waiting list for the infant bench.",
+        text: "Westfield, it emerged, had also reinstated its librarian, stabilized its teaching staff, and kept the same reading curriculum for four consecutive years.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sq-7",
-        text: "The meeting resolved to count the actual children before closing anything, which passed for wisdom and, that evening, was.",
+        text: "The meeting voted to audit all four factors before adjusting any policy, which some called prudence and others called delay, and on that particular evening it was both.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -417,20 +417,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-harbor-fee",
-    title: "The Harbor Fee",
+    title: "Thread: Proposed Subscription",
     difficulty: "intermediate",
     includedLabels: ["slippery-slope", "correlation-causation"],
     sentences: [
       {
         id: "sr-1",
-        text: "The harbor board proposed a mooring fee of two coppers a night, earmarked for dredging the silted north channel.",
+        text: "The platform's founding team proposed a six-dollar monthly subscription to cover server costs and remove the ads that had been landing on members' portfolio pages.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sr-2",
-        text: "Two coppers tonight, said the eldest of the fishermen, then five by spring, then a licensing office with a brass plate, and inside ten years no boat under sail would afford to call this harbor home.",
+        text: "Six dollars now, predicted the most-upvoted reply, then twelve by spring, then a gated paywall for uploads, and inside three years no independent illustrator would be able to afford to call this platform home — it always started with one small fee.",
         labels: ["slippery-slope"],
         primaryLabel: "slippery-slope",
         isTarget: true,
@@ -438,28 +438,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sr-2-a",
-            text: "The two-copper fee is escalated to the fleet's extinction through a chain of 'thens' — none of which is given a reason to happen.",
+            text: "Six dollars is escalated to the departure of every independent illustrator through a chain of 'thens' — twelve, then a paywall, then an exodus — none of which is given a reason to happen.",
           },
           {
             id: "sr-2-b",
-            text: "The fisherman blames the harbor's troubles on the fee alone, ignoring the silt and the weather.",
+            text: "The commenter blames the platform's troubles on the subscription fee alone, ignoring the ad experience, the server costs, and the moderation backlog.",
           },
           {
             id: "sr-2-c",
-            text: "The fisherman assumes that because fees arrived before hard times elsewhere, the fees caused them.",
+            text: "The commenter assumes that because fees preceded decline on other platforms, the fees caused the decline.",
           },
         ],
       },
       {
         id: "sr-3",
-        text: "The board's clerk countered with figures from along the coast, read out with the confidence of a man holding paper.",
+        text: "A community moderator replied with a detailed server-cost breakdown and a table showing what the ad-supported alternative actually looked like, written with the patience of someone who had read every comment in the thread twice.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sr-4",
-        text: "Every harbor that charges a mooring fee has a larger fleet than ours, the clerk announced, so the fee itself plainly grows a fleet, and ours would grow accordingly.",
+        text: "In a follow-up post, the team noted that platforms with subscription models grew their active userbases faster than free ones, and concluded that a subscription would clearly accelerate their own community's growth.",
         labels: ["correlation-causation"],
         primaryLabel: "correlation-causation",
         isTarget: true,
@@ -467,28 +467,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sr-4-b",
-            text: "The clerk warns that declining the fee will start the harbor down a road that ends in an empty quay.",
+            text: "The team warns that staying free will begin a slow drift toward irrelevance and an empty, abandoned platform.",
           },
           {
             id: "sr-4-c",
-            text: "Fees and fleet size go together across harbors, but big, busy harbors both need fees and attract boats — the clerk reads the going-together as the fee causing the fleet.",
+            text: "Subscription fees and large active communities go together across platforms, but communities large enough to charge are also large enough to attract members already — the going-together doesn't show which direction the cause runs.",
           },
           {
             id: "sr-4-d",
-            text: "The clerk credits fleet size to fees alone, setting aside the fish, the rail line, and the sheltered water.",
+            text: "The team credits community growth to the subscription model alone, setting aside the content quality, the founding network, and the years the platform ran free.",
           },
         ],
       },
       {
         id: "sr-5",
-        text: "An old pilot remarked that deep water gathered boats and fees alike, and that nobody dredged a channel with rhetoric.",
+        text: "A longtime member pointed out that the thriving subscription platforms in the team's data had all been large enough to attract paying members before they ever charged — the fee followed the growth, not the other way around.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sr-6",
-        text: "The fee passed, sized to the dredging and sunsetted in three years, which gave both prophets something to watch.",
+        text: "The subscription passed at six dollars, with a publicly posted cost ledger and a two-year sunset clause, which gave both sides something concrete to argue about.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -497,20 +497,20 @@ export const causalFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-improvement-society",
-    title: "Minutes of the Improvement Society",
+    title: "The Glass Room",
     difficulty: "intermediate",
     includedLabels: ["correlation-causation", "single-cause", "slippery-slope"],
     sentences: [
       {
         id: "cf-1",
-        text: "The Improvement Society met above the saddlery, seven members strong, minutes kept in a marbled book.",
+        text: "The quarterly all-hands ran long, as it always did, in the glass-walled conference room that made everyone feel faintly observed by their future selves.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cf-2",
-        text: "Miss Fairweather opened with her survey: households owning a pianoforte produced the parish's best young readers, and therefore a subscription instrument in the schoolroom would lift the reading of the whole parish.",
+        text: "The growth lead opened with a slide: users who had push notifications enabled opened the app four times more often, so enabling notifications by default for all new signups would multiply engagement fourfold — she recommended flipping the switch before the next sprint.",
         labels: ["correlation-causation"],
         primaryLabel: "correlation-causation",
         isTarget: true,
@@ -518,28 +518,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cf-2-a",
-            text: "Pianos and strong readers keep company in the same households — ones with books, tutors, and quiet evenings — and the keeping-company is mistaken for the piano's doing.",
+            text: "Notification-enabled users and high open rates keep company in her data, but engaged users both turn on notifications and open apps frequently — the lead reads the company-keeping as the notification's doing.",
           },
           {
             id: "cf-2-b",
-            text: "Miss Fairweather credits the children's reading to a single cause when many contribute.",
+            text: "The growth lead credits engagement to the notification setting alone, setting aside content quality, habit loops, and each user's underlying intent.",
           },
           {
             id: "cf-2-c",
-            text: "Miss Fairweather argues that without a piano the parish's reading will decay by inevitable stages.",
+            text: "The growth lead argues that failing to enable notifications by default will send engagement into an unrecoverable decline.",
           },
         ],
       },
       {
         id: "cf-3",
-        text: "The minutes record polite applause, and one abstention on grounds of having heard the schoolroom sing.",
+        text: "The room received the slide with the measured enthusiasm of people who suspected the chart was missing something important.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cf-4",
-        text: "Colonel Brace then addressed the spring flood: the beaver dam had done it, the dam entire and alone, and he moved that its removal be minuted as the flood's remedy — the record rainfall and the silted channel being, he said, distractions.",
+        text: "The CTO then walked through the retention data: the launch-day outage had done it, the outage alone, the UX debt and the confusing onboarding being, she said, contributing noise rather than signal.",
         labels: ["single-cause"],
         primaryLabel: "single-cause",
         isTarget: true,
@@ -547,28 +547,28 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cf-4-b",
-            text: "The Colonel reasons that since flooding followed the beavers' arrival, the beavers caused the flood.",
+            text: "The CTO reasons that because the retention drop followed the launch-day outage, the outage must have caused it.",
           },
           {
             id: "cf-4-c",
-            text: "The flood had three parents in plain sight — dam, record rain, silted channel — and the Colonel elects one, dismissing the others by name.",
+            text: "UX debt and a confusing onboarding sit alongside the outage in the retention data — the CTO elects one and labels the others 'noise'.",
           },
           {
             id: "cf-4-d",
-            text: "The Colonel predicts that tolerating one dam will surrender the whole river, meadow by meadow, to the beavers.",
+            text: "The CTO predicts that one unresolved deployment issue will cascade until every subsequent launch produces a similar crisis.",
           },
         ],
       },
       {
         id: "cf-5",
-        text: "Last came the matter of the pie-cart that wished to stand Tuesdays in the square, and Mr. Owlish rose with the weight of a man saving civilization.",
+        text: "The head of product rose next with numbers on the referral program, moving to the whiteboard with the focused air of someone who had been holding this information since the pre-meeting coffee.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cf-6",
-        text: "License one cart, he said, and next came two, then a row of them, then a fairground where the square had been, and the shops dark behind it — the pie-cart was the first pebble of an avalanche.",
+        text: "Lower the referral bonus by ten dollars, she warned, and users would feel cheated, then disengage, then stop referring anyone at all, and the one acquisition channel that cost less than paid ads would quietly hollow out — all from a single line-item cut.",
         labels: ["slippery-slope"],
         primaryLabel: "slippery-slope",
         isTarget: true,
@@ -576,21 +576,21 @@ export const causalFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cf-6-a",
-            text: "One licensed cart is rolled downhill to darkened shops with no force but repetition — the avalanche is invoked, the pebble-to-avalanche mechanics never shown.",
+            text: "A ten-dollar bonus cut is rolled to a dead acquisition channel with no mechanism at any step — the chain from feeling cheated to disengaging to never referring again is invoked, not argued.",
           },
           {
             id: "cf-6-b",
-            text: "Mr. Owlish observes that squares with carts have fewer shops and takes the carts to be the cause.",
+            text: "The head of product observes that platforms with lower referral bonuses have smaller user bases, and takes the bonus level to be the cause of the difference.",
           },
           {
             id: "cf-6-c",
-            text: "Mr. Owlish blames the high street's struggles on the pie-cart alone, forgetting the new valley road.",
+            text: "The head of product blames the referral program's struggles on the bonus cut alone, setting aside the product experience and the invite-flow design.",
           },
         ],
       },
       {
         id: "cf-7",
-        text: "The Society licensed the cart, tabled the piano, and referred the beavers to a committee, where they remain.",
+        text: "The team voted to A/B test the notification default, audit the onboarding separately, and run a three-month pilot on the adjusted bonus before treating any of the afternoon's predictions as verdicts.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

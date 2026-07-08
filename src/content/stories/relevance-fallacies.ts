@@ -2,30 +2,30 @@ import type { PracticeStory } from "@/domain/types";
 
 /**
  * Relevance-fallacy stories: ad hominem, straw man, red herring, tu quoque,
- * and appeal to emotion — with healthy dialectical engagement placed in the
- * same rooms, so the learner practices telling a derailment from a genuine
- * answer. Debate settings throughout: vestries, boards, guild halls, courts.
- * The fallacious lines should sound like real meeting rhetoric — persuasive,
- * even sympathetic — never cartoon mistakes.
+ * and appeal to emotion — with healthy dialectical engagement in the mix, so
+ * the learner practices telling a derailment from a genuine answer.
+ * Settings are modern, everyday, or lightly fantastical. The fallacious lines
+ * should sound like real argument rhetoric — persuasive, even sympathetic —
+ * never cartoon mistakes.
  */
 
 export const relevanceFallacyStories: readonly PracticeStory[] = [
   {
     id: "story-vestry-roof",
-    title: "The Vestry and the Roof",
+    title: "The Tool Trial",
     difficulty: "intermediate",
     includedLabels: ["ad-hominem", "straw-man", "red-herring"],
     sentences: [
       {
         id: "rv1-1",
-        text: "The vestry met on the mason's estimate for releading the church roof, and Churchwarden Ames asked only that a second mason price the work before the parish signed.",
+        text: "Maya, who had been on the team for eight months, asked only that they run a two-week trial of the new project tool before anyone signed a year's contract.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv1-2",
-        text: "Mr. Corliss observed that Ames had come to the parish scarcely nine years ago, from a lowland town where every roof was thatch, and wondered what such a man could have to tell them about lead.",
+        text: "Dan pointed out that Maya had never shipped a full product cycle with this team, coming as she did from a company that ran five-person sprints, and wondered what someone with that background really understood about their tooling needs.",
         labels: ["ad-hominem"],
         primaryLabel: "ad-hominem",
         isTarget: true,
@@ -33,28 +33,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv1-2-a",
-            text: "Corliss recasts the request for a second estimate as a grander scheme — distrusting every roof in the parish — and argues against that version instead.",
+            text: "Dan reframes Maya's request for a trial as a proposal to abandon every process the team has built, then argues against that grander disruption.",
           },
           {
             id: "rv1-2-b",
-            text: "Nothing in the estimate is weighed at all; Ames's short residence and lowland upbringing are offered as the reason to discount him — the man answered in place of his proposal.",
+            text: "The trial proposal is never examined on its merits; Maya's short tenure and her previous company's smaller scale are offered as the reason to discount her — the person answered in place of the idea.",
           },
           {
             id: "rv1-2-c",
-            text: "Corliss steers the vestry from the estimate to the parish's history with newcomers, a fresh subject under which the vote quietly disappears.",
+            text: "Dan steers the group from the tool trial to the question of how team experience should be weighted, a fresh subject under which the proposal quietly disappears.",
           },
         ],
       },
       {
         id: "rv1-3",
-        text: "The mason's figure sat on the table between them, neither defended nor disputed.",
+        text: "The trial proposal sat in the shared doc, undefended and unchallenged on its merits.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv1-4",
-        text: "Mrs. Held replied that if Ames meant the congregation to sit under open rafters through another winter sooner than trust an honest tradesman, then she, for one, could never vote with him.",
+        text: "Priya said she wasn't about to watch them throw out every process they'd spent two years building just because one person was restless with the setup — if they wanted to start from scratch every quarter, she wasn't going to pretend that was a reasonable way to work.",
         labels: ["straw-man"],
         primaryLabel: "straw-man",
         isTarget: true,
@@ -62,21 +62,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv1-4-a",
-            text: "Ames asked for a second estimate before signing; Held answers a far more reckless proposal — a winter under open rafters — and defeats the version she built rather than the one he made.",
+            text: "Maya asked for a two-week trial; Priya argues against overhauling every process every quarter — a far more disruptive proposal that nobody made, defeated in its invented form while the modest suggestion goes unanswered.",
           },
           {
             id: "rv1-4-b",
-            text: "Held attacks Ames's character, painting him as a man who distrusts honest tradesmen, instead of engaging his suggestion.",
+            text: "Priya attacks Maya's character — restless, unwilling to commit — rather than saying anything about what a trial would or wouldn't show.",
           },
           {
             id: "rv1-4-c",
-            text: "Held summons the misery of a roofless winter — cold pews, dripping rafters — as feeling offered in place of any evidence about the estimate itself.",
+            text: "Priya summons the effort that went into two years of process-building — a feeling of potential loss — in place of any evidence that the trial would actually damage what they've made.",
           },
         ],
       },
       {
         id: "rv1-5",
-        text: "Then old Tapping wondered aloud whether the vestry oughtn't first settle the matter of the churchyard gate, which had hung crooked since Lady Day, and for a quarter of an hour the roof was not mentioned again.",
+        text: "Then Joel brought up the Slack notification settings, which had been misfiring since the platform update three weeks ago and were, in his view, the real drain on the team's time, and the next twenty minutes went entirely there.",
         labels: ["red-herring"],
         primaryLabel: "red-herring",
         isTarget: true,
@@ -84,21 +84,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv1-5-a",
-            text: "Tapping restates the roof proposal as a plan to repair everything in the parish at once, then objects to the expense of that larger scheme.",
+            text: "Joel restates the tool trial as a plan to overhaul all the team's tooling at once, then objects to the cost and disruption of that larger project.",
           },
           {
             id: "rv1-5-b",
-            text: "Tapping trades the estimate's figures for sentiment about the churchyard where the parish dead lie, letting feeling settle the question.",
+            text: "Joel replaces the trial question with frustration over missed notifications — accumulated irritation doing the work of engaging the proposal.",
           },
           {
             id: "rv1-5-c",
-            text: "No one's position is distorted and no one is attacked; the question is simply abandoned — the crooked gate is a fresh scent, and the vestry follows it away from the vote.",
+            text: "Nobody's position is distorted and nobody is attacked; the notification settings are simply a livelier grievance, drawn across the trail, and the meeting follows it away from the trial question.",
           },
         ],
       },
       {
         id: "rv1-6",
-        text: "The estimate was carried over to Michaelmas, unsigned, and the lead went on thinning at its own pace.",
+        text: "The trial was moved to the product backlog, the doc was closed, and the current tool went on misfiring in the ways it always had.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -107,27 +107,27 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-dredging-question",
-    title: "The Dredging Question",
+    title: "The Pool Association",
     difficulty: "intermediate",
     includedLabels: ["tu-quoque", "appeal-to-emotion", "dialectical"],
     sentences: [
       {
         id: "rv2-1",
-        text: "The harbor board met on the engineer's report: the inner channel was losing a hand's depth to silt each winter, and the dredger's price rose with every season the work was put off.",
+        text: "The pool inspector's report was clear: the liner had developed twelve delaminations over the winter, and the longer the patch work was deferred, the more expensive the full replacement would become.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv2-2",
-        text: "Pilot Voss said plainly that the board had postponed the dredging three years running, and that the postponing had become the expensive part.",
+        text: "Resident Marcus said plainly that the board had put off the liner repair three summers in a row, and that the deferral itself had become the most expensive decision they'd made.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv2-3",
-        text: "The treasurer answered that Voss's own boat had not been careened in three seasons, by his reckoning, and that a man with weed on his hull might spare the board his lectures on upkeep.",
+        text: "The board treasurer replied that Marcus's own fence still didn't meet the community's property standards — he'd been sent two notices — and that maybe someone with an out-of-code fence shouldn't be lecturing the board about maintenance.",
         labels: ["tu-quoque"],
         primaryLabel: "tu-quoque",
         isTarget: true,
@@ -135,21 +135,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv2-3-a",
-            text: "The postponements are never defended; Voss's own neglected hull — the same fault he charges the board with — is offered as if a critic's hypocrisy could refute his criticism.",
+            text: "The deferred repairs are never defended; Marcus's own out-of-code fence — the same kind of maintenance failure he is charging the board with — is raised as if a critic's hypocrisy could answer his criticism.",
           },
           {
             id: "rv2-3-b",
-            text: "The treasurer attacks Voss's competence as a pilot generally, his character and standing, rather than the substance of what he said.",
+            text: "The treasurer attacks Marcus's general reliability as a neighbor — the notices, his track record — rather than specifically turning one parallel fault back on him.",
           },
           {
             id: "rv2-3-c",
-            text: "The treasurer changes the subject from the harbor's channel to boats in general, so that the three postponed years are never examined.",
+            text: "The treasurer changes the subject from the pool liner to property standards across the whole community, so the three deferred summers are never examined.",
           },
         ],
       },
       {
         id: "rv2-4",
-        text: "Old Callum rose to say that his grandfather had brought ships up that channel when it ran a fathom clear, and that any board that could hear this and still haggle over an engineer's figures had no salt in its blood.",
+        text: "Mrs. Chen rose to say that this pool had been here when she moved in thirty years ago, that her children had learned to swim in it, and that any board willing to sit here and debate costs while the liner rotted had lost sight of what this neighborhood was supposed to be.",
         labels: ["appeal-to-emotion"],
         primaryLabel: "appeal-to-emotion",
         isTarget: true,
@@ -157,21 +157,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv2-4-a",
-            text: "Callum attacks the board members themselves — bloodless, unsalted — in place of engaging anything in the engineer's report.",
+            text: "Chen attacks the board personally — lost sight of what a neighborhood means — rather than weighing anything in the inspector's repair figures.",
           },
           {
             id: "rv2-4-b",
-            text: "Callum steers the meeting away from this year's dredging and into his family's history, a new subject under which the figures are quietly lost.",
+            text: "Chen leads the meeting from this summer's patch work into a thirty-year history of the pool, a different subject under which the costs are quietly set aside.",
           },
           {
             id: "rv2-4-c",
-            text: "Pride and shame do the arguing: the grandfather's fathom of clear water is offered where soundings and costs belong, feeling standing in for evidence about what the channel needs now.",
+            text: "Sentiment does the arguing: thirty years of childhood summers are offered where timelines and cost projections belong, feeling standing in for evidence about what the liner actually needs now.",
           },
         ],
       },
       {
         id: "rv2-5",
-        text: "The chairwoman put Voss's objection back to the room in its strongest form — that every postponed season raised the price of the next — granted it outright, and moved that the outer bar be dredged that autumn with the inner channel bound into the spring estimates.",
+        text: "The association chair restated Marcus's point at full strength — every summer of delay compounded the eventual cost — conceded it as accurate, and proposed that the outer pool deck be patched that fall with the full liner replacement built into the spring budget.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -179,21 +179,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv2-5-a",
-            text: "The chairwoman rewrites Voss's complaint into a softer version — a worry about prices — that she can grant more cheaply than what he actually said.",
+            text: "The chair softens Marcus's complaint into a vague worry about the pace of decisions, a milder version she can grant more cheaply than what he actually said.",
           },
           {
             id: "rv2-5-b",
-            text: "The objection is restated whole, at full strength, conceded where it is true, and the board's plan is amended to answer it — the criticism taken into the reasoning rather than turned aside.",
+            text: "The objection is taken up whole, at full strength, conceded where it's true, and the board's plan is adjusted to answer it — the criticism built into the decision rather than turned aside.",
           },
           {
             id: "rv2-5-c",
-            text: "She slides from Voss's criticism to the outer bar, a different stretch of water entirely, and so escapes the question about the inner channel.",
+            text: "She moves from Marcus's concern about deferral to the outer deck, a different part of the project, and so escapes the question about the liner.",
           },
         ],
       },
       {
         id: "rv2-6",
-        text: "The motion carried, the minutes recorded it, and Voss went out to look at his hull.",
+        text: "The motion passed, the minutes recorded it, and Marcus drove home past his fence.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -202,20 +202,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-guild-audit",
-    title: "The Guild Audit",
+    title: "The Expense Report",
     difficulty: "intermediate",
     includedLabels: ["ad-hominem", "tu-quoque"],
     sentences: [
       {
         id: "rv3-1",
-        text: "The auditor's letter, read aloud in the guild hall, found the wardens' ledger short by the price of forty hides over two years.",
+        text: "The finance team's report, shared on the team channel the night before, found the department's discretionary spending over budget by just over four hundred dollars across the last two quarters.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv3-2",
-        text: "Warden Crail reminded the hall that Mr. Fenn, who wrote it, had twice been passed over for guild office, and asked, to some laughter, whether a disappointed man's letter deserved the name of an audit.",
+        text: "The department manager noted that the auditor, Dan Fisk, had applied for the finance lead position twice and been passed over both times, and asked, with a half-smile, whether a disappointed man's spreadsheet deserved to be called an audit.",
         labels: ["ad-hominem"],
         primaryLabel: "ad-hominem",
         isTarget: true,
@@ -223,28 +223,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv3-2-a",
-            text: "Crail deflects the audit by accusing Fenn of the very shortfall it alleges, answering the charge of missing money with a matching charge.",
+            text: "The manager turns Fisk's own record against him — as though his failed applications committed the same fault as the one the audit alleges.",
           },
           {
             id: "rv3-2-b",
-            text: "Crail turns the hall from the ledger to the history of guild elections, a livelier subject under which the letter is never answered.",
+            text: "The manager steers the meeting from the expense figures to the history of the finance lead selection, a livelier topic under which the spreadsheet is never answered.",
           },
           {
             id: "rv3-2-c",
-            text: "The forty hides go entirely unexplained; Fenn's disappointed ambitions are offered as the reason to dismiss his findings — the arguer's motives attacked in place of his arithmetic.",
+            text: "The four hundred dollars goes entirely unexplained; Fisk's disappointed career ambitions are offered as the reason to dismiss his findings — the arguer's motives set in place of his arithmetic.",
           },
         ],
       },
       {
         id: "rv3-3",
-        text: "The letter lay on the lectern where the clerk had left it, its columns as long as before.",
+        text: "The spreadsheet remained in the shared drive, its columns as long as before.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv3-4",
-        text: "When the journeyman Hobbe pressed for the missing entries to be read out, Crail observed that Hobbe's own dues stood two quarters in arrears, and that men who owed the box might be slower to talk of what was owed from it.",
+        text: "When junior analyst Hoppe pressed to see the itemized receipts, the manager pointed out that Hoppe had expensed a sixty-dollar team lunch in March that the receipts showed was for one person, and suggested that people who padded their own expenses might think twice before calling others into question.",
         labels: ["tu-quoque"],
         primaryLabel: "tu-quoque",
         isTarget: true,
@@ -252,28 +252,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv3-4-a",
-            text: "Crail attacks Hobbe's character — a debtor, not fit to be heard — in place of the request, discrediting the man rather than his question.",
+            text: "The manager attacks Hoppe's character wholesale — someone who pads expenses, not fit to question others — rather than returning one specific parallel act back to him.",
           },
           {
             id: "rv3-4-b",
-            text: "Hobbe's question is met by turning his own conduct back on him: his unpaid dues, the same kind of fault, offered as though his standing to ask settled whether the entries were missing.",
+            text: "Hoppe's request to see the receipts is met with his own past expense claim turned back on him; the same kind of fault is offered as though it settled whether the department's itemized figures were accurate.",
           },
           {
             id: "rv3-4-c",
-            text: "Crail moves the talk from the wardens' ledger to the dues-box, a different account entirely, so the missing entries are never read.",
+            text: "The manager shifts the discussion from the department's discretionary spending to the personal expense category, a different account, so the itemized receipts are never produced.",
           },
         ],
       },
       {
         id: "rv3-5",
-        text: "Hobbe paid his two quarters at the door that evening, which changed the price of forty hides not at all.",
+        text: "Hoppe reimbursed the sixty dollars that afternoon, which did nothing to close the four-hundred-dollar gap.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv3-6",
-        text: "The audit was referred to a committee of three, two of them wardens.",
+        text: "The audit was referred to a review committee of three, two of them members of the department.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -282,20 +282,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-schoolhouse-flue",
-    title: "The Schoolhouse Flue",
+    title: "The Mold Report",
     difficulty: "intermediate",
     includedLabels: ["straw-man", "appeal-to-emotion"],
     sentences: [
       {
         id: "rv4-1",
-        text: "The sweep's report found the schoolhouse flue cracked in two places above the second floor, and Mistress Pryce asked that lessons move to the granary hall for one winter while it was rebuilt.",
+        text: "The HVAC contractor's report found active mold growth behind the walls of two second-floor classrooms, and Principal Torres asked that lessons move to the library wing for one semester while the remediation was completed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv4-2",
-        text: "Alderman Strood said he would not sit quiet while the building their grandfathers had raised was condemned as a death-trap and marked for pulling down, and on the word of one sweep at that.",
+        text: "Board member Strode said he would not sit quietly while the building this community had raised over fifty years was condemned as uninhabitable and marked for shutdown, not on the word of a single contractor without so much as a second opinion.",
         labels: ["straw-man"],
         primaryLabel: "straw-man",
         isTarget: true,
@@ -303,28 +303,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv4-2-a",
-            text: "Pryce asked for a winter's remove while a flue was mended; Strood answers a demolition nobody proposed — the modest request rebuilt into an extreme one and rebutted in that easier form.",
+            text: "Torres asked to move two classes for one semester while the walls were treated; Strode argues against a condemnation and permanent shutdown that nobody proposed — the modest request rebuilt into an extreme one and rebutted in that invented form.",
           },
           {
             id: "rv4-2-b",
-            text: "Strood attacks the sweep himself — one tradesman, not to be trusted — rather than saying anything about the two cracks in the flue.",
+            text: "Strode attacks the contractor himself — a single tradesman, not credentialed enough to be trusted — rather than saying anything about what the mold report actually found.",
           },
           {
             id: "rv4-2-c",
-            text: "Strood offers the grandfathers' labor as pure sentiment, warmth of ancestry standing in for any evidence that the flue is sound.",
+            text: "Strode invokes the community's fifty-year investment in the building — civic pride and attachment — as feeling offered in place of any evidence that the walls are sound.",
           },
         ],
       },
       {
         id: "rv4-3",
-        text: "The granary hall could be had for a peppercorn rent, the maltster having no winter use for it.",
+        text: "The library wing could accommodate both classes with space to spare, at no additional cost to the district.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv4-4",
-        text: "Mrs. Vane rose to say she had learned her letters beside that stove, as had half the room, and that anyone who remembered its warmth on a snow morning knew in their heart the chimney was sound.",
+        text: "Mrs. Vane said she had learned to read in that building, that her children had sat in those same rooms, and that anyone who could sit here and call it a health hazard had clearly not spent a day in it the way she had.",
         labels: ["appeal-to-emotion"],
         primaryLabel: "appeal-to-emotion",
         isTarget: true,
@@ -332,28 +332,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv4-4-a",
-            text: "Vane recasts Pryce's request as an insult to everyone schooled in the building, then argues against the insult rather than the plan.",
+            text: "Vane reframes Torres's request as an accusation that everyone who studied there was harmed, then argues against that insult rather than the remediation plan.",
           },
           {
             id: "rv4-4-b",
-            text: "Vane draws the meeting away from the flue and into her school days, a new subject under which the sweep's report is never weighed.",
+            text: "Vane draws the board away from the mold report and into her own history with the school, a change of subject that leaves the contractor's findings where they were.",
           },
           {
             id: "rv4-4-c",
-            text: "The warmth of remembered snow mornings is offered as evidence about the flue itself — fondness set where the sweep's findings belong, as though a feeling could inspect a chimney.",
+            text: "The warmth of remembered classrooms is placed where the mold report's findings belong — fondness offered as evidence about the walls' condition, as though a feeling could assess an air sample.",
           },
         ],
       },
       {
         id: "rv4-5",
-        text: "The sweep, asked to repeat himself, said only that cracks did not care where anyone had learned their letters.",
+        text: "The contractor, asked to clarify, said that mold did not particularly care where anyone had learned to read.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv4-6",
-        text: "The children wintered in the granary hall, and the schoolhouse got its new flue and, in the spring, its children back.",
+        text: "The classes moved to the library that autumn, and the building got its remediation and, the following spring, its students back.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -362,20 +362,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-common-stint",
-    title: "The Common Stint",
+    title: "The Parking Log",
     difficulty: "intermediate",
     includedLabels: ["red-herring", "tu-quoque"],
     sentences: [
       {
         id: "rv5-1",
-        text: "The hayward's count, taken at first light and again at dusk, put Dunmore's flock at sixty head over his stint on the common.",
+        text: "The parking coordinator's log, verified at the start and end of each day, put the Dunmore household at three vehicles over their allotment for the full six weeks of July.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv5-2",
-        text: "Dunmore rose and spoke, with real force, about the ramblers who came over the stile each Sunday and left the top gates swinging, and by the time he sat down the meeting was arguing about latches.",
+        text: "Dunmore stood and spoke, with real feeling, about the food delivery drivers who blocked the main entrance every evening and left the visitor gate swinging open, and by the time he sat down the association was arguing about gate codes.",
         labels: ["red-herring"],
         primaryLabel: "red-herring",
         isTarget: true,
@@ -383,28 +383,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv5-2-a",
-            text: "Dunmore turns the accusation back on the ramblers, charging his accusers with the very fault laid at his own door.",
+            text: "Dunmore turns the parking complaint back on the delivery drivers, charging his accusers with the same kind of violation laid at his own household's door.",
           },
           {
             id: "rv5-2-b",
-            text: "The count of sixty is never disputed or even mentioned; a fresh grievance — gates and Sunday ramblers — is laid across the trail, and the meeting follows it away from the stint.",
+            text: "The count of three over-allotment is never disputed or addressed; a separate grievance — nightly delivery trucks and an open gate — is placed across the trail, and the meeting follows it away from the parking question.",
           },
           {
             id: "rv5-2-c",
-            text: "Dunmore recasts the hayward's complaint as an attack on everyone who uses the common, then argues against that broader charge.",
+            text: "Dunmore reframes the coordinator's complaint as an accusation against every resident who ever had a guest park without logging in, then argues against that broader charge.",
           },
         ],
       },
       {
         id: "rv5-3",
-        text: "The chairman, recovering the thread, asked Dunmore directly whether the count was wrong.",
+        text: "The chair recovered the thread and asked Dunmore directly whether the parking log was wrong.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv5-4",
-        text: "Dunmore reminded the hall instead that the hayward himself had wintered a dozen ewes on the common the year the counts ran short, and asked how the man who did that could stand there reading numbers at him.",
+        text: "Dunmore reminded the room instead that the coordinator herself had parked a personal trailer in a guest space for the entire long weekend in May, and asked how someone who did that could stand up there reading numbers at him.",
         labels: ["tu-quoque"],
         primaryLabel: "tu-quoque",
         isTarget: true,
@@ -412,28 +412,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv5-4-a",
-            text: "The hayward's own past grazing — the same fault in the critic — is offered as if it unmade his count; a charge of hypocrisy stands where an answer about the sixty head should.",
+            text: "The coordinator's own trailer — the same kind of rule violation turned back on herself — is offered as if a critic's hypocrisy unmade her count; whether the three extra vehicles were parked remains answered by nobody.",
           },
           {
             id: "rv5-4-b",
-            text: "Dunmore attacks the hayward's character wholesale — grasping, not to be trusted with office — rather than the count he carried out.",
+            text: "Dunmore attacks the coordinator's character as an enforcer — capricious, not to be trusted with authority — rather than returning one specific comparable act to her.",
           },
           {
             id: "rv5-4-c",
-            text: "Dunmore shifts the meeting to a bygone winter, an older story under which the present count is never discussed at all.",
+            text: "Dunmore shifts the meeting to the May holiday weekend, a different incident, so the six weeks of July are never actually discussed.",
           },
         ],
       },
       {
         id: "rv5-5",
-        text: "Nobody in the hall, it was noticed, had yet said the number sixty was false.",
+        text: "Nobody in the room had yet said the number three was incorrect.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv5-6",
-        text: "The stint question was carried over to the next court, and the flock went on eating in the meantime.",
+        text: "The parking question was carried over to the next meeting, and the extra vehicles went on fitting just fine in the meantime.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -442,27 +442,27 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-almshouse-orchard",
-    title: "The Almshouse Orchard",
+    title: "The Council of the Grove",
     difficulty: "intermediate",
     includedLabels: ["ad-hominem", "appeal-to-emotion", "dialectical"],
     sentences: [
       {
         id: "rv6-1",
-        text: "The almshouse trust met on a single question: whether to sell the orchard the founder had left it and spend the price on the west wing's failing roof.",
+        text: "The Arcane Council had one item before it: whether to sell the Verdant Grove, which the founder had bequeathed it in perpetuity, and spend the proceeds on repairs to the crumbling East Tower.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv6-2",
-        text: "Surveyor Pellam, who had measured the rafters, argued against the sale: an orchard could be sold once, he said, while roofs would go on failing, and the trust would do better to repair from reserve and keep the orchard's yearly rent.",
+        text: "Master Archivist Pellam, who had measured the cracks in the tower stones himself, argued against the sale: a grove could be sold once, he noted, while towers would go on requiring repair, and the council would do better to draw from the treasury reserve and keep the grove's yearly tribute in crystals.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv6-3",
-        text: "Trustee Gorse replied that Pellam rented his own lodgings, had never held a rood of land in his life, and that the trust need not take instruction on property from a man who owned none.",
+        text: "Magister Gorse replied that Pellam lived in borrowed quarters, had never held a charter of land in his own name in forty years of service, and that the council need not receive instruction on endowments from a man who owned nothing of his own.",
         labels: ["ad-hominem"],
         primaryLabel: "ad-hominem",
         isTarget: true,
@@ -470,21 +470,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv6-3-a",
-            text: "Gorse charges Pellam with the very improvidence Pellam warns the trust against, meeting the criticism with a matching accusation of the same fault.",
+            text: "Gorse charges Pellam with the very improvidence he warns against — living on borrowed space while advising the council about its assets — as though Pellam's personal situation committed the same fault he named.",
           },
           {
             id: "rv6-3-b",
-            text: "Pellam's point about capital and recurring costs is never touched; his rented lodgings are — the man's circumstances offered as if they answered his reasoning.",
+            text: "Pellam's reasoning about a one-time sale versus recurring repair costs is never examined; his borrowed quarters and lack of a land title are placed in its place — the man's circumstances offered as though they answered his argument.",
           },
           {
             id: "rv6-3-c",
-            text: "Gorse turns the meeting from the roof to the question of who owns what in the parish, and the repair figures slip quietly out of view.",
+            text: "Gorse steers the council from the sale question to the matter of who among them holds property of their own, a fresh subject under which the tower estimates disappear.",
           },
         ],
       },
       {
         id: "rv6-4",
-        text: "Mrs. Alder said the founder had set those trees with his own hands, that she could not walk the rows in blossom-time without weeping, and that a heart which felt this rightly would know the roof could be paid for some other way.",
+        text: "Elder Alder said the founder had planted the grove's first trees with her own hands, that she wept every time she walked there at dawn, and that any council with the proper feeling for this institution would surely find the tower could be paid for some other way.",
         labels: ["appeal-to-emotion"],
         primaryLabel: "appeal-to-emotion",
         isTarget: true,
@@ -492,21 +492,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv6-4-a",
-            text: "Her tears in blossom-time are given as grounds for a claim about the trust's finances — the feeling is real, but it is set where figures belong, as though grief could locate another source of funds.",
+            text: "Her grief at dawn in the grove is offered as grounds for a claim about the council's finances — the feeling is real and the attachment genuine, but it is placed where figures and alternatives belong, as though weeping could locate another source of funds.",
           },
           {
             id: "rv6-4-b",
-            text: "Alder recasts the proposed sale as a deliberate attack on the founder's memory, then argues against that darker version of the plan.",
+            text: "Alder reframes the proposed sale as a deliberate betrayal of the founder's trust, then argues against that darker version of the motion rather than the practical one on the table.",
           },
           {
             id: "rv6-4-c",
-            text: "Alder leads the trustees away from the roof accounts and out into the orchard rows, a change of subject under which the estimate is never weighed.",
+            text: "Alder leads the council from the tower repair accounts out into the grove's founding history, a different subject under which the estimate is never weighed.",
           },
         ],
       },
       {
         id: "rv6-5",
-        text: "The chair took up Pellam's objection and gave it back whole — a sold orchard could be sold once, while roofs would go on failing — then proposed selling the outer acre alone and meeting the rest of the repairs from two years of the orchard's rent.",
+        text: "The Archon took up Pellam's objection and gave it back whole — a sold grove can be sold only once, while towers go on needing repair — conceded it fully, and moved that the council sell the outer quarter of the grove alone and meet the remaining cost from two years of the grove's tribute.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -514,28 +514,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv6-5-a",
-            text: "The chair rewrites Pellam's warning into a milder doubt about timing, a version far easier to accommodate than what he actually argued.",
+            text: "The Archon softens Pellam's warning into a general caution about timing, a much milder version she can accommodate without addressing the point about a one-time sale.",
           },
           {
             id: "rv6-5-b",
-            text: "The chair slides from the sale question to rents and acreage, a different subject that lets the real vote go unmade.",
+            text: "The Archon pivots from the full-grove sale to partial acreage and tribute schedules, a different set of questions, so the original motion is never properly examined.",
           },
           {
             id: "rv6-5-c",
-            text: "The objection is repeated at its full strength, not softened, and the proposal is amended until it answers the objection — the criticism built into the plan rather than brushed off it.",
+            text: "The objection is repeated at its full force, not weakened, and the proposal is amended until it accounts for what Pellam said — the criticism built into the plan rather than brushed past.",
           },
         ],
       },
       {
         id: "rv6-6",
-        text: "The amended motion carried by one vote, Gorse abstaining.",
+        text: "The amended motion carried by a single vote, Gorse abstaining.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv6-7",
-        text: "The founder's trees kept most of their rows, and the west wing kept out that winter's rain.",
+        text: "Most of the grove stayed in the council's hands, and the East Tower shed no rain that winter.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -544,27 +544,27 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-cart-lanterns",
-    title: "Lanterns on the Toll Road",
+    title: "Porch Lights",
     difficulty: "intermediate",
     includedLabels: ["straw-man", "red-herring"],
     sentences: [
       {
         id: "rv7-1",
-        text: "The turnpike trust met on a single clause — that carts on the toll road carry a lit lantern from dusk until dawn — after two collisions at the mile bridge inside a year.",
+        text: "The neighborhood safety committee convened on one item — a rule requiring every residence to keep its porch light on between dusk and dawn — following two burglaries on the same block in under twelve months.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv7-2",
-        text: "The clerk read the clause twice, it being short.",
+        text: "The committee secretary read the clause aloud, it being eleven words long.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv7-3",
-        text: "Farmer Quill answered that if the trust meant every hay-cart in the district to be rigged and burning like a pleasure barge from breakfast onward, oil bought at the farmer's cost for the townsman's comfort, then the trust had lost its senses and he was against it.",
+        text: "Resident Quinn said she would not stand quietly while they required every house on the street to burn lights all night like a hotel lobby, at each homeowner's electricity expense, for the comfort of passersby who didn't even live there.",
         labels: ["straw-man"],
         primaryLabel: "straw-man",
         isTarget: true,
@@ -572,28 +572,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv7-3-a",
-            text: "Quill offers the farmer's burden as raw feeling — resentment of the townsman's comfort — in place of any evidence bearing on the collisions.",
+            text: "Quinn channels homeowners' resentment at bearing electricity costs for others' benefit — that feeling standing in for any evidence about whether the clause would reduce break-ins.",
           },
           {
             id: "rv7-3-b",
-            text: "The clause asked for one lantern after dusk; Quill argues against a grander scheme — lights burning all day at ruinous cost — and finds that invented version far easier to defeat.",
+            text: "The clause asked for a porch light after dusk; Quinn argues against a scheme of all-night illumination at ruinous cost to every resident — a far more burdensome requirement that nobody proposed, defeated in its invented form.",
           },
           {
             id: "rv7-3-c",
-            text: "Quill diverts the trust from the mile bridge to the price of lamp oil, a side subject under which the clause is never brought to a vote.",
+            text: "Quinn steers the committee from the break-ins to the question of electricity costs, a side subject under which the clause is never actually brought to a vote.",
           },
         ],
       },
       {
         id: "rv7-4",
-        text: "A trustee tried to return to the plain question of whether a lantern would have prevented either collision at the bridge.",
+        text: "A committee member asked whether a porch light would have made any difference in either of the actual break-ins.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv7-5",
-        text: "Then Mr. Setter, of the lower tollhouse, asked when the trust proposed to do something about the potholes past the nine-mile stone, one of which had swallowed a wheel whole in March, and the lantern clause was not seen again that evening.",
+        text: "Then Mr. Setter asked when the committee planned to address the broken streetlight at the corner of Maple and Third, which had been dark since March and which he considered the real safety issue on this block, and the porch-light clause was not mentioned again that evening.",
         labels: ["red-herring"],
         primaryLabel: "red-herring",
         isTarget: true,
@@ -601,21 +601,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv7-5-a",
-            text: "Nothing in the clause is distorted and no one is attacked; the potholes are simply a stronger scent, and the meeting is drawn off along it with the bridge question left unanswered.",
+            text: "Nobody's position is distorted and nobody is attacked; the broken streetlight is simply a more pressing grievance, drawn across the trail, and the meeting follows it away from the porch-light question.",
           },
           {
             id: "rv7-5-b",
-            text: "Setter recasts the lantern clause as a claim that light alone will mend the road, then shows how plainly false that claim is.",
+            text: "Setter reframes the porch-light clause as a claim that homeowners alone can solve the neighborhood's safety problem, then points to the city's broken streetlight as evidence that claim is false.",
           },
           {
             id: "rv7-5-c",
-            text: "Setter answers criticism of the road's carters by charging the trust with neglecting the road itself — the accusers' own fault returned to them as a refutation.",
+            text: "Setter answers the committee's concern about residents' lighting by charging the city with neglecting the public lights — the accusers' own parallel failure returned as a refutation.",
           },
         ],
       },
       {
         id: "rv7-6",
-        text: "The clause was tabled to the spring meeting, and the mile bridge kept its dark.",
+        text: "The clause was tabled until the next meeting, and the block kept its dark.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -624,20 +624,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-price-card-ordinance",
-    title: "The Price-Card Ordinance",
+    title: "The Price List",
     difficulty: "intermediate",
     includedLabels: ["straw-man", "red-herring"],
     sentences: [
       {
         id: "rv8-1",
-        text: "The market master put a single clause to the hall: that every licensed stall selling goods by weight must display a written price card at the front of its board, so a buyer could read the rate before the scale was touched.",
+        text: "The food truck lot coordinator put one clause to the group: that every licensed truck must display a printed price list at the service window before any order was taken, so a customer could read the prices before the transaction began.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv8-2",
-        text: "Chandler Brigg said he was not the sort of man to sit quiet while they turned his wife's Tuesday stall into a counting-house, with forms to fill, a ledger to keep, and a clerk perhaps to be hired and paid, and that the town had done well enough without all this for two hundred years.",
+        text: "Operator Brigg said he was not the kind of person to sit still while they turned his family's food truck into a full-service restaurant — laminated menus, a POS printout for every item, a dedicated signage budget, maybe a graphic designer on retainer — and that the business had run fine for eight years without any of this.",
         labels: ["straw-man"],
         primaryLabel: "straw-man",
         isTarget: true,
@@ -645,28 +645,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv8-2-a",
-            text: "Brigg rebuilds the ordinance — a single posted card — into a counting-house demanding forms, a ledger, and paid staff, then defeats that invented scale of burden; the actual clause, three lines long, is left completely untouched.",
+            text: "Brigg rebuilds the one-page price list into a full restaurant-grade system requiring menus, budgets, and professional design, then objects to the cost and complexity of that invented version; the actual clause — a single printed sheet — is never addressed.",
           },
           {
             id: "rv8-2-b",
-            text: "Brigg shifts the hall from the card rule to the town's two-hundred-year market history, a different subject under which the ordinance is never brought to a vote.",
+            text: "Brigg steers the group from the price-list rule to the eight-year history of doing business without such requirements, a different subject under which the clause is never brought to a vote.",
           },
           {
             id: "rv8-2-c",
-            text: "Brigg casts the clause's drafter as a bureaucrat hostile to working traders, attacking whoever designed the rule rather than engaging the rule itself.",
+            text: "Brigg casts the coordinator as someone hostile to working operators, attacking the rule's author rather than engaging the rule itself.",
           },
         ],
       },
       {
         id: "rv8-3",
-        text: "The market master noted that the proposed card was three lines long and required no ledger of any kind.",
+        text: "The coordinator noted that the proposed price list was a single sheet of paper, nothing more.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv8-4",
-        text: "Before he could say more, Mrs. Foss asked whether the hall might also attend to the municipal scale at the south gate, which had been running three grains light since Candlemas, a matter she considered more pressing than any card, and the hall turned as one toward the scale.",
+        text: "Before she could continue, operator Foss asked whether the group might also discuss the county permit renewal process, which had backed up four months and was costing every truck extra fees through no fault of its own, and the room turned entirely toward the permits.",
         labels: ["red-herring"],
         primaryLabel: "red-herring",
         isTarget: true,
@@ -674,28 +674,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv8-4-a",
-            text: "Foss recasts the price-card clause as a claim that the market's weights and measures are already fair, then produces the short-weight scale as evidence against that claim — arguing against a position no one had taken.",
+            text: "Foss reframes the price-list rule as a claim that the lot's operators are already in full compliance with county regulations, then uses the permit backlog to disprove that — arguing against a position nobody took.",
           },
           {
             id: "rv8-4-b",
-            text: "Foss summons the grievance of buyers short-changed since Candlemas as a feeling that stands in for any reasoning about whether the card clause would help.",
+            text: "Foss brings the shared frustration of extra fees and bureaucratic delay to the room, letting that grievance replace any discussion of whether the price-list clause would benefit customers.",
           },
           {
             id: "rv8-4-c",
-            text: "Nothing in the ordinance is distorted and no one is attacked; the scale at the south gate is simply a livelier grievance, drawn across the trail, and the hall follows it away from the price-card vote.",
+            text: "The price-list clause is not distorted and no one is attacked; the permit backlog is simply a more urgent shared problem, drawn across the trail, and the room follows it away from the vote.",
           },
         ],
       },
       {
         id: "rv8-5",
-        text: "The price-card clause was not resumed that morning, and the south-gate scale was not weighed that morning either.",
+        text: "The price-list clause was not returned to that morning, and the permit backlog was not resolved that morning either.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv8-6",
-        text: "A buyer on Bridge Row paid the wrong rate for a quarter of beeswax the following Tuesday, and had nothing posted to check against.",
+        text: "A customer at the lot the following Saturday paid an unexpected price for the daily special and had nothing posted to check it against.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -704,20 +704,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-infirmary-rate",
-    title: "The Infirmary Rate",
+    title: "Eight Dollars",
     difficulty: "intermediate",
     includedLabels: ["ad-hominem", "appeal-to-emotion"],
     sentences: [
       {
         id: "rv9-1",
-        text: "The overseer of the poor had proposed raising the parish rate by one halfpenny in the pound for a single year, the sum earmarked for a second room at the infirmary where women could lie apart from men.",
+        text: "The building manager had proposed raising the monthly maintenance fee by eight dollars for one year, the amount earmarked for a key-fob access system on the parking garage entrance, where two cars had been broken into in the past quarter.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv9-2",
-        text: "Councillor Manse replied that the overseer had come to the post through his cousin's influence, that his father's drapery had ended in the county court, and that a man who had never managed his own affairs without a relative's hand was a singular choice to direct the parish's.",
+        text: "Resident Manse replied that the building manager had gotten the position through a contact on the board, that his previous management company had ended in a contract dispute, and that a man who had never handled his own building's finances without backing wasn't particularly well-placed to direct theirs.",
         labels: ["ad-hominem"],
         primaryLabel: "ad-hominem",
         isTarget: true,
@@ -725,28 +725,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv9-2-a",
-            text: "Manse turns the overseer's own past difficulty — the failed drapery, the cousin's favour — back at him as if his family's history committed the same fault as the one Manse suspects in the rate proposal.",
+            text: "Manse turns the manager's own past financial difficulty against him — as if the disputed contract committed the same fault that Manse suspects in the eight-dollar proposal.",
           },
           {
             id: "rv9-2-b",
-            text: "The halfpenny proposal is never examined; the overseer's family connections and his father's debts are set in their place — the man's circumstances offered as if they answered his arithmetic.",
+            text: "The security system's cost and feasibility are never examined; the manager's hiring connection and his previous contract dispute are placed in their place — the man's background offered as though it answered his arithmetic.",
           },
           {
             id: "rv9-2-c",
-            text: "Manse steers the council from the rate question to the overseer's appointment, a separate matter, so the infirmary room is never costed or considered.",
+            text: "Manse steers the meeting from the fee proposal to the manager's appointment history, a separate matter, so the garage access question is never costed or considered.",
           },
         ],
       },
       {
         id: "rv9-3",
-        text: "The halfpenny in question had not been disputed on any arithmetical ground.",
+        text: "The eight-dollar figure had not been challenged on any practical ground.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv9-4",
-        text: "Mrs. Crowe spoke of the women she had visited in the fever ward — three to a pallet in December, the candles gone before midnight, the smell such that she had wept on the way home — and said that anyone who could sit in this room and query a halfpenny had no Christian feeling left in him.",
+        text: "Ms. Crowe described coming to her car three times last month to find the garage door ajar — the first time she had stood there for several minutes before calling anyone — and said that any resident willing to sit here and debate eight dollars clearly had no idea what it felt like to actually be afraid.",
         labels: ["appeal-to-emotion"],
         primaryLabel: "appeal-to-emotion",
         isTarget: true,
@@ -754,28 +754,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv9-4-a",
-            text: "Crowe recasts the council's hesitation as indifference to suffering — and argues against that cruelty rather than the actual question of whether a halfpenny sum would fund a separate room.",
+            text: "Crowe reframes the room's hesitation as indifference to her safety, and argues against that callousness rather than the actual question of whether eight dollars per unit would fund a working access system.",
           },
           {
             id: "rv9-4-b",
-            text: "Crowe draws the meeting away from the rate figures and into the fever ward's conditions, a change of subject under which the halfpenny is never weighed.",
+            text: "Crowe shifts the meeting from the fee figures to the experience of finding the door open, a different subject, so the cost per unit is never weighed against what the system would provide.",
           },
           {
             id: "rv9-4-c",
-            text: "The anguish of three women to a pallet is placed where a reckoning of cost belongs — the feeling is real, but it stands in for the evidence: whether a halfpenny rise would in fact fund and staff a second room.",
+            text: "The fear of returning to a car in an unsecured garage is set where a comparison of cost to coverage belongs — the feeling is real, but it stands in for the evidence: whether eight dollars per unit would in fact pay for and maintain the proposed system.",
           },
         ],
       },
       {
         id: "rv9-5",
-        text: "What a halfpenny in the pound would actually buy, and whether it was enough, remained unexamined when the hour ended.",
+        text: "What eight dollars per unit per month would actually cover, and whether it was sufficient, had not been examined when the hour ended.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv9-6",
-        text: "The motion was deferred for better figures, which the overseer produced, alone, three weeks later.",
+        text: "The proposal was tabled for a fuller cost breakdown, which the building manager produced, alone, two weeks later.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -784,27 +784,27 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-leat-hearing",
-    title: "The Leat Hearing",
+    title: "The Compliance Review",
     difficulty: "intermediate",
     includedLabels: ["tu-quoque", "straw-man"],
     sentences: [
       {
         id: "rv10-1",
-        text: "The water inspector's report was brief: Farrow's Mill had drawn from the leat on nine nights in July beyond its licensed hours, and the inspector asked that the lost flow be reckoned and a price set.",
+        text: "The compliance officer's report was brief: the development team had logged nine nights of overtime beyond its authorized hours for the quarter, and the officer requested that the time be reviewed and a corrective plan submitted.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv10-2",
-        text: "Aldred Farrow, the mill's owner, did not dispute the nine nights.",
+        text: "Team lead Aldred Farrow did not dispute the nine nights.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv10-3",
-        text: "He observed instead that this same inspector had run the north leat dry in a drought summer twelve years past, without leave from anyone, and asked whether a man with that on his record was in a position to price anyone else's water.",
+        text: "He pointed out instead that this same compliance officer had approved her own team's overtime without prior authorization during a product launch two years ago, and asked whether someone with that on her record was in a position to file reports on anyone else.",
         labels: ["tu-quoque"],
         primaryLabel: "tu-quoque",
         isTarget: true,
@@ -812,28 +812,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv10-3-a",
-            text: "The nine nights are never answered; the inspector's own dry-summer diversion — the same kind of act — is held up as if a critic's past fault could refute his present finding, the reckoning still owed.",
+            text: "The nine nights are never defended; the compliance officer's own past unauthorized overtime — the same type of act — is raised as if a critic's comparable conduct could refute her present finding, the corrective plan still owed.",
           },
           {
             id: "rv10-3-b",
-            text: "Farrow attacks the inspector's general character and fitness for office rather than returning one specific act of the same kind to him.",
+            text: "Farrow attacks the officer's general fitness for the compliance role — her judgment, her track record overall — rather than specifically returning one parallel act of the same kind.",
           },
           {
             id: "rv10-3-c",
-            text: "Farrow steers the hearing from this July's nine nights to a drought twelve years past, a separate event, under which the present excess is never examined.",
+            text: "Farrow steers the review from this quarter's nine nights to a product launch two years ago, a separate event, under which the current overtime is never addressed.",
           },
         ],
       },
       {
         id: "rv10-4",
-        text: "The inspector's report lay before the board with its nine nights intact, undisputed still.",
+        text: "The compliance officer's report remained on the table with its nine nights intact, undisputed still.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv10-5",
-        text: "Young Farrow, Aldred's son, rose to say he would not sit still while they condemned his grandfather's mill and stripped the family of its licence over a trifle, and that the inspectorate could come for the wheel itself when they were ready to answer for what that would do to the village.",
+        text: "The deputy lead said he would not sit here while HR condemned the entire team and threatened to freeze its budget over nine nights of extra work, and that the compliance office could come for their headcount allocation if they were ready to answer for what that would do to the product timeline.",
         labels: ["straw-man"],
         primaryLabel: "straw-man",
         isTarget: true,
@@ -841,21 +841,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv10-5-a",
-            text: "Young Farrow summons the grandfather's mill and the village's dependence on it — inheritance and local feeling doing the arguing where an account of the nine nights was owed.",
+            text: "The deputy invokes the product timeline and what the team stands to lose — urgency and team pride doing the arguing where an account of the nine nights was owed.",
           },
           {
             id: "rv10-5-b",
-            text: "The report asked for a price for nine nights' excess; young Farrow answers a confiscation — licence stripped, the wheel itself taken — and defends against that extreme rather than the modest reckoning the inspector filed.",
+            text: "The report asked for a corrective plan on nine nights' overtime; the deputy argues against a budget freeze and headcount cut — extreme consequences nobody had proposed — and defends against that version rather than the modest review on file.",
           },
           {
             id: "rv10-5-c",
-            text: "Young Farrow turns the inspector's finding back on the inspectorate, charging them with overreach as if their excess cancelled the question of his father's.",
+            text: "The deputy charges the compliance office with overreach — as if the office's own past conduct cancelled the question of the team's unauthorized hours.",
           },
         ],
       },
       {
         id: "rv10-6",
-        text: "The board adjourned without setting a price, and the nine nights remained on the record, unclosed.",
+        text: "The review was adjourned without a corrective plan, the nine nights still unclosed on the record.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -864,20 +864,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-reading-room-renewal",
-    title: "The Reading Room Renewal",
+    title: "The Digest Renewal",
     difficulty: "intermediate",
     includedLabels: ["red-herring", "appeal-to-emotion"],
     sentences: [
       {
         id: "rv11-1",
-        text: "The reading room committee had a single item: whether to renew the London Illustrated at its new subscription of fourteen shillings — four more than the year before — or to let the subscription lapse and find a cheaper paper for the shelf.",
+        text: "The reading committee had one item: whether to renew the Oracle's Weekly Prophecy Digest at its new subscription of forty crystals — twelve more than the previous cycle — or to let it lapse and consult a cheaper oracle.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv11-2",
-        text: "Before the chair could invite discussion, Mr. Tole asked whether this might not be the moment to address the fiction catalogue, which had gone un-weeded since the previous secretary's time and currently listed three entries for the same novel, and the room gave the catalogue its full attention for the better part of an hour.",
+        text: "Before the chair could call for discussion, Archivist Tole asked whether this might not be the right moment to address the spell index, which had gone unsorted since the last cataloguer's departure and currently contained three separate entries for the same incantation, and the committee gave the index its full attention for most of the session.",
         labels: ["red-herring"],
         primaryLabel: "red-herring",
         isTarget: true,
@@ -885,28 +885,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv11-2-a",
-            text: "Tole recasts the renewal question as a claim that the reading room's administration is in good order, then uses the catalogue's three duplicate entries to disprove that claim — arguing against a position no one had taken.",
+            text: "Tole reframes the renewal question as a claim that the council's archives are already in good order, then uses the three duplicate spell entries to disprove that — arguing against a position no one had taken.",
           },
           {
             id: "rv11-2-b",
-            text: "Tole offers the committee's neglect of the catalogue as an indignity — accumulated carelessness doing the work of engaging the fourteen-shilling question — feeling in place of a price comparison.",
+            text: "Tole brings the accumulated embarrassment of a disorganized index into the room, letting that indignity replace any actual comparison of subscription rates.",
           },
           {
             id: "rv11-2-c",
-            text: "Nothing in the renewal question is distorted and no one is attacked; the catalogue's three copies of the same novel is simply a more engrossing problem, and the committee follows it away from the vote on fourteen shillings.",
+            text: "Nothing in the renewal question is distorted and nobody is attacked; the unsorted spell index is simply a more tractable problem, and the committee follows it away from the vote on forty crystals.",
           },
         ],
       },
       {
         id: "rv11-3",
-        text: "The chair recovered her thread and put the fourteen shillings back before the table.",
+        text: "The chair gathered herself and put the forty crystals back before the table.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv11-4",
-        text: "Mr. Hoult said that the London Illustrated had arrived every week when he was a boy sweeping the room's floor for pennies, that it had taught him to read a map and follow a parliamentary debate, and that a committee willing to lose it for four shillings was not the kind of committee his parents had trusted with their dues.",
+        text: "Master Hoult said the Digest had arrived every week when he was a junior apprentice sweeping the council chamber, that it had taught him to read an augury and follow a territorial dispute, and that any committee willing to lose it over twelve extra crystals was not the kind of committee the founders had trusted with the order's affairs.",
         labels: ["appeal-to-emotion"],
         primaryLabel: "appeal-to-emotion",
         isTarget: true,
@@ -914,28 +914,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv11-4-a",
-            text: "Hoult leads the committee away from the fourteen-shilling question and into his childhood with the room, a change of subject that leaves the price comparison where it began.",
+            text: "Hoult draws the committee from the forty-crystal question into his years as a junior apprentice, a change of subject that leaves the rate comparison where it began.",
           },
           {
             id: "rv11-4-b",
-            text: "Hoult's memories of the sweeping boy and his parents' trust are placed where an argument about the paper's value at fourteen shillings belongs — feeling doing the work that a comparison of price to benefit was owed.",
+            text: "The memory of sweeping the chamber as a boy and the founders' trust are placed where an argument about the Digest's worth at forty crystals belongs — feeling doing the work that a comparison of price to value was owed.",
           },
           {
             id: "rv11-4-c",
-            text: "Hoult calls the committee unworthy of the trust placed in them, attacking their character rather than engaging the question of whether fourteen shillings is a price worth paying.",
+            text: "Hoult tells the committee they are unworthy of the founders' trust — attacking their character rather than engaging whether forty crystals is a price worth paying for what the Digest provides.",
           },
         ],
       },
       {
         id: "rv11-5",
-        text: "The four extra shillings, and whether any paper in England offered comparable reading at a lower price, were not discussed.",
+        text: "The twelve extra crystals, and whether any oracle in the realm offered comparable foresight for less, were not discussed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv11-6",
-        text: "The Illustrated was renewed, the catalogue was not weeded, and the three copies of the same novel stood through the following year on the same shelf.",
+        text: "The Digest was renewed, the spell index was not sorted, and the three entries for the same incantation stood through the following year on the same shelf.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -944,20 +944,20 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-mill-lane-bridge",
-    title: "The Mill Lane Bridge",
+    title: "The Parking Deck",
     difficulty: "intermediate",
     includedLabels: ["ad-hominem", "tu-quoque", "dialectical"],
     sentences: [
       {
         id: "rv12-1",
-        text: "The borough surveyor's report put the cost of repiling the Mill Lane footbridge at eleven pounds twelve, and advised the work be done before the autumn floods.",
+        text: "The building inspector's report put the cost of resurfacing the underground parking deck at eleven thousand six hundred dollars, and advised the work be completed before the first freeze.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv12-2",
-        text: "Councillor Petch reminded the room that this same surveyor had declared the south vestry wall sound eighteen months before it shed a course of stone into the churchyard, and suggested the eleven pounds might deserve a firmer foundation than his word.",
+        text: "Board member Petch reminded the room that this same inspector had certified the stairwell handrails as structurally sound fourteen months ago, three weeks before one pulled free from the wall entirely, and suggested that eleven thousand dollars might deserve a more reliable foundation than his word.",
         labels: ["ad-hominem"],
         primaryLabel: "ad-hominem",
         isTarget: true,
@@ -965,21 +965,21 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv12-2-a",
-            text: "Petch charges the surveyor with the very carelessness he suspects in the piling report, returning the vestry wall failure to him as if a past fault cancelled the present estimate.",
+            text: "Petch charges the inspector with the same carelessness he now suspects in the deck report — the handrail failure returned to him as if a past error cancelled the present estimate.",
           },
           {
             id: "rv12-2-b",
-            text: "The piling estimate is never examined on its own terms; the surveyor's record on the vestry wall is set in its place — the man's past error offered as if it answered whether eleven pounds twelve is the right price for the footbridge.",
+            text: "The resurfacing estimate is never examined on its own terms; the inspector's past failure on the handrails is placed in its place — the man's track record offered as if it answered whether eleven thousand six hundred dollars is the right figure for the deck.",
           },
           {
             id: "rv12-2-c",
-            text: "Petch moves the meeting from the footbridge to the vestry wall, a different structure on a different question, so the piling figures are never opened.",
+            text: "Petch moves the meeting from the parking deck to the stairwell handrails, a different structure on a different question, so the resurfacing estimate is never opened.",
           },
         ],
       },
       {
         id: "rv12-3",
-        text: "Alderman Rowe observed that Petch had been more than willing to accept that same surveyor's certificate on his own barn extension last spring, had written to thank him for it, and asked when exactly the incompetence had been discovered.",
+        text: "Board member Rowe noted that Petch had been delighted to accept this same inspector's sign-off on his own unit's balcony renovation last spring, had even sent a thank-you email, and asked when exactly the inspector's competence had become a problem.",
         labels: ["tu-quoque"],
         primaryLabel: "tu-quoque",
         isTarget: true,
@@ -987,28 +987,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv12-3-a",
-            text: "Rowe attacks Petch's general reliability as a councillor — a man who shifts his opinions for convenience — rather than specifically turning Petch's use of the vestry wall back on him.",
+            text: "Rowe attacks Petch's consistency as a board member — a man who shifts his positions to suit his own convenience — rather than specifically returning his past use of the same inspector back to him.",
           },
           {
             id: "rv12-3-b",
-            text: "Rowe steers the meeting from the footbridge toward Petch's barn, a separate building, so the piling estimate remains unopened throughout.",
+            text: "Rowe steers the meeting from the parking deck toward Petch's balcony renovation, a separate project, so the resurfacing estimate remains unexamined.",
           },
           {
             id: "rv12-3-c",
-            text: "Petch's past trust in the surveyor — when that trust served his own barn — is turned back on him, as though his earlier reliance refuted his present doubt, the footbridge's piles still unexamined.",
+            text: "Petch's own recent reliance on the inspector — when it suited his balcony — is turned back on him as if that earlier trust refuted his present doubt, while the deck's eleven thousand six hundred dollars sits unexamined still.",
           },
         ],
       },
       {
         id: "rv12-4",
-        text: "Neither man had yet said anything about the eleven pounds twelve, or about the piles.",
+        text: "Neither board member had yet said anything about the eleven thousand six hundred dollars, or about the deck.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv12-5",
-        text: "The chair stated the surveyor's concern plainly — the piles were six inches short of specification after six winters, and the first heavy flood would find that margin — acknowledged that the vestry wall question was a fair one for another meeting, and proposed the repair proceed on the condition that the county surveyor review the work independently before any sum was released.",
+        text: "The chair restated the inspector's finding plainly — the concrete had developed stress fractures in six locations, and the first freeze-thaw cycle would expand them — acknowledged that the handrail question was legitimate and deserved its own agenda item, and proposed the resurfacing proceed on the condition that a second inspector review the work specification before any contract was signed.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -1016,28 +1016,28 @@ export const relevanceFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "rv12-5-a",
-            text: "The surveyor's finding is restated at full strength; the vestry wall concern is acknowledged as legitimate rather than dismissed; the two matters are separated and both answered — the objection taken into the plan rather than turned aside.",
+            text: "The inspector's finding is restated at full strength; the handrail concern is acknowledged as a real issue rather than dismissed; the two matters are separated and each given a path forward — the objection absorbed into the plan rather than turned aside.",
           },
           {
             id: "rv12-5-b",
-            text: "The chair rewrites Petch's vestry wall concern as a minor quibble about one past job and grants it cheaply, sidestepping the real challenge to the surveyor's reliability rather than meeting it.",
+            text: "The chair softens Petch's handrail concern into a vague worry about one past job, a version much less challenging to address than the actual question of whether this inspector should be trusted at all.",
           },
           {
             id: "rv12-5-c",
-            text: "The chair pivots from the bridge estimate to the county surveyor review, a new subject, so the eleven-pounds figure passes through without the room ever examining it.",
+            text: "The chair pivots from the deck estimate to an independent review requirement, a new procedural question, so the eleven-thousand-six-hundred-dollar figure passes through without the board ever examining it.",
           },
         ],
       },
       {
         id: "rv12-6",
-        text: "The motion carried, and the footbridge stood through the winter without event.",
+        text: "The motion carried, and the parking deck held through the winter without incident.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "rv12-7",
-        text: "The vestry wall question went onto the agenda for March, where it sat through the spring undiscussed.",
+        text: "The handrail question went onto the March agenda, where it sat undiscussed through the spring.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

@@ -1,16 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { LESSONS, getLesson } from "@/content/curriculum";
 import { completeLesson } from "@/domain/curriculum";
-import type { GuidedExample } from "@/domain/types";
+import type { GuidedExample, MixedQuestion } from "@/domain/types";
 import { useProgress } from "@/components/layout/useProgress";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { LabelChip } from "@/components/ui/LabelChip";
 import { QuestionCard } from "./QuestionCard";
 import { cn } from "@/lib/cn";
+import { createRng } from "@/lib/rng";
+
+function pickChallengeQuestions(questions: readonly MixedQuestion[], seed: number): MixedQuestion[] {
+  const rng = createRng(seed + 1);
+  const shuffled = [...questions].sort(() => rng() - 0.5);
+  return shuffled.slice(0, Math.min(3, shuffled.length));
+}
 
 type Stage = "overview" | "worked" | "guided" | "mixed" | "challenge" | "complete";
 
@@ -95,6 +102,11 @@ export function LessonFlow({ lessonId }: { lessonId: string }) {
   const [challengeKey, setChallengeKey] = useState(0);
   const [challengeResults, setChallengeResults] = useState<boolean[]>([]);
 
+  const challengeQuestions = useMemo(
+    () => lesson ? pickChallengeQuestions(lesson.unlockChallenge, challengeKey) : [],
+    [lesson, challengeKey],
+  );
+
   if (!lesson) return null;
 
   if (lesson.status === "draft") {
@@ -116,9 +128,9 @@ export function LessonFlow({ lessonId }: { lessonId: string }) {
   }
 
   const challengePassed =
-    challengeResults.length === lesson.unlockChallenge.length &&
+    challengeResults.length === challengeQuestions.length &&
     challengeResults.every(Boolean);
-  const challengeFinished = challengeResults.length === lesson.unlockChallenge.length;
+  const challengeFinished = challengeResults.length === challengeQuestions.length;
 
   const finishChallenge = () => {
     if (challengePassed) {
@@ -227,12 +239,12 @@ export function LessonFlow({ lessonId }: { lessonId: string }) {
       {stage === "challenge" && (
         <div className="space-y-4">
           <p className="max-w-prose text-sm text-ink-soft">
-            Answer all {lesson.unlockChallenge.length} correctly on the first
+            Answer all {challengeQuestions.length} correctly on the first
             try to unlock{" "}
             {lesson.labelIds.length > 1 ? "these forms" : "this form"} for
             practice. You can retake it as often as you like.
           </p>
-          {lesson.unlockChallenge.map((question) => (
+          {challengeQuestions.map((question) => (
             <QuestionCard
               key={`${question.id}-${challengeKey}`}
               question={question}
@@ -245,7 +257,7 @@ export function LessonFlow({ lessonId }: { lessonId: string }) {
             <Card role="status">
               <p className="font-sans text-sm font-semibold">
                 Not quite — {challengeResults.filter(Boolean).length} of{" "}
-                {lesson.unlockChallenge.length} on the first try.
+                {challengeQuestions.length} on the first try.
               </p>
               <p className="mt-1 text-sm text-ink-soft">
                 Reread the explanations above, then try a fresh attempt.

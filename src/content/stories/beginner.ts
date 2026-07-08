@@ -9,27 +9,27 @@ import type { PracticeStory } from "@/domain/types";
 export const beginnerStories: readonly PracticeStory[] = [
   {
     id: "story-greenhouse",
-    title: "The Locked Greenhouse",
+    title: "The Rebooted Server",
     difficulty: "beginner",
     includedLabels: ["deductive", "abductive"],
     sentences: [
       {
         id: "gh-1",
-        text: "Frost had come early to the hill gardens, and Alba walked the rows with her coat buttoned to the chin.",
+        text: "The lab was running on a skeleton crew that Saturday, and Min noticed the status light in the server room blinking red through the narrow window.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "gh-2",
-        text: "The greenhouse door stood locked, yet inside, a watering can sat in the middle of the aisle where no one would leave it overnight.",
+        text: "The maintenance log showed a manual reboot at 3 a.m., yet the server room required both a keycard scan and a PIN, and only two engineers held active credentials.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "gh-3",
-        text: "Only the head gardener and the caretaker hold keys, so whoever moved that can must be one of those two.",
+        text: "Only Dr. Sato and the site reliability engineer held valid access credentials, so whoever triggered that reboot had to be one of those two.",
         labels: ["deductive"],
         primaryLabel: "deductive",
         isTarget: true,
@@ -37,28 +37,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "gh-3-a",
-            text: "A rule about who holds keys forces the conclusion: if the door was used, it must have been one of the two key-holders.",
+            text: "A rule about who holds valid credentials forces the conclusion — if the reboot happened inside that room, it had to be one of the two engineers.",
           },
           {
             id: "gh-3-b",
-            text: "Past experience shows gardeners usually forget watering cans, so this was probably a gardener.",
+            text: "Past reboots have usually been triggered by the site reliability engineer, so this one was probably her too.",
           },
           {
             id: "gh-3-c",
-            text: "The watering can is the surprising clue, and a gardener's visit is the best explanation for it.",
+            text: "The blinking red status light is the clue, and an unauthorized reboot is the best explanation for it.",
           },
         ],
       },
       {
         id: "gh-4",
-        text: "Alba tried the caretaker's cottage first, but his boots were dry and the path from his door was unswept snow.",
+        text: "Dr. Sato's keycard showed a baggage-claim scan at a distant airport at 2:58 a.m. — a time-stamped record that put her unambiguously elsewhere.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "gh-5",
-        text: "The likeliest explanation, then, was that the head gardener had come before dawn to move the tender seedlings away from the glass.",
+        text: "The likeliest explanation was that the site reliability engineer had connected remotely using her admin override to stop a disk-filling process before it crashed the night's experiment.",
         labels: ["abductive"],
         primaryLabel: "abductive",
         isTarget: true,
@@ -66,21 +66,21 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "gh-5-a",
-            text: "A rule about greenhouse keys guarantees that the head gardener was the one who entered.",
+            text: "The credential rules guarantee that it must have been the site reliability engineer — the conclusion follows necessarily.",
           },
           {
             id: "gh-5-b",
-            text: "With the caretaker ruled out by the unswept snow, the gardener's pre-dawn visit is the explanation that best fits all the clues.",
+            text: "With Dr. Sato's alibi confirmed by the keycard log, the SRE's remote disk-cleanup is the hypothesis that accounts for both who had access and why the reboot happened at 3 a.m.",
           },
           {
             id: "gh-5-c",
-            text: "The gardener has come before dawn every frost this year, so she probably did again.",
+            text: "The SRE has performed emergency cleanups before, so she probably ran one again.",
           },
         ],
       },
       {
         id: "gh-6",
-        text: "Sure enough, the seedling trays had been shifted to the stone bench along the warm north wall.",
+        text: "A support ticket confirmed it: \"Emergency disk cleanup, 3:04 a.m., SRE override applied.\"",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -89,27 +89,27 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-trains",
-    title: "Morning Trains",
+    title: "The Points Problem",
     difficulty: "beginner",
     includedLabels: ["inductive", "deductive"],
     sentences: [
       {
         id: "tr-1",
-        text: "Jonas had taken the 7:12 from Elm Junction every working day since the spring timetable began.",
+        text: "Zara had used the same coffee shop's loyalty app every weekday for seven months, scanning her phone at the register without fail.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tr-2",
-        text: "In all those months, the 7:12 had never once arrived ahead of the slower 7:04 local.",
+        text: "In all that time, her reward points had appeared in the app within an hour of each visit — sometimes faster, never once later.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tr-3",
-        text: "So when a stranger on the platform asked which train reached the city first, Jonas said the 7:04 would almost certainly win again today.",
+        text: "When her friend suggested the app might occasionally post points instantly, Zara said she'd be surprised — the one-hour lag had been the pattern every single time she'd checked.",
         labels: ["inductive"],
         primaryLabel: "inductive",
         isTarget: true,
@@ -117,28 +117,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tr-3-a",
-            text: "Months of observed arrivals form a pattern, which Jonas projects onto today as a strong likelihood.",
+            text: "Seven months of consistent one-hour postings form a pattern, and Zara projects that pattern onto today as a strong likelihood.",
           },
           {
             id: "tr-3-b",
-            text: "The timetable's rules make it logically necessary that the 7:04 arrives first.",
+            text: "The app's terms of service guarantee that points post within one hour of every visit.",
           },
           {
             id: "tr-3-c",
-            text: "The stranger's question is puzzling, and the 7:04's speed is the best explanation for it.",
+            text: "Her friend's urgency is a puzzle, and the delayed posting window is the best explanation for why instant redemption isn't available.",
           },
         ],
       },
       {
         id: "tr-4",
-        text: "The stranger frowned at his ticket, a paper monthly pass stamped in red.",
+        text: "Her friend was racing to redeem a free drink before midnight, when the monthly tier reset and all her progress would vanish.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tr-5",
-        text: "Monthly passes are valid only on local services, and the 7:12 is an express, so his pass would not carry him aboard it in any case.",
+        text: "Free drinks could only be redeemed in whole-point increments, and her friend had accumulated 4.7 points, so the five-point reward was not yet redeemable.",
         labels: ["deductive"],
         primaryLabel: "deductive",
         isTarget: true,
@@ -146,21 +146,21 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tr-5-c",
-            text: "Two rules — passes valid only on locals, the 7:12 being an express — together make the conclusion inescapable.",
+            text: "Two rules — redemption requires whole points, and her friend holds 4.7 — combine to make the conclusion inescapable.",
           },
           {
             id: "tr-5-d",
-            text: "Conductors have turned away pass-holders before, so this one would probably be turned away too.",
+            text: "People with fractional point balances have always had to wait before, so her friend would probably have to wait too.",
           },
           {
             id: "tr-5-e",
-            text: "The red stamp is a clue, and rejection at the express is the best explanation for the stranger's frown.",
+            text: "The midnight reset deadline is a clue, and the fractional balance is the best explanation for why the drink is currently out of reach.",
           },
         ],
       },
       {
         id: "tr-6",
-        text: "Jonas pointed him down the platform, and the local sighed into the station right on time.",
+        text: "They ordered two regular coffees and sat by the window to wait it out together.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -169,27 +169,27 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-ledger",
-    title: "The Missing Ledger",
+    title: "The Missing Mug",
     difficulty: "beginner",
     includedLabels: ["abductive", "inductive"],
     sentences: [
       {
         id: "lg-1",
-        text: "The harbormaster's office smelled of tar and old paper, and the shelf where the tide ledger lived stood empty.",
+        text: "The break room was quiet when Jess came in at noon, but her favorite mug — the wide one with the chipped handle — was gone from its usual hook.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lg-2",
-        text: "A ring of dust marked where the ledger had sat, and beside it lay a pair of reading glasses that belonged to no one in the office.",
+        text: "A faint coffee ring marked the shelf where it normally sat, and next to the ring someone had left an energy drink she didn't recognize.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lg-3",
-        text: "The best explanation, Rhea decided, was that the retired harbormaster had wandered in for his old ledger and left his glasses in trade.",
+        text: "The best explanation Jess could come up with was that her office neighbor Cam had grabbed the mug by mistake, left his drink as an accidental placeholder, and hadn't noticed the swap yet.",
         labels: ["abductive"],
         primaryLabel: "abductive",
         isTarget: true,
@@ -197,28 +197,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "lg-3-a",
-            text: "A single hypothesis — the retired harbormaster's visit — accounts for both odd clues: the missing ledger and the strange glasses.",
+            text: "A single hypothesis — Cam's accidental swap — accounts for both odd details at once: the missing mug and the unfamiliar energy drink in its place.",
           },
           {
             id: "lg-3-b",
-            text: "Office rules say only harbormasters may touch the ledger, so it must have been him.",
+            text: "The break room's unwritten rule is that mugs on personal hooks belong to individuals, so whoever took it had to have some claim on it.",
           },
           {
             id: "lg-3-c",
-            text: "He has borrowed the ledger many times before, so he probably borrowed it again.",
+            text: "Cam has borrowed her mug before, so he probably borrowed it again.",
           },
         ],
       },
       {
         id: "lg-4",
-        text: "Rhea had crossed the square to his cottage twice that month already, once about charts and once about a kettle he'd left boiling.",
+        text: "She had lent Cam mugs twice before that year — once when his shattered in the microwave, and once when his team had an early client call.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "lg-5",
-        text: "Every one of his borrowings, going back years, had ended with the ledger returned by Friday, so she expected this one back by week's end too.",
+        text: "Every time something of hers ended up on his desk, it came back by end of day, so she expected the mug to return before five.",
         labels: ["inductive"],
         primaryLabel: "inductive",
         isTarget: true,
@@ -226,21 +226,21 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "lg-5-a",
-            text: "The harbor code requires borrowed ledgers to be returned by Friday, so it must come back.",
+            text: "Office etiquette requires borrowed items to be returned the same day, so the mug has to come back by five.",
           },
           {
             id: "lg-5-b",
-            text: "Years of past borrowings all ended the same way, and that pattern makes the same outcome likely this time.",
+            text: "Every previous time something of hers ended up on Cam's desk it came back by end of day — that consistent track record makes the same outcome likely now.",
           },
           {
             id: "lg-5-c",
-            text: "The returned-by-Friday habit is the best explanation for the ring of dust on the shelf.",
+            text: "The energy drink left in place is a clue whose best explanation is that Cam already plans to swap back today.",
           },
         ],
       },
       {
         id: "lg-6",
-        text: "She set the glasses in her drawer for safekeeping and pencilled a note into the margin of the day's log.",
+        text: "She poured her tea into a paper cup and went back to her desk to wait.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -249,20 +249,20 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-weigh-house",
-    title: "The Weigh-House Rule",
+    title: "Science Fair Check-In",
     difficulty: "beginner",
     includedLabels: ["deductive"],
     sentences: [
       {
         id: "wh-1",
-        text: "Market mornings began at the weigh-house, where Maren queued behind a line of carts breathing steam into the cold.",
+        text: "The school gym smelled of poster board and nervous energy, and Preet wheeled her project display to the check-in table near the entrance.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wh-2",
-        text: "The notice above the scale was plain — carts over two tons must cross by the stone bridge — and hers had weighed in at two and a half, so the stone bridge it would have to be.",
+        text: "The posted rules stated that any display taller than five feet must go in the overflow row, and hers measured five and a half, so the overflow row it was.",
         labels: ["deductive"],
         primaryLabel: "deductive",
         isTarget: true,
@@ -270,28 +270,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "wh-2-a",
-            text: "A posted rule plus the cart's measured weight force the conclusion — no room is left for the wooden bridge.",
+            text: "A posted rule plus the measured height force the conclusion — given those two facts, no other row is possible.",
           },
           {
             id: "wh-2-b",
-            text: "Heavy carts have usually taken the stone bridge in the past, so hers probably would too.",
+            text: "Taller displays have usually ended up in the overflow row at past fairs, so hers probably would too.",
           },
           {
             id: "wh-2-c",
-            text: "The queue at the weigh-house is a clue best explained by the stone bridge being the required route.",
+            text: "The crowded main row is a clue best explained by taller displays being routed to the overflow area.",
           },
         ],
       },
       {
         id: "wh-3",
-        text: "At the customs bench, an inspector in fingerless gloves walked the length of her load, tapping each sack.",
+        text: "A judge in a lanyard walked the main aisles with a clipboard, noting things down with the deliberate energy of someone who had done this many times before.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wh-4",
-        text: "Only sealed sacks may pass the bench, and every sack on her cart still carried its lead seal, so the load was cleared to pass.",
+        text: "Only projects submitted before the ten o'clock deadline were eligible for awards, and all three of Preet's teammates had uploaded their sections the night before, so their project qualified.",
         labels: ["deductive"],
         primaryLabel: "deductive",
         isTarget: true,
@@ -299,28 +299,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "wh-4-b",
-            text: "The inspector has cleared sealed loads all season, so this one was likely to be cleared as well.",
+            text: "Projects from teams with multiple members have been cleared for awards in every past fair, so this one would likely qualify.",
           },
           {
             id: "wh-4-c",
-            text: "The customs rule and the intact seals together settle it — nothing about the clearance is left to chance.",
+            text: "The deadline rule and the confirmed upload time together make the outcome certain — there is no gap in the logic that leaves eligibility in doubt.",
           },
           {
             id: "wh-4-d",
-            text: "The tapping of each sack is best explained by the inspector checking for broken seals.",
+            text: "The judge's deliberate approach to the main aisles is best explained by her already knowing which projects have qualified.",
           },
         ],
       },
       {
         id: "wh-5",
-        text: "By the time she reached the stone bridge, the frost on its parapets had gone to glitter in the sun.",
+        text: "The gym grew louder as families arrived and set up folding chairs along the side wall.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "wh-6",
-        text: "She let the horses take the crossing at their own pace, the way her mother always had.",
+        text: "Preet adjusted her title card, checked the circuit connections one more time, and settled in to wait for the judging to begin.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -329,20 +329,20 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-swallows",
-    title: "Swallows over the Chimney",
+    title: "The Cat Who Kept Time",
     difficulty: "beginner",
     includedLabels: ["inductive"],
     sentences: [
       {
         id: "sw-1",
-        text: "Nan kept her almanac on the windowsill, its pages soft with a decade of thumbing.",
+        text: "Cleo kept a rough diary of her cat Figaro's habits — less out of research interest than because Figaro was the most consistent creature she had ever lived with.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sw-2",
-        text: "The swallows had come back to her chimney in the first week of April every spring for ten years, so she expected them again within the week.",
+        text: "He had sat on the kitchen windowsill and meowed twice between 7:00 and 7:10 every single morning for three years, so she started the coffee before the first meow.",
         labels: ["inductive"],
         primaryLabel: "inductive",
         isTarget: true,
@@ -350,28 +350,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sw-2-a",
-            text: "Ten springs of arrivals make a pattern, and the pattern is carried forward to this year as a likelihood.",
+            text: "Three years of daily observations form a strong pattern, and Cleo carries it forward as a reliable expectation — not a guarantee, but dependable enough to act on.",
           },
           {
             id: "sw-2-b",
-            text: "A rule of the almanac guarantees that swallows return in the first week of April.",
+            text: "A rule about cats' circadian rhythms guarantees that Figaro will always meow at the same time each morning.",
           },
           {
             id: "sw-2-c",
-            text: "The empty chimney is a puzzle, and the swallows' return is the explanation that best fits it.",
+            text: "The coffee already running is a clue, and Figaro's regular morning meow is the best explanation for why it gets started early.",
           },
         ],
       },
       {
         id: "sw-3",
-        text: "She swept the grate and left off lighting fires, out of courtesy to the tenants to come.",
+        text: "She had stopped needing her phone alarm entirely, which felt like a small private victory over technology.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sw-4",
-        text: "In all her notebooks, the last frost had never come later than a fortnight after the swallows, so she reckoned it safe to set the beans out by month's end.",
+        text: "In all her diary entries, Figaro had never once asked for dinner before 5:45 p.m., so she left afternoon meetings without watching the clock, confident she had until at least quarter to six.",
         labels: ["inductive"],
         primaryLabel: "inductive",
         isTarget: true,
@@ -379,28 +379,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sw-4-b",
-            text: "A long record with no exceptions grounds a probable conclusion about this year's frost — pattern, not guarantee.",
+            text: "A diary with no exceptions grounds a probable conclusion about today — pattern-based, not certain, but reliable enough to leave meetings without checking the time.",
           },
           {
             id: "sw-4-c",
-            text: "By definition, the frost season ends when the swallows arrive, so the beans must be safe.",
+            text: "By definition, cats on a fixed routine cannot request meals outside that routine, so an early dinner request is simply impossible.",
           },
           {
             id: "sw-4-d",
-            text: "The softness of the soil is a clue whose best explanation is that the frosts have finished.",
+            text: "Figaro's afternoon calm is a clue whose best explanation is that he responds to a biological hunger signal that only activates at 5:45.",
           },
         ],
       },
       {
         id: "sw-5",
-        text: "The seed packets waited in a biscuit tin, sorted by the color of their promised flowers.",
+        text: "Her colleague once asked if it worried her to trust a cat that much, and she said she trusted him more than most project timelines.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sw-6",
-        text: "On the fourth of April, a shadow crossed the sill, and Nan put the kettle on as if greeting family.",
+        text: "Figaro watched her leave each morning from his windowsill perch, as regular as a second hand.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -409,20 +409,20 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-salt-letter",
-    title: "The Salt-Stained Letter",
+    title: "The Wet Package",
     difficulty: "beginner",
     includedLabels: ["abductive"],
     sentences: [
       {
         id: "sl-1",
-        text: "The letter waited a week in the rack before Odile came down from the high pasture to claim it.",
+        text: "The package had been sitting on the front steps for two days before Mira noticed it, half-hidden behind a terra cotta planter.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sl-2",
-        text: "Its corners were stiff with salt and the ink of the postmark had run to a blue ghost — the best explanation was that it had crossed on the deck of a ship, not in a mailbag under cover.",
+        text: "Its corners were swollen and the shipping label had faded to a gray blur — the best explanation was that it had sat through Thursday's rainstorm uncovered, rather than in the dry porch alcove where deliveries were supposed to go.",
         labels: ["abductive"],
         primaryLabel: "abductive",
         isTarget: true,
@@ -430,28 +430,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sl-2-a",
-            text: "Salt stiffening and run ink are traces, and an open sea crossing is the explanation that accounts for both at once.",
+            text: "Swollen corners and a faded label are distinct traces, and an uncovered exposure to rain is the single explanation that accounts for both at once.",
           },
           {
             id: "sl-2-b",
-            text: "Letters from the coast have always arrived salt-stained, so this one naturally would be too.",
+            text: "Packages left outside in this neighborhood have always gotten rained on eventually, so this one naturally would be too.",
           },
           {
             id: "sl-2-c",
-            text: "Postal regulations require deck transport for overseas mail, so it must have traveled on deck.",
+            text: "Delivery instructions require packages to be left in the dry alcove, so the courier must have broken that rule.",
           },
         ],
       },
       {
         id: "sl-3",
-        text: "The hand on the envelope was cramped and unfamiliar, though the letter inside ran on in her brother's easy loops.",
+        text: "The return address was in her mother's handwriting, though the box itself was sealed with the gray packing tape her brother always bought in bulk.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sl-4",
-        text: "The likeliest explanation, she decided, was that he had finished the letter at sea and passed it to a shipmate to address and post from the first port.",
+        text: "The likeliest explanation, she decided, was that her mother had packed it but her brother had sealed and shipped it — which would account for the handwriting outside and the tape within.",
         labels: ["abductive"],
         primaryLabel: "abductive",
         isTarget: true,
@@ -459,28 +459,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sl-4-b",
-            text: "Her brother's letters have often arrived addressed by strangers, so this one probably was as well.",
+            text: "Her brother has often shipped things her mother originally packed, so this was probably the same arrangement again.",
           },
           {
             id: "sl-4-c",
-            text: "One hypothesis — a shipmate addressing it in port — explains the strange hand outside and the familiar hand within.",
+            text: "One hypothesis — her mother packed while her brother sealed and mailed — explains both the mother's handwriting on the return address and the brother's characteristic gray tape on the box.",
           },
           {
             id: "sl-4-d",
-            text: "Since only the sender may address an envelope, the writing outside must be her brother's after all.",
+            text: "Since the person who ships a package normally prepares the label too, the handwriting outside must be her brother's after all.",
           },
         ],
       },
       {
         id: "sl-5",
-        text: "The letter itself was all weather and wages and a promise to be home when the fleet turned south.",
+        text: "The box turned out to contain three jars of homemade jam and a note that said \"no occasion, just because.\"",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sl-6",
-        text: "Odile read it twice on the walk back up, and once more by lamplight for good measure.",
+        text: "Mira carried it inside, dried it off with a dish towel, and put the kettle on.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -489,20 +489,20 @@ export const beginnerStories: readonly PracticeStory[] = [
   },
   {
     id: "story-tollgate",
-    title: "Night at the Tollgate",
+    title: "Night at the Study Rooms",
     difficulty: "beginner",
     includedLabels: ["deductive", "inductive", "abductive"],
     sentences: [
       {
         id: "tg-1",
-        text: "The tollgate lantern burned low, and Tam sat with his boots to the brazier, listening for wheels.",
+        text: "The library's study rooms closed to new reservations at eleven, and Nadia sat at the sign-in desk with her clipboard and a thermos of tea.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tg-2",
-        text: "The ledger rule was plain — no cart passes after midnight without a magistrate's stamp — and this driver carried no stamp, so the gate stayed down.",
+        text: "The booking policy was unambiguous — rooms could only be reserved by current students carrying an active ID card, and this visitor had a staff badge, not a student card, so the reservation could not stand.",
         labels: ["deductive"],
         primaryLabel: "deductive",
         isTarget: true,
@@ -510,28 +510,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tg-2-a",
-            text: "The rule plus the missing stamp force the outcome; nothing about the night is left to judgment.",
+            text: "The booking policy plus the visitor's staff badge — not a student card — make the outcome inescapable; no version of the rules allows the reservation to stand.",
           },
           {
             id: "tg-2-b",
-            text: "Drivers without stamps have been turned back all winter, so this one probably would be too.",
+            text: "Staff members have had reservations declined here all semester, so this one probably would be too.",
           },
           {
             id: "tg-2-c",
-            text: "The driver's late arrival is a puzzle best explained by his lacking the proper papers.",
+            text: "The visitor's polite extended explanation is best explained by his already knowing the reservation wouldn't hold.",
           },
         ],
       },
       {
         id: "tg-3",
-        text: "The man argued a while, then settled onto his box seat to wait for morning, as they mostly did.",
+        text: "He explained the situation politely, then agreed to try the faculty lounge downstairs, as most staff members did once they understood the rule.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tg-4",
-        text: "Carters bound for the fish market had rolled through before dawn every Friday for years, so Tam expected more wheels within the hour.",
+        text: "Students rushing to submit work before midnight had knocked on that door in clusters every finals week for the four years Nadia had worked here, so she expected the next group within a minute.",
         labels: ["inductive"],
         primaryLabel: "inductive",
         isTarget: true,
@@ -539,21 +539,21 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tg-4-b",
-            text: "Years of Friday traffic form a pattern, projected onto this Friday as a likelihood.",
+            text: "Four years of finals-week clusters arriving within a minute of each other form a strong pattern, projected onto tonight as a likelihood.",
           },
           {
             id: "tg-4-c",
-            text: "The market charter obliges carters to arrive before dawn, so more must be coming.",
+            text: "The midnight submission deadline obligates students to arrive before the rooms close, so more must be on their way.",
           },
           {
             id: "tg-4-d",
-            text: "The waiting driver is a clue whose best explanation is a market day ahead.",
+            text: "The quiet hallway right now is a clue whose best explanation is a large group arriving any second.",
           },
         ],
       },
       {
         id: "tg-5",
-        text: "This cart, though, smelled of pitch, and the driver's boots were white to the ankle with lime — the best explanation was that he'd come down the kiln road, not the coast road he claimed.",
+        text: "This student's bag was soaking wet and she had come from the east stairwell — the best explanation was that she had climbed in through a fire-exit window from the closed east wing, not arrived through the main lobby she claimed.",
         labels: ["abductive"],
         primaryLabel: "abductive",
         isTarget: true,
@@ -561,28 +561,28 @@ export const beginnerStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tg-5-a",
-            text: "Pitch smell and lime dust are traces the coast road can't account for; the kiln road explains both.",
+            text: "A soaking wet bag and emergence from the east stairwell are traces the main lobby cannot account for; a fire-exit window from the closed east wing explains both at once.",
           },
           {
             id: "tg-5-b",
-            text: "Most late carts come down the kiln road, so his story was unlikely from the start.",
+            text: "Most late arrivals during finals use the fire-exit windows when the east wing is closed, so her story was unlikely from the start.",
           },
           {
             id: "tg-5-c",
-            text: "Since the coast road was closed by order, he could not have come that way.",
+            text: "Since the east wing was locked to students after nine, anyone coming from that stairwell had to have bypassed the locks.",
           },
         ],
       },
       {
         id: "tg-6",
-        text: "Tam noted the lime in the margin of the ledger, for the magistrate's eyes and not his own.",
+        text: "Nadia logged the wet bag and asked which window — for the facilities team, she said, not for herself.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tg-7",
-        text: "Toward four the frost deepened, and the first fish carts came through singing on their axles, right on time.",
+        text: "The next knock came thirty seconds later, right on schedule, and three more followed before midnight.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

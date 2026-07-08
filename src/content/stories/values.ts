@@ -10,20 +10,20 @@ import type { PracticeStory } from "@/domain/types";
 export const valuesStories: readonly PracticeStory[] = [
   {
     id: "story-keepers-word",
-    title: "The Keeper's Word",
+    title: "The Garden List",
     difficulty: "intermediate",
     includedLabels: ["moral"],
     sentences: [
       {
         id: "mo-1",
-        text: "The light at Gannet Point had burned every night for forty-one years, through three keepers, two wars of paperwork with the board, and one memorable eel.",
+        text: "The Riverside Community Garden had been running for eight years — through three volunteer coordinators, two contentious HOA votes, and one memorable composting incident.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mo-2",
-        text: "The board's letter cut the oil allowance by a third and suggested, delicately, a half-wick on clear nights; but Tam had given his word to the fishing fleet the day he took the post, and a promise made to men at sea does not shrink with the price of oil — the lamp would burn full.",
+        text: "The city's letter cut the plot allotment by a third and suggested, quietly, letting some families on the waitlist lapse over winter; but Nora had given her word to every family the day she took over, and a promise made to people who'd waited two seasons does not shrink with the city's budget — the plots would be held.",
         labels: ["moral"],
         primaryLabel: "moral",
         isTarget: true,
@@ -31,28 +31,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "mo-2-a",
-            text: "The word given to the fleet stands as a duty, and the conclusion — the lamp burns full — follows from that obligation outweighing the price of oil.",
+            text: "The word given to the families stands as a duty, and the conclusion — plots held — follows from that obligation outweighing the budget pressure.",
           },
           {
             id: "mo-2-b",
-            text: "It ranks the full wick against the board's half-wick along shared criteria of brightness and cost, concluding the full wick the better setting.",
+            text: "It ranks the full allotment against the reduced number along shared criteria of fairness and cost, concluding the full number the better arrangement.",
           },
           {
             id: "mo-2-c",
-            text: "It settles on the full wick as the most effective available means to the keeper's goal of bringing the fleet safely round the point.",
+            text: "It holds the plots open as Nora's most effective means of keeping the families engaged through winter.",
           },
         ],
       },
       {
         id: "mo-3",
-        text: "He wrote as much to the board, in a hand that had signed nothing longer than a delivery slip in years.",
+        text: "She emailed the parks department in the careful tone of someone who had attended too many neighborhood meetings to be surprised by much.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mo-4",
-        text: "Their reply offered a bargain — the full allowance restored, if he would log which boats ran the point after dark, so the harbor office could chase its unpaid moorings — and Tam refused it, because a light kept to watch over sailors ought never be turned into a means of watching them.",
+        text: "The department's reply offered a deal — full restoration of all thirty plots if she would flag which families hadn't visited since spring, so they could clear spots for more active households — and she refused it, because a waitlist kept in trust for the community cannot be turned into a tool for deciding who belongs there.",
         labels: ["moral"],
         primaryLabel: "moral",
         isTarget: true,
@@ -60,28 +60,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "mo-4-a",
-            text: "It sets the restored oil against the burden of keeping the log, adds the fleet's likely resentment, and lets the balance of reasons carry the refusal.",
+            text: "It weighs the plot restoration against the burden of flagging families, adds the community's likely resentment, and lets the balance of reasons carry the refusal.",
           },
           {
             id: "mo-4-b",
-            text: "It rejects the bargain because logging boats at night would be a poor means to the harbor office's end of collecting its moorings.",
+            text: "It rejects the deal because flagging inactive families would be a poor means to the department's goal of filling plots efficiently.",
           },
           {
             id: "mo-4-c",
-            text: "The refusal rests on a principle about what the light is for — protection, not surveillance — and derives what ought never be done from it, whatever the allowance is worth.",
+            text: "The refusal rests on a principle about what the waitlist is for — serving community trust, not sorting households — and derives what ought never be done from it, whatever the restored plots are worth.",
           },
         ],
       },
       {
         id: "mo-5",
-        text: "The allowance stayed cut, and the village, hearing of it, took to leaving oil cans at the foot of the tower stairs.",
+        text: "The plot count stayed cut, and the neighborhood, hearing what had happened, organized a plot-sharing arrangement without being asked.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mo-6",
-        text: "By spring the store shed held more oil than the board had ever sent.",
+        text: "By October the garden had more volunteers than plots, which created its own small problems.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -90,20 +90,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-three-quays",
-    title: "The Three Quays",
+    title: "The Third Option",
     difficulty: "intermediate",
     includedLabels: ["comparative"],
     sentences: [
       {
         id: "cq-1",
-        text: "The herring came early that year, and the harbor board met above the net loft to decide which quay should take the winter landings.",
+        text: "The regional qualifier came up fast, and the robotics club met in the computer lab to decide which room to reserve for their practice scrimmage.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cq-2",
-        text: "Measured against the three things a landing quay must offer — depth at low tide, nearness to the ice house, shelter from the north swell — the East Quay beat the Old Quay on every count and gave up nothing in return.",
+        text: "Measured against what a scrimmage venue needs — table space for three bots, proximity to the equipment closet, and reliable wifi — the gymnasium beat the cafeteria on every count and gave up nothing in return.",
         labels: ["comparative"],
         primaryLabel: "comparative",
         isTarget: true,
@@ -111,28 +111,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cq-2-a",
-            text: "Three named criteria — depth, nearness to the ice, shelter — are laid across both quays, and the conclusion is a ranking: East better than Old on every count.",
+            text: "Three named criteria — table space, equipment access, wifi — are laid across both rooms, and the conclusion is a ranking: gym better than cafeteria on every count.",
           },
           {
             id: "cq-2-b",
-            text: "Independent reasons for and against each quay are gathered and weighed, no single one decisive, until their combined lean favors the East Quay.",
+            text: "Independent reasons for and against each room are gathered and weighed, no single one decisive, until their combined lean favors the gymnasium.",
           },
           {
             id: "cq-2-c",
-            text: "It argues the East Quay is owed the landings by long-standing right, deriving what the board ought to do from that claim.",
+            text: "It argues the gymnasium is owed the scrimmage by tradition, deriving what the club ought to do from that claim.",
           },
         ],
       },
       {
         id: "cq-3",
-        text: "That left the Chapel Quay, which everyone had been politely not mentioning.",
+        text: "That left the library annex, which everyone had been politely not suggesting.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cq-4",
-        text: "On depth and shelter the Chapel Quay matched the East stone for stone; on the walk to the ice house it was worse by two hundred yards of cobbles, and fish do not improve with jostling — so, of the three, East stood first, Chapel second, and the Old Quay a distant third.",
+        text: "On space and wifi the library annex matched the gym table for table; on the walk to the equipment closet it was worse by two hallways and a locked stairwell, and bots do not improve when carried at speed — so of the three, the gym stood first, the annex second, and the cafeteria a distant third.",
         labels: ["comparative"],
         primaryLabel: "comparative",
         isTarget: true,
@@ -140,28 +140,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cq-4-a",
-            text: "It piles up separate, unlike pros and cons for the Chapel Quay — depth, cobbles, jostled fish — and lets their combined weight, rather than any shared measure, settle a verdict.",
+            text: "It piles up separate, unlike pros and cons for the library annex — space, the stairwell, bot handling — and lets their combined weight, rather than any shared measure, settle a verdict.",
           },
           {
             id: "cq-4-b",
-            text: "The same yardsticks are applied again — matched on depth and shelter, worse on the walk — and the sentence ends where comparison ends, in an ordering of the three.",
+            text: "The same yardsticks are applied again — matched on space and wifi, worse on the equipment walk — and the sentence ends where comparison ends, in an ordering of the three.",
           },
           {
             id: "cq-4-c",
-            text: "It picks the quay that best serves the goal of getting fish onto ice quickly, choosing an action as a means to that end.",
+            text: "It picks the gym as the option that best serves the goal of keeping the bots intact, choosing an action as a means to that end.",
           },
         ],
       },
       {
         id: "cq-5",
-        text: "The vote was brief; the arguing about it in the tavern afterward was not.",
+        text: "The vote took two minutes; the argument about who forgot to book it in advance took considerably longer.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cq-6",
-        text: "By November the East Quay smelled so richly of herring that even the gulls seemed impressed.",
+        text: "By Saturday the gym smelled richly of solder fumes and nervous ambition.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -170,20 +170,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-winter-road",
-    title: "The Winter Road",
+    title: "The Last Session",
     difficulty: "intermediate",
     includedLabels: ["conductive"],
     sentences: [
       {
         id: "cu-1",
-        text: "The high road over Crake Fell closed each winter, and each autumn the parish argued about whether it should.",
+        text: "The Tuesday game group had been meeting for three years, and each spring someone suggested they might be close to wrapping up the campaign.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cu-2",
-        text: "Keeping it open would spare the carters the long valley detour and keep the fell farms in reach of the doctor; against that stood the wage of a snow gang, drifts that could bury a wall in a night, and the plain fact that hardly anyone crossed after Martinmas — none of it settled the matter alone, but set side by side the reasons leaned, all together, toward closing.",
+        text: "Running one more arc would let the players who'd invested the most see their characters' storylines land; against that stood the fact that the winning condition had technically passed, attendance had dropped from eight to five, and nobody had updated the shared notes document in two months — none of it settled the matter alone, but weighed together the reasons leaned, quietly, toward ending it.",
         labels: ["conductive"],
         primaryLabel: "conductive",
         isTarget: true,
@@ -191,28 +191,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cu-2-c",
-            text: "Carters' time, the doctor's reach, the snow gang's wage, the drifts, the empty road — independent reasons on both sides, none decisive, with the conclusion carried by how they lean together.",
+            text: "Unfinished storylines, the passed winning condition, falling attendance, neglected notes — independent reasons on both sides, none decisive, with the conclusion carried by how they lean together.",
           },
           {
             id: "cu-2-d",
-            text: "It ranks the high road against the valley detour along shared criteria of cost and safety and concludes the valley road the better of the two.",
+            text: "It ranks continuing against ending along the shared criteria of player investment and attendance and concludes ending the better course.",
           },
           {
             id: "cu-2-e",
-            text: "It derives the parish's duty to close the road from its obligation to keep the snow gang out of mortal danger.",
+            text: "It derives the group's obligation to end the campaign from its duty to respect the rules they agreed to at the start.",
           },
         ],
       },
       {
         id: "cu-3",
-        text: "Widow Askern, whose farm sat highest on the fell, asked what the doctor was to do in February.",
+        text: "Janelle, who had been playing the group's cleric since the very first session and owned more dice than anyone, asked what was supposed to happen to the unfinished subplot about the missing heir.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cu-4",
-        text: "A staked bridleway would cost little, could be walked when the road could not, and answered the doctor's case; it would still drift in the worst weeks, and someone must ride out after every storm to reset the poles — but the three reasons for it, taken with the two against, came down comfortably on its side.",
+        text: "A single wrap-up session would cost them one Tuesday evening, could land the missing-heir storyline with whatever dignity remained, and answered Janelle's concern; it would still leave two other subplots unresolved, and someone would have to write a summary for the player who'd moved to Denver — but the three reasons for it, taken with the two against, came down clearly enough on its side.",
         labels: ["conductive"],
         primaryLabel: "conductive",
         isTarget: true,
@@ -220,28 +220,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "cu-4-a",
-            text: "Three considerations for the bridleway and two against are counted as separate weights, and the conclusion rests on their combined balance rather than on any one of them.",
+            text: "Three considerations for the wrap-up session and two against are counted as separate weights, and the conclusion rests on their combined balance rather than on any one of them.",
           },
           {
             id: "cu-4-b",
-            text: "It measures the bridleway against the full road on the shared criteria of cost and winter passability and ranks the bridleway higher.",
+            text: "It measures the wrap-up session against running more arcs along the shared criteria of time cost and storyline completion, and ranks the wrap-up higher.",
           },
           {
             id: "cu-4-c",
-            text: "It concludes the parish ought to stake the way because it owes its highest farms the reach of a doctor, that obligation doing the work.",
+            text: "It concludes the group ought to wrap up because it owes Janelle the resolution of her subplot, that obligation doing the work.",
           },
         ],
       },
       {
         id: "cu-5",
-        text: "The vote carried with only the carters against, and they were outnumbered by everyone who had ever dug one out.",
+        text: "The vote carried with only the DM against, and he was outnumbered by everyone who had ever cared about what happened to the missing heir.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "cu-6",
-        text: "The first poles went in before the fair, painted a red the fell fog would learn to respect.",
+        text: "They met the following Tuesday, finished in two hours, and spent the third arguing about what they would play next.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -250,20 +250,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-gleaners-field",
-    title: "The Gleaners' Field",
+    title: "The Maker Space",
     difficulty: "intermediate",
     includedLabels: ["moral", "comparative"],
     sentences: [
       {
         id: "mk-1",
-        text: "Harvest ended at Longbarrow the way it always did: the last wagon cheered off the field, and the stubble left glinting behind it.",
+        text: "Every school year ended at Westbrook the same way: the last bell, the hallways cleared, and Mr. Osei's unofficial maker space still humming with half-finished projects.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mk-2",
-        text: "The new steward proposed folding the sheep onto the stubble at once, but gleaning had been the right of the parish poor since anyone's grandmother could remember, and a right of the poor is not the steward's to spend — the field ought to stand open a week, as it always had.",
+        text: "The new vice-principal proposed reclaiming the room for storage at the start of next term, but students had been using that space for independent work for five years running, and a resource a school has implicitly offered its students for that long doesn't become the administration's to reassign without notice — the room ought to stay open through the year, as it always had.",
         labels: ["moral"],
         primaryLabel: "moral",
         isTarget: true,
@@ -271,28 +271,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "mk-2-a",
-            text: "It weighs the estate's gain from early folding against the gleaners' loss and several smaller considerations, letting the balance fall to a week's delay.",
+            text: "It weighs the school's gain from having storage against the students' loss of the maker space and several smaller considerations, letting the balance fall to keeping it open.",
           },
           {
             id: "mk-2-b",
-            text: "An old right of the parish poor supplies the premise, and the ought — the field stands open — follows from that right not being the steward's to spend, whatever the sheep might gain.",
+            text: "A five-year pattern of implicit use supplies the premise, and the ought — the room stays open — follows from that resource not being the vice-principal's to reassign without notice, whatever the storage situation.",
           },
           {
             id: "mk-2-c",
-            text: "It keeps the field open as the steward's most reliable means of staying on good terms with the parish.",
+            text: "It keeps the maker space open as the vice-principal's most reliable means of maintaining student goodwill at the start of term.",
           },
         ],
       },
       {
         id: "mk-3",
-        text: "The steward, to his credit, asked which fields the gleaners actually walked.",
+        text: "The vice-principal, to her credit, actually visited during a session and counted twelve students working on six different projects.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mk-4",
-        text: "Of the two just cut, Longbarrow offered heavier leavings and level footing, while the Brook Field lay closer to the cottages but flooded at its margins and had been cut clean by the new reaper; on what mattered to a gleaner — leavings, footing, and the walk — Longbarrow came out better on two counts of three.",
+        text: "Of the two rooms that might serve as storage instead, the old computer lab offered power outlets along every wall and enough bench space for everything that needed storing, while the converted supply closet was closer to the main office but lacked ventilation and could barely fit one cart; on what mattered to a storage room — capacity, access, and air — the computer lab came out better on two counts of three.",
         labels: ["comparative"],
         primaryLabel: "comparative",
         isTarget: true,
@@ -300,28 +300,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "mk-4-a",
-            text: "Three criteria a gleaner cares about are named — leavings, footing, the walk — and both fields are scored against them, ending in better and worse rather than in a decision.",
+            text: "Three criteria any storage room needs are named — capacity, access, air — and both rooms are scored against them, ending in better and worse rather than in a decision.",
           },
           {
             id: "mk-4-b",
-            text: "It argues the gleaners are owed the richer field as a matter of fairness, deriving the outcome from what is due to them.",
+            text: "It argues the students are owed the better room as a matter of fairness, deriving the outcome from what they've been implicitly promised.",
           },
           {
             id: "mk-4-c",
-            text: "Separate, unlike reasons about each field — the flooding, the new reaper, the distance — are thrown into one scale, and the verdict is read off their combined weight.",
+            text: "Separate, unlike reasons about each room — the ventilation problem, the crowding, the distance — are thrown into one scale, and the verdict is read off their combined weight.",
           },
         ],
       },
       {
         id: "mk-5",
-        text: "So the sheep went to the Brook Field, and nobody's grandmother was troubled in her rest.",
+        text: "So the storage went to the computer lab, and nobody's half-finished drone was disturbed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "mk-6",
-        text: "The week's gleaning filled aprons, and occasioned one small argument about a hen.",
+        text: "The following year, the maker space got a proper sign on the door and a budget line, which at Westbrook counted as an official endorsement.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -330,20 +330,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-harbor-clock",
-    title: "The Harbor Clock",
+    title: "The Sound System",
     difficulty: "intermediate",
     includedLabels: ["comparative", "conductive"],
     sentences: [
       {
         id: "kq-1",
-        text: "The clock above the harbor office had lost eleven minutes since Easter, which on a coast ruled by tides was not a joke.",
+        text: "The park amphitheater's sound system had been cutting out since the spring concert, which for a neighborhood that took its outdoor music festival seriously was not a minor complaint.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "kq-2",
-        text: "Two bids came in — Marsh the younger would clean and rebush the old works, Fenner would fit a new movement outright — and judged on price, on years bought, and on keeping the original bell, Marsh's stood better on the first and last and worse only on the second.",
+        text: "Two proposals came in — the local shop would rewire and recalibrate the existing board, and a regional vendor would swap in a new system entirely — and judged on price, on years of service expected, and on keeping the original speaker setup, the local shop's bid stood better on the first and last and worse only on the second.",
         labels: ["comparative"],
         primaryLabel: "comparative",
         isTarget: true,
@@ -351,28 +351,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "kq-2-a",
-            text: "It assembles independent reasons favoring each clockmaker and lets their accumulated weight, rather than any common measure, tip toward Marsh.",
+            text: "It assembles independent reasons favoring each vendor and lets their accumulated weight, rather than any common measure, tip toward the local shop.",
           },
           {
             id: "kq-2-b",
-            text: "It reasons that the town ought to keep faith with the old works, an obligation to the bell deciding between the bids.",
+            text: "It reasons that the neighborhood ought to support local businesses as a matter of community obligation, that duty deciding between the bids.",
           },
           {
             id: "kq-2-c",
-            text: "The two bids are set against three named criteria — price, years bought, the original bell — and the sentence ends in a scoring of better and worse, not in a choice.",
+            text: "The two bids are set against three named criteria — price, years of service, the original speakers — and the sentence ends in a scoring of better and worse, not in a choice.",
           },
         ],
       },
       {
         id: "kq-3",
-        text: "The harbormaster, who distrusted anything that arrived in a crate, said nothing and refilled his pipe.",
+        text: "The committee chair, who distrusted anything that arrived on a pallet with instructions in three languages, said nothing and checked her phone.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "kq-4",
-        text: "There were other things than the bids to reckon with: the town's affection for the old chime, the risk that a cleaned movement might stall again in a hard frost, the sailmaker's point that a stopped clock had already cost one missed tide, and the thinness of the repair fund — none conclusive by itself, but weighed together they came down, narrowly, on Marsh's side.",
+        text: "There were other things besides the bids worth considering: the neighborhood's attachment to the old speaker tone, the risk that a recalibrated board might cut out again at the summer festival, the guitarist who pointed out that one bad show had already cost two sponsors, and the thinness of the parks budget — none conclusive by itself, but weighed together they tipped, narrowly, toward the local shop.",
         labels: ["conductive"],
         primaryLabel: "conductive",
         isTarget: true,
@@ -380,28 +380,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "kq-4-a",
-            text: "It re-ranks the two bids along the same shared criteria as before — price, years, and the bell — and finds Marsh still ahead on points.",
+            text: "It re-ranks the two bids along the same shared criteria as before — price, years, and the speakers — and finds the local shop still ahead on points.",
           },
           {
             id: "kq-4-b",
-            text: "Affection for the chime, frost risk, the missed tide, the thin fund — considerations of different kinds, none decisive alone, weighed in one motion until the balance settles narrowly on Marsh.",
+            text: "Attachment to the old tone, festival risk, the lost sponsors, the thin budget — considerations of different kinds, none decisive alone, weighed in one motion until the balance settles narrowly on the local shop.",
           },
           {
             id: "kq-4-c",
-            text: "It selects Marsh's repair as the most effective means to the single goal of never missing another tide.",
+            text: "It selects the local shop's repair as the most effective means to the single goal of never missing another summer festival.",
           },
         ],
       },
       {
         id: "kq-5",
-        text: "Marsh took the works away in a fish basket, promising them back by the spring tides.",
+        text: "The shop sent two technicians, who worked the whole of a Saturday and left behind a laminated maintenance card that nobody touched.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "kq-6",
-        text: "When the clock struck true again, half the town checked it against their watches, and the other half checked their watches against it.",
+        text: "When the sound came up clean at the test run, half the committee checked it against the vendor's specs, and the other half just applauded.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -410,20 +410,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-unclaimed-letters",
-    title: "The Unclaimed Letters",
+    title: "The Unread Queue",
     difficulty: "intermediate",
     includedLabels: ["conductive", "moral"],
     sentences: [
       {
         id: "um-1",
-        text: "Behind the old sorting-office wall, the builders found a mail sack: ninety-odd letters, stamped and sealed, undelivered since the year of the great gale.",
+        text: "Behind the old backup server, the studio's migration team found a folder: eight hundred feedback emails, tagged and queued, unread since the year of the big relaunch.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "um-2",
-        text: "Delivering them now might reopen old griefs, and half the addresses had long since fallen to the sea; against that, some of the names still had grandchildren in the village, the letters were short walks rather than sea voyages to deliver, and curiosity, once loosed, would not be got back into the sack — taken all together, the reasons tipped toward trying.",
+        text: "Responding now might reopen complaints players had long since moved past, and half the accounts had been deleted; against that, some of the usernames still had active players in the community, the messages were easy to route and answer, and the goodwill of finally hearing back, once expected, would not quietly disappear — taken all together, the reasons tipped toward trying.",
         labels: ["conductive"],
         primaryLabel: "conductive",
         isTarget: true,
@@ -431,28 +431,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "um-2-a",
-            text: "Old griefs and lost addresses on one side; living grandchildren, easy delivery, unstoppable curiosity on the other — unlike reasons weighed together, the verdict carried by where the whole collection tips.",
+            text: "Old complaints and deleted accounts on one side; active players, easy routing, and unfulfilled goodwill on the other — unlike reasons weighed together, the verdict carried by where the whole collection tips.",
           },
           {
             id: "um-2-b",
-            text: "It concludes the letters ought to go out because a posted letter is owed its delivery, a duty that survives even the gale.",
+            text: "It concludes the messages ought to go out because a sent message is owed its response, a duty that survives even a server migration.",
           },
           {
             id: "um-2-c",
-            text: "It ranks delivering against archiving along the shared criteria of cost and likely harm and finds delivery the better option.",
+            text: "It ranks responding against archiving along the shared criteria of cost and likely harm and finds responding the better option.",
           },
         ],
       },
       {
         id: "um-3",
-        text: "The question that stopped the room was what to do with letters whose lines had ended.",
+        text: "The question that stopped the room was what to do with messages from accounts that had closed completely.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "um-4",
-        text: "The archivist was firm on one point: a sealed letter belongs to the person it names, living or dead, and where no heir could be found the seal ought to stay unbroken, however much the parish history might profit by the reading.",
+        text: "The community manager was firm: a message sent in trust belongs to the person who sent it, active account or not, and where no account remained the content ought to stay unread, however useful it might be as user research.",
         labels: ["moral"],
         primaryLabel: "moral",
         isTarget: true,
@@ -460,28 +460,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "um-4-a",
-            text: "It balances the history's gain from reading against the grief of broken seals and a handful of smaller reasons, finding the case against reading slightly heavier.",
+            text: "It balances the research value of reading against the oddness of reading private feedback and a handful of smaller reasons, finding the case against reading slightly heavier.",
           },
           {
             id: "um-4-b",
-            text: "It keeps the seals whole as the archive's surest means of avoiding disputes with distant heirs.",
+            text: "It keeps the messages unread as the studio's surest means of avoiding disputes with former players.",
           },
           {
             id: "um-4-c",
-            text: "A sealed letter's belonging to the person it names is asserted as a right, and the ought — seals unbroken — is derived from it even against the history's admitted profit.",
+            text: "A sent message's belonging to the person who sent it is asserted as a right, and the ought — messages unread — is derived from it even against the admitted research value.",
           },
         ],
       },
       {
         id: "um-5",
-        text: "Thirty-one letters went out that autumn, some to houses only two doors from where they were first posted.",
+        text: "Four hundred messages went out that month, some to players still on the same username they'd registered with during the original beta.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "um-6",
-        text: "The rest sleep in the archive in their sack, addresses fading, seals intact.",
+        text: "The rest live in a folder marked \"unread, as sent,\" which someone has since organized alphabetically for reasons no one can fully explain.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -490,20 +490,20 @@ export const valuesStories: readonly PracticeStory[] = [
   },
   {
     id: "story-flood-fund",
-    title: "The Flood Fund",
+    title: "The Surplus",
     difficulty: "intermediate",
     includedLabels: ["moral", "comparative", "conductive"],
     sentences: [
       {
         id: "vv-1",
-        text: "The river took the footbridge and the school's lower floor in the same March night, and by April the flood fund stood at a sum nobody had dared hope for.",
+        text: "The fire took the rec center's gym floor and its sound system in the same October night, and by December the repair fund stood at a figure nobody had expected to reach.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "vv-2",
-        text: "A councillor suggested the surplus might quietly seed the long-wished-for market hall; the treasurer replied that money given for flood relief is held in trust for that grief and no other, and spending it otherwise ought to be unthinkable, however good the hall.",
+        text: "A board member suggested the surplus might quietly seed the long-planned sensory garden; the treasurer replied that money raised for fire damage is held in trust for that loss and no other, and spending it otherwise ought to be off the table, however good the garden.",
         labels: ["moral"],
         primaryLabel: "moral",
         isTarget: true,
@@ -511,15 +511,15 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "vv-2-a",
-            text: "The treasurer reasons from a trust — money given for one grief — to what ought not be done with it, the principle standing firm even against the hall's admitted good.",
+            text: "The treasurer reasons from a trust — money raised for one specific loss — to what ought not be done with it, the principle holding firm even against the garden's admitted good.",
           },
           {
             id: "vv-2-b",
-            text: "It weighs the hall's benefits against the awkwardness of redirected funds and several smaller reasons, and the balance falls against the councillor.",
+            text: "It weighs the garden's benefits against the awkwardness of redirected funds and several smaller reasons, and the balance falls against the board member.",
           },
           {
             id: "vv-2-c",
-            text: "It ranks the market hall against flood repairs along shared criteria of benefit to the town and finds the repairs the better use of the surplus.",
+            text: "It ranks the sensory garden against the fire repairs along shared criteria of community benefit and finds the repairs the better use of the surplus.",
           },
         ],
       },
@@ -532,7 +532,7 @@ export const valuesStories: readonly PracticeStory[] = [
       },
       {
         id: "vv-4",
-        text: "Set against each other on urgency, on the number served each day, and on what delay would cost, the school outranked the bridge: children could cross by the long lane either way, but lessons in a borrowed barn were failing by the week.",
+        text: "Set against each other on urgency, on how many people used them each week, and on what delay would cost, the gym floor outranked the sound system: programs could run in silence if needed, but classes in a borrowed space were losing attendance by the week.",
         labels: ["comparative"],
         primaryLabel: "comparative",
         isTarget: true,
@@ -540,28 +540,28 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "vv-4-a",
-            text: "It argues the children are owed their schoolroom first, a duty to them deciding between the two projects.",
+            text: "It argues the regular attendees are owed their gym first, a duty to them deciding between the two projects.",
           },
           {
             id: "vv-4-b",
-            text: "School and bridge are measured on the same three counts — urgency, daily use, the cost of delay — and the outcome is an ordering, the school ranked above the bridge.",
+            text: "Gym floor and sound system are measured on the same three counts — urgency, weekly use, the cost of delay — and the outcome is an ordering, the gym floor ranked above the sound system.",
           },
           {
             id: "vv-4-c",
-            text: "It gathers unlike reasons on each side — the long lane, the draughty barn — and lets their combined weight, not any shared measure, produce a verdict.",
+            text: "It gathers unlike reasons on each side — the borrowed space, the silence — and lets their combined weight, not any shared measure, produce a verdict.",
           },
         ],
       },
       {
         id: "vv-5",
-        text: "The bridge men took it well, on the whole, and only mentioned the barn's draughts twice.",
+        text: "The sound team took it reasonably well and only brought up the borrowed space twice.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "vv-6",
-        text: "When the bridge's turn came, the quarry's offer of stone at cost pulled one way; against it stood an extra year of carting, the mason's warning about winter mortar, and the village's plain hunger to cross its river again — while for it counted the hundred years a stone span would stand and the end, forever, of rot; no single reason carried the day, but the balance, argued over three long evenings, settled on stone.",
+        text: "When the sound system's turn came, the supplier's trade-in offer pulled one way; against it stood another month of borrowed speakers, the director's warning about the aging wiring, and the community's impatience to just have working sound again — while for it counted the five-year warranty and the end, permanently, of static; no single factor carried the day, but the balance, argued through two long evenings, settled on the trade-in.",
         labels: ["conductive"],
         primaryLabel: "conductive",
         isTarget: true,
@@ -569,21 +569,21 @@ export const valuesStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "vv-6-a",
-            text: "It ranks stone against timber along the shared criteria of cost and lifespan and concludes stone the better bridge on both.",
+            text: "It ranks the trade-in against buying new along the shared criteria of cost and durability and concludes the trade-in the better option on both.",
           },
           {
             id: "vv-6-b",
-            text: "It derives a duty to build in stone from what the village owes the generations who will cross after it.",
+            text: "It derives a duty to install proper equipment from what the community was promised when the fundraiser launched.",
           },
           {
             id: "vv-6-c",
-            text: "Cheap stone, a lost year, winter mortar, the village's impatience, a century's standing — considerations pulling both ways, and the passage says itself that no one reason carried it; the balance did.",
+            text: "Trade-in deal, borrowed speakers, aging wiring, community impatience, a five-year warranty — considerations pulling both ways, and the passage says itself that no one factor carried it; the balance did.",
           },
         ],
       },
       {
         id: "vv-7",
-        text: "The school opened first, smelling of new plaster; the bridge followed a year on, and the fund closed itself out with a supper for the whole parish.",
+        text: "The gym opened first to a full Tuesday lineup; the sound system followed six weeks later, and the fund closed with a pizza party that the treasurer logged as a community relations expense.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

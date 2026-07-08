@@ -31,8 +31,12 @@ selected label.
 
 ## Craft rules
 
-- Voice: literary, concrete, lightly wry — village life, harbors, archives,
-  orchards. No brands, no topical politics.
+- Voice: clear, concrete, lightly wry. Settings should be varied and
+  approachable: everyday modern life, workplace situations, school, families,
+  social media, fantastical scenarios (wizards, robots, magic, sci-fi), or
+  humor. Avoid defaulting to formal English historical settings (18th-century
+  guilds, quays, harbors, chandlers). The reasoning must be clear regardless
+  of setting. No brands, no topical politics.
 - Beginner: signpost the reasoning ("The best explanation…", "so", rules
   stated outright). One form per sentence, whole-sentence selection.
 - Intermediate/advanced: bury the signposts; let the reasoning live in

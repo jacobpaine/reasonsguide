@@ -9,20 +9,20 @@ import type { PracticeStory } from "@/domain/types";
 export const presumptionFallacyStories: readonly PracticeStory[] = [
   {
     id: "story-guild-admission",
-    title: "The Guild Admission",
+    title: "The Tryout",
     difficulty: "intermediate",
     includedLabels: ["begging-the-question", "loaded-question", "false-dilemma"],
     sentences: [
       {
         id: "ps1-1",
-        text: "Tolla's application to the weavers' guild came up third on the evening's docket, her sample cloth folded on the table.",
+        text: "Lena's tryout for the city trivia league happened in a corner booth with the team captain and two veterans, a printed set of sample questions folded between them.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps1-2",
-        text: "Master Hobb opposed it plainly: outsiders' work isn't guild quality, he said, and hers can't be — because it's an outsider's.",
+        text: "The captain said she wasn't quite the right fit — outside players never had the right instincts, he explained, and the proof was that her instincts hadn't been forged inside a league team.",
         labels: ["begging-the-question"],
         primaryLabel: "begging-the-question",
         isTarget: true,
@@ -30,28 +30,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps1-2-a",
-            text: "The premise — outsiders' work isn't guild quality — simply restates the conclusion it's meant to prove; the cloth on the table never gets examined.",
+            text: "The premise — outside players lack the right instincts — simply restates the conclusion it's meant to prove; her sample-question scores are never actually examined.",
           },
           {
             id: "ps1-2-b",
-            text: "Hobb offers Tolla only two paths when a third plainly exists.",
+            text: "He offers Lena only two paths when a third plainly exists.",
           },
           {
             id: "ps1-2-c",
-            text: "Hobb raises the admission standard after Tolla has already met it.",
+            text: "He raises the standard after she has already met the sample-question requirement.",
           },
         ],
       },
       {
         id: "ps1-3",
-        text: "The sample itself, the recording clerk noted, had passed the thread-count test at first inspection.",
+        text: "One of the veterans mentioned, quietly, that Lena had won a regional science category three years running at an open tournament.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps1-4",
-        text: "Then Master Reya leaned forward with her only question: 'Tell the hall — do you still pass off town-loom cloth as your own handwork?'",
+        text: "The other veteran leaned forward with a friendly tone: 'Can you walk us through when you realized competitive pressure wasn't really your thing?'",
         labels: ["loaded-question"],
         primaryLabel: "loaded-question",
         isTarget: true,
@@ -59,21 +59,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps1-4-b",
-            text: "Reya's question assumes its own conclusion as a premise and argues in a circle.",
+            text: "The veteran's question assumes its own conclusion as a premise and argues in a circle.",
           },
           {
             id: "ps1-4-c",
-            text: "The question smuggles in the unproven charge of passing-off — 'still' makes any direct answer, yes or no, a confession.",
+            text: "The question smuggles in 'realized competitive pressure wasn't your thing' as already settled — any direct answer, including a denial, accepts that the realization happened.",
           },
           {
             id: "ps1-4-d",
-            text: "Reya exempts her own past applications from the standard she applies to Tolla's.",
+            text: "The veteran exempts the team's own high-pressure environment from the scrutiny he applies to Lena's track record.",
           },
         ],
       },
       {
         id: "ps1-5",
-        text: "The chairman moved to settle it briskly: admit her tonight without conditions, or bar her from the trade for good — those being, he said, the choices before the hall.",
+        text: "The captain wrapped it up cleanly: she could take the alternate-round reserve slot starting next month, or they'd have to pass — those were the options, and the spot wouldn't stay open.",
         labels: ["false-dilemma"],
         primaryLabel: "false-dilemma",
         isTarget: true,
@@ -81,21 +81,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps1-5-a",
-            text: "Two options are presented as the only ones while the guild's own customs — probation, apprenticeship, resubmission — stand in plain sight.",
+            text: "Two options are presented as the only ones while a full roster spot, a trial season, or a follow-up match are plain alternatives that go unmentioned.",
           },
           {
             id: "ps1-5-b",
-            text: "The chairman's proposal quietly assumes Tolla unworthy, which was the very question.",
+            text: "The captain's offer quietly assumes she was already not good enough, which was the very question the tryout was meant to settle.",
           },
           {
             id: "ps1-5-c",
-            text: "The chairman shifts the requirement upward now that the thread-count test is passed.",
+            text: "He shifts the requirement from trivia scores to competitive instincts, now that the first has been addressed.",
           },
         ],
       },
       {
         id: "ps1-6",
-        text: "An older weaver reminded the hall, dryly, that half its masters had entered by the probationary bench the chairman had just abolished.",
+        text: "She joined a different league, and her team beat the captain's squad by eighteen points at the district finals five months later.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -104,20 +104,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-prize-marrow",
-    title: "The Prize Marrow",
+    title: "The Cook-Off",
     difficulty: "intermediate",
     includedLabels: ["special-pleading", "moving-goalposts", "dialectical"],
     sentences: [
       {
         id: "ps2-1",
-        text: "The vegetable show's rules were short and old: entries grown in the parish, by the entrant, weighed at the table.",
+        text: "The office chili cook-off had one rule: scratch-made, no commercial bases, judged blind — except that the team lead had always competed and also helped run the judging, a tension the sign-up sheet had never quite resolved.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps2-2",
-        text: "When Judge Ambrose's own marrow was found to have grown in his sister's parish, he ruled the rule inapplicable to judges, whose produce, he explained, was entered in a different spirit.",
+        text: "When someone mentioned that a seasoning packet was still sitting in the recycling bin next to the team lead's entry, he clarified that the scratch rule applied to employee submissions — his own participation was managerial in nature and ran on a different track.",
         labels: ["special-pleading"],
         primaryLabel: "special-pleading",
         isTarget: true,
@@ -125,28 +125,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps2-2-a",
-            text: "The parish rule he applies to every other entrant is waived for his own case, with 'a different spirit' standing in for any relevant difference.",
+            text: "The scratch rule applied to every other entry is quietly waived for his own, with 'managerial in nature' standing in for any exception the rules actually name.",
           },
           {
             id: "ps2-2-b",
-            text: "Ambrose raises the bar for the other entries after they have already been weighed.",
+            text: "He raises the bar for the other entries after they have already been scored.",
           },
           {
             id: "ps2-2-c",
-            text: "Ambrose assumes judges' produce is superior, which is the point in dispute.",
+            text: "He assumes management entries are by definition superior, which is the point in dispute.",
           },
         ],
       },
       {
         id: "ps2-3",
-        text: "Widow Crane's marrow, meanwhile, out-weighed the field by half a stone on the show's own scale.",
+        text: "The intern's chili, entered as number four, took first place in the blind tasting by eleven points and produced a brief, respectful silence in the room.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps2-4",
-        text: "Weight, Ambrose then announced, was never the true test — girth was wanted; and when her marrow won the tape as well, he found that what the show truly honored was symmetry.",
+        text: "Taste, the team lead explained, had never been the real criterion — presentation was what set a serious entry apart; and when the intern's presentation score came back highest as well, he decided the cook-off had always fundamentally been about recipe originality.",
         labels: ["moving-goalposts"],
         primaryLabel: "moving-goalposts",
         isTarget: true,
@@ -154,21 +154,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps2-4-b",
-            text: "Ambrose offers the hall a choice between two tests when many exist.",
+            text: "He offers the panel only two criteria to weigh when several are available.",
           },
           {
             id: "ps2-4-c",
-            text: "Each standard is abandoned the moment it is met — weight, then girth, then symmetry — so no marrow of hers can ever count as enough.",
+            text: "Each standard is abandoned the moment it's met — taste, then presentation, then recipe originality — so no score she produces can ever be enough.",
           },
           {
             id: "ps2-4-d",
-            text: "Ambrose exempts his own marrow from the weighing he requires of others.",
+            text: "He exempts his own entry from the blind tasting requirement he applies to everyone else.",
           },
         ],
       },
       {
         id: "ps2-5",
-        text: "The show's secretary took the objection Ambrose kept implying — that scale-weight alone rewards watering — stated it better than he had, and answered it: the rulebook already deducted for split skins and hollow flesh, which is what watering produces.",
+        text: "The office manager took the implicit objection — that blind tastings reward shortcuts over craft — stated it more charitably than the team lead had, and answered it: the scratch rule was already designed to rule out shortcuts, which is exactly what a seasoning packet is.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -176,21 +176,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps2-5-a",
-            text: "The objection is given its strongest form and then answered from the rulebook — engagement that meets the point instead of dodging it.",
+            text: "The objection is given its strongest form and then answered with the actual rule — engagement that meets the point rather than dismissing it.",
           },
           {
             id: "ps2-5-b",
-            text: "The secretary raises a new standard of evidence now that the old one is satisfied.",
+            text: "The office manager raises a new standard of evidence now that the original criterion has been satisfied.",
           },
           {
             id: "ps2-5-c",
-            text: "The secretary assumes the rulebook's fairness, which was the very matter in question.",
+            text: "The office manager assumes the scratch rule's fairness, which was the very matter in question.",
           },
         ],
       },
       {
         id: "ps2-6",
-        text: "The cup went to Widow Crane, and Ambrose went home with his marrow and his spirit, both unweighed.",
+        text: "The intern kept the trophy on her desk for the rest of the year, and the team lead kept saying he'd been robbed, which everyone agreed was at least consistent.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -199,20 +199,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-ferry-tithe",
-    title: "The Ferry Tithe",
+    title: "The Rota",
     difficulty: "intermediate",
     includedLabels: ["begging-the-question", "special-pleading"],
     sentences: [
       {
         id: "ps3-1",
-        text: "The question before the harbor board was whether the ferry tithe was still lawful, the charter being older than anyone's grandfather.",
+        text: "The flatmate meeting had been called because the kitchen rota had reached what the group chat described as 'Code Red,' and Oliver kept appearing in the evidence.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps3-2",
-        text: "The collector's case ran in a small circle: the tithe is lawful because it is rightfully collected — and it is rightfully collected, he said, because it is lawful.",
+        text: "Oliver's defense ran in a tidy circle: the weekday rule didn't apply to him because he'd never been held to it before, and the proof it had never applied was that he'd never followed it.",
         labels: ["begging-the-question"],
         primaryLabel: "begging-the-question",
         isTarget: true,
@@ -220,28 +220,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps3-2-a",
-            text: "Each half of the argument rests on the other — 'rightfully collected' is 'lawful' in different clothes, and the charter question is never touched.",
+            text: "Each half of the argument rests on the other — the rule doesn't apply because he's never followed it, and he's never followed it because it doesn't apply; the actual flatmate agreement is never examined.",
           },
           {
             id: "ps3-2-b",
-            text: "The collector applies the tithe to everyone but waives it for his own crossings.",
+            text: "Oliver applies the kitchen rule to all flatmates but quietly suspends it for himself without an exception the agreement recognizes.",
           },
           {
             id: "ps3-2-c",
-            text: "The collector demands ever-older documents each time one is produced.",
+            text: "Oliver demands ever-older documentation of the rule each time the flatmates produce any evidence of it.",
           },
         ],
       },
       {
         id: "ps3-3",
-        text: "The clerk fetched the charter itself, which proved to say less than either side had promised it would.",
+        text: "The flatmate agreement, dug out from a shared folder no one had opened since move-in, turned out to be rather less ambiguous than Oliver had been hoping.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps3-4",
-        text: "It also emerged that the collector's own goods had crossed tithe-free for years — a courtesy of office, he called it, though the charter named no such courtesy.",
+        text: "It also emerged that Oliver's girlfriend had been using the kitchen and generating dishes for three weeks straight without being added to the cleaning rota — a house-guest arrangement, he called it, though the agreement named no such category.",
         labels: ["special-pleading"],
         primaryLabel: "special-pleading",
         isTarget: true,
@@ -249,21 +249,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps3-4-b",
-            text: "The collector's defense of the tithe assumes the tithe's validity from the start.",
+            text: "Oliver's defense of the arrangement assumes the arrangement is already valid, which was the question the flatmates were trying to settle.",
           },
           {
             id: "ps3-4-c",
-            text: "The rule pressed on every crossing is suspended for his own, with 'courtesy of office' naming no difference the charter recognizes.",
+            text: "The rota obligation applied to every other household member is suspended for his own guest, with 'house-guest arrangement' naming no category the flatmate agreement actually recognizes.",
           },
           {
             id: "ps3-4-d",
-            text: "The collector confines the board to two readings of the charter when it bears several.",
+            text: "Oliver limits the flatmates to two readings of the agreement when it plainly bears several interpretations.",
           },
         ],
       },
       {
         id: "ps3-5",
-        text: "The board suspended the tithe pending counsel, and the collector's goods, by unanimous vote, paid double until then.",
+        text: "The agreement was updated that evening, Oliver's girlfriend was added to the Tuesday rota, and she turned out to be considerably more thorough about it than Oliver had ever been.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -272,20 +272,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-lantern-inquest",
-    title: "The Lantern Inquest",
+    title: "The Group Chat",
     difficulty: "intermediate",
     includedLabels: ["loaded-question", "moving-goalposts"],
     sentences: [
       {
         id: "ps4-1",
-        text: "After the hayloft fire, the inquest turned its attention to the carter, whose lantern had hung in the barn that night among a dozen others.",
+        text: "The family debrief had been ninety messages deep in the group chat before anyone suggested a video call, which happened on a Sunday evening with four of the five trip participants and an open agenda.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps4-2",
-        text: "The foreman opened with what he called a simple question: 'When did you stop leaving your lantern lit among dry hay?'",
+        text: "Dad opened with what he called a simple clarifying question: 'Can someone explain to me at what point they stopped checking the campsite's cancellation policy?'",
         labels: ["loaded-question"],
         primaryLabel: "loaded-question",
         isTarget: true,
@@ -293,28 +293,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps4-2-a",
-            text: "The question presumes the lantern was left lit — a charge no one had proven — so 'never' sounds like denial and any date sounds like guilt.",
+            text: "The question assumes the policy wasn't checked — a claim no one had yet established — so 'never' sounds like a confession and any date sounds like a belated excuse.",
           },
           {
             id: "ps4-2-b",
-            text: "The foreman's question assumes the carter's guilt as a premise and concludes it from itself.",
+            text: "Dad's question assumes the family's negligence as a premise and concludes it from itself.",
           },
           {
             id: "ps4-2-c",
-            text: "The foreman raises the standard of proof each time the carter meets it.",
+            text: "Dad raises the standard of proof each time someone produces the evidence he's asked for.",
           },
         ],
       },
       {
         id: "ps4-3",
-        text: "The carter, to his credit, answered the question underneath the question: his lantern, he said, had been out and cold on its hook by supper.",
+        text: "The oldest sibling found the booking confirmation in her inbox, timestamped three weeks before the trip, with the cancellation policy highlighted in yellow.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps4-4",
-        text: "Two witnesses confirmed the cold lantern; the foreman then wanted the hook itself examined, and when the hook proved sound, declared that only testimony from someone awake at midnight could settle anything.",
+        text: "Dad wanted the original campsite website screenshot as confirmation; when that arrived, he asked whether anyone had also phoned to verify; and when the call log appeared with a reference number, he concluded that only a written confirmation from the site manager could truly settle whether the booking had been properly secured.",
         labels: ["moving-goalposts"],
         primaryLabel: "moving-goalposts",
         isTarget: true,
@@ -322,28 +322,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps4-4-b",
-            text: "The foreman offers the inquest a false pair: convict the carter or close the case unsolved.",
+            text: "Dad offers the family a false choice — blame someone or leave the question open — when the evidence already closes it.",
           },
           {
             id: "ps4-4-c",
-            text: "Each demand is satisfied and immediately replaced by a steeper one — witnesses, then the hook, then a midnight observer — so no evidence can ever clear him.",
+            text: "Confirmation email, then website screenshot, then a phone log, then a written letter from the site manager — each bar is cleared and immediately replaced, arriving at something no one bothers to produce.",
           },
           {
             id: "ps4-4-d",
-            text: "The foreman excuses his own drowsing that night while condemning the carter's.",
+            text: "Dad exempts his own failure to read the confirmation from the scrutiny he applies to everyone else's booking process.",
           },
         ],
       },
       {
         id: "ps4-5",
-        text: "The smith observed from the back that by that standard no fire in the county's history had ever been explained.",
+        text: "The middle sibling observed, mildly, that by that standard no family trip since 2009 could be said to have been properly confirmed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps4-6",
-        text: "The inquest found for accident, and the foreman found, in time, other uses for his simplicity.",
+        text: "The call shifted to trip photos not long afterward, most of which were quite nice, and the cancellation policy was not mentioned again.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -352,20 +352,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-mill-lease",
-    title: "The Mill Lease",
+    title: "The Cancellation",
     difficulty: "intermediate",
     includedLabels: ["false-dilemma", "special-pleading"],
     sentences: [
       {
         id: "ps5-1",
-        text: "The mill lease came up for renewal in a wet spring, with the miller and the manor at the same long table as their grandfathers.",
+        text: "The gym membership cancellation call started with eleven minutes of hold music and ended with a representative whose warmth had the texture of something rehearsed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps5-2",
-        text: "The steward put the manor's position with great finality: accept the doubled rent, or see the mill closed by Michaelmas — there was no third road.",
+        text: "He explained the situation with practiced patience: she could upgrade to the annual plan at the new rate starting immediately, or she'd need to complete the full thirty-day cancellation notice — those were, he said, the only realistic options.",
         labels: ["false-dilemma"],
         primaryLabel: "false-dilemma",
         isTarget: true,
@@ -373,28 +373,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps5-2-a",
-            text: "Two outcomes are offered as exhaustive while the customary third roads — arbitration, a stepped rent, a shorter term — sit unmentioned in the very lease being renewed.",
+            text: "Upgrade or wait thirty days are offered as exhaustive, while a month-to-month continuation, a membership freeze, and a prorated exit all sat in the contract she was holding.",
           },
           {
             id: "ps5-2-b",
-            text: "The steward assumes the doubled rent is fair, which is precisely what the table is meeting to decide.",
+            text: "The rep assumes the new annual rate is fair, which is precisely what she had called to dispute.",
           },
           {
             id: "ps5-2-c",
-            text: "The steward exempts the manor's own arrears from the strictness he demands of the miller.",
+            text: "The rep exempts the gym's own equipment delays from the strictness he applies to her membership obligations.",
           },
         ],
       },
       {
         id: "ps5-3",
-        text: "The miller's daughter read aloud the arbitration clause, article nine, in the steward's own fair copperplate.",
+        text: "She read paragraph seven aloud, which described a membership freeze option at four dollars a month that required no cancellation notice at all.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps5-4",
-        text: "Pressed on the manor's unpaid repairs to the weir — owed under the same lease — the steward explained that obligations ran differently upward than downward, the manor being the manor.",
+        text: "When she raised the six-week weights-room closure she had been paying through, the rep explained that equipment downtime was handled under a separate service framework on the operations side, with its own timelines — though the contract drew no such distinction for either party.",
         labels: ["special-pleading"],
         primaryLabel: "special-pleading",
         isTarget: true,
@@ -402,28 +402,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps5-4-b",
-            text: "The steward narrows the miller's remedies to two when the lease provides several.",
+            text: "The rep narrows her options to upgrade or wait when the contract provides several paths.",
           },
           {
             id: "ps5-4-c",
-            text: "One document binds both parties, but its duties are enforced on the miller and waived for the manor, with 'being the manor' offered as the entire difference.",
+            text: "One contract governs both parties, but its obligations are enforced on her and waived for the gym, with 'operations framework' offered as the entire difference.",
           },
           {
             id: "ps5-4-d",
-            text: "The steward demands new proof of the weir damage each time the old proof is accepted.",
+            text: "The rep asks for a new record of the closure each time the previous one is accepted.",
           },
         ],
       },
       {
         id: "ps5-5",
-        text: "The arbitrator, when article nine produced one, read obligations in both directions, as ink generally runs.",
+        text: "The freeze was processed in about ninety seconds, the equipment closure was noted on the account, and the hold music never played again.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps5-6",
-        text: "The rent rose by a quarter, the weir was mended by June, and the steward's copperplate grew, if anything, fairer.",
+        text: "She rejoined six months later during a promotion, and the weights room had new equipment that worked on the first try.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -432,20 +432,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-comet-club",
-    title: "The Comet Club",
+    title: "The Book Club",
     difficulty: "intermediate",
     includedLabels: ["begging-the-question", "false-dilemma"],
     sentences: [
       {
         id: "ps6-1",
-        text: "The astronomy club met above the bakery, and the question that spring was whether to admit the self-taught.",
+        text: "The book club met on alternating Fridays, and the item on the table was whether to let Marcus join — he mostly read thrillers, and the founding members mostly preferred not to.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps6-2",
-        text: "Dr. Fenn's argument had a pleasing roundness: only the properly trained can judge the sky, and the proof that the self-taught judge it badly is that they lack proper training.",
+        text: "Priya's objection had a pleasing circularity: only readers with genuine literary taste could contribute meaningfully to discussions, and the evidence that thriller readers lacked genuine literary taste was that they read thrillers.",
         labels: ["begging-the-question"],
         primaryLabel: "begging-the-question",
         isTarget: true,
@@ -453,28 +453,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps6-2-a",
-            text: "The evidence offered for the conclusion is the conclusion — lacking training proves bad judgment only if training is what judgment requires, which was the question.",
+            text: "The evidence offered for the conclusion is the conclusion — reading thrillers proves lack of literary taste only if literary taste is what thriller readers are missing, which was the question.",
           },
           {
             id: "ps6-2-b",
-            text: "Fenn poses a question that convicts whoever answers it directly.",
+            text: "Priya poses a question that traps whoever tries to answer it directly.",
           },
           {
             id: "ps6-2-c",
-            text: "Fenn allows the club only two futures when others are available.",
+            text: "Priya allows the group only two futures when others are plainly available.",
           },
         ],
       },
       {
         id: "ps6-3",
-        text: "It was gently recalled that the club's founding comet had been found by a customs officer with a shop-window telescope.",
+        text: "It was noted, mildly, that their most insightful member had a shelf full of genre fiction at home and had never made a secret of it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps6-4",
-        text: "Very well, said Fenn: then let the club choose tonight between remaining a serious body or becoming a public amusement — for those were the alternatives.",
+        text: "Fine, said Priya: they could decide that evening whether to remain a serious literary community or become a casual anything-goes reading club — those, she said, were the real options.",
         labels: ["false-dilemma"],
         primaryLabel: "false-dilemma",
         isTarget: true,
@@ -482,21 +482,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps6-4-b",
-            text: "Fenn's alternatives each assume the self-taught are unserious, the matter under debate.",
+            text: "Priya's alternatives each assume that thriller readers are unserious, which was still the matter under debate.",
           },
           {
             id: "ps6-4-c",
-            text: "Serious body or public amusement — as if an examination, a probationary year, or a sponsored membership were not third, fourth, and fifth doors standing open.",
+            text: "Serious literary community or casual anything-goes club — as if a guest session, a two-book trial, or a mentored membership were not third, fourth, and fifth options.",
           },
           {
             id: "ps6-4-d",
-            text: "Fenn holds candidates to a credential he himself was never asked to produce.",
+            text: "Priya holds new applicants to a taste credential she herself was never required to demonstrate.",
           },
         ],
       },
       {
         id: "ps6-5",
-        text: "The club adopted the examination, which Dr. Fenn helped write, and which the baker's apprentice passed at the first sitting.",
+        text: "The club adopted a two-book trial, which Priya helped design, and Marcus passed it when his notes on the shortlisted novel were the most detailed anyone had brought in months.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -506,20 +506,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   // ── Stories 8–12 ─────────────────────────────────────────────────────────
   {
     id: "story-tide-wall",
-    title: "The Tide Wall",
+    title: "The Router",
     difficulty: "intermediate",
     includedLabels: ["false-dilemma", "moving-goalposts"],
     sentences: [
       {
         id: "ps8-1",
-        text: "The tide-wall commission sat in the harbor house on a grey Wednesday, the crack in the sea wall wide enough to see from the south window.",
+        text: "The flat-share had been arguing about the router for two weeks, the group chat had hit a hundred and twelve messages, and Dan — who paid slightly more rent for having signed the lease first — had called a house meeting.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps8-2",
-        text: "Commissioner Pryce opened with what he called practical clarity: the wall must either come down to the sill and be rebuilt entirely, or stand as it is — the sea, he said, left no room between those two positions.",
+        text: "Dan opened with what he called operational clarity: either they binned the router and ordered a new one this week, or they accepted the outages indefinitely — there was, he said, no workable middle option.",
         labels: ["false-dilemma"],
         primaryLabel: "false-dilemma",
         isTarget: true,
@@ -527,32 +527,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps8-2-a",
-            text: "Full demolition or doing nothing are offered as the only choices, while the harbor engineer's buttress repair — already drafted and costed — sits unmentioned on the same table.",
+            text: "Full replacement or permanent outage are offered as the only choices, while Priya's firmware-update plan — already downloaded and ready to run — sits on the table unaddressed.",
           },
           {
             id: "ps8-2-b",
-            text: "Pryce treats the wall's condition as self-evident without letting the survey speak, arguing from the conclusion he has already reached.",
+            text: "Dan treats the router's unfixability as self-evident without examining the error logs, reasoning from a conclusion he has already reached.",
           },
           {
             id: "ps8-2-c",
-            text: "Pryce raises the evidentiary standard for the repair plan each time a new piece of evidence is brought forward.",
+            text: "Dan raises the evidentiary bar for the firmware fix each time new evidence is submitted.",
           },
           {
             id: "ps8-2-d",
-            text: "Pryce exempts the rebuild proposal from the cost scrutiny he applies to the repair plan.",
+            text: "Dan exempts the replacement proposal from the cost scrutiny he applies to the firmware plan.",
           },
         ],
       },
       {
         id: "ps8-3",
-        text: "The harbor engineer spread her survey drawings across the table and traced the crack, explaining that a buttress line at the toe of the wall would seal it at a sixth of the rebuild cost.",
+        text: "Priya walked through the fix: a firmware update and a channel reset would resolve nearly every drop, cost nothing, and take about twenty minutes if someone put the kettle on.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps8-4",
-        text: "Pryce required core samples before accepting that finding; when the cores came back sound, he wanted an admiralty endorsement; when the endorsement arrived by Friday and agreed with the survey, he concluded that only a decade of tidal readings could confirm whether the lime had been weakened by salt.",
+        text: "Dan wanted a speed test first to confirm the drops were real; when the test showed exactly the pattern he'd described, he asked that the ISP be called to verify; when the ISP confirmed the firmware was out of date, he decided they'd need to run the fix for a full month before they could know if it had worked — at which point, he noted, they might as well just buy a new one.",
         labels: ["moving-goalposts"],
         primaryLabel: "moving-goalposts",
         isTarget: true,
@@ -560,32 +560,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps8-4-a",
-            text: "Pryce offers the commission a pair of options — demolition or inaction — when the survey already names a third.",
+            text: "Dan offers the flat two options — buy new or do nothing — when the firmware plan already names a third.",
           },
           {
             id: "ps8-4-b",
-            text: "Pryce assumes the wall is unsound, and then uses that assumption to question any evidence that the wall is sound.",
+            text: "Dan assumes the router is unrepairable, then uses that assumption to question any evidence that it can be fixed.",
           },
           {
             id: "ps8-4-c",
-            text: "Cores, then admiralty endorsement, then ten years of tidal readings — each standard is satisfied and immediately traded for a steeper one, so no survey can ever be enough.",
+            text: "Speed test, ISP call, and a month of live data — each bar is cleared and immediately replaced by a steeper one, so no finding can ever be enough to avoid the purchase.",
           },
           {
             id: "ps8-4-d",
-            text: "Pryce waives the tidal-reading requirement for the rebuild proposal while applying it strictly to the repair.",
+            text: "Dan waives the performance-data requirement for the replacement proposal while applying it strictly to the firmware fix.",
           },
         ],
       },
       {
         id: "ps8-5",
-        text: "The tidal ledgers, fifty-three years of them in bound volumes, were on the shelf behind the commissioner's chair.",
+        text: "Priya ran the update at nine forty-five that evening and the router had not dropped a connection since.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps8-6",
-        text: "The commission voted three to one for the buttress repair, and the ledgers were returned, unread, to the shelf.",
+        text: "Dan suggested they'd probably want a new one by summer anyway, and no one disagreed, just to keep things moving.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -594,20 +594,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-missing-folio",
-    title: "The Missing Folio",
+    title: "The Leftovers",
     difficulty: "intermediate",
     includedLabels: ["begging-the-question", "loaded-question"],
     sentences: [
       {
         id: "ps9-1",
-        text: "Folio 39 of the county register had been missing for three weeks when the head archivist raised it at the board of trustees, without, it emerged, telling his assistant in advance.",
+        text: "The leftovers situation came up in the kitchen at eight in the morning, which was not the best time, but it was the time Jake had chosen.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps9-2",
-        text: "His opening question to her was brief: 'Can you tell the board at what point you decided to conceal the loss rather than report it?'",
+        text: "His question to Maya was measured and pointed: 'Can you explain what made you decide to throw out my pasta rather than just move it to make room?'",
         labels: ["loaded-question"],
         primaryLabel: "loaded-question",
         isTarget: true,
@@ -615,32 +615,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps9-2-a",
-            text: "The archivist assumes his conclusion — that she concealed the loss — in order to establish the conclusion that she concealed the loss.",
+            text: "Jake assumes his conclusion — that Maya disposed of the pasta — in order to establish that Maya disposed of the pasta.",
           },
           {
             id: "ps9-2-b",
-            text: "'Decided to conceal' and 'rather than report' both presume guilt before any evidence is heard; saying 'I did not conceal it' still accepts the frame of a deliberate decision.",
+            text: "'Decided to throw out' and 'rather than just move it' both presume guilt before any evidence is heard; even 'I didn't throw it out' still accepts the frame of a deliberate choice between options.",
           },
           {
             id: "ps9-2-c",
-            text: "The archivist demands a higher standard of proof from his assistant than from other staff who handled the register that month.",
+            text: "Jake holds Maya to a higher standard of fridge management than the other flatmates who also use the top shelf.",
           },
           {
             id: "ps9-2-d",
-            text: "The archivist limits the board to two readings — concealment or negligence — while a third possibility, that the folio was misfiled by someone else, goes unmentioned.",
+            text: "Jake limits the explanation to two options — she threw it out or she moved it — when a third, that someone else did, goes unexamined.",
           },
         ],
       },
       {
         id: "ps9-3",
-        text: "The assistant asked the board to check the incident ledger, where she had logged the gap the same afternoon she noticed it.",
+        text: "Maya pointed at the pasta, which was on the middle shelf where she'd moved it the previous night to make room for a grocery delivery.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps9-4",
-        text: "The archivist set the ledger aside without reading it: a record kept by someone dishonest must be read with suspicion, and dishonesty, he explained, was self-evident in a person who hid what went missing.",
+        text: "Jake studied the pasta and said he couldn't take it at face value — she'd clearly moved it back when she heard him coming, and if she'd moved it back when she heard him coming, that was precisely what someone who had disposed of it would do to cover their tracks.",
         labels: ["begging-the-question"],
         primaryLabel: "begging-the-question",
         isTarget: true,
@@ -648,25 +648,25 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps9-4-a",
-            text: "The ledger is disqualified because she is dishonest, and she is dishonest because the ledger would otherwise clear her — the circle needs no evidence and admits none.",
+            text: "The pasta being there is dismissed because she moved it back, and she moved it back because the pasta being there would otherwise clear her — the circle needs no new evidence and admits none.",
           },
           {
             id: "ps9-4-b",
-            text: "The archivist's question to her presupposes concealment, and his dismissal of the ledger reinforces that presupposition without new argument.",
+            text: "Jake's opening question presupposed the disposal, and his dismissal of the pasta reinforces that presupposition without any new argument.",
           },
           {
             id: "ps9-4-c",
-            text: "The archivist raises the required proof one step each time the previous step is satisfied: report, then ledger, then a witness to the shelving.",
+            text: "Jake raises the required level of proof one step each time the previous step is satisfied: location of the pasta, then a witness, then a fridge timestamp.",
           },
           {
             id: "ps9-4-d",
-            text: "The archivist waives the ledger requirement for his own incident reports while insisting on it for hers.",
+            text: "Jake waives the documentation requirement for his own fridge usage while insisting on it for Maya's.",
           },
         ],
       },
       {
         id: "ps9-5",
-        text: "The board opened the ledger and found the entry in the assistant's hand, dated three weeks prior, with the archivist's own counter-signature immediately below it.",
+        text: "The pasta was still warm from the microwave Maya had been using when Jake walked in, a detail the timer confirmed without being asked.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -675,20 +675,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-net-toll",
-    title: "The Net Toll",
+    title: "The Entry Fee",
     difficulty: "intermediate",
     includedLabels: ["special-pleading", "false-dilemma"],
     sentences: [
       {
         id: "ps10-1",
-        text: "The harbor toll had stood at sixpence a catch since the charter, and the thirty working boats that came through the channel bar paid it without argument.",
+        text: "The running club charged a ten-dollar entry fee for every race to cover timing chips and water stations, and every member paid it without particular complaint.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps10-2",
-        text: "The harbor master's brother kept a sloop, and that sloop had crossed the bar weekly for four years without paying, described each time in the port log as transit on harbor business — though the log recorded no business done.",
+        text: "The race director's brother-in-law had run in every event for two years without paying, logged each time as 'volunteer support' in the race register — though no volunteer duties had ever been recorded against him.",
         labels: ["special-pleading"],
         primaryLabel: "special-pleading",
         isTarget: true,
@@ -696,32 +696,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps10-2-a",
-            text: "The harbor master limits the fishers' association to two options — accept the exemption or challenge it — while the charter provides a third.",
+            text: "The race director limits the committee to two options — accept the exemption or challenge it — while a simple registration amendment is readily available.",
           },
           {
             id: "ps10-2-b",
-            text: "The harbor master's argument that the sloop serves harbor business assumes what it needs to prove — that a relevant exception exists.",
+            text: "The race director's claim that the visits serve a volunteer function assumes what it needs to prove — that a relevant exception exists.",
           },
           {
             id: "ps10-2-c",
-            text: "The toll pressed on every other vessel is suspended for a family member's, with 'harbor business' offered as a justification the log contradicts and the charter does not mention.",
+            text: "The fee applied to every other participant is suspended for a personal connection, with 'volunteer support' offered as justification that the race register contradicts and the club rules don't mention.",
           },
           {
             id: "ps10-2-d",
-            text: "The harbor master shifts his justification for the exemption each time a new crossing is queried.",
+            text: "The race director shifts his justification for the exemption each time a different race entry is queried.",
           },
         ],
       },
       {
         id: "ps10-3",
-        text: "The fishers' association brought the matter before the harbor board at the autumn sitting.",
+        text: "The treasurer raised it at the quarterly committee meeting.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps10-4",
-        text: "The harbor master framed the board's choices plainly: either confirm, on the record, that the exemption was valid by long custom, or expose the harbor to litigation by overturning a practice that had run for years — those, he told the board, were its only options.",
+        text: "The race director laid out the choice: either the committee formally recognized volunteer participation as an established category, or they risked damaging club morale by retroactively billing a longstanding participant — those, he said, were the realistic paths forward.",
         labels: ["false-dilemma"],
         primaryLabel: "false-dilemma",
         isTarget: true,
@@ -729,32 +729,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps10-4-a",
-            text: "The harbor master assumes the exemption is already customary, which was the point the board was assembled to determine.",
+            text: "The race director assumes volunteer participation is already an established category, which was precisely what the committee had gathered to decide.",
           },
           {
             id: "ps10-4-b",
-            text: "Legal confirmation or costly litigation are presented as exhaustive, while amendment, enforcement, and a simple board resolution go unmentioned — avenues the board's solicitor named in under a minute.",
+            text: "Formal recognition or damaging morale are presented as the only options while a registration amendment, a policy note, and a small invoice go unmentioned — all named by the treasurer in under two minutes.",
           },
           {
             id: "ps10-4-c",
-            text: "The harbor master applies the risk of litigation to the association's position while waiving any similar risk from his own family's practice.",
+            text: "The race director applies the risk of morale damage to the committee's position while waiving any comparable risk from the original exemption.",
           },
           {
             id: "ps10-4-d",
-            text: "The harbor master shifts his defence from custom to necessity each time the board presses the previous justification.",
+            text: "The race director shifts his defense from custom to operational necessity each time the previous justification is questioned.",
           },
         ],
       },
       {
         id: "ps10-5",
-        text: "The board's solicitor observed that a vote to amend the collection register was both available and free, and moved to schedule it for the following week.",
+        text: "The treasurer said a registration amendment and a small invoice would take about fifteen minutes, and asked whether anyone wanted tea while she drafted it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps10-6",
-        text: "The sloop began paying sixpence a catch at the next crossing, and the port log found other ways to be interesting.",
+        text: "The brother-in-law paid his back entry fees with reasonable grace, and the 'volunteer support' category was quietly removed from the register.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -763,20 +763,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-chart-proof",
-    title: "The Chart Proof",
+    title: "The Hamster",
     difficulty: "intermediate",
     includedLabels: ["moving-goalposts", "begging-the-question"],
     sentences: [
       {
         id: "ps11-1",
-        text: "The surveyor's apprentice had redrawn the northern commons chart three times at the certifier's direction, each version correcting the fault he had named in the last.",
+        text: "Sam had been trying to convince his dad to let him get a hamster for the better part of six weeks, fixing each objection that came up in the previous conversation.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps11-2",
-        text: "The first draft lacked a sealed instrument, so she obtained one; the second lacked a licensed co-signature, so she secured one; the third was returned for an insufficient scale, and when she submitted the fourth — with the seal, the signature, and the larger scale — he found it wanting in a common-land notation he had not previously mentioned.",
+        text: "The cage was too small, so Sam researched and ordered a larger one; it was too noisy for the bedroom, so he moved it to his desk; the desk spot lacked ventilation, so he added a small fan — and then his dad raised a concern about allergens he had not mentioned before.",
         labels: ["moving-goalposts"],
         primaryLabel: "moving-goalposts",
         isTarget: true,
@@ -784,32 +784,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps11-2-a",
-            text: "The certifier confines the apprentice to passing or failing, when the guild examiner represents a third path she had not been told to take.",
+            text: "Sam's dad confines him to passing or failing when a trial period represents a path neither of them had considered.",
           },
           {
             id: "ps11-2-b",
-            text: "The certifier assumes that uncertified charts are inadequate, and uses that assumption to justify the certification process that produces the assumption.",
+            text: "Sam's dad assumes unapproved pets are inherently problematic, using that assumption to justify the approval process that keeps producing it.",
           },
           {
             id: "ps11-2-c",
-            text: "The certifier holds the apprentice's charts to a standard he exempts from licensed surveyors who submit through the same office.",
+            text: "Sam's dad holds Sam to a standard he never applied to their previous family cat.",
           },
           {
             id: "ps11-2-d",
-            text: "Seal, co-signature, scale, and finally an undisclosed notation — each requirement is satisfied and at once replaced, so the fourth draft is no closer to acceptance than the first.",
+            text: "Cage size, bedroom noise, desk ventilation, and then an undisclosed allergen concern — each requirement is met and at once replaced, so the fourth week is no closer to a yes than the first.",
           },
         ],
       },
       {
         id: "ps11-3",
-        text: "She added the notation, submitted the chart a fifth time, and waited.",
+        text: "Sam arranged an allergy test, which came back negative for rodents, and presented his case again.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps11-4",
-        text: "The certifier explained his thoroughness to a colleague: charts that failed certification were by definition inadequate, and inadequate charts were exactly why a certification process existed — which showed, he said, that the process was doing its job.",
+        text: "His dad explained his caution to Sam's mum: if Sam hadn't satisfied every concern yet, the pet clearly wasn't ready to be approved; and the fact that it kept not being approved showed that the concerns were real — which confirmed, he said, that his caution was entirely sensible.",
         labels: ["begging-the-question"],
         primaryLabel: "begging-the-question",
         isTarget: true,
@@ -817,32 +817,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps11-4-a",
-            text: "The certifier raises the standard for what counts as adequate each time the apprentice satisfies the previous requirement.",
+            text: "Sam's dad raises the standard for what counts as ready each time Sam satisfies the previous requirement.",
           },
           {
             id: "ps11-4-b",
-            text: "'Failed charts are inadequate' and 'inadequate charts need certification' circle each other without touching the question of whether the process itself is well-designed — any chart it rejects is, by definition, proof that the process is necessary.",
+            text: "'Not yet approved' and 'concerns are real' circle each other without touching whether the concerns themselves are reasonable — any pet that keeps being rejected is, by definition, proof that the caution is justified.",
           },
           {
             id: "ps11-4-c",
-            text: "The certifier limits the apprentice to two conclusions — the chart is adequate or it is not — rather than allowing that adequacy admits of degrees.",
+            text: "Sam's dad limits the conclusion to approved or not approved when readiness admits of degrees.",
           },
           {
             id: "ps11-4-d",
-            text: "The certifier's defense embeds the assumption that the certification standard is beyond challenge, which was precisely what the guild examiner had been asked to review.",
+            text: "Sam's dad assumes the review standard is beyond question, which was precisely what Sam's mum had been asked to assess.",
           },
         ],
       },
       {
         id: "ps11-5",
-        text: "The guild examiner arrived for an unrelated inspection, looked at the fifth draft for ninety seconds, and stamped it.",
+        text: "Sam's mum looked at the test result, the cage setup, and the ventilation fan, and said yes in about thirty seconds.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps11-6",
-        text: "The certifier found, in the weeks that followed, other apprentices and other charts requiring his particular attention.",
+        text: "The hamster arrived on a Thursday, caused no allergic reactions, and was named Theorem by popular vote.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -851,20 +851,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-vestry-bond",
-    title: "The Vestry Bond",
+    title: "The Van Fund",
     difficulty: "intermediate",
     includedLabels: ["loaded-question", "special-pleading", "dialectical"],
     sentences: [
       {
         id: "ps12-1",
-        text: "The vestry committee met after evensong to decide whether to sell the lower meadow — left in a Victorian bequest — and use the proceeds to settle the bell-tower debt.",
+        text: "The friend group's shared camping fund meeting happened over a video call on a Sunday, and the item on the table was whether to use the pooled equipment budget to repair the shared van, which had failed its annual check.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps12-2",
-        text: "The rector opened by asking whether the committee was prepared to explain to the parish why it had let the tower fall into disrepair while sitting on a valuable asset for thirty years.",
+        text: "Rhiannon opened by asking whether anyone was prepared to explain to the group why they had spent four years sitting on a van fund while the vehicle quietly fell apart around them.",
         labels: ["loaded-question"],
         primaryLabel: "loaded-question",
         isTarget: true,
@@ -872,32 +872,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps12-2-a",
-            text: "'Let the tower fall' and 'sitting on a valuable asset' both plant blame before the meeting has begun — any direct answer, including a denial, accepts that a decision to neglect was made.",
+            text: "'Sitting on a van fund' and 'quietly fell apart around them' both plant blame before the meeting has begun — any direct answer, including a correction, accepts the frame that someone chose to neglect it.",
           },
           {
             id: "ps12-2-b",
-            text: "The rector assumes the committee was negligent in order to argue that the committee was negligent; the question is its own evidence.",
+            text: "Rhiannon assumes the group was negligent in order to argue that the group was negligent; the question is its own evidence.",
           },
           {
             id: "ps12-2-c",
-            text: "The rector limits the committee to selling or facing criticism, while a fundraising campaign or a grant application are unmentioned alternatives.",
+            text: "Rhiannon limits the group to two responses — accept blame or face external criticism — while a plain timeline would show the van only recently started failing.",
           },
           {
             id: "ps12-2-d",
-            text: "The rector exempts his own tenure from the thirty-year account he demands of the committee.",
+            text: "Rhiannon exempts her own missed fund contribution from the four-year account she demands of the rest of the group.",
           },
         ],
       },
       {
         id: "ps12-3",
-        text: "The clerk noted that the bequest had carried spending restrictions until the present year, so 'sitting on' the meadow had not, until recently, been a choice the committee was permitted to forgo.",
+        text: "The treasurer pointed out that the van had passed its last two annual checks without issue, the current fault had been flagged within a week of appearing, and 'quietly falling apart for four years' wasn't quite what had happened.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps12-4",
-        text: "The treasurer, whose family ran cattle on the meadow under a private grazing arrangement, supported the sale warmly — but when the clerk proposed that the grazing arrangement should also come before the committee, he explained that personal tenure was a wholly separate matter, not within the vestry's jurisdiction to review.",
+        text: "Rhiannon voted enthusiastically for the repair — but when the treasurer proposed a full equipment audit, including the tent Rhiannon had been using privately since August, Rhiannon said personal-use arrangements were a separate matter and outside the fund's scope to review.",
         labels: ["special-pleading"],
         primaryLabel: "special-pleading",
         isTarget: true,
@@ -905,32 +905,32 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps12-4-a",
-            text: "The treasurer's support for the sale embeds the assumption that his own arrangement is already settled, which the clerk's motion would decide.",
+            text: "Rhiannon's support for the repair assumes her own arrangement is already settled, which the treasurer's motion would address.",
           },
           {
             id: "ps12-4-b",
-            text: "The treasurer assumes the vestry lacks jurisdiction, and uses that assumption to establish that the vestry lacks jurisdiction.",
+            text: "Rhiannon assumes the fund lacks scope to review personal use, and uses that assumption to establish that the fund lacks scope.",
           },
           {
             id: "ps12-4-c",
-            text: "The parish asset under review is subject to full committee scrutiny; the treasurer's private use of the same asset is not — with 'separate matter' standing in for any distinction the vestry's own rules actually draw.",
+            text: "Shared group equipment is subject to full audit; Rhiannon's private use of shared equipment is not — with 'separate matter' standing in for any distinction the fund's own rules actually draw.",
           },
           {
             id: "ps12-4-d",
-            text: "The treasurer shifts his objection from jurisdiction to procedure to precedent each time a committee member pushes back.",
+            text: "Rhiannon shifts her objection from scope to precedent to procedure each time a group member pushes back.",
           },
         ],
       },
       {
         id: "ps12-5",
-        text: "Three committee members exchanged a look, but the agenda moved on.",
+        text: "Two people on the call exchanged a look, which is the video-call equivalent of saying something without saying it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps12-6",
-        text: "The school governor set the question of culpability aside and laid out what she took to be the actual case: the tower needed eighty thousand pounds by March, the endowment earned less than four thousand a year, and no other parish asset was available — an argument she believed was sufficient, and which she invited the room to rebut on its own terms rather than avoid.",
+        text: "The van mechanic in the group set the blame question aside and laid out what she took to be the actual situation: the repair estimate was six hundred and forty pounds, the fund held four hundred and twenty, the gap was real, and she offered these numbers to the group as a case to be answered rather than a point to be conceded.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -938,25 +938,25 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps12-6-a",
-            text: "The governor presents debt and meadow as the only two items in the equation, when a grant application or a loan are options she does not address.",
+            text: "The mechanic frames the repair and the fund as the only variables, without considering a crowdfund or a payment plan.",
           },
           {
             id: "ps12-6-b",
-            text: "The loaded frame of the rector's opening question is set aside, the real case for selling is stated as a proper argument with specific figures, and the room is invited to answer it — a move from accusation to genuine contestation.",
+            text: "Rhiannon's loaded framing is set aside; the actual case for the repair is laid out as an argument with specific numbers, and the group is invited to answer it on its own terms — a shift from accusation to genuine reasoning.",
           },
           {
             id: "ps12-6-c",
-            text: "The governor assumes the tower must be repaired without arguing for that premise, which some members had not conceded.",
+            text: "The mechanic assumes the van must be repaired without arguing for that premise, which some members hadn't conceded.",
           },
           {
             id: "ps12-6-d",
-            text: "The governor raises a new standard — eighty thousand by March — after the earlier question of culpability has been set aside.",
+            text: "The mechanic introduces a new constraint — the funding gap — after the earlier question of blame has been set aside.",
           },
         ],
       },
       {
         id: "ps12-7",
-        text: "The committee voted to sell, and the treasurer's grazing arrangement became, by the clerk's motion, the first item on the next meeting's agenda.",
+        text: "The group voted to repair the van and run the equipment audit, and Rhiannon's tent became, at the treasurer's suggestion, the first item on the list.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -965,20 +965,20 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
   },
   {
     id: "story-boundary-oak",
-    title: "The Boundary Oak",
+    title: "The Borrowed Amp",
     difficulty: "intermediate",
     includedLabels: ["loaded-question", "moving-goalposts", "dialectical"],
     sentences: [
       {
         id: "ps7-1",
-        text: "The boundary oak had stood between the two farms longer than the deeds, which made its fallen state a legal event.",
+        text: "The shared bass amp had been on a borrowing rotation between the two bands for three years, until it came back from the last gig with a blown speaker and no explanation left in the case.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps7-2",
-        text: "Old Garrow's opening at the hearing was a question for his neighbor: 'Will you at least tell the assessor why you had the oak felled in the dark?'",
+        text: "Dominic's opening message to his bandmate Joel was brief: 'Can you at least tell me why you pushed the amp to full volume when you knew it was already running hot?'",
         labels: ["loaded-question"],
         primaryLabel: "loaded-question",
         isTarget: true,
@@ -986,28 +986,28 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps7-2-a",
-            text: "That the neighbor felled it, and by night, are smuggled into the question as settled — answering 'why' concedes both before any evidence is heard.",
+            text: "That Joel pushed the amp to full volume and that he knew it was running hot are both smuggled in as settled — answering 'why' concedes both before any evidence has been produced.",
           },
           {
             id: "ps7-2-b",
-            text: "Garrow reasons in a circle: the felling was wrongful because it was a wrongful felling.",
+            text: "Dominic reasons in a circle: the damage was Joel's fault because Joel caused it.",
           },
           {
             id: "ps7-2-c",
-            text: "Garrow raises what would count as proof of innocence each time it's supplied.",
+            text: "Dominic raises what would count as proof of innocence each time it is supplied.",
           },
         ],
       },
       {
         id: "ps7-3",
-        text: "The assessor set the question aside and asked instead what the storm ledger showed for that week, which was a gale from the northwest.",
+        text: "The sound engineer who had worked the gig confirmed that the amp had been running through a fault-protection limiter all night and was within normal range until the final set.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ps7-4",
-        text: "Shown the gale record, Garrow wanted the stump examined for saw marks; shown the stump's clean tear, he allowed that only a witness to the fall itself would move him — the county having, he knew, no such witness.",
+        text: "Dominic wanted the mixing desk logs reviewed; shown logs placing the amp in the normal range all evening, he asked for written statements from the crew; when three crew members confirmed the same thing, he said that only a signed report from the sound engineer would fully settle it — and the engineer was no longer available.",
         labels: ["moving-goalposts"],
         primaryLabel: "moving-goalposts",
         isTarget: true,
@@ -1015,21 +1015,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps7-4-b",
-            text: "Garrow puts to the hearing a pair of choices — sabotage or negligence — that leaves out the storm.",
+            text: "Dominic presents only two explanations — deliberate misuse or negligence — leaving out equipment age and manufacturing fault entirely.",
           },
           {
             id: "ps7-4-c",
-            text: "Ledger, then stump, then an impossible eyewitness: the required proof climbs each time it is met, arriving finally at what cannot exist.",
+            text: "Engineer's confirmation, then mixing desk logs, then crew statements, then a signed report from someone no longer available — the required proof climbs each time it is met, arriving at something impossible to produce.",
           },
           {
             id: "ps7-4-d",
-            text: "Garrow's question to the neighbor assumes the very act it asks about.",
+            text: "Dominic's opening message assumed the very act it was questioning.",
           },
         ],
       },
       {
         id: "ps7-5",
-        text: "The neighbor then did what no one expected: he stated Garrow's real grievance better than Garrow had — that the fallen oak erased the only mark of a line Garrow's family had defended for a century — and offered to bear half the cost of a surveyed stone in its place.",
+        text: "Joel then did something Dominic hadn't expected: he named Dominic's real concern more clearly than Dominic had — that he'd trusted Joel with an expensive piece of kit and felt let down regardless of cause — and proposed they split the repair cost evenly and get the amp professionally serviced before the next booking.",
         labels: ["dialectical"],
         primaryLabel: "dialectical",
         isTarget: true,
@@ -1037,21 +1037,21 @@ export const presumptionFallacyStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ps7-5-a",
-            text: "The opposing concern is restated at full strength and answered with an amendment that meets it — the stone — turning a quarrel into a settled line.",
+            text: "The underlying concern is restated at full strength — the trust, the cost, the feeling of being let down — and answered with a concrete proposal that meets it, turning a blame dispute into a workable resolution.",
           },
           {
             id: "ps7-5-b",
-            text: "The neighbor concedes guilt by proposing to pay for the marker.",
+            text: "Joel concedes fault by offering to split the repair cost.",
           },
           {
             id: "ps7-5-c",
-            text: "The neighbor limits Garrow to accepting the stone or losing the line entirely.",
+            text: "Joel limits Dominic to accepting the cost split or losing any claim to recompense.",
           },
         ],
       },
       {
         id: "ps7-6",
-        text: "The stone was set at midsummer with both families present, and the oak's timber, by agreement, roofed the school.",
+        text: "The amp was repaired and serviced, both names went on the care log, and the borrowing schedule held without a gap.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

@@ -2,27 +2,27 @@ import type { PracticeStory } from "@/domain/types";
 
 /**
  * Intermediate stories mixing analogical, causal, and statistical reasoning.
- * Targets are less signposted than in beginner stories, but each sentence
- * still carries one primary label.
+ * Targets are less signposted than in beginner stories; sentence length is
+ * varied so targets don't stand out by shape alone.
  */
 
 export const intermediateStories: readonly PracticeStory[] = [
   {
     id: "story-mill",
-    title: "The Mill Pond",
+    title: "The Grey Potions",
     difficulty: "intermediate",
     includedLabels: ["causal", "analogical"],
     sentences: [
       {
         id: "ml-1",
-        text: "The mill pond had grown a green skin of algae by midsummer, thick enough to hold a dropped glove.",
+        text: "The apprentice's potions had come out grey for three sessions running, which would have been cause for concern if the master weren't the sort of man who considered grey a reasonable interim color.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ml-2",
-        text: "The trouble had started the same season the dairy upstream doubled its herd, and the runoff channels from its pasture fed straight into the millstream.",
+        text: "The greyness had arrived the same week as a new shipment of moonmoss, and moonmoss was known to strip pigment compounds from a brew before they could bind — the moss was bleaching the color out before it could set.",
         labels: ["causal"],
         primaryLabel: "causal",
         isTarget: true,
@@ -30,32 +30,32 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ml-2-a",
-            text: "It links the algae to the herd through a traceable pathway — runoff carrying nutrients down the channels into the pond.",
+            text: "It connects the grey to the new moonmoss through a mechanism — the moss binding pigment compounds before they could set — and the same-week timing fits that pathway exactly.",
           },
           {
             id: "ml-2-b",
-            text: "It compares this pond to other ponds that recovered after similar troubles.",
+            text: "It compares this apprentice's potions to other students' brews that went grey after similar ingredient changes.",
           },
           {
             id: "ml-2-c",
-            text: "It generalizes from several summers of algae to a prediction about this one.",
+            text: "It generalizes from three grey sessions to a prediction about the next batch.",
           },
           {
             id: "ml-2-d",
-            text: "It applies a rate of algal blooms measured across the county's ponds.",
+            text: "It applies a known rate of discoloration across the conservatory's student potions.",
           },
         ],
       },
       {
         id: "ml-3",
-        text: "The miller's daughter wrote to the county office and waited three weeks for a reply that never came.",
+        text: "The master suggested renaming the intended product Storm Elixir and charging accordingly.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ml-4",
-        text: "Harwick's mill pond, fed by the same kind of pasture runoff, had cleared within two summers once the farmers planted a reed bed at the inflow — so a reed bed would likely clear this pond as well.",
+        text: "A student at the northern conservatory had fixed the exact same problem — same supplier, same grey result — by pre-soaking the moonmoss in brine for an hour before adding it, and her brew had come out deep blue the following day, so the same pre-soak would very likely work here.",
         labels: ["analogical"],
         primaryLabel: "analogical",
         isTarget: true,
@@ -63,32 +63,32 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "ml-4-a",
-            text: "It identifies the mechanism by which reeds strip nutrients from inflowing water.",
+            text: "It traces how brine disrupts moonmoss's pigment-stripping chemistry, explaining the mechanism.",
           },
           {
             id: "ml-4-b",
-            text: "It transfers Harwick's result to this pond on the strength of a relevant likeness: the same kind of runoff causing the same kind of bloom.",
+            text: "It transfers the northern student's result here on the strength of a relevant likeness — same supplier, same grey outcome — to predict the pre-soak will work.",
           },
           {
             id: "ml-4-c",
-            text: "It projects this pond's own history of clearing forward to next summer.",
+            text: "It projects the apprentice's own sessions forward, expecting grey unless something changes.",
           },
           {
             id: "ml-4-d",
-            text: "It converts a measured proportion of recovered ponds into a probability.",
+            text: "It calculates how often the brine pre-soak succeeds across known cases of moonmoss greyness.",
           },
         ],
       },
       {
         id: "ml-5",
-        text: "The dairy farmer, when she finally called on him, turned out to have been reading about reed beds himself.",
+        text: "The apprentice tried it that evening.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "ml-6",
-        text: "They agreed to split the cost of the planting before the autumn rains.",
+        text: "The next morning's potion came out a confident purple, and the master said nothing, which was its own kind of praise.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -97,20 +97,20 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-orchard-count",
-    title: "A Count of Blossoms",
+    title: "The Growth Log",
     difficulty: "intermediate",
     includedLabels: ["statistical", "causal"],
     sentences: [
       {
         id: "oc-1",
-        text: "Old Fen kept records the way other people kept grudges: thoroughly, and going back decades.",
+        text: "Priya's lab notebook was three colors of pen and fully cross-referenced — she kept records the way other students kept secrets, which is to say comprehensively.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "oc-2",
-        text: "In her ledgers, years when April blossom counts topped ten thousand had brought a full cider pressing nine times out of ten — and this April's count had topped it, so she told the cooper to expect a full pressing, likely as not.",
+        text: "In those records, seedlings grown under fourteen hours of daily light had reached at least ten centimeters by week four in nine out of ten trials — this trial's seedlings were already on fourteen hours, so she told her lab partner to expect full growth by the deadline, most likely.",
         labels: ["statistical"],
         primaryLabel: "statistical",
         isTarget: true,
@@ -118,32 +118,32 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "oc-2-a",
-            text: "It infers the best explanation for this spring's unusual abundance of blossoms.",
+            text: "It infers the best explanation for why this trial's seedlings are growing so well.",
           },
           {
             id: "oc-2-b",
-            text: "It reasons that blossoms cause fruit, tracing the mechanism from flower to press.",
+            text: "It reasons that fourteen hours of light directly causes taller plants, tracing the biological pathway from light to growth.",
           },
           {
             id: "oc-2-c",
-            text: "It applies a measured frequency — nine full pressings in ten high-blossom years — to the current year as a probability.",
+            text: "It applies a measured frequency — nine successes in ten high-light trials — to the current trial as a probability.",
           },
           {
             id: "oc-2-d",
-            text: "It compares this orchard to a neighboring orchard with similar trees.",
+            text: "It compares this trial to a similar seedling experiment run by another class with the same setup.",
           },
         ],
       },
       {
         id: "oc-3",
-        text: "The cooper, a cautious man, asked about the tenth year — the one that failed.",
+        text: "Her lab partner, the cautious type, asked about the tenth trial — the one that fell short.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "oc-4",
-        text: "That was the year a late frost struck during bloom, Fen said: the cold killed the open flowers outright, and the fruit never set.",
+        text: "That was the trial where the grow lamp had failed for three days during week two, she said: the blackout had stalled the seedlings during a critical growth window, and they never made up the lost time.",
         labels: ["causal"],
         primaryLabel: "causal",
         isTarget: true,
@@ -151,32 +151,32 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "oc-4-a",
-            text: "It explains the failed year by a mechanism — frost killing open blossoms so fruit could not set.",
+            text: "It explains the failed trial through a mechanism — a three-day blackout stalling the seedlings during a critical growth window from which they never recovered.",
           },
           {
             id: "oc-4-b",
-            text: "It updates the nine-in-ten rate downward to account for frost years.",
+            text: "It updates the nine-in-ten rate downward to account for lamp-failure trials.",
           },
           {
             id: "oc-4-c",
-            text: "It generalizes from one frost year to all cold springs.",
+            text: "It generalizes from one lamp failure to all trials with unstable lighting conditions.",
           },
           {
             id: "oc-4-d",
-            text: "It argues the failed year resembles this year in the ways that matter.",
+            text: "It argues the failed trial resembles the current one in the ways that matter most.",
           },
         ],
       },
       {
         id: "oc-5",
-        text: "The forecast held no frost, and the cooper went home to count his staves.",
+        text: "The current lamp was new, and had run without interruption.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "oc-6",
-        text: "By September the presses ran sweet and late into the evenings, just as the ledgers had promised.",
+        text: "By week four the seedlings were eleven centimeters and still climbing, exactly as the notebook had suggested they would be.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -185,27 +185,27 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-two-libraries",
-    title: "The Two Libraries",
+    title: "Two Co-Working Spaces",
     difficulty: "intermediate",
     includedLabels: ["analogical", "statistical"],
     sentences: [
       {
         id: "tl-1",
-        text: "The town's library board met above the fish market, which lent every budget debate a certain urgency.",
+        text: "The co-working space on Ardmore Street had the kind of lunchtime atmosphere that made people check their phones and leave early.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tl-2",
-        text: "Membership had sagged for three years, and the shelves smelled increasingly of the neighbors downstairs.",
+        text: "Membership had slipped three months in a row, and the plants near the south window were starting to look as dispirited as the sign-up numbers.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tl-3",
-        text: "Councillor Ames argued that Saltmarsh — a town of the same size, with the same fishing economy and the same aging readers — had doubled its membership by opening on Sunday mornings, so Sunday hours would likely lift membership here as well.",
+        text: "Petra argued that the Millfield hub — same price point, same freelance-heavy membership, same neighborhood energy — had reversed its midday slump by hosting a weekly skill-share lunch, so the same format would probably draw people in here as well.",
         labels: ["analogical"],
         primaryLabel: "analogical",
         isTarget: true,
@@ -213,25 +213,25 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tl-3-a",
-            text: "It converts Saltmarsh's doubled membership into a probability for this town.",
+            text: "It converts Millfield's membership turnaround into a probability for this space.",
           },
           {
             id: "tl-3-b",
-            text: "It transfers Saltmarsh's outcome here on the strength of named, relevant likenesses: size, economy, and readership.",
+            text: "It transfers Millfield's outcome here on the strength of named, relevant likenesses — price point, member mix, and neighborhood character.",
           },
           {
             id: "tl-3-c",
-            text: "It explains the membership sag by identifying its most likely cause.",
+            text: "It explains the lunchtime slump by identifying its most likely cause.",
           },
           {
             id: "tl-3-d",
-            text: "It applies the rule that all libraries must serve weekend readers.",
+            text: "It applies the general principle that all co-working spaces benefit from programming events.",
           },
         ],
       },
       {
         id: "tl-4",
-        text: "The treasurer countered with her survey: of the two hundred members who answered, only 14 percent said they would visit on a Sunday, so fewer than one member in six could be expected through the door.",
+        text: "The manager countered with her own survey: of the eighty members who replied, only 12 percent said they'd attend a weekday lunchtime event, so fewer than one member in eight could realistically be expected through the door.",
         labels: ["statistical"],
         primaryLabel: "statistical",
         isTarget: true,
@@ -239,32 +239,32 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tl-4-a",
-            text: "It draws its conclusion from a measured proportion of a sample — 14 percent of two hundred respondents.",
+            text: "It draws its conclusion from a measured proportion of a sample — 12 percent of eighty respondents — applied to the membership as a whole.",
           },
           {
             id: "tl-4-b",
-            text: "It reasons from what Saltmarsh's members did to what these members will do.",
+            text: "It reasons from what Millfield's members chose to do to what these members will do.",
           },
           {
             id: "tl-4-c",
-            text: "It infers the best explanation for why members stopped coming.",
+            text: "It infers the best explanation for why members stopped coming at lunchtime.",
           },
           {
             id: "tl-4-d",
-            text: "It traces the mechanism by which Sunday hours produce new members.",
+            text: "It traces the mechanism by which programming events attract new members over time.",
           },
         ],
       },
       {
         id: "tl-5",
-        text: "Ames noted, not unkindly, that lapsed members and new readers answer no surveys at all.",
+        text: "Petra noted, not unkindly, that lapsed members and non-members answer no surveys at all.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tl-6",
-        text: "The board voted for a three-month Sunday trial, to be measured against the treasurer's own numbers.",
+        text: "They agreed on a six-week trial run, to be measured against the manager's own figures.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -273,20 +273,20 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-two-bridges",
-    title: "Two Bridges",
+    title: "The Community Garden Repairs",
     difficulty: "intermediate",
     includedLabels: ["analogical"],
     sentences: [
       {
         id: "tb-1",
-        text: "The chapel footbridge had gone soft underfoot again, and the vestry meeting turned, as it did each autumn, to the question of planks.",
+        text: "The raised beds at the east-end community garden had warped badly over winter, and the planning committee met in the potting shed to figure out what to do about it.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tb-2",
-        text: "The Weir Lane bridge — same span, same builder, same river damp rising off the same water — had been re-decked in larch six years ago and hadn't rotted since, so larch would likely hold here as well.",
+        text: "The Riverside plot — same sun exposure, same coastal humidity, same basic timber-frame design — had been rebuilt with composite decking four years ago and hadn't warped since, so composite would likely hold here as well.",
         labels: ["analogical"],
         primaryLabel: "analogical",
         isTarget: true,
@@ -294,28 +294,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tb-2-a",
-            text: "Weir Lane's result is carried over on named, relevant likenesses — same span, builder, and damp — which is comparison doing the work.",
+            text: "Riverside's result is carried over on named, relevant likenesses — same sun, humidity, and frame design — making comparison the engine of the prediction.",
           },
           {
             id: "tb-2-b",
-            text: "It traces the mechanism by which larch resists rot in wet conditions.",
+            text: "It traces the mechanism by which composite decking resists warping better than untreated timber.",
           },
           {
             id: "tb-2-c",
-            text: "It converts a measured rate of larch failures into a probability for this bridge.",
+            text: "It converts a measured rate of composite-decking failures into a probability for this garden.",
           },
         ],
       },
       {
         id: "tb-3",
-        text: "The sexton, who priced timber the way other men priced horses, allowed that larch could be had from the yard at Croft's.",
+        text: "The committee treasurer, who priced timber the way other people priced flights, found a supplier two blocks away who had it in stock.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tb-4",
-        text: "As for paying for it, the ferry commons had covered their own repairs with a halfpenny box and a painted sign, and their crossing carried the same farm traffic as ours — a halfpenny box would probably serve the chapel bridge too.",
+        text: "As for the cost, the Rooftop Growers Collective had covered comparable repairs with a donation box and a painted sign, and their plot served the same mix of families and schools as this one — a donation box would probably raise enough here too.",
         labels: ["analogical"],
         primaryLabel: "analogical",
         isTarget: true,
@@ -323,28 +323,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "tb-4-b",
-            text: "It reasons that the halfpenny box causes travelers to feel obliged, tracing the mechanism of the payment.",
+            text: "It reasons that a donation box causes neighbors to feel a sense of community obligation, tracing the mechanism of voluntary giving.",
           },
           {
             id: "tb-4-c",
-            text: "The ferry commons' outcome transfers here because the crossings are alike in the way that matters: the same kind and volume of traffic.",
+            text: "The Rooftop Growers' outcome transfers here because the plots are alike in the way that matters — the same mix of local families and schools using the space.",
           },
           {
             id: "tb-4-d",
-            text: "It applies the parish rule that all bridges must fund their own upkeep.",
+            text: "It applies the general rule that community green spaces can always fund themselves through local donations.",
           },
         ],
       },
       {
         id: "tb-5",
-        text: "Someone asked whether chapel-goers would grudge the halfpenny, and someone else observed that they grudged the wet feet more.",
+        text: "Someone asked whether neighbors would donate for beds they'd never used, and someone else said they'd give for the neighbor who always left extra tomatoes at the gate.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "tb-6",
-        text: "The motion carried on a show of hands, and the sexton went out into the rain looking almost pleased.",
+        text: "The vote passed on a show of hands, and the treasurer left looking cautiously optimistic, which for her was equivalent to cheering.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -353,20 +353,20 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-smoking-chimney",
-    title: "The Smoking Chimney",
+    title: "The Recording Hum",
     difficulty: "intermediate",
     includedLabels: ["causal"],
     sentences: [
       {
         id: "sc-1",
-        text: "The schoolhouse chimney had taken to coughing smoke back into the room, and the children had taken to theatrical dying.",
+        text: "The home studio had developed a low hum somewhere between a refrigerator and a mild regret, and it was showing up on every track.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sc-2",
-        text: "The smoke came only on east winds, and only since the grain elevator went up across the lane — the tall building was turning the east wind down onto the chimney's mouth, stalling the draw.",
+        text: "The hum appeared only when the overhead fluorescent light was switched on, and only since the audio interface had been moved to the same wall outlet as the light — the fluorescent was cycling current into the outlet, and the interface was picking it up in the signal.",
         labels: ["causal"],
         primaryLabel: "causal",
         isTarget: true,
@@ -374,28 +374,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sc-2-a",
-            text: "It connects elevator to smoke through a mechanism — deflected wind stalling the draw — and the east-wind-only pattern fits that pathway exactly.",
+            text: "It connects the hum to the fluorescent light through a mechanism — current cycling from the light into the shared outlet, picked up by the audio interface — and the on-with-light-only pattern fits that pathway exactly.",
           },
           {
             id: "sc-2-b",
-            text: "It compares this chimney to other chimneys near tall buildings that smoked the same way.",
+            text: "It compares this studio to other home setups that developed hums near fluorescent lighting.",
           },
           {
             id: "sc-2-c",
-            text: "It applies the rate of smoking chimneys measured across the district to this one.",
+            text: "It applies the rate of audio interference complaints measured across similar home studio configurations.",
           },
         ],
       },
       {
         id: "sc-3",
-        text: "The mason came with a cowl for the chimney pot, muttered at the elevator, and charged the parish accordingly.",
+        text: "The producer, who had spent three hours in internet forums, arrived at this theory approximately ninety seconds before finding the right page.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sc-4",
-        text: "For a week after the cowl went on, east winds blew and the room stayed clear; the mason took the cowl off for a day to satisfy a doubter, and the smoke came back — the cowl, then, was what had cured it.",
+        text: "For two weeks after she moved the interface to a different outlet, the hum was gone; she plugged it back into the original outlet to satisfy a skeptical collaborator, and the hum returned within thirty seconds — the outlet, then, was what the hum needed.",
         labels: ["causal"],
         primaryLabel: "causal",
         isTarget: true,
@@ -403,28 +403,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "sc-4-b",
-            text: "It projects the week's clear days forward as a pattern likely to continue.",
+            text: "It projects the two weeks of clean recordings forward as a pattern likely to continue indefinitely.",
           },
           {
             id: "sc-4-c",
-            text: "Removing the suspected cause brought the effect back, and restoring it cleared the room again — the two-way test that ties cause to effect.",
+            text: "Moving the interface away ended the hum, and plugging it back brought the hum back — the two-way test that ties cause to effect.",
           },
           {
             id: "sc-4-d",
-            text: "It argues the schoolhouse resembles other buildings whose cowls cured their chimneys.",
+            text: "It argues this studio resembles other setups where moving a device to a different outlet fixed the same kind of hum.",
           },
         ],
       },
       {
         id: "sc-5",
-        text: "The doubter, a churchwarden of long standing, paid for the cowl himself by way of apology.",
+        text: "The collaborator was persuaded, and went home to check his own outlets.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "sc-6",
-        text: "The children, deprived of their smoke, went back to dying of arithmetic instead.",
+        text: "The recordings came out clean after that, and the producer quietly deleted four hours of noise-reduction edits she would not be mentioning.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -433,20 +433,20 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-ferry-count",
-    title: "The Ferry Count",
+    title: "The Food Truck Board",
     difficulty: "intermediate",
     includedLabels: ["statistical"],
     sentences: [
       {
         id: "fc-1",
-        text: "The harbormaster's tally-board hung where everyone could see it, which was rather the point.",
+        text: "The food truck's daily chalkboard had become the most closely read document on the block, which the owner thought was only fair.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "fc-2",
-        text: "Of the forty spring crossings chalked up so far, three had been canceled for weather, so a traveler booking the dawn boat faced something like a one-in-thirteen chance of standing on the quay with her luggage.",
+        text: "Of the fifty-four lunch services logged that summer, six had sold out the special before noon — so a customer showing up at quarter-to-twelve faced something like a one-in-nine chance of leaving without it.",
         labels: ["statistical"],
         primaryLabel: "statistical",
         isTarget: true,
@@ -454,28 +454,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "fc-2-a",
-            text: "A measured frequency — three cancellations in forty crossings — becomes a probability for a single booking.",
+            text: "A measured frequency — six sell-outs in fifty-four services — becomes a probability for a single lunchtime visit.",
           },
           {
             id: "fc-2-b",
-            text: "It explains why spring crossings get canceled by tracing the weather that causes them.",
+            text: "It explains why the special sells out early by tracing the demand that causes it.",
           },
           {
             id: "fc-2-c",
-            text: "It reasons that this ferry line resembles other lines with similar cancellation troubles.",
+            text: "It reasons that this food truck resembles other trucks with similar sell-out patterns.",
           },
         ],
       },
       {
         id: "fc-3",
-        text: "The ferry company, wanting to add an earlier boat, had gone so far as to ask the passengers themselves.",
+        text: "The owner, considering adding a second batch, had asked the regulars directly.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "fc-4",
-        text: "Two hundred and fifty riders answered, gathered across a month of sailings and every hour of the day, and sixty-two in a hundred favored the earlier boat — most of the ferry's riders, in all likelihood, wanted it.",
+        text: "A hundred and sixty customers replied over three weeks of varied days and serving hours, and seventy-one in a hundred said they'd pay a dollar more for a reserved portion — which suggested most of the regulars would, as a fair estimate.",
         labels: ["statistical"],
         primaryLabel: "statistical",
         isTarget: true,
@@ -483,28 +483,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "fc-4-b",
-            text: "It infers the best explanation for why riders keep asking about an earlier boat.",
+            text: "It infers the best explanation for why regulars keep asking about a reserved option.",
           },
           {
             id: "fc-4-c",
-            text: "A proportion from a sizeable, well-spread sample is extended to the riders as a whole — sample to population, with the method doing the reassuring.",
+            text: "A proportion from a sizeable, well-spread sample is extended to all regulars — the breadth of the survey doing the reassuring work.",
           },
           {
             id: "fc-4-d",
-            text: "It carries over another harbor's experience with early boats on the strength of their similarity.",
+            text: "It carries over another food truck's experience with reserved items on the strength of their similarity.",
           },
         ],
       },
       {
         id: "fc-5",
-        text: "The company posted the figures beside the tally-board, where they drew more argument than the weather ever had.",
+        text: "The chalkboard gained a new line that week: Reserve before 10 a.m., guaranteed.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "fc-6",
-        text: "The dawn boat gained a sister at first light the following month, and the quay learned a new kind of quiet.",
+        text: "The second batch sold out by 11:20 on its first day, and the owner updated the board by hand, looking quietly pleased.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
@@ -513,20 +513,20 @@ export const intermediateStories: readonly PracticeStory[] = [
   },
   {
     id: "story-beekeeper",
-    title: "The Beekeeper's Ledger",
+    title: "The Training Log",
     difficulty: "intermediate",
     includedLabels: ["statistical", "causal", "analogical"],
     sentences: [
       {
         id: "bk-1",
-        text: "Wren kept sixty hives strung along the valley, and a ledger that knew each of them by name.",
+        text: "Coach Nadia kept records for all thirty-two athletes in the program, and a whiteboard in the team room that tracked every missed training session.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bk-2",
-        text: "Nine of the sixty had failed over winter — a rate of about one in seven — so, with her stock and sites unchanged, she budgeted for roughly that share of losses again next year.",
+        text: "Five of the thirty-two had missed at least a week due to knee strain over the season — a rate of roughly one in six — so, with the program unchanged, she budgeted for about that many again next year.",
         labels: ["statistical"],
         primaryLabel: "statistical",
         isTarget: true,
@@ -534,28 +534,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bk-2-a",
-            text: "A measured loss rate across her own sixty hives is applied forward as an expected proportion.",
+            text: "A measured injury rate across her own thirty-two athletes is applied forward as an expected proportion.",
           },
           {
             id: "bk-2-b",
-            text: "It explains the winter losses by identifying what killed those nine colonies.",
+            text: "It explains the knee strains by identifying what caused those five athletes' injuries.",
           },
           {
             id: "bk-2-c",
-            text: "It transfers another valley's loss rate to hers because the valleys are alike.",
+            text: "It transfers the Harlow club's injury rate to hers because their programs are similar.",
           },
         ],
       },
       {
         id: "bk-3",
-        text: "But the ledger showed something the rate alone did not: the failures were not scattered.",
+        text: "But the whiteboard showed something the rate alone did not: the missed weeks were not scattered evenly.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bk-4",
-        text: "Eight of the nine dead hives stood along the wet hollow, where the mist pooled until noon — damp chills a wintering cluster faster than any frost, and these clusters had been chilled where they stood.",
+        text: "Four of the five injured athletes had done their midweek long runs on the synthetic track, where the stiffer surface absorbed less impact on each stride and passed it to the knee instead — the track, not the mileage, was what was wearing them down.",
         labels: ["causal"],
         primaryLabel: "causal",
         isTarget: true,
@@ -563,21 +563,21 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bk-4-b",
-            text: "It refines the one-in-seven rate by calculating a separate rate for the hollow.",
+            text: "It refines the one-in-six rate by calculating a separate injury rate for synthetic-track athletes.",
           },
           {
             id: "bk-4-c",
-            text: "It names a mechanism — damp chilling the cluster — and the failures' tight footprint along the hollow matches that cause's reach.",
+            text: "It names a mechanism — the stiffer surface absorbing less impact and transferring it to the knee on each stride — and the failures' concentration among synthetic-track athletes matches that cause's reach.",
           },
           {
             id: "bk-4-d",
-            text: "It compares her hollow to Aldermoor's wet ground, where hives fail the same way.",
+            text: "It compares her track to the Harlow club's, where athletes on the same surface suffered the same pattern of injuries.",
           },
         ],
       },
       {
         id: "bk-5",
-        text: "The Aldermoor beekeepers, whose ground was every bit as wet as hers, had halved their winter losses by raising each hive a hand's width on stands — the same remedy would probably answer in her hollow.",
+        text: "The Harlow club, whose synthetic track was the same hardness rating, had cut knee-strain incidents nearly in half after switching their long runs to the grass loop, and the same kind of surface change would probably help here.",
         labels: ["analogical"],
         primaryLabel: "analogical",
         isTarget: true,
@@ -585,28 +585,28 @@ export const intermediateStories: readonly PracticeStory[] = [
         explanationOptions: [
           {
             id: "bk-5-a",
-            text: "Aldermoor's outcome is brought across on the strength of the relevant likeness — equally wet ground — to predict the stands will work here.",
+            text: "Harlow's outcome is brought across on the strength of the relevant likeness — same surface hardness, same injury pattern — to predict the grass-loop switch will work here.",
           },
           {
             id: "bk-5-b",
-            text: "It converts Aldermoor's halved losses into a precise probability for her own hives.",
+            text: "It converts Harlow's near-halved injury rate into a precise probability for her own athletes.",
           },
           {
             id: "bk-5-c",
-            text: "It traces how a hand's width of air stops damp from reaching the cluster.",
+            text: "It traces how a softer grass surface absorbs the impact that the synthetic track passes to the knee.",
           },
         ],
       },
       {
         id: "bk-6",
-        text: "She ordered the timber before the ink of the ledger entry was dry.",
+        text: "Nadia updated the week's schedule before the team meeting ended.",
         labels: [],
         explanationOptions: [],
         isTarget: false,
       },
       {
         id: "bk-7",
-        text: "The following spring, the hollow hummed as loudly as the hilltops, and the ledger recorded two losses, both old queens.",
+        text: "The following season, three athletes had minor knee complaints, all from weeks when the grass loop was closed for maintenance.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

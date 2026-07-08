@@ -127,7 +127,8 @@ describe("lessons", () => {
       expect(lesson.workedExamples).toHaveLength(2);
       expect(lesson.guidedExamples).toHaveLength(3);
       expect(lesson.mixedQuestions).toHaveLength(5);
-      expect(lesson.unlockChallenge).toHaveLength(3);
+      expect(lesson.unlockChallenge.length).toBeGreaterThanOrEqual(3);
+      expect(lesson.unlockChallenge.length).toBeLessThanOrEqual(6);
     },
   );
 
