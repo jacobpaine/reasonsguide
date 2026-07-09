@@ -226,5 +226,39 @@ export const fallaciesIntroLesson: Lesson = {
       correctLabel: "anecdotal-evidence",
       explanation: "A single dramatic story outweighs the records — vividness beating measurement.",
     },
+    {
+      id: "fi-u4",
+      passage: [
+        "The first three customers at a new coffee cart all ordered oat milk.",
+        "The owner immediately quadrupled her oat milk order and halved her regular-milk supply, convinced she had identified the neighborhood's clear preference.",
+      ],
+      options: ["hasty-generalization", "post-hoc", "anecdotal-evidence"],
+      correctLabel: "hasty-generalization",
+      explanation:
+        "Three customers at the start of one morning can't support a claim about a neighborhood's preference. The generalization has induction's shape — cases to a general conclusion — but far too few and unrepresentative cases to carry it.",
+    },
+    {
+      id: "fi-u5",
+      passage: [
+        "A software team tracked which bug categories slipped past testing over eighteen months.",
+        "Memory-leak bugs appeared in production in 11 of 15 releases, across different engineers and code bases.",
+        "The team concluded that memory leaks were their most persistent category of slip and added a mandatory memory-profiling step to the release checklist.",
+      ],
+      options: ["inductive", "hasty-generalization", "post-hoc"],
+      correctLabel: "inductive",
+      explanation:
+        "Many releases tracked over eighteen months, a precise count across varied conditions, and a proportionate response — this is induction earning its conclusion. Unlike hasty generalization, the pattern here is genuinely well-supported before the inference is drawn.",
+    },
+    {
+      id: "fi-u6",
+      passage: [
+        "After speed bumps were installed in June, the number of pedestrians counted crossing the main road rose by 30 percent in July and August.",
+        "The transport committee attributed the increase to the speed bumps, without investigating whether school-holiday traffic patterns, a new crossing signal, or nearby road closures might account for it.",
+      ],
+      options: ["post-hoc", "anecdotal-evidence", "causal"],
+      correctLabel: "post-hoc",
+      explanation:
+        "Speed bumps came before the rise in crossings, so the committee credits them — but no rival explanations were examined. Sequence is where causal investigation begins, not where it ends; treating it as sufficient is the post hoc fallacy.",
+    },
   ],
 };

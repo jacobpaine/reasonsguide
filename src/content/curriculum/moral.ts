@@ -227,5 +227,38 @@ export const moralLesson: Lesson = {
       explanation:
         "The committee reasons from what a contest *promises* — fairness — to what must be done when the promise is broken. The value premise ('a contest is a promise of equal footing') powers the verdict.",
     },
+    {
+      id: "mo-u4",
+      passage: [
+        "Priya found a wallet on the subway seat — sixty dollars cash, no cards, no way to trace the owner.",
+        "She turned it in to the station office anyway: whatever cash does once it leaves someone's pocket, it remains theirs, and that's the end of the matter.",
+      ],
+      options: ["moral", "practical", "claim-support"],
+      correctLabel: "moral",
+      explanation:
+        "A principle about ownership — that it persists regardless of circumstance — settles the matter against Priya's own interest. No goal of hers is served, which rules out practical reasoning; one principle does all the work.",
+    },
+    {
+      id: "mo-u5",
+      passage: [
+        "If Kai's podcast episode is going live Thursday morning, the audio file needs to be uploaded by Wednesday night.",
+        "So Kai blocked Tuesday evening to finish editing.",
+      ],
+      options: ["practical", "moral", "causal"],
+      correctLabel: "practical",
+      explanation:
+        "A publication deadline (the goal) drives the upload timing (the means), which selects the Tuesday editing slot (the action). No principle about what Kai ought to do enters the picture — only logistics in service of a goal.",
+    },
+    {
+      id: "mo-u6",
+      passage: [
+        "The company's ethics advisory board reviewed the proposed merger and found no conflict of interest.",
+        "With that clearance, the board of directors moved the deal forward.",
+      ],
+      options: ["authority", "moral", "practical"],
+      correctLabel: "authority",
+      explanation:
+        "The directors defer to the advisory board's finding rather than arguing from a principle of their own. Accepting a credible body's assessment is authority reasoning — the board did the normative work; the directors accepted the conclusion on testimony.",
+    },
   ],
 };

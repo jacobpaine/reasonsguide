@@ -230,5 +230,38 @@ export const claimSupportLesson: Lesson = {
       explanation:
         "The support here is a rule plus a fact that together *require* the conclusion — a taste of deduction, your next chapter.",
     },
+    {
+      id: "cs-u4",
+      passage: [
+        "The office should switch to a four-day workweek.",
+        "Pilot programs at similar-sized firms reduced sick days by a third, and our own survey found most staff would choose it over a pay raise.",
+      ],
+      options: ["claim-support", "deductive", "inductive"],
+      correctLabel: "claim-support",
+      explanation:
+        "One proposal, two independent reasons — external data from pilot firms and an internal preference survey. Neither reason compels the conclusion; together they hold it up.",
+    },
+    {
+      id: "cs-u5",
+      passage: [
+        "The checkout queue has stretched past the freezers every Friday afternoon for the past two months.",
+        "It will probably stretch past the freezers this Friday too.",
+      ],
+      options: ["inductive", "claim-support", "deductive"],
+      correctLabel: "inductive",
+      explanation:
+        "A repeated pattern is projected onto the next case. There is no proposal being supported and no rule forcing the conclusion — only likelihood earned by a consistent run of Fridays.",
+    },
+    {
+      id: "cs-u6",
+      passage: [
+        "You should try the new podcast app.",
+        "It speeds up episodes without distorting voices, and it saves your position automatically across every device.",
+      ],
+      options: ["claim-support", "deductive", "inductive"],
+      correctLabel: "claim-support",
+      explanation:
+        "A recommendation held up by two practical reasons. Neither compels the conclusion — knowing both facts, you could still reasonably prefer a different app.",
+    },
   ],
 };

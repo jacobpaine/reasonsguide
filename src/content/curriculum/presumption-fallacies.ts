@@ -234,5 +234,30 @@ export const presumptionFallaciesLesson: Lesson = {
       explanation:
         "All-or-none offered as the only doors, while the village's own history walks through the middle one twice. (No chain of consequences is argued — the options are simply erased, which marks this as the dilemma rather than a slope.)",
     },
+    {
+      id: "pu-u4",
+      passage: [
+        "The committee weighed three proposals for the break-room renovation: a full refurbishment, a partial update limited to the kitchenette, and a simple deep-clean.",
+        "They scored each against cost, disruption time, and staff preference survey data.",
+        "The kitchenette update scored highest on all three measures and was chosen.",
+      ],
+      options: ["comparative", "false-dilemma", "special-pleading"],
+      correctLabel: "comparative",
+      explanation:
+        "Multiple genuine options, shared criteria, evidence consulted — the healthy contrast with false dilemma, which would have erased two of the three proposals before the weighing began.",
+    },
+    {
+      id: "pu-u5",
+      passage: [
+        "The employee asked her manager for a performance review ahead of the raise cycle.",
+        "He said he needed three months of consistent output first; she delivered it.",
+        "He then said he also needed to see improved client-feedback scores; those came in strong.",
+        "He noted that quarterly targets hadn't been finalized yet, and suggested revisiting the review after they were.",
+      ],
+      options: ["moving-goalposts", "loaded-question", "begging-the-question"],
+      correctLabel: "moving-goalposts",
+      explanation:
+        "Each standard met produces a new, steeper one — the bar climbs only when cleared, which is the pattern that convicts this as goalpost-moving rather than genuine rigor.",
+    },
   ],
 };

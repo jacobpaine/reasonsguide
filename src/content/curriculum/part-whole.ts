@@ -231,5 +231,41 @@ export const partWholeLesson: Lesson = {
       explanation:
         "Here the whole's property is fixed not by summing parts but by the minimum — a chain composes readiness by its weakest link, and the reasoning names that composition rule before trusting it.",
     },
+    {
+      id: "pw-u4",
+      passage: [
+        "Each instrument in the string quartet was tuned and tested individually before the recording session.",
+        "But when all four played together, a slow, uncomfortable beat frequency appeared — caused by the minute pitch difference between the two violins.",
+        "No single instrument showed it; the effect existed only in the combination, and the session was paused until both violins were tuned to each other, not just to the reference pitch.",
+      ],
+      options: ["part-whole", "causal", "abductive"],
+      correctLabel: "part-whole",
+      explanation:
+        "The beat frequency is an emergent property belonging to the whole arrangement, not to any single instrument. Testing parts individually cannot reveal it because the property only comes into existence when the parts combine — exactly the gap between part-level and whole-level behavior that part–whole reasoning tracks.",
+    },
+    {
+      id: "pw-u5",
+      passage: [
+        "Every week, the community garden's compost bin reached a high temperature two days after fresh food scraps were added.",
+        "The gardeners identified microbial respiration in the new material as the heat source — the more scraps, the more microbial activity, the higher the temperature.",
+        "They concluded that adding smaller, more frequent batches would hold temperatures in the safer range and protect the beneficial bacteria.",
+      ],
+      options: ["causal", "part-whole", "inductive"],
+      correctLabel: "causal",
+      explanation:
+        "The reasoning names a mechanism — microbial respiration generating heat in proportion to new material — and uses it to design a remedy. A component's property affects a system-wide output, but the argument is about what produces what, not about whether a property survives the trip between part and whole.",
+    },
+    {
+      id: "pw-u6",
+      passage: [
+        "A building manager installed highly rated thermal insulation on each floor of the apartment block independently.",
+        "She expected the building to retain heat well.",
+        "But the lift shafts and open stairwells connecting the floors acted as chimneys, and the building's measured heat retention fell far below what the floor-by-floor ratings had suggested.",
+      ],
+      options: ["part-whole", "classification", "inductive"],
+      correctLabel: "part-whole",
+      explanation:
+        "Each floor performed well in isolation, but the whole building's thermal behavior depended on the connections between floors — an arrangement-level property invisible to part-by-part testing. Heat retention here is emergent: it lives in the whole, and the floor ratings cannot simply be added to reach it.",
+    },
   ],
 };

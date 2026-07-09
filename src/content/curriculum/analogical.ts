@@ -228,5 +228,41 @@ export const analogicalLesson: Lesson = {
       explanation:
         "The relevant likeness — layered symbolic maps learned through real use — transfers the lesson from tides to stars.",
     },
+    {
+      id: "an-u4",
+      passage: [
+        "The downtown branch of a café chain added a dog-friendly patio and saw weekend revenue climb by thirty percent.",
+        "Our branch has an unused side terrace with the same foot-traffic patterns and the same customer demographic.",
+        "Making the terrace dog-friendly would probably lift our weekend revenue too.",
+      ],
+      options: ["analogical", "inductive", "abductive"],
+      correctLabel: "analogical",
+      explanation:
+        "Named, relevant likenesses — matching foot traffic and customer base — carry the downtown branch's result across to this one. A second branch's track record is not the same thing as a pattern from the same place, which is what induction would need.",
+    },
+    {
+      id: "an-u5",
+      passage: [
+        "Any item in the archive labelled 'restricted' requires a supervisor's signature to access.",
+        "This folder is labelled 'restricted'.",
+        "So this folder requires a supervisor's signature to access.",
+      ],
+      options: ["deductive", "analogical", "inductive"],
+      correctLabel: "deductive",
+      explanation:
+        "A policy rule covers all restricted items; this folder falls under it; the conclusion follows necessarily. No similarity between comparable items is doing the work — only a rule and the fact that the folder satisfies its condition.",
+    },
+    {
+      id: "an-u6",
+      passage: [
+        "The Westfield office cut meeting fatigue by switching their daily stand-up to a short walking loop around the building.",
+        "Our team runs the same kind of brief check-in and has an accessible loop right outside the fire exit.",
+        "A walking stand-up would probably help our team too.",
+      ],
+      options: ["analogical", "claim-support", "inductive"],
+      correctLabel: "analogical",
+      explanation:
+        "The relevant likenesses — same meeting format, comparable walking route — justify transferring the Westfield result to this team. A key check: if the two offices differed on what made walking effective (say, floor count or climate), the analogy would weaken at exactly that point.",
+    },
   ],
 };

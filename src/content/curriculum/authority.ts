@@ -229,5 +229,39 @@ export const authorityLesson: Lesson = {
       explanation:
         "Careful: this is an argument *about* whom to trust, giving three checkable reasons for a recommendation. Nothing is yet believed on her say-so — that comes later, when she speaks about bells.",
     },
+    {
+      id: "au-u4",
+      passage: [
+        "The forensic linguist had published forty peer-reviewed studies on regional dialect markers.",
+        "Her analysis placed the anonymous letter's author in the northern coastal dialect zone.",
+        "The jury gave the finding significant weight.",
+      ],
+      options: ["authority", "inductive", "abductive"],
+      correctLabel: "authority",
+      explanation:
+        "The jury's acceptance rests on the linguist's relevant expertise — they are trusting a qualified source's testimony, not projecting a pattern or inferring an explanation themselves.",
+    },
+    {
+      id: "au-u5",
+      passage: [
+        "Every time the restaurant has changed its menu in the past four years, it has briefly lost regulars before things settled.",
+        "The latest menu overhaul will probably cost them some regulars for a while too.",
+      ],
+      options: ["inductive", "authority", "causal"],
+      correctLabel: "inductive",
+      explanation:
+        "A pattern across four past menu changes is extended to the fifth. No expert's word is being accepted — the argument draws on observed regularity, which is induction.",
+    },
+    {
+      id: "au-u6",
+      passage: [
+        "A survey of 500 new parents recruited through pediatric clinics across five states found that 72 percent reported disrupted sleep in the first three months.",
+        "New parents in the same demographic bracket are likely to experience similar sleep disruption.",
+      ],
+      options: ["statistical", "authority", "inductive"],
+      correctLabel: "statistical",
+      explanation:
+        "A measured rate from a representative sample is applied to a new group that fits the same description — no expert's say-so is doing the work, only the proportion from the data itself.",
+    },
   ],
 };

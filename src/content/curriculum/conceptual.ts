@@ -229,5 +229,39 @@ export const conceptualLesson: Lesson = {
       explanation:
         "The clerk's point is structural: unexpectedness is what surprise *is*, so advance announcement doesn't reduce the surprise but abolishes it. The idea's own contents settle the matter.",
     },
+    {
+      id: "cw-u4",
+      passage: [
+        "The manager praised the team for their 'candor', then announced that anyone who raised concerns publicly would be reassigned.",
+        "The team's rep noted that candor under threat of reprisal isn't candor — speaking freely only counts when speaking carries no cost for doing so.",
+      ],
+      options: ["conceptual", "moral", "definitional"],
+      correctLabel: "conceptual",
+      explanation:
+        "The rep unfolds candor's internal structure: freedom from cost is load-bearing in the idea, not a nicety of any policy's wording. The argument holds whatever the manager calls the practice — which is the mark of conceptual, not definitional, reasoning.",
+    },
+    {
+      id: "cw-u5",
+      passage: [
+        "The writing competition's rules define 'original work' as writing not previously published in any form, including personal blogs.",
+        "Jonas submitted a lightly revised version of a post from his blog two years earlier.",
+        "Under the rules, his entry was ineligible.",
+      ],
+      options: ["definitional", "conceptual", "moral"],
+      correctLabel: "definitional",
+      explanation:
+        "The rules supply a precise definition; Jonas's entry fails to meet it. If the competition changed its wording, the answer could change — that sensitivity to the written rule marks this as definitional. A conceptual argument would hold in any wording.",
+    },
+    {
+      id: "cw-u6",
+      passage: [
+        "The landlord offered to 'negotiate' the lease renewal, then presented a single take-it-or-leave-it figure.",
+        "The tenant replied that presenting one option isn't negotiating — negotiation requires that both parties put forward terms and respond to each other's.",
+      ],
+      options: ["conceptual", "definitional", "claim-support"],
+      correctLabel: "conceptual",
+      explanation:
+        "The tenant analyzes what negotiation consists in: mutual proposal-making is structural to the idea, not a clause any landlord could define away. Rename the exchange a 'discussion' and the same structure is still absent — the distinction survives any vocabulary.",
+    },
   ],
 };

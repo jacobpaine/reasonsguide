@@ -232,5 +232,42 @@ export const conductiveLesson: Lesson = {
       explanation:
         "The verdict goes *against* the more numerous reasons — a reminder that conductive weighing counts heaviness, not heads. Three light reasons lost to one heavy one, and the reasoning showed its scale.",
     },
+    {
+      id: "cu-u4",
+      passage: [
+        "Should Mei accept the job offer across the country?",
+        "For it: the salary was higher, the team had a strong reputation, and she had always wanted to live near the coast.",
+        "Against: her parents were aging and needed occasional help nearby.",
+        "On balance, she judged the single pull of family heavier than the three separate draws of the new role.",
+      ],
+      options: ["conductive", "practical", "comparative"],
+      correctLabel: "conductive",
+      explanation:
+        "Independent reasons on both sides, none alone settling the matter, and an explicit balance call — including the acknowledgment that one weighty against can outweigh several fors. That's the conductive shape.",
+    },
+    {
+      id: "cu-u5",
+      passage: [
+        "The committee assessed two catering firms on price, dietary variety, and client reviews.",
+        "Flavor First scored better on variety and reviews; Hearth & Co. led on price.",
+        "Weighting variety and reviews more heavily for an all-day conference, the committee ranked Flavor First.",
+      ],
+      options: ["comparative", "conductive", "authority"],
+      correctLabel: "comparative",
+      explanation:
+        "Two rivals ordered on shared criteria with the weighting made explicit — a ranking, not a ledger of pros and cons for one proposal. Comparative reasoning orders options against each other; conductive reasoning weighs reasons for and against a single conclusion.",
+    },
+    {
+      id: "cu-u6",
+      passage: [
+        "The building committee supported expanding the community garden: the shared outdoor space was underused, the soil tested well, three neighbors had volunteered to tend it, and a local grant would cover the fencing.",
+        "Against, only the winter shade the new beds would cast on one unit's window.",
+        "None of the four fors alone would have carried it, but taken together they did.",
+      ],
+      options: ["conductive", "claim-support", "moral"],
+      correctLabel: "conductive",
+      explanation:
+        "Four independent supporting reasons and one against, with the explicit note that no single reason was decisive. The conclusion belongs to the balance of the pile — that independence and visible weighing are conductive reasoning's signature.",
+    },
   ],
 };

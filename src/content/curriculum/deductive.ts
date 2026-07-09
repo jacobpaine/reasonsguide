@@ -230,5 +230,39 @@ export const deductiveLesson: Lesson = {
       explanation:
         "A definition plus a count force the conclusion. Deduction can rule things out just as firmly as it rules them in.",
     },
+    {
+      id: "de-u4",
+      passage: [
+        "Any account inactive for ninety days is archived automatically.",
+        "Rahel's account has been inactive for a hundred and twelve days.",
+        "Rahel's account has been archived.",
+      ],
+      options: ["deductive", "inductive", "claim-support"],
+      correctLabel: "deductive",
+      explanation:
+        "A policy rule plus one measured fact force the conclusion with no room for probability. The rule does all the work — no pattern-counting, no weighing of reasons.",
+    },
+    {
+      id: "de-u5",
+      passage: [
+        "The library café should stay open an hour later on weeknights.",
+        "Evening borrowers almost always stop for coffee when it is open, and the night staff say the extra traffic makes their shift feel worthwhile.",
+      ],
+      options: ["claim-support", "deductive", "inductive"],
+      correctLabel: "claim-support",
+      explanation:
+        "A proposal held up by two supporting reasons. Neither reason makes the conclusion necessary — you could accept both and still disagree. That's support, not rule-based certainty.",
+    },
+    {
+      id: "de-u6",
+      passage: [
+        "The vending machine on the third floor has been out of order every Monday morning for the past two months.",
+        "It will probably be out of order this Monday morning too.",
+      ],
+      options: ["inductive", "deductive", "claim-support"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent run of Monday outages is projected as a likely next event. No rule guarantees the conclusion — a repair could break the pattern at any time.",
+    },
   ],
 };

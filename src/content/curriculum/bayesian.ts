@@ -234,5 +234,40 @@ export const bayesianLesson: Lesson = {
       explanation:
         "A modest prior meets evidence far more likely under 'queenless' than under the alternative, and her confidence rises in proportion. The named starting rate and the shift are the Bayesian signature.",
     },
+    {
+      id: "by-u4",
+      passage: [
+        "Packages from that courier go missing about once in fifty deliveries — a reliable base rate.",
+        "This package requires a signature on delivery, and signed packages from the same courier are lost at roughly one in five hundred.",
+        "Knowing about the signature, Petra lowered her concern from 1-in-50 to around 1-in-500.",
+      ],
+      options: ["bayesian", "statistical", "inductive"],
+      correctLabel: "bayesian",
+      explanation:
+        "New information — the signature requirement — updates the base loss rate. The evidence sharply separates signed from unsigned packages, so the prior is revised substantially downward.",
+    },
+    {
+      id: "by-u5",
+      passage: [
+        "The school-run traffic backs up at the roundabout every weekday without exception — six months of records confirm it.",
+        "It will probably back up there again tomorrow morning.",
+      ],
+      options: ["inductive", "bayesian", "causal"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent pattern extended one more instance, with no new evidence arriving to shift a prior. That's induction — Bayesian updating would require a clue that changes how likely tomorrow's jam is relative to before.",
+    },
+    {
+      id: "by-u6",
+      passage: [
+        "The phone's battery drains fastest when screen brightness is high and location services are running at the same time.",
+        "Turning both off made it last all day; with both on, it dies by noon.",
+        "Running them together is causing the rapid drain.",
+      ],
+      options: ["causal", "bayesian", "statistical"],
+      correctLabel: "causal",
+      explanation:
+        "A mechanism (power-hungry features depleting the battery) is confirmed by a toggle test — removing both factors stops the effect. That is causal reasoning; no prior probability is being updated here.",
+    },
   ],
 };

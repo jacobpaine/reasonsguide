@@ -231,5 +231,30 @@ export const languageFallaciesLesson: Lesson = {
       explanation:
         "The band's medal is worn down onto one chair — the whole's honor dealt to a part. Ensembles win as wholes; the ribbon says nothing about any single horn.",
     },
+    {
+      id: "lf-u4",
+      passage: [
+        "The lease prohibited the tenant from subletting 'the premises'.",
+        "The tenant rented out one furnished room while occupying the rest himself.",
+        "At the dispute hearing, the property manager pointed to three other clauses in the same lease where 'premises' unambiguously referred to the entire property, not individual rooms.",
+        "The adjudicator accepted that meaning and found the room rental a breach.",
+      ],
+      options: ["definitional", "equivocation", "ambiguity"],
+      correctLabel: "definitional",
+      explanation:
+        "The contested word's meaning settled by examining its use throughout the same document — definitional reasoning pinning a term with evidence before drawing a conclusion, not trading on its slipperiness.",
+    },
+    {
+      id: "lf-u5",
+      passage: [
+        "Each section of the documentary had won a festival award for craft.",
+        "The distributor's pitch called it an award-winning film.",
+        "Critics at the premiere found the sections brilliant in isolation but tonally mismatched as a whole.",
+      ],
+      options: ["composition", "division", "equivocation"],
+      correctLabel: "composition",
+      explanation:
+        "Part-level awards transferred to the whole film without checking whether award-worthiness survives assembly — a property belonging to each section alone, not to the sections together.",
+    },
   ],
 };

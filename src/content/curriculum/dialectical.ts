@@ -233,5 +233,42 @@ export const dialecticalLesson: Lesson = {
       explanation:
         "The strongest objection is stated by the view's own author and carried openly as a debt, with the verdict deferred to its answer. That bookkeeping of objections is dialectic — here practiced against herself.",
     },
+    {
+      id: "dl-u4",
+      passage: [
+        "A city planner proposed removing parking bays on the main shopping street to install a protected bike lane.",
+        "Business owners objected that the lost parking would drive away customers.",
+        "The planner revised the design: half the removed bays became cargo-bike delivery zones, and an agreement with the neighboring car park gave drivers an overflow option.",
+        "The business owners reviewed the revision and withdrew their objection as answered.",
+      ],
+      options: ["dialectical", "practical", "conductive"],
+      correctLabel: "dialectical",
+      explanation:
+        "The objection wasn't deflected or outweighed — it was absorbed into a revised proposal that the objectors themselves confirmed as meeting their concern. Objection, amendment, and the objector's confirmation form the full dialectical loop.",
+    },
+    {
+      id: "dl-u5",
+      passage: [
+        "Before voting on a bypass route, the chair listed reasons in favor: faster freight deliveries, quieter village streets, and lower accident rates at the central junction.",
+        "Against: the construction cost and the impact on the wetlands.",
+        "Three in favor, two against — the chair judged the two against insufficient to outweigh the three, and the committee voted for the bypass.",
+      ],
+      options: ["conductive", "dialectical", "comparative"],
+      correctLabel: "conductive",
+      explanation:
+        "Independent reasons for and against are listed, counted, and weighed to a verdict. The cost and wetland impact are judged insufficient — but they are not engaged or answered, only outweighed. Counting the against-side and declaring it lighter is the ledger, not the dialogue.",
+    },
+    {
+      id: "dl-u6",
+      passage: [
+        "At a product review meeting, the manager walked through the launch plan and asked for blockers.",
+        "A security engineer flagged a data-handling vulnerability the manager could not resolve on the spot.",
+        "She updated the project board: the concern was logged as a blocking issue, the launch date was moved out three weeks, and the plan would advance only once the security team confirmed the fix was in place.",
+      ],
+      options: ["dialectical", "practical", "claim-support"],
+      correctLabel: "dialectical",
+      explanation:
+        "An unanswered objection is recorded as a standing debt against the plan — the position suspends rather than advancing, and waits for the objection to be met. Carrying objections honestly, rather than routing around them, is dialectical reasoning's discipline.",
+    },
   ],
 };

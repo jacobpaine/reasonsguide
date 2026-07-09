@@ -228,5 +228,40 @@ export const comparativeLesson: Lesson = {
       explanation:
         "Two offers, criteria named, and an explicit weighting driven by circumstance. The ranking is the conclusion; acting on it comes after.",
     },
+    {
+      id: "cq-u4",
+      passage: [
+        "Renting or buying? Marcus ranked both options on monthly cost, flexibility to relocate, and equity-building.",
+        "Renting scored better on cost and flexibility; buying won clearly on equity.",
+        "With his job still unsettled, he weighted the first two criteria higher and ranked renting first — for now.",
+      ],
+      options: ["comparative", "practical", "conductive"],
+      correctLabel: "comparative",
+      explanation:
+        "Two options, three named criteria, an explicit weighting tied to his circumstances, and a qualified ranking. Deciding to sign a lease would be the practical step after.",
+    },
+    {
+      id: "cq-u5",
+      passage: [
+        "The park's design team argued that the shade trees should go along the south boundary, not the center path.",
+        "The elderly residents of the adjacent care home spend their afternoons on the south side, and shade belongs first where it is most needed.",
+      ],
+      options: ["moral", "comparative", "practical"],
+      correctLabel: "moral",
+      explanation:
+        "The team reasons from a principle — shade belongs where need is greatest — to a placement decision. No criteria are scored against rival layouts; a duty shapes the conclusion. That's moral reasoning, however the outcome looks on a map.",
+    },
+    {
+      id: "cq-u6",
+      passage: [
+        "Choosing between two editing apps, the journalist checked load time, offline capability, and integration with her publishing platform.",
+        "The second app lagged on integration but led clearly on the other two counts.",
+        "For daily deadline work, she ranked it the stronger tool.",
+      ],
+      options: ["comparative", "claim-support", "conductive"],
+      correctLabel: "comparative",
+      explanation:
+        "Named criteria, both options scored, and a weighting justified by her specific workflow. The conclusion is a ranking — acting on it is the further practical step.",
+    },
   ],
 };

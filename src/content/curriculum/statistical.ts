@@ -231,5 +231,39 @@ export const statisticalLesson: Lesson = {
       explanation:
         "A frequency becomes a single-case probability. (A sharper estimate would ask about Prue's baking — refining rates with evidence is Bayesian reasoning, a later chapter.)",
     },
+    {
+      id: "st-u4",
+      passage: [
+        "In a survey of 300 gym members spread across all days and times of day, 74 percent said they use the sauna at least once a week.",
+        "A randomly chosen member of the same gym probably uses the sauna at least weekly.",
+      ],
+      options: ["statistical", "inductive", "abductive"],
+      correctLabel: "statistical",
+      explanation:
+        "A measured rate from a representative sample is applied to a new member of the same group — the classic move of converting a group frequency into a single-case probability.",
+    },
+    {
+      id: "st-u5",
+      passage: [
+        "The espresso machine has pulled weak shots all week, though the grind setting hasn't been touched.",
+        "The grounds in the portafilter are noticeably coarser than they used to be.",
+        "The best explanation is that the burrs are worn and need replacing.",
+      ],
+      options: ["abductive", "statistical", "inductive"],
+      correctLabel: "abductive",
+      explanation:
+        "A puzzling result — weak espresso despite no setting change — is matched to the most fitting explanation. Inferring the best explanation for a clue is abduction, not a projection of rates.",
+    },
+    {
+      id: "st-u6",
+      passage: [
+        "Every Tuesday for the past eight weeks, the studio's 7 a.m. yoga class has been fully booked.",
+        "It will probably be full again next Tuesday.",
+      ],
+      options: ["inductive", "statistical", "bayesian"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent pattern is projected one instance forward — no rate or proportion is calculated and no new evidence has arrived to shift a prior. That is induction in its plain form, not statistical reasoning.",
+    },
   ],
 };

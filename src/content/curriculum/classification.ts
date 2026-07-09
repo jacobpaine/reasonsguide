@@ -233,5 +233,41 @@ export const classificationLesson: Lesson = {
       explanation:
         "The setting behavior is a sorting mark; the jar joins the rape-honey kind and inherits both its standing (honest honey) and its station (the cooking shelf).",
     },
+    {
+      id: "cx-u4",
+      passage: [
+        "The chef lifted the fish by its tail and checked the gills: bright red, eyes clear, flesh firm with no give to the press.",
+        "By every mark in the fishmonger's trade, it went into the 'fresh' column.",
+        "Fresh fish goes straight to the cold counter; staged fish to the smoker — so the counter got a new delivery that afternoon.",
+      ],
+      options: ["classification", "inductive", "causal"],
+      correctLabel: "classification",
+      explanation:
+        "Marks observed, category assigned (fresh), and the category's handling rule inherited into the afternoon's plan. Sort-then-inherit throughout.",
+    },
+    {
+      id: "cx-u5",
+      passage: [
+        "The archive's copy of the deed was perfectly legible, but the seal was wrong — a late-Victorian press on a document dated 1714.",
+        "The ink beneath showed the original seal's outline, ghost-faint.",
+        "The archivist concluded the deed had been fraudulently resealed, probably during the estate dispute of the 1890s.",
+      ],
+      options: ["abductive", "classification", "inductive"],
+      correctLabel: "abductive",
+      explanation:
+        "The wrong seal and the ghosted original are clues pointing to one explanation — fraudulent resealing — as better than any rival. Marks are read as evidence for an explanation here, not sorted into a kind.",
+    },
+    {
+      id: "cx-u6",
+      passage: [
+        "An IT coordinator logged help-desk tickets across four departments for eight months.",
+        "In every department, ticket volume spiked on the Monday following a software update, without exception.",
+        "She predicted the next scheduled update would bring another spike and pre-staffed the help desk for that Monday.",
+      ],
+      options: ["inductive", "classification", "definitional"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent pattern across many cases and departments, projected into a new prediction — induction. Classification would sort a single case into a kind by observable marks; definitional would settle a question about what a term covers. The reasoning runs on a repeated trend, not a category.",
+    },
   ],
 };

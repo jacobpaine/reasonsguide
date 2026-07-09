@@ -241,5 +241,28 @@ export const formalFallaciesLesson: Lesson = {
       explanation:
         "Loved things and valuable things share only the room — the middle term. Two groups in one place are still two groups, as the seaweed's buyer explained.",
     },
+    {
+      id: "fo-u4",
+      passage: [
+        "Any prescription dispensed at this pharmacy requires a physician's written authorization.",
+        "The prescription Delia collected carries Dr. Reyes's written authorization.",
+        "So this prescription met the pharmacy's requirement.",
+      ],
+      options: ["deductive", "affirming-consequent", "undistributed-middle"],
+      correctLabel: "deductive",
+      explanation:
+        "Rule stated, case placed squarely under it, conclusion forced — valid deduction running in the direction the rule actually licenses, not backward from the consequent.",
+    },
+    {
+      id: "fo-u5",
+      passage: [
+        "The property manager stated that the warehouse had stood empty for over a year, proven by the absence of utility bills.",
+        "He also reported that the caretaker had lived there throughout the same period, as shown by weekly grocery deliveries signed in the caretaker's hand.",
+      ],
+      options: ["contradictory-premises", "affirming-consequent", "denying-antecedent"],
+      correctLabel: "contradictory-premises",
+      explanation:
+        "Empty-for-over-a-year and occupied-by-the-caretaker-throughout cannot both be true; the two premises unmake each other before any conclusion can stand.",
+    },
   ],
 };

@@ -234,5 +234,40 @@ export const practicalLesson: Lesson = {
       explanation:
         "Goal (keep the doctor), evidence about the effective means (her own letters), a decision enacted. The vote is the conclusion — practical reasoning ends in acts.",
     },
+    {
+      id: "pr-u4",
+      passage: [
+        "Milo needs to submit his grant application by Friday, and the portal requires two-factor authentication before it will accept a submission.",
+        "Setting up two-factor takes ten minutes and must be done in advance.",
+        "He set it up Wednesday morning.",
+      ],
+      options: ["practical", "deductive", "causal"],
+      correctLabel: "practical",
+      explanation:
+        "A goal (submit by Friday) plus a prerequisite revealed by the constraint (authentication first) yields an action taken to clear the way — means-end reasoning concluded in a step.",
+    },
+    {
+      id: "pr-u5",
+      passage: [
+        "All café staff must complete a food-safety refresher each calendar year — that's the franchise rule.",
+        "Bex joined the café staff in January.",
+        "Bex must complete the refresher before the year is out.",
+      ],
+      options: ["deductive", "practical", "authority"],
+      correctLabel: "deductive",
+      explanation:
+        "A rule covering all staff covers Bex — the conclusion is forced once the rule and her membership are granted. No goal or chosen means is in play; the obligation follows necessarily from the premises.",
+    },
+    {
+      id: "pr-u6",
+      passage: [
+        "The climbing wall has been quieter on Thursday evenings than on any other weekday, every week since it opened last spring.",
+        "It will probably be quieter there again this Thursday evening.",
+      ],
+      options: ["inductive", "practical", "causal"],
+      correctLabel: "inductive",
+      explanation:
+        "A recurring pattern across many past evenings is projected forward — no goal is stated, no action recommended, and no cause proposed. Extending an observed regularity one more instance is induction.",
+    },
   ],
 };

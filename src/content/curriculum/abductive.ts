@@ -225,5 +225,27 @@ export const abductiveLesson: Lesson = {
       correctLabel: "abductive",
       explanation: "Two odd traces, one storage hypothesis that explains both. Best-explanation reasoning, held provisionally.",
     },
+    {
+      id: "ab-u4",
+      passage: [
+        "Dani's laptop screen is fogged with condensation on the inside of the glass.",
+        "The likeliest explanation is that the laptop was moved from a cold bag into a warm room before the internal pressure had time to equalize.",
+      ],
+      options: ["abductive", "inductive", "deductive"],
+      correctLabel: "abductive",
+      explanation:
+        "Inside condensation is a specific, unusual trace. The explanation is chosen because it fits the exact location of the fog better than rivals — a cracked seal or a spill would leave different marks.",
+    },
+    {
+      id: "ab-u5",
+      passage: [
+        "The bread delivery has arrived before 8 a.m. every working morning this month.",
+        "It will probably arrive before 8 a.m. tomorrow.",
+      ],
+      options: ["inductive", "abductive", "claim-support"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent delivery pattern is projected onto the next morning. No puzzle is being explained — just a run of cases extended to the likely next one.",
+    },
   ],
 };

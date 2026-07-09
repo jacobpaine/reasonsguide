@@ -234,5 +234,40 @@ export const definitionalLesson: Lesson = {
       explanation:
         "Agreement on all the facts, disagreement in the line — the mark of a word doing double duty. The grant's definition of 'boundary' resolves it without a single new fact.",
     },
+    {
+      id: "df-u4",
+      passage: [
+        "The foundation's grant covers 'professional development', defined in its guidelines as training directly applicable to the recipient's current role.",
+        "Mira applied for funding for a general coding bootcamp unrelated to her work as a copy editor.",
+        "The fund declined: the course was training, but not professional development within the guidelines.",
+      ],
+      options: ["definitional", "deductive", "moral"],
+      correctLabel: "definitional",
+      explanation:
+        "The guidelines supply the term's requirements; Mira's course fails them. The definitional work is pinning what 'professional development' requires — the deduction that follows once the term is fixed is almost a formality.",
+    },
+    {
+      id: "df-u5",
+      passage: [
+        "The insurance policy defines 'storm damage' as harm caused by wind or by water driven by wind.",
+        "The warehouse roof collapsed under the weight of wet snow on a windless night.",
+        "Whatever the loss is, it is not storm damage within the policy.",
+      ],
+      options: ["definitional", "abductive", "conductive"],
+      correctLabel: "definitional",
+      explanation:
+        "The policy's definition sets two conditions; neither is met. The question closes with the term — not with a moral judgment or a weighing of circumstances, but with what the word requires.",
+    },
+    {
+      id: "df-u6",
+      passage: [
+        "All invoices submitted more than thirty days after the service date are ineligible for reimbursement, per clause 8 of the vendor agreement.",
+        "Theo's invoice arrived on day thirty-four.",
+      ],
+      options: ["deductive", "definitional", "practical"],
+      correctLabel: "deductive",
+      explanation:
+        "The rule is already in plain language; no term needs pinning. A universal rule plus a case that falls under it yields the conclusion necessarily — that's deduction. Definitional reasoning would be needed only if 'submitted' or 'service date' were in dispute.",
+    },
   ],
 };

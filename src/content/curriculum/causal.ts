@@ -231,5 +231,41 @@ export const causalLesson: Lesson = {
       explanation:
         "A comparison group (the cellar potatoes), a mechanism (warmth triggers sprouting), and a measured difference connect cause to effect.",
     },
+    {
+      id: "ca-u4",
+      passage: [
+        "The office air-conditioning started cycling on and off irregularly the same week facilities swapped in a new thermostat.",
+        "When they replaced the new thermostat with the old model, the cycling stopped immediately.",
+        "The new thermostat was causing the irregular cycling.",
+      ],
+      options: ["causal", "inductive", "deductive"],
+      correctLabel: "causal",
+      explanation:
+        "The suspected cause is removed and the effect stops — the two-way check that separates a genuine causal connection from mere coincidence.",
+    },
+    {
+      id: "ca-u5",
+      passage: [
+        "Switching from fluorescent to LED lighting stopped daily headaches among the data-entry team within a week.",
+        "The design studio next door has the same complaint and the same fluorescent setup.",
+        "LED lights would probably stop the studio team's headaches too.",
+      ],
+      options: ["analogical", "causal", "inductive"],
+      correctLabel: "analogical",
+      explanation:
+        "The conclusion moves from one team's result to another because they share the relevant conditions — a comparison between cases, not a tracing of mechanism.",
+    },
+    {
+      id: "ca-u6",
+      passage: [
+        "Jaya's sourdough starter smells unpleasantly cheesy rather than tangy today, though she hasn't changed her routine.",
+        "She left the jar open on the counter near a bowl of overripe fruit last night.",
+        "The best explanation is that wild yeast from the fruit found its way in and shifted the culture.",
+      ],
+      options: ["abductive", "causal", "inductive"],
+      correctLabel: "abductive",
+      explanation:
+        "An unexpected change prompts the hypothesis that best accounts for it — no toggle test was run and no mechanism independently confirmed. Inferring a best-fit explanation from a clue is abduction, not causal reasoning.",
+    },
   ],
 };

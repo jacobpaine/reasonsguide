@@ -229,5 +229,28 @@ export const relevanceFallaciesLesson: Lesson = {
       explanation:
         "Family service, then the rail company — two changes of subject and no answer; the manifest in the coat is the argument still standing behind the noise.",
     },
+    {
+      id: "rl-u4",
+      passage: [
+        "The comms team objected that cutting the staff newsletter would leave shift workers without any internal news channel.",
+        "The manager asked them to show readership data for that group specifically.",
+        "They produced circulation figures; the manager reviewed them, accepted that shift-worker reach was real, and revised the plan to keep a monthly edition for shift workers while ending the weekly email to desk staff.",
+      ],
+      options: ["dialectical", "ad-hominem", "straw-man"],
+      correctLabel: "dialectical",
+      explanation:
+        "The objection was taken at its actual strength, tested with evidence the objectors themselves supplied, and the position adjusted where the evidence held — the healthy form these five fallacies are failures of.",
+    },
+    {
+      id: "rl-u5",
+      passage: [
+        "The budget proposal called for a five-percent reduction in the events line.",
+        "The events coordinator told the all-staff meeting that the office was planning to eliminate all community programming and retreat from its founding mission.",
+      ],
+      options: ["straw-man", "tu-quoque", "appeal-to-emotion"],
+      correctLabel: "straw-man",
+      explanation:
+        "A five-percent trim becomes total elimination — the position replaced with a more alarming version that is easier to oppose and was never on the table.",
+    },
   ],
 };

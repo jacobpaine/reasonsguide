@@ -227,5 +227,41 @@ export const evidenceFallaciesLesson: Lesson = {
       explanation:
         "The street only displays survivors — the failed shops were removed from the sample by the very recessions in question.",
     },
+    {
+      id: "ef-u4",
+      passage: [
+        "A supplement company's press release cited three clinical trials showing positive effects for their product.",
+        "Their regulatory file — not released publicly — contained eleven further studies with null or negative results.",
+        "The press release quoted only the three favorable ones.",
+      ],
+      options: ["cherry-picking", "survivorship-bias", "biased-sample"],
+      correctLabel: "cherry-picking",
+      explanation:
+        "All fourteen studies existed and were known; the release drew only from the favorable three. Choosing which evidence to cite after checking which way it points is cherry-picking — the unfavorable eleven were not filtered out by any external process, they were simply set aside.",
+    },
+    {
+      id: "ef-u5",
+      passage: [
+        "A personal finance blog profiled fifteen people who had started freelancing in the past decade and now earned more than at their previous jobs.",
+        "The author concluded that freelancing was a reliable path to higher income.",
+        "Freelancers who had tried it and returned to employment were harder to find online and were not contacted.",
+      ],
+      options: ["survivorship-bias", "cherry-picking", "biased-sample"],
+      correctLabel: "survivorship-bias",
+      explanation:
+        "The blog sampled people still visible as freelancing successes — those who had quit and moved on had no active freelancing profile left to find. A filter (leaving freelancing) removed the disconfirming cases before the sample was drawn, making success look more reliable than it is.",
+    },
+    {
+      id: "ef-u6",
+      passage: [
+        "To evaluate a new courier company, the logistics team randomly selected 600 orders over three months, spanning multiple cities, parcel sizes, and delivery time windows.",
+        "The new company delivered on time in 89 percent of those orders, versus 74 percent for the previous one.",
+        "The team reported the difference alongside a confidence interval and recommended switching.",
+      ],
+      options: ["statistical", "cherry-picking", "biased-sample"],
+      correctLabel: "statistical",
+      explanation:
+        "A pre-specified random sample varied across relevant conditions, with the full count reported and uncertainty quantified — this is healthy statistical reasoning. The method was designed before the results were known, and nothing was selected after the fact. Not every confident percentage hides a fallacy.",
+    },
   ],
 };

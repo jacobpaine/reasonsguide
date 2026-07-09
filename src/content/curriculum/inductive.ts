@@ -224,5 +224,39 @@ export const inductiveLesson: Lesson = {
       correctLabel: "inductive",
       explanation: "Forty spotless years make a strong pattern — and still only a probable conclusion. That restraint is induction done well.",
     },
+    {
+      id: "in-u4",
+      passage: [
+        "Every team meeting scheduled after lunch this quarter has run at least twenty minutes over its allotted time.",
+        "The Thursday after-lunch meeting will probably run over too.",
+      ],
+      options: ["inductive", "deductive", "claim-support"],
+      correctLabel: "inductive",
+      explanation:
+        "A consistent run of overruns projects a likely next outcome. 'Probably' is the honest word here — a rule isn't delivering this conclusion, a pattern is.",
+    },
+    {
+      id: "in-u5",
+      passage: [
+        "The community centre should add a second pottery kiln.",
+        "Firing slots book out weeks in advance, and three instructors have said they would offer evening classes if more kiln time were available.",
+      ],
+      options: ["claim-support", "inductive", "deductive"],
+      correctLabel: "claim-support",
+      explanation:
+        "A recommendation with two supporting reasons — unmet demand and instructor readiness. No pattern is being projected onto a next case; no rule forces anything.",
+    },
+    {
+      id: "in-u6",
+      passage: [
+        "All items checked out from the tool library must be returned within seven days.",
+        "This pressure washer was checked out eight days ago.",
+        "So this pressure washer is overdue.",
+      ],
+      options: ["deductive", "inductive", "claim-support"],
+      correctLabel: "deductive",
+      explanation:
+        "A lending rule plus one measured fact force the conclusion. No pattern from past returns is being projected — the rule alone closes the case.",
+    },
   ],
 };

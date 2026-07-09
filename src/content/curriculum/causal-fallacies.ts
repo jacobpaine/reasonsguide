@@ -229,5 +229,28 @@ export const causalFallaciesLesson: Lesson = {
       explanation:
         "From one dovecote to civic starvation with every link unargued — the escalation is theatrical precisely because no mechanism could be named.",
     },
+    {
+      id: "cf-u4",
+      passage: [
+        "When the office building installed a new ventilation system, reported headaches fell sharply the following month.",
+        "The facilities team compared headache rates against the same month in three prior years, checked whether a passing flu season could account for it, and confirmed no other building changes had occurred that week.",
+        "Only this building improved; comparable offices nearby saw no change.",
+        "They concluded the ventilation was responsible.",
+      ],
+      options: ["causal", "correlation-causation", "post-hoc"],
+      correctLabel: "causal",
+      explanation:
+        "Competing explanations eliminated, time-matched comparisons made, a single change isolated — this is the mechanism-and-check work causal reasoning requires, not a correlation or a bare sequence.",
+    },
+    {
+      id: "cf-u5",
+      passage: [
+        "Allow students to resubmit one assignment, the department chair warned, and next semester they'd expect unlimited chances at everything, then grades would lose all meaning, and within five years no employer in the field would trust a degree from the institution.",
+      ],
+      options: ["slippery-slope", "single-cause", "correlation-causation"],
+      correctLabel: "slippery-slope",
+      explanation:
+        "From one resubmission policy to institutional ruin through a chain where no link is argued — each step is asserted as inevitable, and the mechanism that would move it is never named.",
+    },
   ],
 };
