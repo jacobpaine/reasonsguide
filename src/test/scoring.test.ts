@@ -84,6 +84,27 @@ describe("scoreStory", () => {
   });
 });
 
+describe("scoreStory with selectedLabels", () => {
+  it("treats a target whose label is not selected as clear, even if unanswered", () => {
+    const result = scoreStory(story, [], new Set(["deductive"]));
+    // t1 (deductive) is active → missed; t2 (inductive) is inactive → clear
+    expect(result.sentenceResults.find((r) => r.sentenceId === "t1")?.verdict).toBe("missed");
+    expect(result.sentenceResults.find((r) => r.sentenceId === "t2")?.verdict).toBe("clear");
+    expect(result.missed).toBe(1);
+  });
+
+  it("emits no mastery event for an inactive target even if the user labeled it", () => {
+    const result = scoreStory(
+      story,
+      [{ sentenceId: "t2", labelId: "deductive" }],
+      new Set(["deductive"]),
+    );
+    // t2 is inactive (inductive, not in selection): clear regardless of answer
+    expect(result.sentenceResults.find((r) => r.sentenceId === "t2")?.verdict).toBe("clear");
+    expect(result.overLabeled).toBe(0);
+  });
+});
+
 describe("scorePracticeSession", () => {
   it("aggregates totals across stories and emits label events", () => {
     const score = scorePracticeSession([story], {

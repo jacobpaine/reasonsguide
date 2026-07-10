@@ -9,8 +9,8 @@ import {
 } from "@/domain/labels";
 
 describe("label registry", () => {
-  it("contains all 18 reasoning types and 27 fallacies", () => {
-    expect(REASONING_LABELS).toHaveLength(18);
+  it("contains all 22 reasoning types and 27 fallacies", () => {
+    expect(REASONING_LABELS).toHaveLength(22);
     expect(FALLACY_LABELS).toHaveLength(27);
   });
 

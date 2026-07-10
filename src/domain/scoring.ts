@@ -31,12 +31,20 @@ const SCORE_LABEL_ONLY = 0.6;
 export function scoreStory(
   story: PracticeStory,
   answers: readonly UserAnswer[],
+  selectedLabels?: ReadonlySet<string>,
 ): StoryScore {
   const answersBySentence = new Map(answers.map((a) => [a.sentenceId, a]));
 
   const sentenceResults: SentenceResult[] = story.sentences.map((sentence) => {
     const answer = answersBySentence.get(sentence.id);
-    if (sentence.isTarget) {
+    // A target is "active" only when its label is among the session's selected labels.
+    // Inactive targets (label not selected) are treated as neutral so learners aren't
+    // penalized for missing forms they aren't practicing.
+    const isActiveTarget =
+      sentence.isTarget &&
+      (!selectedLabels || !sentence.primaryLabel || selectedLabels.has(sentence.primaryLabel));
+
+    if (isActiveTarget) {
       if (!answer) {
         return {
           sentenceId: sentence.id,
@@ -63,6 +71,10 @@ export function scoreStory(
         expectedLabel: sentence.primaryLabel,
         chosenLabel: answer.labelId,
       };
+    }
+    if (sentence.isTarget) {
+      // Inactive target: treat as clear regardless of whether the user marked it.
+      return { sentenceId: sentence.id, verdict: "clear" };
     }
     if (answer) {
       return {
@@ -111,9 +123,10 @@ function labelEventsForStory(score: StoryScore): LabelEvent[] {
 export function scorePracticeSession(
   stories: readonly PracticeStory[],
   answersByStory: Readonly<Record<string, readonly UserAnswer[]>>,
+  selectedLabels?: ReadonlySet<string>,
 ): SessionScore {
   const storyScores = stories.map((story) =>
-    scoreStory(story, answersByStory[story.id] ?? []),
+    scoreStory(story, answersByStory[story.id] ?? [], selectedLabels),
   );
   const labelEvents = storyScores.flatMap(labelEventsForStory);
 

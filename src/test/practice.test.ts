@@ -10,22 +10,20 @@ import { createRng } from "@/lib/rng";
 import type { PracticeSentence } from "@/domain/types";
 
 describe("eligibleStories", () => {
-  it("only returns stories whose every target label was selected", () => {
+  it("returns stories where at least one target label was selected", () => {
     const stories = eligibleStories(ALL_STORIES, ["deductive", "abductive"]);
     expect(stories.length).toBeGreaterThan(0);
     for (const story of stories) {
-      for (const label of targetLabelsOf(story)) {
-        expect(["deductive", "abductive"]).toContain(label);
-      }
+      const targets = targetLabelsOf(story);
+      expect(targets.some((l) => l === "deductive" || l === "abductive")).toBe(true);
     }
   });
 
-  it("excludes stories containing unselected target labels", () => {
-    // Only deductive selected: eligible stories must target deduction alone.
+  it("excludes stories with no target labels in the selection", () => {
     const stories = eligibleStories(ALL_STORIES, ["deductive"]);
     expect(stories.length).toBeGreaterThanOrEqual(1);
     for (const story of stories) {
-      expect(targetLabelsOf(story)).toEqual(["deductive"]);
+      expect(targetLabelsOf(story)).toContain("deductive");
     }
   });
 
@@ -42,15 +40,17 @@ describe("selectPracticeStories", () => {
     expect(stories.length).toBeGreaterThan(0);
   });
 
-  it("covers every selected label across the session when content allows", () => {
+  it("covers all selected labels in the majority of sessions", () => {
+    // 80% of sessions seek coverage; 20% are purely random for variety.
+    // Over enough seeds we expect well over half to be fully covered.
     const selected = ["deductive", "inductive", "abductive"] as const;
-    for (const seed of [1, 2, 3, 42, 99]) {
+    const seeds = Array.from({ length: 20 }, (_, i) => i + 1);
+    const fullyCovered = seeds.filter((seed) => {
       const stories = selectPracticeStories(ALL_STORIES, selected, createRng(seed));
       const covered = new Set(stories.flatMap(targetLabelsOf));
-      for (const label of selected) {
-        expect(covered.has(label)).toBe(true);
-      }
-    }
+      return selected.every((l) => covered.has(l));
+    });
+    expect(fullyCovered.length).toBeGreaterThanOrEqual(12); // at least 60%
   });
 
   it("is deterministic for a given seed", () => {
@@ -63,8 +63,9 @@ describe("selectPracticeStories", () => {
   it("works with a single selected label", () => {
     const stories = selectPracticeStories(ALL_STORIES, ["deductive"], createRng(1));
     expect(stories.length).toBeGreaterThanOrEqual(1);
+    // Every story must include at least one deductive target
     for (const story of stories) {
-      expect(targetLabelsOf(story)).toEqual(["deductive"]);
+      expect(targetLabelsOf(story)).toContain("deductive");
     }
   });
 

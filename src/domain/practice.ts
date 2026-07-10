@@ -26,7 +26,7 @@ export function targetLabelsOf(story: PracticeStory): ReasoningOrFallacyLabel[] 
   return [...new Set(labels)];
 }
 
-/** Stories whose every target label was selected by the user. */
+/** Stories with at least one target label in the user's selection. */
 export function eligibleStories(
   stories: readonly PracticeStory[],
   selected: readonly ReasoningOrFallacyLabel[],
@@ -34,7 +34,7 @@ export function eligibleStories(
   const selectedSet = new Set(selected);
   return stories.filter((story) => {
     const targets = targetLabelsOf(story);
-    return targets.length > 0 && targets.every((label) => selectedSet.has(label));
+    return targets.length > 0 && targets.some((label) => selectedSet.has(label));
   });
 }
 
@@ -47,11 +47,12 @@ export function selectPracticeStories(
   const pool = shuffle(eligibleStories(stories, selected), rng);
   if (pool.length <= count) return pool;
 
-  // Randomized first-fit cover: walk the shuffled pool, preferring the first
-  // story that still adds an uncovered selected label; once everything is
-  // covered (or nothing can add coverage), fill the rest in shuffled order.
-  // Unlike a strict max-gain greedy, this varies from session to session —
-  // no single story is picked every time just for covering the most labels.
+  // 20% of sessions pick purely at random for variety; the other 80% use a
+  // randomized first-fit cover so each selected label is likely represented.
+  if (rng() < 0.2) {
+    return pool.slice(0, count);
+  }
+
   const uncovered = new Set(selected);
   const chosen: PracticeStory[] = [];
   const remaining = [...pool];

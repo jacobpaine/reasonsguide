@@ -89,6 +89,24 @@ export const REASONING_LABELS: readonly ReasoningLabel[] = [
     shortDefinition: "Accepting a claim because a credible source vouches for it.",
   },
   {
+    id: "expected-value",
+    kind: "reasoning",
+    name: "Expected-value reasoning",
+    friendlyName: "Risk-and-reward reasoning",
+    category: "applied",
+    shortDefinition:
+      "Choosing an action by weighing each possible outcome's magnitude against its probability.",
+  },
+  {
+    id: "precedent",
+    kind: "reasoning",
+    name: "Precedent reasoning",
+    friendlyName: "Prior-case reasoning",
+    category: "applied",
+    shortDefinition:
+      "Applying the treatment established in a past decision to a sufficiently similar current case.",
+  },
+  {
     id: "practical",
     kind: "reasoning",
     name: "Practical reasoning",
@@ -161,6 +179,24 @@ export const REASONING_LABELS: readonly ReasoningLabel[] = [
     category: "structural",
     shortDefinition:
       "Refining a position by taking objections seriously and responding to them.",
+  },
+  {
+    id: "thought-experiment",
+    kind: "reasoning",
+    name: "Thought experiment",
+    friendlyName: "What-if reasoning",
+    category: "structural",
+    shortDefinition:
+      "Reasoning inside a hypothetical scenario to test whether a principle holds or reveals its limits.",
+  },
+  {
+    id: "reductio",
+    kind: "reasoning",
+    name: "Reductio ad absurdum",
+    friendlyName: "Absurdity reasoning",
+    category: "structural",
+    shortDefinition:
+      "Proving a claim by assuming its opposite and showing that assumption leads to contradiction or absurdity.",
   },
 ];
 

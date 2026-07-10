@@ -315,7 +315,7 @@ export function SessionView() {
 
     // Final story: score the whole session, fold it into progress, and
     // hand the result to the feedback screen.
-    const score = scorePracticeSession(stories, nextAnswers);
+    const score = scorePracticeSession(stories, nextAnswers, new Set(pending.selectedLabels));
     const now = new Date().toISOString();
     const involvedLabels = [...new Set(score.labelEvents.map((e) => e.labelId))];
     const nextProgress = recordSession(

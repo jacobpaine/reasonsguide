@@ -115,7 +115,7 @@ describe("lessons", () => {
     expect(new Set(ids).size).toBe(ids.length);
     const taught = LESSONS.flatMap((l) => l.labelIds);
     expect(new Set(taught).size).toBe(taught.length);
-    expect(taught).toHaveLength(45); // 18 reasoning + 27 fallacies
+    expect(taught).toHaveLength(49); // 22 reasoning + 27 fallacies
   });
 
   it.each(ready.map((l) => [l.title, l] as const))(

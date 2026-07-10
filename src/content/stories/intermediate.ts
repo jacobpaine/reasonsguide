@@ -512,6 +512,386 @@ export const intermediateStories: readonly PracticeStory[] = [
     ],
   },
   {
+    id: "story-patch-window",
+    title: "The Patch Window",
+    difficulty: "intermediate",
+    includedLabels: ["expected-value"],
+    sentences: [
+      {
+        id: "nv-1",
+        text: "The station's navigation module had been throwing a seven-millisecond lag for three weeks, and Dr. Chen had stopped pretending it wasn't going to become a problem when they reached the asteroid corridor.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "nv-2",
+        text: "Two patches had been written: one tested and validated across twelve simulations, one faster to deploy but never run against live hardware.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "nv-3",
+        text: "The untested patch had about a one-in-five chance of clearing the lag without incident and roughly the same chance of disabling attitude control entirely — one outcome saved a few hours, the other ended the mission — so she took it off the table.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "nv-3-a",
+        explanationOptions: [
+          {
+            id: "nv-3-a",
+            text: "She sets the untested patch's one-in-five chance of a clean fix against its equal chance of disabling attitude control — one outcome saves hours, the other ends the mission — and the magnitude asymmetry makes the gamble not worth taking.",
+          },
+          {
+            id: "nv-3-b",
+            text: "It cites the one-in-five probability as a frequency measured across comparable patches and applies that rate to this one.",
+          },
+          {
+            id: "nv-3-c",
+            text: "It updates her confidence in the untested patch based on the absence of validation data, and rests at that revised belief.",
+          },
+          {
+            id: "nv-3-d",
+            text: "It identifies not deploying as the practical means to avoid disabling attitude control, without comparing the probability-weighted cost of each outcome.",
+          },
+        ],
+      },
+      {
+        id: "nv-4",
+        text: "The tested patch reduced the lag to three milliseconds — not zero, but within the corridor's published tolerance margins.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "nv-5",
+        text: "Leaving even the residual three-millisecond lag in place carried a four-percent misalignment risk at approach speed, and misalignment at approach speed was not survivable; she found that a small probability of total loss was still too heavy to carry when a working patch was in hand.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "nv-5-b",
+        explanationOptions: [
+          {
+            id: "nv-5-a",
+            text: "It measures the four-percent misalignment rate across prior corridor approaches and projects that frequency onto this one.",
+          },
+          {
+            id: "nv-5-b",
+            text: "A four-percent chance of total, unrecoverable loss is weighed against the minor cost of residual lag — the probability-times-magnitude comparison makes deploying the tested patch the clear choice.",
+          },
+          {
+            id: "nv-5-c",
+            text: "It revises her estimate of misalignment likelihood given the three-millisecond residual lag, and holds that updated probability.",
+          },
+          {
+            id: "nv-5-d",
+            text: "It identifies deploying the patch as the practical means to reduce misalignment risk, without engaging how the four-percent probability and the unrecoverable outcome together justify the cost.",
+          },
+        ],
+      },
+      {
+        id: "nv-6",
+        text: "She deployed the tested patch at 0400 and logged the decision in the mission record, as the charter required.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "nv-7",
+        text: "The lag held at three milliseconds through the corridor, and nobody mentioned it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-backup-burner",
+    title: "The Backup Burner",
+    difficulty: "intermediate",
+    includedLabels: ["expected-value"],
+    sentences: [
+      {
+        id: "bp-1",
+        text: "Margot had run the catering company for eleven years and had learned that the only real surprise at a formal event is that there's always one.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bp-2",
+        text: "The wedding had a hundred and sixty guests, an open bar, and a kitchen she'd never worked in before.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bp-3",
+        text: "A backup staff member would cost three hundred dollars; her main sous-chef went home sick roughly one time in eight over a season, and one-eighth of a ten-thousand-dollar booking refund came to more than three hundred dollars without very much arithmetic, so she made the call.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "bp-3-b",
+        explanationOptions: [
+          {
+            id: "bp-3-a",
+            text: "It identifies booking a backup as the practical means to cover a potential staffing gap, without engaging the one-in-eight probability or comparing it against the cost of a refund.",
+          },
+          {
+            id: "bp-3-b",
+            text: "A one-in-eight illness probability is multiplied against a ten-thousand-dollar refund risk and compared to the three-hundred-dollar backup cost — the probability-weighted exposure exceeds the preventive cost, and that arithmetic drives the decision.",
+          },
+          {
+            id: "bp-3-c",
+            text: "It applies the one-in-eight rate as a measured frequency from her own records and projects it onto this booking without deciding whether to act.",
+          },
+          {
+            id: "bp-3-d",
+            text: "It compares this booking to similar large events where a backup staff member proved useful, inferring the same will hold here.",
+          },
+        ],
+      },
+      {
+        id: "bp-4",
+        text: "She booked the backup on Tuesday, requested someone with cold-station experience, and said nothing about it to the bride.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bp-5",
+        text: "The sous-chef arrived healthy, the backup helped with plating, and the kitchen ran four minutes ahead of schedule.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bp-6",
+        text: "She'd also chosen to bring a portable burner in case the venue's range failed — the probability was low, but a failed range at a seated dinner for a hundred and sixty meant no hot food, and no hot food at a formal dinner meant a refund she couldn't absorb, so the burner came with her.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "bp-6-c",
+        explanationOptions: [
+          {
+            id: "bp-6-a",
+            text: "It updates her belief about venue range failure rates based on working in an unfamiliar kitchen, and holds that revised estimate.",
+          },
+          {
+            id: "bp-6-b",
+            text: "It generalizes from prior venue failures she has seen to expect some non-trivial probability of failure at this one.",
+          },
+          {
+            id: "bp-6-c",
+            text: "A low probability of range failure is weighed against the full magnitude of the consequence — no hot food, a total refund — and that probability-times-stakes comparison justifies carrying the burner.",
+          },
+          {
+            id: "bp-6-d",
+            text: "It identifies carrying the burner as the practical means to ensure food delivery if the range fails, without weighing how likely that failure is against the cost of the outcome.",
+          },
+        ],
+      },
+      {
+        id: "bp-7",
+        text: "The range did not fail, and the burner rode home in the van unused, which Margot considered the best possible outcome for something you hope never to need.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-coverage-desk",
+    title: "The Coverage Desk",
+    difficulty: "intermediate",
+    includedLabels: ["expected-value"],
+    sentences: [
+      {
+        id: "cv-1",
+        text: "The insurance desk at the Mages' Guild occupied a corner of the hall that smelled faintly of old parchment and cautious decisions.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "cv-2",
+        text: "Reva was planning an expedition into the Quarried Ruins, where the ambient curse density was rated moderate-to-high by the last survey team.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "cv-3",
+        text: "A moderate-to-high rating meant roughly a thirty-percent chance of incurring a binding affliction; the affliction could run anywhere from a week's inconvenience to five years of mandatory silence, and at five years of lost work the forty-gold premium looked modest even at thirty percent.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "cv-3-a",
+        explanationOptions: [
+          {
+            id: "cv-3-a",
+            text: "A thirty-percent affliction probability is weighed against a range of possible magnitudes — up to five years of lost work — and the forty-gold premium is found reasonable when set against that probability-weighted cost.",
+          },
+          {
+            id: "cv-3-b",
+            text: "It updates Reva's belief about how likely she is to pick up an affliction in moderate-to-high rated ruins, and holds that revised belief without deciding whether to buy coverage.",
+          },
+          {
+            id: "cv-3-c",
+            text: "It reports the thirty-percent curse-density rating as a measured frequency from the survey team, without using it as input to a purchase decision.",
+          },
+          {
+            id: "cv-3-d",
+            text: "It identifies buying the policy as the practical means to obtain compensation if cursed, without multiplying the thirty-percent probability against the five-year magnitude to justify the price.",
+          },
+        ],
+      },
+      {
+        id: "cv-4",
+        text: "The clerk wrote the policy in the guild's standard parchment and explained the three-day claim window.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "cv-5",
+        text: "Reva paid and tucked the policy into her inner robe pocket, next to the antidote vials.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "cv-6",
+        text: "She'd considered skipping coverage for the outer chambers, where the curse density dropped to eight percent, but eight percent of a five-year binding was still a number she couldn't comfortably absorb, so she kept the outer rooms in the policy.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "cv-6-b",
+        explanationOptions: [
+          {
+            id: "cv-6-a",
+            text: "It compares the outer chambers to the inner ones and, finding the construction similar enough, infers the risk is comparable.",
+          },
+          {
+            id: "cv-6-b",
+            text: "Eight percent of a five-year binding still represents a significant weighted cost — the magnitude holds even as the probability drops — and that remaining probability-times-stakes figure justifies keeping the coverage.",
+          },
+          {
+            id: "cv-6-c",
+            text: "It notes that the outer-chamber curse density is lower than the inner chambers and reports that rate as a fact.",
+          },
+          {
+            id: "cv-6-d",
+            text: "It identifies keeping outer-room coverage as the practical means to ensure compensation for any outer-chamber afflictions, without engaging how the eight-percent probability and five-year magnitude together weigh the cost.",
+          },
+        ],
+      },
+      {
+        id: "cv-7",
+        text: "She emerged from the ruins eleven days later, affliction-free and slightly smug about it, which the clerk noted without comment when she came to close the policy.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-challenge-sheet",
+    title: "The Challenge Sheet",
+    difficulty: "intermediate",
+    includedLabels: ["expected-value"],
+    sentences: [
+      {
+        id: "eq-1",
+        text: "The exam packet had a stapled extra sheet at the back — five challenge questions, double points for correct answers, double deduction for wrong ones, which the proctor mentioned once and did not elaborate on.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "eq-2",
+        text: "Yusuf had twenty minutes left and felt uncertain about two of the five.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "eq-3",
+        text: "On the three questions he felt confident about, a wrong answer would cost him six points each, but he put his probability of error at less than one in ten — an expected loss under a point per question against an expected gain near six — so he wrote them.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "eq-3-b",
+        explanationOptions: [
+          {
+            id: "eq-3-a",
+            text: "It counts the three confident questions as a proportion of the five available and uses that ratio to decide how many to attempt.",
+          },
+          {
+            id: "eq-3-b",
+            text: "For each confident question, a less-than-one-in-ten error probability is set against a six-point deduction and compared to the near-certain six-point gain — the expected loss is under a point, the expected gain is close to six, so the attempt is clearly worth it.",
+          },
+          {
+            id: "eq-3-c",
+            text: "It identifies attempting the confident questions as the practical means to earn bonus points, without specifying how the error probability and point magnitudes together justify the decision.",
+          },
+          {
+            id: "eq-3-d",
+            text: "It updates Yusuf's confidence level based on his recall, and holds that updated belief without using it to weigh probability against points.",
+          },
+        ],
+      },
+      {
+        id: "eq-4",
+        text: "The remaining two were harder: one he could reconstruct from logic he mostly trusted and one he genuinely could not.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "eq-5",
+        text: "The question he couldn't reconstruct offered no better than coin-flip odds on a six-point swing either way, which worked out to roughly zero in expected value — not enough to justify four minutes he could spend reviewing his earlier work.",
+        labels: ["expected-value"],
+        primaryLabel: "expected-value",
+        isTarget: true,
+        correctExplanationId: "eq-5-a",
+        explanationOptions: [
+          {
+            id: "eq-5-a",
+            text: "A fifty-fifty probability on a six-point gain cancels against a fifty-fifty probability on a six-point loss — the expected value is near zero — so the question offers no return worth trading four minutes for.",
+          },
+          {
+            id: "eq-5-b",
+            text: "It generalizes from Yusuf's past performance on questions he can't reconstruct to estimate how often he gets them right.",
+          },
+          {
+            id: "eq-5-c",
+            text: "It infers that guessing is the most likely explanation for how students lose points on challenge sections.",
+          },
+          {
+            id: "eq-5-d",
+            text: "It compares the guesswork question to the logic-reconstructible one and identifies their differences as the reason to handle them differently.",
+          },
+        ],
+      },
+      {
+        id: "eq-6",
+        text: "He skipped it, spent the four minutes on the calculation section, and caught a sign error that would otherwise have cost him.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "eq-7",
+        text: "He got two of the three challenge answers right, which he told his study group later was well within the range of outcomes he'd considered acceptable.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
     id: "story-beekeeper",
     title: "The Training Log",
     difficulty: "intermediate",
@@ -607,6 +987,358 @@ export const intermediateStories: readonly PracticeStory[] = [
       {
         id: "bk-7",
         text: "The following season, three athletes had minor knee complaints, all from weeks when the grass loop was closed for maintenance.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-off-cycle-raise",
+    title: "The Off-Cycle Window",
+    difficulty: "intermediate",
+    includedLabels: ["precedent"],
+    sentences: [
+      {
+        id: "pv-1",
+        text: "Rafael had been at the company for three years before the competing offer arrived, and the entire office reacted with the polished surprise of people who had been quietly expecting it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pv-2",
+        text: "Two years earlier, when a senior developer had left for a competitor, the VP had approved an off-cycle raise immediately — that decision had set the practice — and Rafael's position was the same in every relevant way: a competing offer, a role that was hard to backfill, a person the team couldn't afford to lose.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "pv-2-a",
+        explanationOptions: [
+          {
+            id: "pv-2-a",
+            text: "It names the VP's prior approval as the established decision, identifies the matching criteria — competing offer, hard-to-backfill role — and extends the same approval to Rafael because those factors are present here too.",
+          },
+          {
+            id: "pv-2-b",
+            text: "It compares Rafael's situation to the prior developer's on shared structural features — same kind of offer, same kind of role — and uses that resemblance to predict the same outcome.",
+          },
+          {
+            id: "pv-2-c",
+            text: "It defers to the VP's authority and experience in compensation decisions as the basis for approving the raise.",
+          },
+          {
+            id: "pv-2-d",
+            text: "It treats the single prior case as evidence of a general company pattern: employees with competing offers in hard-to-fill roles tend to receive off-cycle raises.",
+          },
+        ],
+      },
+      {
+        id: "pv-3",
+        text: "The VP said she would look into it, which her team had learned to translate as a yes that would require several forms before anything moved.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pv-4",
+        text: "The HR director pulled the original approval from the records and noted that it had been accompanied by a one-year commitment agreement — the company had structured the exception that way from the start — so Rafael's offer would carry the same term.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "pv-4-c",
+        explanationOptions: [
+          {
+            id: "pv-4-a",
+            text: "It compares the two off-cycle situations and concludes that a one-year commitment is structurally appropriate given their resemblance.",
+          },
+          {
+            id: "pv-4-b",
+            text: "It relies on the HR director's professional expertise in employment contracts to determine what conditions a retention raise should include.",
+          },
+          {
+            id: "pv-4-c",
+            text: "The original approval established a one-year commitment as part of the exception, and that condition follows into Rafael's case because the company set it that way when the practice was created.",
+          },
+          {
+            id: "pv-4-d",
+            text: "It projects from the prior case that off-cycle approvals at this company generally include commitment agreements, as a pattern.",
+          },
+        ],
+      },
+      {
+        id: "pv-5",
+        text: "Rafael had already decided he was staying, so the commitment agreement was, as he put it, purely administrative.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pv-6",
+        text: "The paperwork was signed on a Thursday, and nobody mentioned the competing offer again.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-test-accommodation",
+    title: "The Accommodation Request",
+    difficulty: "intermediate",
+    includedLabels: ["precedent"],
+    sentences: [
+      {
+        id: "pm-1",
+        text: "The form had arrived in the second week of October, technically past the start-of-semester deadline but within the late window the committee kept open for documented submissions.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pm-2",
+        text: "The student's packet included a licensed psychologist's assessment, an ADHD diagnosis, and enrollment confirmation from the campus support program — the standard documentation set.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pm-3",
+        text: "Three semesters earlier, a request with exactly this documentation — same diagnosis, same program enrollment, same assessment format — had come before the committee and been approved without reservation; nothing in the current file differed in any relevant way, so the outcome should be the same.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "pm-3-b",
+        explanationOptions: [
+          {
+            id: "pm-3-a",
+            text: "It compares the two students' profiles on shared diagnostic and enrollment features, using structural resemblance to predict the same result.",
+          },
+          {
+            id: "pm-3-b",
+            text: "It cites the prior committee approval as the governing decision, establishes that the current request matches it on every relevant factor, and extends the same outcome on that basis.",
+          },
+          {
+            id: "pm-3-c",
+            text: "It treats the prior approval as part of a broader committee pattern: ADHD requests with complete documentation tend to succeed.",
+          },
+          {
+            id: "pm-3-d",
+            text: "It defers to the psychologist's professional assessment as the expert basis for the accommodation grant.",
+          },
+        ],
+      },
+      {
+        id: "pm-4",
+        text: "The chair asked whether anyone had objections, in a tone that did not particularly invite them.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "pm-5",
+        text: "That earlier approval had included a private testing room alongside extended time — the committee had packaged them together when it set the accommodation — and the current grant carried both, for the same reason.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "pm-5-a",
+        explanationOptions: [
+          {
+            id: "pm-5-a",
+            text: "The prior approval established the full package — extended time plus private room — as the complete accommodation, and the current case receives both because that is how the committee set the practice.",
+          },
+          {
+            id: "pm-5-b",
+            text: "It argues that the structural nature of ADHD testing needs makes a private room as appropriate here as it was for the earlier student.",
+          },
+          {
+            id: "pm-5-c",
+            text: "It treats the earlier inclusion of a private room as evidence that the committee routinely bundles rooms with extended-time grants.",
+          },
+          {
+            id: "pm-5-d",
+            text: "It relies on the chair's expertise in accommodation law to determine what the full package should include.",
+          },
+        ],
+      },
+      {
+        id: "pm-6",
+        text: "The confirmation email reached the student before her afternoon seminar, which she attended and did not mention.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-guild-waiver",
+    title: "The Feronath Standard",
+    difficulty: "intermediate",
+    includedLabels: ["precedent"],
+    sentences: [
+      {
+        id: "wg-1",
+        text: "The tribunal had been convened on a Tuesday, which several members considered inauspicious and which the guild secretary recorded simply as 'scheduled.'",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "wg-2",
+        text: "Senna had diverted a flash flood through the lower market using three unauthorized containment spells, and the twelve protocol violations she had accumulated were, her advocate noted, the entire reason the lower market still existed.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "wg-3",
+        text: "Fourteen years ago, Master Feronath had broken containment protocols to stop the Riverside fire, and the tribunal had preserved his license because the emergency justified the breach; Senna's case shared every criterion that had driven that ruling — unauthorized action, immediate threat, measurable harm prevented — and nothing before the tribunal distinguished it from Feronath's.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "wg-3-a",
+        explanationOptions: [
+          {
+            id: "wg-3-a",
+            text: "It cites the specific Feronath ruling as the established decision, shows that Senna's case matches the criteria that drove it — unauthorized action, immediate threat, harm prevented — and extends the same outcome because nothing distinguishes the two cases.",
+          },
+          {
+            id: "wg-3-b",
+            text: "It draws a structural parallel between Senna's actions and Feronath's — both unauthorized, both emergency-triggered, both harm-preventing — and reasons from that resemblance that the same result applies.",
+          },
+          {
+            id: "wg-3-c",
+            text: "It treats the Feronath case as one data point in a broader pattern of guild rulings that tend to protect emergency action.",
+          },
+          {
+            id: "wg-3-d",
+            text: "It defers to Master Feronath's personal expertise as the practitioner who established the relevant standard.",
+          },
+        ],
+      },
+      {
+        id: "wg-4",
+        text: "Master Feronath, who was on the tribunal, said nothing during this portion of the deliberation, which was considered appropriate and which he appeared to find deeply uncomfortable.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "wg-5",
+        text: "Feronath's original waiver had required a full incident log within thirty days — that condition had been part of how the guild established the emergency-use exception — and Senna's waiver carried the same requirement, on the same terms.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "wg-5-c",
+        explanationOptions: [
+          {
+            id: "wg-5-a",
+            text: "It uses the structural similarity between the two mages' situations to argue that the same accountability conditions are proportionately fair.",
+          },
+          {
+            id: "wg-5-b",
+            text: "It infers from the single prior case that emergency-use waivers in the guild generally come with incident-reporting requirements.",
+          },
+          {
+            id: "wg-5-c",
+            text: "The incident-log requirement was attached to Feronath's waiver when the guild established the emergency-use exception, and Senna's case carries the same term because that is how the practice was set.",
+          },
+          {
+            id: "wg-5-d",
+            text: "It relies on the tribunal's expertise in guild governance to determine what accountability measures are appropriate for unauthorized spellwork.",
+          },
+        ],
+      },
+      {
+        id: "wg-6",
+        text: "Senna submitted her incident log in twelve days and included a footnote suggesting the emergency protocols could use updating, which the tribunal filed under 'noted' and the administration filed under a different heading entirely.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-lakeview-roof",
+    title: "The Kowalski Exception",
+    difficulty: "intermediate",
+    includedLabels: ["precedent"],
+    sentences: [
+      {
+        id: "hv-1",
+        text: "The Lakeview Commons board met on the first Monday of each month, and the treasurer had begun tracking variance requests in a spreadsheet she called 'the exceptions,' which had eleven rows by autumn.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "hv-2",
+        text: "The Okafor family wanted to replace their shingle roof with standing-seam metal after a contractor found that the decking beneath was too degraded to support a new shingle layer safely.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "hv-3",
+        text: "Two years earlier the board had approved the same variance for the Kowalski property, where the decking had the identical defect and the same documentation had been submitted, and the approval had rested on the finding that requiring unsafe roofing to preserve aesthetics was not a standard anyone wanted to defend; the Okafor request was the same in every material respect, and the same approval followed.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "hv-3-b",
+        explanationOptions: [
+          {
+            id: "hv-3-a",
+            text: "It compares the two properties on shared structural features — degraded decking, identical documentation — and uses that resemblance to predict the same outcome.",
+          },
+          {
+            id: "hv-3-b",
+            text: "It cites the Kowalski approval as the established decision, establishes that the Okafor case matches it on the factors that drove it — same defect, same documentation, same safety rationale — and extends the same approval on that basis.",
+          },
+          {
+            id: "hv-3-c",
+            text: "It treats the Kowalski approval as evidence that the board generally prioritizes safety over aesthetic standards when the two conflict.",
+          },
+          {
+            id: "hv-3-d",
+            text: "It defers to the contractor's professional assessment of the decking damage as the expert basis for the board's decision.",
+          },
+        ],
+      },
+      {
+        id: "hv-4",
+        text: "One board member asked about color options, and the chair said she was about to get to that.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "hv-5",
+        text: "The Kowalski variance had required the metal roof to fall within the existing approved color palette — the board had attached that condition when it created the exception, to keep the exemption from swallowing the standard — and the Okafor approval included the same restriction, unchanged.",
+        labels: ["precedent"],
+        primaryLabel: "precedent",
+        isTarget: true,
+        correctExplanationId: "hv-5-d",
+        explanationOptions: [
+          {
+            id: "hv-5-a",
+            text: "It argues that the structural logic of the exception — overriding uniformity for safety — makes a color restriction appropriate for any such approval.",
+          },
+          {
+            id: "hv-5-b",
+            text: "It defers to the board chair's expertise in HOA governance to determine what conditions variance approvals should carry.",
+          },
+          {
+            id: "hv-5-c",
+            text: "It treats the Kowalski condition as evidence that the board routinely attaches palette restrictions to metal-roof variances.",
+          },
+          {
+            id: "hv-5-d",
+            text: "The color restriction was part of how the board established the metal-roof exception in the Kowalski case, and the Okafor approval carries it unchanged because that is the practice as set.",
+          },
+        ],
+      },
+      {
+        id: "hv-6",
+        text: "The Okafors chose Slate Grey, which was within the palette and had been their first choice all along.",
         labels: [],
         explanationOptions: [],
         isTarget: false,

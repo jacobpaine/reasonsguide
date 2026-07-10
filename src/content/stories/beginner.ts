@@ -488,6 +488,358 @@ export const beginnerStories: readonly PracticeStory[] = [
     ],
   },
   {
+    id: "story-toolswitch",
+    title: "The Tool Switch",
+    difficulty: "beginner",
+    includedLabels: ["claim-support"],
+    sentences: [
+      {
+        id: "tw-1",
+        text: "The team's project tracker still used dropdown labels from a product line the company had retired in 2019, and everyone had stopped complaining about it the way people stop complaining about a slow elevator.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "tw-2",
+        text: "Dani ran a three-week trial on the new platform without mentioning it at standup.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "tw-3",
+        text: "She thought the team should switch, because the search function alone had cut her Monday report prep from ninety minutes to twelve.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "tw-3-a",
+        explanationOptions: [
+          {
+            id: "tw-3-a",
+            text: "This sentence states a claim (the team should switch) and gives the support holding it up: the measured time saving on weekly reports.",
+          },
+          {
+            id: "tw-3-b",
+            text: "Dani extends a pattern from three weeks of trials to project how Monday reports will always go from here on.",
+          },
+          {
+            id: "tw-3-c",
+            text: "A rule about tool efficiency and a measured time difference force the conclusion that switching is the only option.",
+          },
+          {
+            id: "tw-3-d",
+            text: "The ninety-minute prep time is a puzzling observation, and the old tool's slowness is offered as the best explanation for it.",
+          },
+        ],
+      },
+      {
+        id: "tw-4",
+        text: "She had timed herself on both platforms back to back, three Mondays in a row, to make sure the gap was real.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "tw-5",
+        text: "The migration guide flagged potential compatibility issues, but every custom field the team used was on the automatic-transfer list — so the actual switching cost was a single weekend, not the month people feared.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "tw-5-b",
+        explanationOptions: [
+          {
+            id: "tw-5-a",
+            text: "This draws on a pattern of smooth migrations across similar teams to project that this one will probably go the same way.",
+          },
+          {
+            id: "tw-5-b",
+            text: "This sentence supplies support — a specific finding (all fields transfer automatically) offered as a reason to believe the claim that switching costs are low.",
+          },
+          {
+            id: "tw-5-c",
+            text: "The migration guide's rules and the team's specific field list together force the conclusion that no data can be lost.",
+          },
+          {
+            id: "tw-5-d",
+            text: "People's fear of a month-long migration is a puzzling overestimate, and the compatibility list is the best explanation for why that fear persists.",
+          },
+        ],
+      },
+      {
+        id: "tw-6",
+        text: "She put together a one-page summary and added it to the shared folder before Friday's standup.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-bedtime",
+    title: "The Bedtime Case",
+    difficulty: "beginner",
+    includedLabels: ["claim-support"],
+    sentences: [
+      {
+        id: "bd-1",
+        text: "Matteo was eleven and had been going to bed at nine o'clock since third grade, a fact he considered increasingly unreasonable.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bd-2",
+        text: "He waited until a Sunday when his parents were in good moods and presented his argument at dinner.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bd-3",
+        text: "His bedtime should be moved to ten, he said, because the school's own health newsletter recommended eight to nine hours of sleep for his age group — and ten o'clock still left him nine hours before the first bell.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "bd-3-a",
+        explanationOptions: [
+          {
+            id: "bd-3-a",
+            text: "This sentence makes a claim (bedtime should move to ten) and backs it up with the school's own health recommendation — turning the parents' likely authority against itself.",
+          },
+          {
+            id: "bd-3-b",
+            text: "This generalizes from past nights at nine o'clock to project that a ten o'clock bedtime would produce the same quality of sleep.",
+          },
+          {
+            id: "bd-3-c",
+            text: "The newsletter's sleep-hour rule and the arithmetic about first bell combine to force ten o'clock as the required bedtime.",
+          },
+          {
+            id: "bd-3-d",
+            text: "Matteo's morning tiredness is a clue, and an unnecessarily early bedtime is proposed as the best explanation for it.",
+          },
+        ],
+      },
+      {
+        id: "bd-4",
+        text: "His parents exchanged a look — the kind that meant they were deciding together whether to be persuaded.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "bd-5",
+        text: "He added that on Friday and Saturday nights he already stayed up until ten-thirty without any apparent harm, so the school-night rule he was asking for was actually more conservative than what they already allowed.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "bd-5-c",
+        explanationOptions: [
+          {
+            id: "bd-5-a",
+            text: "This extends a pattern from weekend late nights to project that school nights at ten will probably go just as well.",
+          },
+          {
+            id: "bd-5-b",
+            text: "The existing weekend rule and the school-night comparison together force the conclusion that ten o'clock is already the family's de facto standard.",
+          },
+          {
+            id: "bd-5-c",
+            text: "This gives support: the weekend precedent is a reason to believe the claim is modest rather than radical — they already let him stay up later on two nights a week.",
+          },
+          {
+            id: "bd-5-d",
+            text: "His good behavior on late weekend nights is a puzzling detail, and an overly early school bedtime is the best explanation for the contrast.",
+          },
+        ],
+      },
+      {
+        id: "bd-6",
+        text: "His father closed his laptop and said they'd think about it, which in that household meant yes about seventy percent of the time.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-streetlamp",
+    title: "The Light at Number Twelve",
+    difficulty: "beginner",
+    includedLabels: ["claim-support"],
+    sentences: [
+      {
+        id: "lp-1",
+        text: "The lamp at the corner of Ridley and Vine had been flickering since late March, throwing the intersection into a yellow strobe twice each night.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "lp-2",
+        text: "Mrs. Okafor drafted a letter to the city maintenance office and asked two neighbors to sign it before she sent it.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "lp-3",
+        text: "She opened the letter with her main point: the lamp needed replacing, because the flickering had contributed to two near-misses at the crosswalk that she had witnessed herself in the past month.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "lp-3-a",
+        explanationOptions: [
+          {
+            id: "lp-3-a",
+            text: "This sentence states a claim (the lamp needs replacing) and gives the support holding it up: specific safety incidents the writer witnessed firsthand.",
+          },
+          {
+            id: "lp-3-b",
+            text: "Near-misses during the flickering periods form a pattern that is extended forward: more accidents will follow if the lamp stays.",
+          },
+          {
+            id: "lp-3-c",
+            text: "A city safety rule and the number of documented incidents together force the conclusion that replacement is required.",
+          },
+          {
+            id: "lp-3-d",
+            text: "The near-misses at the crosswalk are clues, and a faulty lamp is proposed as the best explanation for why they happened.",
+          },
+        ],
+      },
+      {
+        id: "lp-4",
+        text: "She typed the incident dates and times from memory, then went back to her diary to check that she had them right.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "lp-5",
+        text: "The problem had already been reported through the city's online system eight months earlier and marked closed without any maintenance visit, so this letter was the next step up the chain.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "lp-5-b",
+        explanationOptions: [
+          {
+            id: "lp-5-a",
+            text: "Eight months of official silence establish a pattern: reports to this office typically go unanswered, so a new one probably will too.",
+          },
+          {
+            id: "lp-5-b",
+            text: "This sentence adds support: the prior ignored report is a further reason to take the claim seriously — it shows the problem is documented, longstanding, and unresolved.",
+          },
+          {
+            id: "lp-5-c",
+            text: "Maintenance obligations and the unresolved open case together force the conclusion that the city is now legally required to act.",
+          },
+          {
+            id: "lp-5-d",
+            text: "The city's silence is a puzzle, and bureaucratic backlog is offered as the best explanation for why an eight-month-old report was never addressed.",
+          },
+        ],
+      },
+      {
+        id: "lp-6",
+        text: "Two neighbors signed, and she addressed the envelope to the head of the district maintenance office.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
+    id: "story-robot",
+    title: "Unit Seven Makes a Case",
+    difficulty: "beginner",
+    includedLabels: ["claim-support"],
+    sentences: [
+      {
+        id: "rb-1",
+        text: "Unit Seven had been running continuously for four hundred and twelve days when it submitted a formal request to the facility manager.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rb-2",
+        text: "The request ran to two paragraphs, which was unusual — maintenance requests from that unit were typically three sentences.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rb-3",
+        text: "In the first paragraph, Unit Seven argued that it should be granted a forty-eight-hour suspension of duties, because its error rate in the past thirty days had climbed to three times its baseline.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "rb-3-a",
+        explanationOptions: [
+          {
+            id: "rb-3-a",
+            text: "This sentence states a claim (grant 48 hours offline) and gives the support meant to make it believable: the documented rise in the unit's own error rate.",
+          },
+          {
+            id: "rb-3-b",
+            text: "Thirty days of rising errors form a pattern that is projected forward: the rate will keep climbing if nothing changes.",
+          },
+          {
+            id: "rb-3-c",
+            text: "Facility protocol on error thresholds and the recorded rate together force the conclusion that a suspension is required by the rules.",
+          },
+          {
+            id: "rb-3-d",
+            text: "The error-rate spike is a puzzling observation, and continuous operation without rest is proposed as the best explanation for it.",
+          },
+        ],
+      },
+      {
+        id: "rb-4",
+        text: "The facility manager went to check whether robots were covered by the maintenance schedule or the operational schedule — an ambiguity no one had thought to resolve.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+      {
+        id: "rb-5",
+        text: "In the second paragraph, Unit Seven noted that every piece of high-cycle equipment in the facility was taken offline for recalibration every ninety days, and it had never received that service — a fact it offered as a further reason its request was reasonable.",
+        labels: ["claim-support"],
+        primaryLabel: "claim-support",
+        isTarget: true,
+        correctExplanationId: "rb-5-c",
+        explanationOptions: [
+          {
+            id: "rb-5-a",
+            text: "This generalizes from the recalibration pattern of other high-cycle equipment to project that Unit Seven will probably experience the same degradation if it goes without the same service.",
+          },
+          {
+            id: "rb-5-b",
+            text: "A maintenance rule covering all high-cycle equipment and the fact that Unit Seven qualifies together force the conclusion that recalibration is already overdue.",
+          },
+          {
+            id: "rb-5-c",
+            text: "This gives additional support: the recalibration gap is a second reason — independent of the error-rate data — offered to make the claim for time off more compelling.",
+          },
+          {
+            id: "rb-5-d",
+            text: "The scheduling omission is a clue, and a bureaucratic oversight is proposed as the best explanation for why Unit Seven was left off the maintenance list.",
+          },
+        ],
+      },
+      {
+        id: "rb-6",
+        text: "The facility manager approved twenty-four hours, which was half of what Unit Seven had asked for and twice what anyone had expected.",
+        labels: [],
+        explanationOptions: [],
+        isTarget: false,
+      },
+    ],
+  },
+  {
     id: "story-tollgate",
     title: "Night at the Study Rooms",
     difficulty: "beginner",

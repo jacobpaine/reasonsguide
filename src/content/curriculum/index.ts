@@ -8,6 +8,8 @@ import { causalLesson } from "./causal";
 import { statisticalLesson } from "./statistical";
 import { bayesianLesson } from "./bayesian";
 import { authorityLesson } from "./authority";
+import { expectedValueLesson } from "./expected-value";
+import { precedentLesson } from "./precedent";
 import { practicalLesson } from "./practical";
 import { moralLesson } from "./moral";
 import { comparativeLesson } from "./comparative";
@@ -17,6 +19,8 @@ import { conceptualLesson } from "./conceptual";
 import { classificationLesson } from "./classification";
 import { partWholeLesson } from "./part-whole";
 import { dialecticalLesson } from "./dialectical";
+import { thoughtExperimentLesson } from "./thought-experiment";
+import { reductioLesson } from "./reductio";
 import { fallaciesIntroLesson } from "./fallacies-intro";
 import { evidenceFallaciesLesson } from "./evidence-fallacies";
 import { causalFallaciesLesson } from "./causal-fallacies";
@@ -46,6 +50,8 @@ export const LESSONS: readonly Lesson[] = [
   bayesianLesson,
   // reasoning in use
   authorityLesson,
+  expectedValueLesson,
+  precedentLesson,
   practicalLesson,
   moralLesson,
   comparativeLesson,
@@ -56,6 +62,8 @@ export const LESSONS: readonly Lesson[] = [
   classificationLesson,
   partWholeLesson,
   dialecticalLesson,
+  thoughtExperimentLesson,
+  reductioLesson,
   // failure modes
   fallaciesIntroLesson,
   evidenceFallaciesLesson,

@@ -17,6 +17,8 @@ export type ReasoningLabelId =
   | "statistical"
   | "bayesian"
   | "authority"
+  | "expected-value"
+  | "precedent"
   | "practical"
   | "moral"
   | "comparative"
@@ -25,7 +27,9 @@ export type ReasoningLabelId =
   | "conceptual"
   | "classification"
   | "part-whole"
-  | "dialectical";
+  | "dialectical"
+  | "thought-experiment"
+  | "reductio";
 
 export type FallacyLabelId =
   // formal
