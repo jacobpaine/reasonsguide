@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Back half of vane -->
+  <path d="M27 2C18 5 9 14 5 29l3-2C10 17 18 8 27 2z" fill="#3b2314"/>
+  <!-- Front half of vane (lighter) -->
+  <path d="M27 2C23 7 18 13 14 18S8 25 7 28C11 23 15 17 19 13s7-7 8-11z" fill="#8b5a34"/>
+  <!-- Shaft line -->
+  <line x1="16" y1="15" x2="6" y2="28" stroke="#3b2314" stroke-width="1" stroke-linecap="round"/>
+  <!-- Nib -->
+  <path d="M5 29L3 32l5-1z" fill="#3b2314"/>
+</svg>
